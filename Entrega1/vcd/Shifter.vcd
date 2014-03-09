@@ -1,0 +1,68 @@
+$date
+	Sun Mar  9 11:25:23 2014
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module Shifter_tb $end
+$var wire 32 ! result [31:0] $end
+$var reg 32 " in [31:0] $end
+$var reg 5 # shiftamt [4:0] $end
+$var reg 2 $ shiftop [1:0] $end
+$scope module teste $end
+$var wire 32 % in [31:0] $end
+$var wire 5 & shiftamt [4:0] $end
+$var wire 2 ' shiftop [1:0] $end
+$var reg 32 ( result [31:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b0 (
+b0 '
+b1 &
+b1 %
+b0 $
+b1 #
+b1 "
+b0 !
+$end
+#10
+b10 #
+b10 &
+#20
+b11 #
+b11 &
+#30
+b1 #
+b1 &
+b1 $
+b1 '
+#40
+b10 #
+b10 &
+#50
+b11 #
+b11 &
+#60
+b10 (
+b10 !
+b1 #
+b1 &
+b10 $
+b10 '
+#70
+b100 (
+b100 !
+b10 #
+b10 &
+#80
+b1000 (
+b1000 !
+b11 #
+b11 &
+#90

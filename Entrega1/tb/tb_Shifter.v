@@ -14,7 +14,7 @@ Shifter teste(in,shiftop,shiftamt, result);
 
 initial
 	begin
-	$dumpfile("Shifter.vcd");
+	$dumpfile("vcd/Shifter.vcd");
 	$dumpvars;
 	in=32'b00000000000000000000000000000001;
 	shiftop=2'b00;
