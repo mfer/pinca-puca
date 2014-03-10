@@ -1,8 +1,7 @@
 #!/bin/bash
 NPROC=$(nproc)
 NPROC_H=$(($(nproc)/2))
-COMB=1048576 #2^20
-#COMB=4294967296 #2^32
+COMB=4294967296 #2^32 #COMB=65536 #2^16
 RANGE=$(($COMB/$NPROC)) 
 
 for (( i=1; i < NPROC_H; i++ ))
