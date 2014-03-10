@@ -1,4 +1,4 @@
-module Comparator_tb;
+module tb_Comparator;
 reg [31:0] a;
 reg [31:0] b;
 reg [2:0] op;
@@ -15,7 +15,7 @@ wire compout;
 Comparator dut (a, b, op, compout);
 initial
 	begin
-	$dumpfile("Comparator.vcd"); //Serve para olhar pelo gtkwave, sinal de onda. Basta dar: gtkwave saidaComparator.vcd
+	$dumpfile("vcd/Comparator.vcd");
 	$dumpvars;
 	a = 32'b00000000000000000000000000000000;
 	b = 32'b00000000000000000000000000000000;

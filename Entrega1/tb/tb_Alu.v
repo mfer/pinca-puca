@@ -1,4 +1,4 @@
-module Alu_tb;
+module tb_Alu;
 
 reg 	[31:0]		a;
 reg 	[31:0]	 	b;
@@ -19,7 +19,7 @@ Alu dut (a, b, aluout, op, unsig, compout, overflow);
 
 initial
 	begin
-	$dumpfile("Alu.vcd");
+	$dumpfile("vcd/Alu.vcd");
 	$dumpvars;
 	//a && b
 	a = 32'b00000000000000000000000000000000;
