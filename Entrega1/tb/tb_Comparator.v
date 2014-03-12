@@ -2,7 +2,7 @@
 
 module tb_Comparator;
 	parameter finishtime=5;
-	integer INB,INA, fromA, fromB, stepA, stepB;
+	integer INB,INA, fromA, fromB, quantA, quantB, stepA, stepB;
 	reg expected000,expected001,expected010,expected011,expected100,expected101,expectedDEF;
 	reg [31:0] inA,inB;
 	parameter op000 = 3'b000; //a==b
@@ -33,6 +33,14 @@ module tb_Comparator;
 	        $display("Informe +fromB=<valor>");
 	        $finish;
 	    end
+	    if (! $value$plusargs("quantA=%d", quantA)) begin
+	        $display("Informe +quantA=<valor>");
+	        $finish;
+	    end
+	    if (! $value$plusargs("quantB=%d", quantB)) begin
+	        $display("Informe +quantB=<valor>");
+	        $finish;
+	    end
 	    if (! $value$plusargs("stepA=%d", stepA)) begin
 	        $display("Informe +stepA=<valor>");
 	        $finish;
@@ -43,7 +51,7 @@ module tb_Comparator;
 	    end
 
 		inA=fromA;
-		inB=fromA;
+		inB=fromB;
 		expected000=inA==inB;
 		expected001=inA>=inB;
 		expected010=inA<=inB;
@@ -57,18 +65,42 @@ module tb_Comparator;
 //		$dumpfile("vcd/Comparator.vcd");
 //		$dumpvars;
 		$display ("fromA= %d, fromB= %d",fromA, fromB);
-		$display ("stepA= %d",stepA);
-		$display ("stepB= %d",stepB);
+		$display ("quantA= %d, quantB= %d",quantA, quantB);
+		$display ("stepA= %d, stepB= %d",stepA, stepB);
 
-		for(INA=1; INA<=stepA*stepA; INA=INA+1)begin
+		for(INA=1; INA<=quantA; INA=INA+1)begin
 			#(`DELAY/5)
 //			$display ("inA= %d, inB= %d",inA, inB);
-			for(INB=1; INB<=stepB*stepB; INB=INB+1)begin
+			for(INB=1; INB<=quantB; INB=INB+1)begin
 				#(`DELAY/5)
 
 				expected000 = inA == inB;
 				//$display ("compout000= %b, expected= %b",compout000,expected000);
 				if (compout000 != expected000) $display ("FAIL000: %b != %b",compout000,expected000);
+
+				expected001 = inA >= inB;
+				//$display ("compout001= %b, expected= %b",compout001,expected001);
+				if (compout000 != expected000) $display ("FAIL001: %b != %b",compout001,expected001);
+
+				expected010 = inA <= inB;
+				//$display ("compout010= %b, expected= %b",compout010,expected010);
+				if (compout010 != expected010) $display ("FAIL010: %b != %b",compout010,expected010);
+
+				expected011 = inA > inB;
+				//$display ("compout011= %b, expected= %b",compout011,expected011);
+				if (compout011 != expected011) $display ("FAIL011: %b != %b",compout011,expected011);
+
+				expected100 = inA < inB;
+				//$display ("compout100= %b, expected= %b",compout100,expected100);
+				if (compout100 != expected100) $display ("FAIL100: %b != %b",compout100,expected100);
+
+				expected101 = inA != inB;
+				//$display ("compout101= %b, expected= %b",compout101,expected101);
+				if (compout101 != expected101) $display ("FAIL101: %b != %b",compout101,expected101);
+
+				expectedDEF = 1'b0;
+				//$display ("compoutDEF= %b, expected= %b",compoutDEF,expectedDEF);
+				if (compoutDEF != expectedDEF) $display ("FAILDEF: %b != %b",compoutDEF,expectedDEF);
 
 				#`DELAY inB = inB + stepB;
 			end

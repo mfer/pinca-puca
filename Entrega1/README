@@ -1,3 +1,14 @@
 sudo apt-get install iverilog
-mkdir bin vcd log
-make
+
+make tb_Shifter_vvp
+make tb_Shifter_check
+
+make tb_Comparator_vvp
+make tb_Comparator_check
+
+make tb_Shifter_par
+make tb_Shifter_par_check
+
+make tb_Comparator_par
+make tb_Comparator_par_check
+

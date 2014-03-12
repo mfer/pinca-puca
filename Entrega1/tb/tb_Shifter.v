@@ -2,7 +2,7 @@
 
 module tb_Shifter;
 	parameter finishtime=5;
-	integer AMT,IN, from, step;
+	integer AMT,IN, from, quant, step;
 	reg [31:0] expected00,expected01,expected10;
 	reg [31:0] in;
 	parameter shiftop00 = 2'b00; //shift lógico para direita
@@ -39,6 +39,7 @@ module tb_Shifter;
 //		$dumpfile("vcd/Shifter.vcd");
 //		$dumpvars;
 		$display ("from= %d",from);
+		$display ("quant= %d",quant);
 		$display ("step= %d",step);
 
 		for(IN=1; IN<=quant; IN=IN+1)begin
@@ -64,6 +65,7 @@ module tb_Shifter;
 		$display ("to= %d",in);
 		#finishtime
 		$display ("Tempo Total - %d",$time);
+		$display ("-----------------------------------");
 		$finish;
 	end
 endmodule
