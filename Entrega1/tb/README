@@ -1,5 +1,7 @@
 sudo apt-get install iverilog
 
+make
+
 make tb_Shifter_vvp
 make tb_Shifter_check
 
