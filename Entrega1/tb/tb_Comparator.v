@@ -63,7 +63,7 @@ module tb_Comparator;
 		for(INA=1; INA<=stepA*stepA; INA=INA+1)begin
 			#(`DELAY/5)
 //			$display ("inA= %d, inB= %d",inA, inB);
-			for(INB=1; INB<stepB*stepB; INB=INB+1)begin
+			for(INB=1; INB<=stepB*stepB; INB=INB+1)begin
 				#(`DELAY/5)
 
 				expected000 = inA == inB;
