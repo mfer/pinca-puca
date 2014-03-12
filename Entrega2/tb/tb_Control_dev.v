@@ -1,6 +1,6 @@
 /* sudolshw@gmail.com */
 
-module tb_Control;
+module tb_Control_dev;
 	reg[5:0] op;
 	reg[5:0] fn;
 	wire[2:0] selwsource;
@@ -18,14 +18,45 @@ module tb_Control;
 	wire[2:0] compop;
 	wire unsig;
 
-	always #2 fn = $random;
+	Control c000000(op,fn,selwsource,selregdest,writereg,writeov,selimregb,selalushift,aluop,shiftop,readmem,writemem,selbrjumpz,selpctype,compop,unsig);
+
+	always #2 fn = 6'b000000;
 
 	initial begin
-	  op = 0;
-	  #2 op = 4'b101x;
-	  #2 op = 4'b0101;
-	  #2 op = 4'b0010;
-	  #2 op = 4'b0000;
-	  #2 $finish;
+		//SLLV,SRLV,SRAV,JR,ADD,ADDU,SUB,SUBU,AND,OR,XOR,NOR
+		op = 6'b000000;
+		#2
+
+		//J,BEQ,BNE,BLEZ,BGTZ
+	    op = 6'b000010;
+		#2
+	    op = 6'b000100;
+		#2
+	    op = 6'b000101;
+		#2
+	    op = 6'b000110;
+		#2
+		op = 6'b000111;
+		#2
+
+		//ADDi,ADDIU,ANDI,ORI,XORI
+	    op = 6'b001000;
+		#2
+	    op = 6'b001001;
+		#2
+	    op = 6'b001100;
+		#2
+	    op = 6'b001101;
+		#2
+		op = 6'b001110;
+		#2
+
+		//LW,SW
+	    op = 6'b100011;
+		#2
+	    op = 6'b101011;
+		#2
+
+		#2 $finish;
 	end
 endmodule
