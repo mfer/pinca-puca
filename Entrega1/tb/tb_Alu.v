@@ -1,5 +1,3 @@
-`include "../Alu.v"
-
 /*Teste operação de soma da Alu*/
 module tb_Alu ();
 	
