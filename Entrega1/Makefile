@@ -1,5 +1,7 @@
 # sudolshw@gmail.com
-
+all:
+	iverilog src/Alu.v tb/tb_Alu.v -o bin/tb_Alu
+	
 init:
 	mkdir -p bin vcd log
 
