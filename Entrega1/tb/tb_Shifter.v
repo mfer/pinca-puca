@@ -1,6 +1,8 @@
+/* sudolshw@gmail.com */
+
 module tb_Shifter;
 	parameter finishtime=5;
-	integer AMT,IN, from, to, qtd, step;
+	integer AMT,IN, from, step;
 	reg [31:0] expected00,expected01,expected10;
 	reg [31:0] in;
 	parameter shiftop00 = 2'b00; //shift lógico para direita
@@ -17,12 +19,8 @@ module tb_Shifter;
 	        $display("Informe +from=<valor>");
 	        $finish;
 	    end
-	    if (! $value$plusargs("to=%d", to)) begin
-	        $display("Informe +to=<valor>");
-	        $finish;
-	    end
-	    if (! $value$plusargs("qtd=%d", qtd)) begin
-	        $display("Informe +qtd=<valor>");
+	    if (! $value$plusargs("step=%d", step)) begin
+	        $display("Informe +step=<valor>");
 	        $finish;
 	    end
 		in=from;
@@ -31,18 +29,14 @@ module tb_Shifter;
 		expected10=in;
 	    shiftamt=4'b0000;
 
-	    step = step/qtd;
-	    if (step<0) step=-step;
 	end
 	initial begin
 //		$dumpfile("vcd/Shifter.vcd");
 //		$dumpvars;
 		$display ("from= %d",from);
-		$display ("to= %d",to);
-		$display ("qtd= %d",qtd);
 		$display ("step= %d",step);
 
-		for(IN=1; IN<=qtd*2; IN=IN+1)begin
+		for(IN=1; IN<=step*2; IN=IN+1)begin
 			#(`DELAY/5)
 //			$display ("in= %b", in);
 			for(AMT=0; AMT<16; AMT=AMT+1)begin
@@ -61,6 +55,8 @@ module tb_Shifter;
 			end
 			#`DELAY in = in + step;
 		end
+
+		$display ("to= %d",in);
 		#finishtime
 		$display ("Tempo Total - %d",$time);
 		$finish;
