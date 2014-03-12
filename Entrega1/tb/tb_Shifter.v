@@ -19,10 +19,15 @@ module tb_Shifter;
 	        $display("Informe +from=<valor>");
 	        $finish;
 	    end
+	    if (! $value$plusargs("quant=%d", quant)) begin
+	        $display("Informe +quant=<valor>");
+	        $finish;
+	    end
 	    if (! $value$plusargs("step=%d", step)) begin
 	        $display("Informe +step=<valor>");
 	        $finish;
 	    end
+
 		in=from;
 		expected00=in;
 		expected01=in;
@@ -36,7 +41,7 @@ module tb_Shifter;
 		$display ("from= %d",from);
 		$display ("step= %d",step);
 
-		for(IN=1; IN<=step*2; IN=IN+1)begin
+		for(IN=1; IN<=quant; IN=IN+1)begin
 			#(`DELAY/5)
 //			$display ("in= %b", in);
 			for(AMT=0; AMT<16; AMT=AMT+1)begin
