@@ -85,7 +85,7 @@ module Control
 									assign selimregb= 1'bx;
 									assign selalushift= 1'bx;
 									assign aluop= 3'bxxx;
-									assign shiftop= 2'bxx // nenhum
+									assign shiftop= 2'bxx; // nenhum
 									assign readmem= 1'b0;
 									assign writemem= 1'b0;
 									assign selbrjumpz= 2'b01;
@@ -118,7 +118,7 @@ module Control
 									assign writeov= 1'b1;
 									assign selimregb= 1'b0;
 									assign selalushift= 1'b0;
-									assign aluop= 3'b010; /soma
+									assign aluop= 3'b010; //soma
 									assign shiftop= 2'bxx; // nenhum
 									assign readmem= 1'b0;
 									assign writemem= 1'b0;
