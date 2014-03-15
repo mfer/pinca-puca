@@ -183,10 +183,10 @@ module Control
 									assign selwsource= 3'b000;
 									assign selregdest= 2'b01; // RD
 									assign writereg= 1'b1;
-									assign writeov= 1'b0;
+									assign writeov= 1'b1;
 									assign selimregb= 1'b0;
 									assign selalushift= 1'b0;
-									assign aluop= 3'b110; // subtração
+									assign aluop= 3'b001; // or lógico
 									assign shiftop= 2'bxx; // nenhum
 									assign readmem= 1'b0;
 									assign writemem= 1'b0;
@@ -200,10 +200,10 @@ module Control
 									assign selwsource= 3'b000;
 									assign selregdest= 2'b01; // RD
 									assign writereg= 1'b1;
-									assign writeov= 1'b0;
+									assign writeov= 1'b1;
 									assign selimregb= 1'b0;
 									assign selalushift= 1'b0;
-									assign aluop= 3'b110; // subtração
+									assign aluop= 3'b101; // xor lógico
 									assign shiftop= 2'bxx; // nenhum
 									assign readmem= 1'b0;
 									assign writemem= 1'b0;
@@ -217,10 +217,10 @@ module Control
 									assign selwsource= 3'b000;
 									assign selregdest= 2'b01; // RD
 									assign writereg= 1'b1;
-									assign writeov= 1'b0;
+									assign writeov= 1'b1;
 									assign selimregb= 1'b0;
 									assign selalushift= 1'b0;
-									assign aluop= 3'b110; // subtração
+									assign aluop= 3'b100; // nor lógico
 									assign shiftop= 2'bxx; // nenhum
 									assign readmem= 1'b0;
 									assign writemem= 1'b0;
@@ -234,88 +234,88 @@ module Control
 					end
 			6'b000010 : begin // J
 						$display("@%0dns J, op %b",$time,op);
-						assign selwsource= 3'b000;
-						assign selregdest= 2'b01; // RD
-						assign writereg= 1'b1;
-						assign writeov= 1'b1;
-						assign selimregb= 1'b0;
-						assign selalushift= 1'b1;
-						assign aluop= 3'bxxx;
-						assign shiftop= 2'b10; // left lógico
+						assign selwsource= 3'bxxx;
+						assign selregdest= 2'bxx; // nenhum
+						assign writereg= 1'b0;
+						assign writeov= 1'bx;
+						assign selimregb= 1'bx;
+						assign selalushift= 1'bx;
+						assign aluop= 3'bxxx; //nenhum
+						assign shiftop= 2'bxx; // nenhum
 						assign readmem= 1'b0;
 						assign writemem= 1'b0;
-						assign selbrjumpz= 2'b10;
-						assign selpctype= 2'bxx;
+						assign selbrjumpz= 2'b01;
+						assign selpctype= 2'b10; //index
 						assign compop= 3'bxxx;
 						assign unsig= 1'bx;
 					end
 			6'b000100 : begin // BEQ
 						$display("@%0dns BEQ, op %b",$time,op);
-						assign selwsource= 3'b000;
-						assign selregdest= 2'b01; // RD
-						assign writereg= 1'b1;
-						assign writeov= 1'b1;
-						assign selimregb= 1'b0;
-						assign selalushift= 1'b1;
-						assign aluop= 3'bxxx;
-						assign shiftop= 2'b10; // left lógico
+						assign selwsource= 3'bxxx;
+						assign selregdest= 2'bxx; // nenhum
+						assign writereg= 1'b0;
+						assign writeov= 1'bx;
+						assign selimregb= 1'bx;
+						assign selalushift= 1'bx;
+						assign aluop= 3'bxxx; // nenhum
+						assign shiftop= 2'bxx; // nenhum
 						assign readmem= 1'b0;
 						assign writemem= 1'b0;
 						assign selbrjumpz= 2'b10;
-						assign selpctype= 2'bxx;
-						assign compop= 3'bxxx;
-						assign unsig= 1'bx;
+						assign selpctype= 2'b00; // pc + lm
+						assign compop= 3'b000; // =
+						assign unsig= 1'b0;
 					end
 			6'b000101 : begin // BNE
-						$display("@%0dns BNE, op %b",$time,op);
-						assign selwsource= 3'b000;
-						assign selregdest= 2'b01; // RD
-						assign writereg= 1'b1;
-						assign writeov= 1'b1;
-						assign selimregb= 1'b0;
-						assign selalushift= 1'b1;
-						assign aluop= 3'bxxx;
-						assign shiftop= 2'b10; // left lógico
+						$display("@%0dns BEQ, op %b",$time,op);
+						assign selwsource= 3'bxxx;
+						assign selregdest= 2'bxx; // nenhum
+						assign writereg= 1'b0;
+						assign writeov= 1'bx;
+						assign selimregb= 1'bx;
+						assign selalushift= 1'bx;
+						assign aluop= 3'bxxx; // nenhum
+						assign shiftop= 2'bxx; // nenhum
 						assign readmem= 1'b0;
 						assign writemem= 1'b0;
 						assign selbrjumpz= 2'b10;
-						assign selpctype= 2'bxx;
-						assign compop= 3'bxxx;
-						assign unsig= 1'bx;
+						assign selpctype= 2'b00; // pc + lm
+						assign compop= 3'b101; // !=
+						assign unsig= 1'b0;
 					end
 			6'b000110 : begin // BLEZ
 						$display("@%0dns BLEZ, op %b",$time,op);
-						assign selwsource= 3'b000;
-						assign selregdest= 2'b01; // RD
-						assign writereg= 1'b1;
-						assign writeov= 1'b1;
-						assign selimregb= 1'b0;
-						assign selalushift= 1'b1;
-						assign aluop= 3'bxxx;
-						assign shiftop= 2'b10; // left lógico
+						assign selwsource= 3'bxxx;
+						assign selregdest= 2'bxx; // nenhum
+						assign writereg= 1'b0;
+						assign writeov= 1'bx;
+						assign selimregb= 1'bx;
+						assign selalushift= 1'bx;
+						assign aluop= 3'bxxx; // nenhum
+						assign shiftop= 2'bxx; // nenhum
 						assign readmem= 1'b0;
 						assign writemem= 1'b0;
 						assign selbrjumpz= 2'b10;
-						assign selpctype= 2'bxx;
-						assign compop= 3'bxxx;
-						assign unsig= 1'bx;
+						assign selpctype= 2'b00; // pc + lm
+						assign compop= 3'b010; // <= 0
+						assign unsig= 1'b0;
 					end
 			6'b000111 : begin // BGTZ
 						$display("@%0dns BGTZ, op %b",$time,op);
-						assign selwsource= 3'b000;
-						assign selregdest= 2'b01; // RD
-						assign writereg= 1'b1;
-						assign writeov= 1'b1;
-						assign selimregb= 1'b0;
-						assign selalushift= 1'b1;
-						assign aluop= 3'bxxx;
-						assign shiftop= 2'b10; // left lógico
+						assign selwsource= 3'bxxx;
+						assign selregdest= 2'bxx; // nenhum
+						assign writereg= 1'b0;
+						assign writeov= 1'bx;
+						assign selimregb= 1'bx;
+						assign selalushift= 1'bx;
+						assign aluop= 3'bxxx; // nenhum
+						assign shiftop= 2'bxx; // nenhum
 						assign readmem= 1'b0;
 						assign writemem= 1'b0;
 						assign selbrjumpz= 2'b10;
-						assign selpctype= 2'bxx;
-						assign compop= 3'bxxx;
-						assign unsig= 1'bx;
+						assign selpctype= 2'b00; // pc + lm
+						assign compop= 3'b011; // > 0
+						assign unsig= 1'b0;
 					end
 			6'b001000 : begin // ADDI
 						$display("@%0dns ADDI, op %b",$time,op);
