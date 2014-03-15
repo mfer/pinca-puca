@@ -438,9 +438,9 @@ module Control
 					end
 
 		  default : begin
-						$display("@%0dns default is selected, op %b",$time,op);
-						//não sei o que fazer nesse caso.
-					end
+				$display("@%0dns default is selected, op %b",$time,op);
+				//não sei o que fazer nesse caso.
+				end
 		endcase
 
 endmodule
