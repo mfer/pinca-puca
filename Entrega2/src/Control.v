@@ -37,7 +37,7 @@ module Control
 									assign shiftop= 2'b10; // left lógico
 									assign readmem= 1'b0;
 									assign writemem= 1'b0;
-									assign selbrjumpz= 2'b10;
+									assign selbrjumpz= 2'b00;
 									assign selpctype= 2'bxx;
 									assign compop= 3'bxxx;
 									assign unsig= 1'bx;
@@ -51,10 +51,10 @@ module Control
 									assign selimregb= 1'b0;
 									assign selalushift= 1'b1;
 									assign aluop= 3'bxxx;
-									assign shiftop= 2'b10; // left lógico
+									assign shiftop= 2'b00; // right lógico
 									assign readmem= 1'b0;
 									assign writemem= 1'b0;
-									assign selbrjumpz= 2'b10;
+									assign selbrjumpz= 2'b00;
 									assign selpctype= 2'bxx;
 									assign compop= 3'bxxx;
 									assign unsig= 1'bx;
@@ -68,18 +68,18 @@ module Control
 									assign selimregb= 1'b0;
 									assign selalushift= 1'b1;
 									assign aluop= 3'bxxx;
-									assign shiftop= 2'b10; // left lógico
+									assign shiftop= 2'b01; // right aritm
 									assign readmem= 1'b0;
 									assign writemem= 1'b0;
-									assign selbrjumpz= 2'b10;
+									assign selbrjumpz= 2'b00;
 									assign selpctype= 2'bxx;
 									assign compop= 3'bxxx;
 									assign unsig= 1'bx;
 								end
 						6'b001000 : begin // JR,
 									$display("@%0dns JR, op %b",$time,op);
-									assign selwsource= 3'b000;
-									assign selregdest= 2'b01; // RD
+									assign selwsource= 3'bxxx;
+									assign selregdest= 2'bxx; // Nenhum
 									assign writereg= 1'b1;
 									assign writeov= 1'b1;
 									assign selimregb= 1'b0;
