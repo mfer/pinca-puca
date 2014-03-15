@@ -4,7 +4,7 @@ module Control
 (
 	input[5:0] op,
 	input[5:0] fn,
-	output reg [2:0] selwsource,
+	output reg [2:0] selwsource,   		//não consegui alterar os valores com output sem usar reg
 	output reg [1:0] selregdest,
 	output reg  writereg,
 	output reg  writeov,
@@ -404,55 +404,42 @@ module Control
 					end
 			6'b100011 : begin // LW
 						$display("@%0dns LW, op %b",$time,op);
-						assign selwsource= 3'b000;
-						assign selregdest= 2'b01; // RD
+						assign selwsource= 3'b001;
+						assign selregdest= 2'b00; // RT
 						assign writereg= 1'b1;
 						assign writeov= 1'b1;
-						assign selimregb= 1'b0;
-						assign selalushift= 1'b1;
-						assign aluop= 3'bxxx;
-						assign shiftop= 2'b10; // left lógico
-						assign readmem= 1'b0;
+						assign selimregb= 1'b1;
+						assign selalushift= 1'b0;
+						assign aluop= 3'b010; // soma
+						assign shiftop= 2'bxx; // nenhum
+						assign readmem= 1'b1;
 						assign writemem= 1'b0;
-						assign selbrjumpz= 2'b10;
-						assign selpctype= 2'bxx;
+						assign selbrjumpz= 2'b00;
+						assign selpctype= 2'bxx; // PC
 						assign compop= 3'bxxx;
-						assign unsig= 1'bx;
+						assign unsig= 1'b0;
 					end
 			6'b101011 : begin // SW
 						$display("@%0dns SW, op %b",$time,op);
 						assign selwsource= 3'bxxx;
-						assign selregdest= 2'bxx; // RD
+						assign selregdest= 2'bxx; // nenhum
 						assign writereg= 1'b0;
 						assign writeov= 1'bx;
 						assign selimregb= 1'b1;
 						assign selalushift= 1'b0;
-						assign aluop= 3'b010;
-						assign shiftop= 2'bxx; // left lógico
+						assign aluop= 3'b010; // soma
+						assign shiftop= 2'bxx; // nenhum
 						assign readmem= 1'b0;
 						assign writemem= 1'b1;
 						assign selbrjumpz= 2'b00;
-						assign selpctype= 2'bxx;
+						assign selpctype= 2'bxx; // PC
 						assign compop= 3'bxxx;
 						assign unsig= 1'b0;
 					end
 
 		  default : begin
 						$display("@%0dns default is selected, op %b",$time,op);
-						assign selwsource= 3'b000;
-						assign selregdest= 2'b01; // RD
-						assign writereg= 1'b1;
-						assign writeov= 1'b1;
-						assign selimregb= 1'b0;
-						assign selalushift= 1'b1;
-						assign aluop= 3'bxxx;
-						assign shiftop= 2'b10; // left lógico
-						assign readmem= 1'b0;
-						assign writemem= 1'b0;
-						assign selbrjumpz= 2'b10;
-						assign selpctype= 2'bxx;
-						assign compop= 3'bxxx;
-						assign unsig = 1'bx;
+						//não sei o que fazer nesse caso.
 					end
 		endcase
 
