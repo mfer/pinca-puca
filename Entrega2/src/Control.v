@@ -80,16 +80,16 @@ module Control
 									$display("@%0dns JR, op %b",$time,op);
 									assign selwsource= 3'bxxx;
 									assign selregdest= 2'bxx; // Nenhum
-									assign writereg= 1'b1;
-									assign writeov= 1'b1;
-									assign selimregb= 1'b0;
-									assign selalushift= 1'b1;
+									assign writereg= 1'b0;
+									assign writeov= 1'bx;
+									assign selimregb= 1'bx;
+									assign selalushift= 1'bx;
 									assign aluop= 3'bxxx;
-									assign shiftop= 2'b10; // left lógico
+									assign shiftop= 2'bxx // nenhum
 									assign readmem= 1'b0;
 									assign writemem= 1'b0;
-									assign selbrjumpz= 2'b10;
-									assign selpctype= 2'bxx;
+									assign selbrjumpz= 2'b01;
+									assign selpctype= 2'b01; //RS
 									assign compop= 3'bxxx;
 									assign unsig= 1'bx;
 								end
@@ -100,15 +100,15 @@ module Control
 									assign writereg= 1'b1;
 									assign writeov= 1'b1;
 									assign selimregb= 1'b0;
-									assign selalushift= 1'b1;
-									assign aluop= 3'bxxx;
-									assign shiftop= 2'b10; // left lógico
+									assign selalushift= 1'b0;
+									assign aluop= 3'b010; //Soma
+									assign shiftop= 2'bxx; // nenhum
 									assign readmem= 1'b0;
 									assign writemem= 1'b0;
-									assign selbrjumpz= 2'b10;
-									assign selpctype= 2'bxx;
+									assign selbrjumpz= 2'b00;
+									assign selpctype= 2'bxx; //PC
 									assign compop= 3'bxxx;
-									assign unsig= 1'bx;
+									assign unsig= 1'b0;
 								end
 						6'b100001 : begin // ADDU,
 									$display("@%0dns ADDU, op %b",$time,op);
@@ -117,31 +117,31 @@ module Control
 									assign writereg= 1'b1;
 									assign writeov= 1'b1;
 									assign selimregb= 1'b0;
-									assign selalushift= 1'b1;
-									assign aluop= 3'bxxx;
-									assign shiftop= 2'b10; // left lógico
+									assign selalushift= 1'b0;
+									assign aluop= 3'b010; /soma
+									assign shiftop= 2'bxx; // nenhum
 									assign readmem= 1'b0;
 									assign writemem= 1'b0;
-									assign selbrjumpz= 2'b10;
-									assign selpctype= 2'bxx;
+									assign selbrjumpz= 2'b00;
+									assign selpctype= 2'bxx; //PC
 									assign compop= 3'bxxx;
-									assign unsig= 1'bx;
+									assign unsig= 1'b1;
 								end
 						6'b100010 : begin // SUB,
 									$display("@%0dns SUB, op %b",$time,op);
 									assign selwsource= 3'b000;
 									assign selregdest= 2'b01; // RD
 									assign writereg= 1'b1;
-									assign writeov= 1'b1;
+									assign writeov= 1'b0;
 									assign selimregb= 1'b0;
-									assign selalushift= 1'b1;
-									assign aluop= 3'bxxx;
-									assign shiftop= 2'b10; // left lógico
+									assign selalushift= 1'b0;
+									assign aluop= 3'b110; // subtração
+									assign shiftop= 2'bxx; // nenhum
 									assign readmem= 1'b0;
 									assign writemem= 1'b0;
-									assign selbrjumpz= 2'b10;
-									assign selpctype= 2'bxx;
-									assign compop= 3'bxxx;
+									assign selbrjumpz= 2'b00;
+									assign selpctype= 2'bxx; //PC
+									assign compop= 3'bxxx; // nenhum
 									assign unsig= 1'bx;
 								end
 						6'b100011 : begin // SUBU,
@@ -151,15 +151,15 @@ module Control
 									assign writereg= 1'b1;
 									assign writeov= 1'b1;
 									assign selimregb= 1'b0;
-									assign selalushift= 1'b1;
-									assign aluop= 3'bxxx;
-									assign shiftop= 2'b10; // left lógico
+									assign selalushift= 1'b0;
+									assign aluop= 3'b110; // subtração
+									assign shiftop= 2'bxx; // nenhum
 									assign readmem= 1'b0;
 									assign writemem= 1'b0;
-									assign selbrjumpz= 2'b10;
-									assign selpctype= 2'bxx;
-									assign compop= 3'bxxx;
-									assign unsig= 1'bx;
+									assign selbrjumpz= 2'b00;
+									assign selpctype= 2'bxx; //PC
+									assign compop= 3'bxxx; // nenhum
+									assign unsig= 1'b1;
 								end
 						6'b100100 : begin // AND,
 									$display("@%0dns AND, op %b",$time,op);
@@ -168,14 +168,14 @@ module Control
 									assign writereg= 1'b1;
 									assign writeov= 1'b1;
 									assign selimregb= 1'b0;
-									assign selalushift= 1'b1;
-									assign aluop= 3'bxxx;
-									assign shiftop= 2'b10; // left lógico
+									assign selalushift= 1'b0;
+									assign aluop= 3'b000; // and lógico
+									assign shiftop= 2'bxx; // nenhum
 									assign readmem= 1'b0;
 									assign writemem= 1'b0;
-									assign selbrjumpz= 2'b10;
-									assign selpctype= 2'bxx;
-									assign compop= 3'bxxx;
+									assign selbrjumpz= 2'b00;
+									assign selpctype= 2'bxx; //PC
+									assign compop= 3'bxxx; // nenhum
 									assign unsig= 1'bx;
 								end
 						6'b100101 : begin // OR,
@@ -183,16 +183,16 @@ module Control
 									assign selwsource= 3'b000;
 									assign selregdest= 2'b01; // RD
 									assign writereg= 1'b1;
-									assign writeov= 1'b1;
+									assign writeov= 1'b0;
 									assign selimregb= 1'b0;
-									assign selalushift= 1'b1;
-									assign aluop= 3'bxxx;
-									assign shiftop= 2'b10; // left lógico
+									assign selalushift= 1'b0;
+									assign aluop= 3'b110; // subtração
+									assign shiftop= 2'bxx; // nenhum
 									assign readmem= 1'b0;
 									assign writemem= 1'b0;
-									assign selbrjumpz= 2'b10;
-									assign selpctype= 2'bxx;
-									assign compop= 3'bxxx;
+									assign selbrjumpz= 2'b00;
+									assign selpctype= 2'bxx; //PC
+									assign compop= 3'bxxx; // nenhum
 									assign unsig= 1'bx;
 								end
 						6'b100110 : begin // XOR,
@@ -200,16 +200,16 @@ module Control
 									assign selwsource= 3'b000;
 									assign selregdest= 2'b01; // RD
 									assign writereg= 1'b1;
-									assign writeov= 1'b1;
+									assign writeov= 1'b0;
 									assign selimregb= 1'b0;
-									assign selalushift= 1'b1;
-									assign aluop= 3'bxxx;
-									assign shiftop= 2'b10; // left lógico
+									assign selalushift= 1'b0;
+									assign aluop= 3'b110; // subtração
+									assign shiftop= 2'bxx; // nenhum
 									assign readmem= 1'b0;
 									assign writemem= 1'b0;
-									assign selbrjumpz= 2'b10;
-									assign selpctype= 2'bxx;
-									assign compop= 3'bxxx;
+									assign selbrjumpz= 2'b00;
+									assign selpctype= 2'bxx; //PC
+									assign compop= 3'bxxx; // nenhum
 									assign unsig= 1'bx;
 								end
 						6'b100111 : begin // NOR
@@ -217,16 +217,16 @@ module Control
 									assign selwsource= 3'b000;
 									assign selregdest= 2'b01; // RD
 									assign writereg= 1'b1;
-									assign writeov= 1'b1;
+									assign writeov= 1'b0;
 									assign selimregb= 1'b0;
-									assign selalushift= 1'b1;
-									assign aluop= 3'bxxx;
-									assign shiftop= 2'b10; // left lógico
+									assign selalushift= 1'b0;
+									assign aluop= 3'b110; // subtração
+									assign shiftop= 2'bxx; // nenhum
 									assign readmem= 1'b0;
 									assign writemem= 1'b0;
-									assign selbrjumpz= 2'b10;
-									assign selpctype= 2'bxx;
-									assign compop= 3'bxxx;
+									assign selbrjumpz= 2'b00;
+									assign selpctype= 2'bxx; //PC
+									assign compop= 3'bxxx; // nenhum
 									assign unsig= 1'bx;
 								end
 					endcase
