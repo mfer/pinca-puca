@@ -4,7 +4,7 @@ module Control
 (
 	input[5:0] op,
 	input[5:0] fn,
-	output reg [2:0] selwsource,   		//não consegui alterar os valores com output sem usar reg
+	output reg [2:0] selwsource,
 	output reg [1:0] selregdest,
 	output reg  writereg,
 	output reg  writeov,
@@ -439,7 +439,8 @@ module Control
 
 		  default : begin
 				$display("@%0dns default is selected, op %b",$time,op);
-				//não sei o que fazer nesse caso.
+				//não fazer nada torna esse cara um latch
+				//e atribuir o valor de antes um fio....
 				end
 		endcase
 
