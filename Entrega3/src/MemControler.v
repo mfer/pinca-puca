@@ -4,7 +4,7 @@ module MemControler(clock, reset, if_mc_en, if_mc_addr, mc_if_data, mem_mc_rw, m
 	input reset; // coloca todos os regs em 0 na descida
 	
 	// Fetch
-	input if_mc_en;
+	input if_mc_en; //
 	input [17:0] if_mc_addr;
 	output [31:0] mc_if_data;
 	
@@ -32,7 +32,10 @@ assign mc_ram_wre = ((!mem_mc_en & if_mc_en) | (!mem_mc_rw));
 
 
 
-always @(posedge clock && reset)begin
+always @(posedge clock or negedge reset)begin
+	if (reset == 1'b0){
+		//coloca todos os regs em 0 na descida
+	} 
 	menos_significativo <= 1'b0;
 	mais_significativo <= 1'b0;
 end
