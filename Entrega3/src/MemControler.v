@@ -39,7 +39,12 @@ assign mc_ram_wre = ((!mem_mc_en & if_mc_en) | (!mem_mc_rw));
 always @(posedge clock or negedge reset)begin
 	if (reset == 1'b0){
 		//coloca todos os regs em 0 na descida
-	} 
+	}
+
+	if (mc_ram_wre == 0'b0){
+		//indica que a operação na RAM será de escrita
+	}  
+
 	menos_significativo <= 1'b0;
 	mais_significativo <= 1'b0;
 end
