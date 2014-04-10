@@ -27,26 +27,71 @@ module MemControler(clock, reset, if_mc_en, if_mc_addr, mc_if_data, mem_mc_rw, m
 	inout [15:0] mc_ram_data; //metade do dado a ser lido/enviado na RAM.
 	
 	// Auxilares
-	reg menos_significativo;
-	reg mais_significativo;
-	
-	Ram dut(mc_ram_addr, mc_ram_data, mc_ram_wre, mem_mc_en,mais_significativo, menos_significativo, if_mc_en);
-	
-assign mc_ram_wre = ((!mem_mc_en & if_mc_en) | (!mem_mc_rw));
+	reg zero = 0;
+	reg [17:0] ram_addr;
+	reg [15:0] data1;
+	reg [31:0] data2;
+	reg [31:0] data3;
+	integer cont;
 
+	Ram dut(mc_ram_addr, mc_ram_data, mc_ram_wre, ~mc_ram_wre, zero, zero, zero);
 
+assign mc_ram_wre = ((!mem_mc_en & if_mc_en) | (!mem_mc_rw));	
 
-always @(posedge clock or negedge reset)begin
-	if (reset == 1'b0){
-		//coloca todos os regs em 0 na descida
-	}
+assign mc_ram_addr = ram_addr;
 
-	if (mc_ram_wre == 0'b0){
-		//indica que a operação na RAM será de escrita
-	}  
+assign mc_ram_data = data1;
 
-	menos_significativo <= 1'b0;
-	mais_significativo <= 1'b0;
+assign mem_mc_data = data2;
+
+assign mc_if_data = data3;
+
+// Reset assíncrono
+always @(posedge clock or negedge reset )begin
+	if(~reset) begin
+		for( cont = 0; cont < 17; cont = cont +1) begin
+			ram_addr[cont] = 18'b0;
+		end
+		for(cont =0; cont < 15; cont = cont+1) begin
+			data1[cont] = 16'b0;
+		end
+		for(cont =0; cont < 31; cont = cont+1) begin
+			data2[cont] = 32'b0;
+			data3[cont] = 32'b0;
+		end
+	end
+	else begin
+		// Se for uma operação de leitura.
+		if(mc_ram_wre) begin
+			// Quem vai ler é o estágio de leitura.
+			if(mem_mc_en) begin
+				// Convertendo para ser lido pela FPGA.
+				ram_addr <= (mem_mc_addr >>1);
+				data2[31:16] <= data1;
+				ram_addr<= ram_addr +1;
+				
+				//Como dar um clock entre essas instruções????
+				data2[15:0]<= data1;
+				
+			end
+			// Quem vai ler é o estágio de fetch.
+			else begin
+				ram_addr <= (if_mc_addr >> 1);
+				data3[31:16] <= data1;
+				ram_addr<= ram_addr +1;
+				//Como dar um clock entre essas instruções????
+				data3[15:0] <= data1
+				
+			end
+		end
+		else begin
+			ram_addr <= (mem_mc_addr >> 1);
+			data1 <= data2[31:16];
+			ram_addr<= ram_addr +1;
+			//Como dar um clock entre essas instruções????
+			data1 <= data2[15:0];
+		end
+	end
 end
 
 endmodule
