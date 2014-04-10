@@ -32,6 +32,7 @@ module MemControler(clock, reset, if_mc_en, if_mc_addr, mc_if_data, mem_mc_rw, m
 	reg [15:0] data1;
 	reg [31:0] data2;
 	reg [31:0] data3;
+	reg conta_clock=1;
 	integer cont;
 
 	Ram dut(mc_ram_addr, mc_ram_data, mc_ram_wre, ~mc_ram_wre, zero, zero, zero);
@@ -65,31 +66,46 @@ always @(posedge clock or negedge reset )begin
 		if(mc_ram_wre) begin
 			// Quem vai ler é o estágio de leitura.
 			if(mem_mc_en) begin
-				// Convertendo para ser lido pela FPGA.
-				ram_addr <= (mem_mc_addr >>1);
-				data2[31:16] <= data1;
-				ram_addr<= ram_addr +1;
-				
-				//Como dar um clock entre essas instruções????
-				data2[15:0]<= data1;
-				
+				if(conta_clock) begin
+					// Convertendo para ser lido pela FPGA.
+					ram_addr <= (mem_mc_addr >>1);
+					data2[31:16] <= data1;
+					ram_addr<= ram_addr +1;
+					conta_clock <= ~conta_clock;
+				end
+				else begin
+					// Dando um clock entre as instruções.
+					data2[15:0]<= data1;
+					conta_clock <= ~conta_clock;
+				end
 			end
 			// Quem vai ler é o estágio de fetch.
 			else begin
-				ram_addr <= (if_mc_addr >> 1);
-				data3[31:16] <= data1;
-				ram_addr<= ram_addr +1;
-				//Como dar um clock entre essas instruções????
-				data3[15:0] <= data1
-				
+				if(conta_clock) begin
+					ram_addr <= (if_mc_addr >> 1);
+					data3[31:16] <= data1;
+					ram_addr<= ram_addr +1;
+					conta_clock <= ~conta_clock;
+				end
+				else begin
+					// Dando um clock entre as instruções.
+					data3[15:0] <= data1;
+					conta_clock <= ~conta_clock;
+				end
 			end
 		end
 		else begin
-			ram_addr <= (mem_mc_addr >> 1);
-			data1 <= data2[31:16];
-			ram_addr<= ram_addr +1;
-			//Como dar um clock entre essas instruções????
-			data1 <= data2[15:0];
+			if(conta_clock) begin
+				ram_addr <= (mem_mc_addr >> 1);
+				data1 <= data2[31:16];
+				ram_addr<= ram_addr +1;
+				conta_clock <= ~conta_clock;
+			end
+			else begin
+				// Dando um clock entre as instruções.
+				data1 <= data2[15:0];
+				conta_clock <= ~conta_clock;
+			end
 		end
 	end
 end
