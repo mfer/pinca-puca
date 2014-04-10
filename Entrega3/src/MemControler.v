@@ -21,7 +21,7 @@ module MemControler(clock, reset, if_mc_en, if_mc_addr, mc_if_data, mem_mc_rw, m
 	// Ram
 	output [17:0] mc_ram_addr; //endereço da ram no qual o acesso será feito. (ver detalhe sobre addr/2)
 	output mc_ram_wre;//quando em 0 indica que a operação na RAM será de escrita
-			//operação só é de escrita quando: ((!mem_mc_en & if_mc_en) | !mem_mc_rw)
+			//operação só é de leitura quando: ((!mem_mc_en & if_mc_en) | !mem_mc_rw)
 	
 	
 	inout [15:0] mc_ram_data; //metade do dado a ser lido/enviado na RAM.
