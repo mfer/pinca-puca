@@ -1,5 +1,3 @@
-`include "Fetch.v"
-
 module Fetch_tb();
 
 	reg 		clock;

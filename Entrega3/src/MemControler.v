@@ -1,5 +1,3 @@
-`include "Ram.v"
-//busca de instruções --> BuscInstr
 module MemControler(clock, reset, if_mc_en, if_mc_addr, mc_if_data, mem_mc_rw, mem_mc_en, mem_mc_addr, mem_mc_data, mc_ram_addr, mc_ram_wre, mc_ram_data);
 	input clock; //acesso a ram na subida
 	input reset; // coloca todos os regs em 0 na descida
@@ -34,8 +32,6 @@ module MemControler(clock, reset, if_mc_en, if_mc_addr, mc_if_data, mem_mc_rw, m
 	reg [31:0] data3;
 	reg conta_clock=1;
 	integer cont;
-
-	Ram dut(mc_ram_addr, mc_ram_data, mc_ram_wre, ~mc_ram_wre, zero, zero, zero);
 
 assign mc_ram_wre = ((!mem_mc_en & if_mc_en) | (!mem_mc_rw));	
 
