@@ -1,77 +1,62 @@
 /* sudolshw@gmail.com */
 
 module MemControler_tb();
+    reg clock, reset, if_mc_en; //input -> reg
+    reg [17:0] if_mc_addr;
+    wire [31:0] mc_if_data; //output -> wire
+    reg mem_mc_rw, mem_mc_en;
+    reg [17:0] mem_mc_addr;
+    inout [31:0] mem_mc_data; //inout -> ?
+    wire [17:0] mc_ram_addr;
+    wire mc_ram_wre;
+    inout [15:0] mc_ram_data;
 
-	Ram dut(mc_ram_addr, mc_ram_data, mc_ram_wre, ~mc_ram_wre, zero, zero, zero);
-
-	parameter finishtime=5;
-	integer INB,INA, fromA, fromB, quantA, quantB, stepA, stepB;
-	reg expected000,expected001,expected010,expected011,expected100,expected101,expectedDEF;
-	reg [31:0] inA,inB;
-	parameter op000 = 3'b000; //a==b
-
-	wire mcout000;
-
-	MemControler mc(clock, reset, if_mc_en, if_mc_addr, mc_if_data, mem_mc_rw, mem_mc_en, mem_mc_addr, mem_mc_data, mc_ram_addr, mc_ram_wre, mc_ram_data);
+	parameter begin_time = 0;
+	parameter clock_time = 10;
+	parameter write_time_case1 = 100; //!mem_mc_en & if_mc_en
+	parameter write_time_case2 = 200; //!mem_mc_rw
+	parameter finishtime = 600;//reset 5 ciclos
 
 	initial begin
-//		$monitor ("tempo = %d", $time);
-	    if (! $value$plusargs("fromA=%d", fromA)) begin
-	        $display("Informe +fromA=<valor>");
-	        $finish;
-	    end
-	    if (! $value$plusargs("fromB=%d", fromB)) begin
-	        $display("Informe +fromB=<valor>");
-	        $finish;
-	    end
-	    if (! $value$plusargs("quantA=%d", quantA)) begin
-	        $display("Informe +quantA=<valor>");
-	        $finish;
-	    end
-	    if (! $value$plusargs("quantB=%d", quantB)) begin
-	        $display("Informe +quantB=<valor>");
-	        $finish;
-	    end
-	    if (! $value$plusargs("stepA=%d", stepA)) begin
-	        $display("Informe +stepA=<valor>");
-	        $finish;
-	    end
-	    if (! $value$plusargs("stepB=%d", stepB)) begin
-	        $display("Informe +stepB=<valor>");
-	        $finish;
-	    end
-
-		inA=fromA;
-		inB=fromB;
-		expected000=inA==inB;
-
-	end
-	initial begin
-//		$dumpfile("vcd/Comparator.vcd");
-//		$dumpvars;
-		$display ("fromA= %d, fromB= %d",fromA, fromB);
-		$display ("quantA= %d, quantB= %d",quantA, quantB);
-		$display ("stepA= %d, stepB= %d",stepA, stepB);
-
-		for(INA=1; INA<=quantA; INA=INA+1)begin
-			#(`DELAY/5)
-//			$display ("inA= %d, inB= %d",inA, inB);
-			for(INB=1; INB<=quantB; INB=INB+1)begin
-				#(`DELAY/5)
-
-				expected000 = inA == inB;
-				//$display ("compout000= %b, expected= %b",compout000,expected000);
-				if (mcout000 != expected000) $display ("FAIL000: %b != %b",compout000,expected000);
-
-				#`DELAY inB = inB + stepB;
-			end
-			#`DELAY inA = inA + stepA;
+		$dumpfile ("MemControler.vcd");
+		$dumpvars;
+		clock <= 1'b1;
+		reset <= 1'b0; 
+		forever begin
+			#clock_time clock = ~clock;
 		end
-
-		$display ("toA= %d, toB= %d",inA, inB);
-		#finishtime
-		$display ("Tempo Total - %d",$time);
-		$finish;
 	end
+
+	initial
+		#finishtime $finish;
+
+    always @(posedge clock or negedge reset )begin
+        $display ("----------------------------------------------------------------");
+		case ($time) 
+			begin_time: reset <= 0'b0;
+			write_time_case1: begin //!mem_mc_en & if_mc_en
+                $display ("write_time_case1");
+                mem_mc_en <= 0'b0;
+                if_mc_en <= 1'b0;
+            end
+            write_time_case2: begin //!mem_mc_rw
+                $display ("write_time_case2");
+                mem_mc_rw <= 0'b0;
+            end
+			1: begin
+				reset <= 1'b1;
+		    end
+		endcase		
+		$display ("Time = %d Reset = %d mc_if_data = %d",  $time, reset, mc_if_data);
+		$display ("if_mc_en = %d if_mc_addr = %d", if_mc_en, if_mc_addr); 
+		$display ("mem_mc_rw = %d mem_mc_en = %d",mem_mc_rw, mem_mc_en);
+		$display ("mem_mc_addr = %d mem_mc_data = %d",mem_mc_addr, mem_mc_data);
+		$display ("mc_ram_addr = %d mc_ram_wre = %d mc_ram_data = %d", mc_ram_addr, mc_ram_wre, mc_ram_data);
+	end
+
+	MemControler dut (.clock(clock), .reset(reset), 
+            .if_mc_en(if_mc_en), .if_mc_addr(if_mc_addr), .mc_if_data(mc_if_data), 
+            .mem_mc_rw(mem_mc_rw), .mem_mc_en(mem_mc_en), .mem_mc_addr(mem_mc_addr), .mem_mc_data(mem_mc_data), 
+            .mc_ram_addr(mc_ram_addr), .mc_ram_wre(mc_ram_wre), .mc_ram_data(mc_ram_data));
 
 endmodule

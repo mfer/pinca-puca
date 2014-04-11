@@ -17,6 +17,9 @@ MemControler: init
 
 tb_MemControler: init
 	iverilog src/MemControler.v tb/MemControler_tb.v tb/Ram.v -o bin/MemControler_tb
+
+tb_MemControler_run: tb_MemControler
+	./bin/MemControler_tb
 	
 #--------------------------------------------------------------------------------#
 clean:

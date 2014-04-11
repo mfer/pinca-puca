@@ -58,9 +58,9 @@ always @(posedge clock or negedge reset )begin
 		end
 	end
 	else begin
-		// Se for uma operação de leitura.
+		// Se for uma operação de escrita.
 		if(mc_ram_wre) begin
-			// Quem vai ler é o estágio de leitura.
+			// Quem vai ler é o estágio de escrita.
 			if(mem_mc_en) begin
 				if(conta_clock) begin
 					// Convertendo para ser lido pela FPGA.
