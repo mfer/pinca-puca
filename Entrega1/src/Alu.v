@@ -12,75 +12,71 @@ module Alu (
 	reg overflow;
 	reg [31:0] aluout;
 
-	always @(op or a or b)
+	always @(op or a or b or unsig)
 	begin
 		case (op)
-			3'b000	: assign aluout = a&b;
-			3'b001	: assign aluout = a|b;
+			3'b000	: aluout <= a&b;
+			3'b001	: aluout <= a|b;
 			3'b010	: begin
-						assign aluout = ($signed(a)+$signed(b));
+						aluout <= ($signed(a)+$signed(b));
 						if (($signed(a)>=0)&&($signed(b)>=0)&&($signed(aluout)<0))
 						begin
-							assign overflow = 1;
+							overflow <= 1;
 						end						
 						else
 						begin
 							if (($signed(a)<0)&&($signed(b)<0)&&($signed(aluout)>=0))
 							begin							
-								assign overflow = 1;
+								overflow <= 1;
 							end
 							else
 							begin
-								assign overflow = 0;
+								overflow <= 0;
 							end
 						end
 					end
-			3'b100	: assign aluout = ~(a|b);
-			3'b101	: assign aluout = a^b;
+			3'b100	: aluout <= ~(a|b);
+			3'b101	: aluout <= a^b;
 			3'b110	: begin
-						assign aluout = ($signed(a)-$signed(b));
+						aluout <= ($signed(a)-$signed(b));
 						if (($signed(a)>=0)&&($signed(b)<0)&&($signed($signed(a)+$signed(b))<0))
 						begin
-							assign overflow = 1;
+							overflow <= 1;
 						end						
 						else
 						begin
 							if (($signed(a)<0)&&($signed(b)>=0)&&($signed($signed(a)+$signed(b))>=0))
 							begin							
-								assign overflow = 1;
+								overflow <= 1;
 							end
 							else
 							begin
-								assign overflow = 0;
+								overflow <= 0;
 							end
 						end
 					end
-			default	: assign aluout = aluout; //tratar exceção 
+			default	: aluout <= aluout; //tratar exceção 
 		endcase
-	end
-	
-	always @(a or b or unsig)
-	begin
 		if (unsig == 0)
 		begin
 			if (a<b)
 			begin
-				compout = 1;
+				compout <= 1;
 			end
 			else
 			begin
-				compout = 0;
+				compout <= 0;
 			end
 		end
 		if (unsig == 1)
 		begin
 			if ($signed(a)<$signed(b))
 			begin
-				compout = 1;
+				compout <= 1;
 			end
 			else
 			begin
-				compout = 0;
+				compout <= 0;
 			end
 		end
 	end

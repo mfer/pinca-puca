@@ -6,7 +6,9 @@ init:
 
 Alu:
 	iverilog src/Alu.v tb/tb_Alu.v -o bin/tb_Alu
-	
+
+tb_Alu: init
+	iverilog src/Alu.v tb/globals.vh tb/tb_Alu.v -o bin/tb_Alu	
 #--------------------------------------------------------------------------------#
 	
 Shifter: init
