@@ -4,22 +4,22 @@ init:
 
 #--------------------------------------------------------------------------------#
 
-Fetch: init
-	iverilog src/Fetch.v -o bin/Fetch
+Execute: init
+	iverilog src/Execute.v -o bin/Execute ../Entrega1/src/Alu.v
 
-tb_Fetch: init
-	iverilog src/Fetch.v tb/Fetch_tb.v -o bin/Fetch_tb
+tb_Execute: init
+	iverilog src/Execute.v tb/Execute_tb.v -o bin/Execute_tb
 	
 #--------------------------------------------------------------------------------#
 
-MemControler: init
-	iverilog src/MemControler.v -o bin/MemControler
+Decode: init
+	iverilog src/Decode.v -o bin/Decode
 
-tb_MemControler: init
-	iverilog src/MemControler.v tb/MemControler_tb.v tb/Ram.v -o bin/MemControler_tb
+tb_Decode: init
+	iverilog src/Decode.v tb/Decode_tb.v tb/Ram.v -o bin/Decode_tb
 
-tb_MemControler_run: tb_MemControler
-	./bin/MemControler_tb
+tb_Decode_run: tb_Decode
+	./bin/Decode_tb
 	
 #--------------------------------------------------------------------------------#
 clean:
