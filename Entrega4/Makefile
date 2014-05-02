@@ -5,7 +5,7 @@ init:
 #--------------------------------------------------------------------------------#
 
 Execute: init
-	iverilog src/Execute.v -o bin/Execute ../Entrega1/src/Alu.v
+	iverilog src/Execute.v -o bin/Execute ../Entrega1/src/Alu.v ../Entrega1/src/Shifter.v
 
 tb_Execute: init
 	iverilog src/Execute.v tb/Execute_tb.v -o bin/Execute_tb
