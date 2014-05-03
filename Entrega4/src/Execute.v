@@ -5,8 +5,7 @@
 *   do estágio de decodificação os operandos e a operação 
 *   a ser realizada. O resultado é passado para o estágio de memória
 *   Depende da Alu e do Shifter.
-*       Tenho feito o include na compilação, nesse caso:
-*         iverilog src/Execute.v -o bin/Execute ../Entrega1/src/Alu.v ../Entrega1/src/Shifter.v
+*      iverilog src/Execute.v -o bin/Execute ../Entrega1/src/Alu.v ../Entrega1/src/Shifter.v
 */
 
 module Execute (    clock,     reset,   id_ex_selalushift,  id_ex_selimregb, 
@@ -75,81 +74,54 @@ module Execute (    clock,     reset,   id_ex_selalushift,  id_ex_selimregb,
     output reg  [31:0]  ex_mem_wbvalue;
 
     /****Alu****/
-    //input   [31:0]      a;
     reg     [31:0]      b;
-    output  [31:0]      aluout;
-    //input   [2:0]       op;
-    //input           unsig;
-    output          compout; //esse sinal é irrelevante nesse trabalho
-    //output          overflow;
+    wire  [31:0]      aluout;
+    wire          compout; //esse sinal é irrelevante nesse trabalho
+    wire          aluov;
 
     /****Shifter****/
-    //input [31:0] in;
-    //input [1:0] shiftop;
-    //input [4:0] shiftamt;
     output [31:0] result;
 
-    assign ex_mem_writereg = ((!overflow | id_ex_writeov) & id_ex_writereg);
 
     always @(posedge clock or negedge reset )begin
         if (~reset) begin
             //zerar todos os registradores na descida
-            b <= 31'b00000000000000000000000000000000;
+            ex_if_stall <= 1'b0;
+            ex_mem_readmem <= 1'b0;
+            ex_mem_regb <='b0;
+            ex_mem_selwsource <= 1'b0;
+            ex_mem_regdest <= 5'b00000;
+            ex_mem_writereg <= 1'b0;
+            ex_mem_wbvalue <= 1'b0;
         end
         else begin
-            if (clock) begin
-                //operações de busca na subida
+            if(id_ex_readmem || id_ex_writemem)begin 
+                // se ocorrer escrita na memória devemos realizar um stall;
+                ex_if_stall <= 1'b1;                
+            end            
+            else begin                
+                ex_if_stall <= 1'b0;
             end
-
-            if (id_ex_readmem) begin
-                //operações de leitura na memoria
-            end
-
-            if (id_ex_writemem) begin
-                //operações de escrita na memoria
-            end
-
-            //seleciona o sinal para a entrada b da Alu
-            if (id_ex_selimregb) begin
-                b <= id_ex_imedext;
-            end
-            else begin
-                b <= id_ex_regb; 
-            end
-
-            //decidindo entre Alu ou Shifter
-            if (~id_ex_selalushift) begin
-                //resultado da Alu 
-                id_mem_wbvalue <= aluout;
-            end
-            else begin
-                //resultado do Shifter
-                id_mem_wbvalue <= result;
-            end
-
-            //repassando valores para o estágio de memória
-            ex_mem_selwsource <= id_ex_selwsource;
-            ex_mem_regdest <= id_ex_regdest;
+            //assinalando os valores de acordo com a tabela passada
             ex_mem_readmem <= id_ex_readmem;
             ex_mem_writemem <= id_ex_writemem;
             ex_mem_regb <= id_ex_regb;
-
-            //indicando que um stall deve ser inserido
-            if (id_ex_readmem | id_ex_writemem)begin
-                ex_if_stall <= 1'b1;
-            end
-
-
-            if (id_ex_writereg) begin
-                //indica escrita no banco de registradores
-            end
-
-            if (id_ex_writeov) begin
-                //indica escrita no banco de registradores  mesmo com overflow na Alu
-            end
+            ex_mem_selwsource <= id_ex_selwsource;
+            ex_mem_regdest <= id_ex_regdest;
+            ex_mem_writereg <= ((!aluov | id_ex_writeov) & id_ex_writereg);
+            
+            case (id_ex_selalushift)            
+                1'b1: ex_mem_wbvalue <=result;
+                default: ex_mem_wbvalue <= aluout;
+            endcase
+            // definindo o que colocaremos na porta b da alu.
+            case (id_ex_selimregb)
+                1'b1: b <= id_ex_imedext;
+                default: b <= id_ex_regb;            
+            endcase
         end
     end
 
-    Alu ALU (.a(id_ex_rega), .b(b), .aluout(aluout), .op(id_ex_aluop), .unsig(id_ex_unsig), .compout(compout), .overflow(overflow));
+    Alu ALU (.a(id_ex_rega), .b(b), .aluout(aluout), .op(id_ex_aluop), .unsig(id_ex_unsig), .compout(compout), .overflow(aluov));
     Shifter SHIFTER(.in(id_ex_regb), .shiftop(id_ex_shiftop), .shiftamt(id_ex_shiftamt), .result(result));
 endmodule
