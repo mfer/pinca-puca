@@ -1,5 +1,5 @@
-`include "Alu.v"
-`include "OutConverter.v"
+//made by douglas
+// depende de Entrega1/src/Alu.v e OutConverter.v
 
 module Top(SW,KEY, LEDR, HEXO, HEX1, HEX2, HEX3, HEX4, HEX5, HEX6, HEX7);
 

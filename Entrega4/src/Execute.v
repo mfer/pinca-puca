@@ -59,20 +59,20 @@ module Execute (    clock,     reset,   id_ex_selalushift,  id_ex_selimregb,
     /****Fetch****/
     //indica que um stall deve ser inserido, setar em  1..
     //..se id_ex_readmem==1 ou id_ex_writemem==1
-    output reg          id_if_stall;
+    output reg          ex_if_stall;
 
     /****Memory****/
     //recebem o id_ex_<correspondente>
-    output reg          id_mem_readmem;
-    output reg          id_mem_writemem;
-    output reg  [31:0]  id_mem_regb;
-    output reg          id_mem_selwsource;
-    output reg  [4:0]   id_mem_regdest;
+    output reg          ex_mem_readmem;
+    output reg          ex_mem_writemem;
+    output reg  [31:0]  ex_mem_regb;
+    output reg          ex_mem_selwsource;
+    output reg  [4:0]   ex_mem_regdest;
     //recebe (!aluov | id_ex_writeov) & id_ex_writereg
-    output reg          id_mem_writereg;
+    output reg          ex_mem_writereg;
     //recebe a saida do shifter caso id_ex_selalushift==1
     //senão recebe a saída da Alu
-    output reg  [31:0]  id_mem_wbvalue;
+    output reg  [31:0]  ex_mem_wbvalue;
 
     /****Alu****/
     //input   [31:0]      a;
@@ -89,11 +89,12 @@ module Execute (    clock,     reset,   id_ex_selalushift,  id_ex_selimregb,
     //input [4:0] shiftamt;
     output [31:0] result;
 
-    assign id_mem_writereg = ((!overflow | id_ex_writeov) & id_ex_writereg);
+    assign ex_mem_writereg = ((!overflow | id_ex_writeov) & id_ex_writereg);
 
     always @(posedge clock or negedge reset )begin
         if (~reset) begin
             //zerar todos os registradores na descida
+            b <= 31'b00000000000000000000000000000000;
         end
         else begin
             if (clock) begin
@@ -108,7 +109,6 @@ module Execute (    clock,     reset,   id_ex_selalushift,  id_ex_selimregb,
                 //operações de escrita na memoria
             end
 
-
             //seleciona o sinal para a entrada b da Alu
             if (id_ex_selimregb) begin
                 b <= id_ex_imedext;
@@ -116,23 +116,29 @@ module Execute (    clock,     reset,   id_ex_selalushift,  id_ex_selimregb,
             else begin
                 b <= id_ex_regb; 
             end
-        end
 
-        if (~id_ex_selalushift) begin
-            //resultado da Alu 
-            id_mem_wbvalue <= aluout;
-        end
-        else begin
-            //resultado do Shifter
-            id_mem_wbvalue <= result;
-        end
 
-        //repassadno valores para o estágio de memória
-        id_mem_selwsource <= id_ex_selwsource;
-        id_mem_regdest <= id_ex_regdest;
-        id_mem_readmem <= id_ex_readmem;
-        id_mem_writemem <= id_ex_writemem;
-        id_mem_regb <= id_ex_regb;
+            if (~id_ex_selalushift) begin
+                //resultado da Alu 
+                id_mem_wbvalue <= aluout;
+            end
+            else begin
+                //resultado do Shifter
+                id_mem_wbvalue <= result;
+            end
+
+            //repassadno valores para o estágio de memória
+            ex_mem_selwsource <= id_ex_selwsource;
+            ex_mem_regdest <= id_ex_regdest;
+            ex_mem_readmem <= id_ex_readmem;
+            ex_mem_writemem <= id_ex_writemem;
+            ex_mem_regb <= id_ex_regb;
+
+            //indicando que um stall deve ser inserido
+            if (id_ex_readmem | id_ex_writemem)begin
+                ex_if_stall <= 1'b1;
+            end            
+        end
     end
 
     Alu ALU (.a(id_ex_rega), .b(b), .aluout(aluout), .op(id_ex_aluop), .unsig(id_ex_unsig), .compout(compout), .overflow(overflow));
