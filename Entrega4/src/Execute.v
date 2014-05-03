@@ -127,7 +127,7 @@ module Execute (    clock,     reset,   id_ex_selalushift,  id_ex_selimregb,
             id_mem_wbvalue <= result;
         end
 
-        //repassadno valores para o estágio de memória        
+        //repassadno valores para o estágio de memória
         id_mem_selwsource <= id_ex_selwsource;
         id_mem_regdest <= id_ex_regdest;
         id_mem_readmem <= id_ex_readmem;
