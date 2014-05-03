@@ -117,7 +117,7 @@ module Execute (    clock,     reset,   id_ex_selalushift,  id_ex_selimregb,
                 b <= id_ex_regb; 
             end
 
-
+            //decidindo entre Alu ou Shifter
             if (~id_ex_selalushift) begin
                 //resultado da Alu 
                 id_mem_wbvalue <= aluout;
@@ -127,7 +127,7 @@ module Execute (    clock,     reset,   id_ex_selalushift,  id_ex_selimregb,
                 id_mem_wbvalue <= result;
             end
 
-            //repassadno valores para o estágio de memória
+            //repassando valores para o estágio de memória
             ex_mem_selwsource <= id_ex_selwsource;
             ex_mem_regdest <= id_ex_regdest;
             ex_mem_readmem <= id_ex_readmem;
@@ -137,7 +137,16 @@ module Execute (    clock,     reset,   id_ex_selalushift,  id_ex_selimregb,
             //indicando que um stall deve ser inserido
             if (id_ex_readmem | id_ex_writemem)begin
                 ex_if_stall <= 1'b1;
-            end            
+            end
+
+
+            if (id_ex_writereg) begin
+                //indica escrita no banco de registradores
+            end
+
+            if (id_ex_writeov) begin
+                //indica escrita no banco de registradores  mesmo com overflow na Alu
+            end
         end
     end
 
