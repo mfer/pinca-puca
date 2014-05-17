@@ -84,10 +84,10 @@ module Mips (
     integer contador1 = 0;
 
     always@(posedge clock)begin
-		contador <= contador + 1;
-		if( contador == 2)begin
+		contador0 <= contador0 + 1;
+		if( contador0 == 2)begin
 			clock_div = ~clock_div;
-			contador = 0;
+			contador0 = 0;
 		end
     end
 

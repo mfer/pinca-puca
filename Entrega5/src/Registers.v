@@ -1,4 +1,4 @@
-module Registers(clock, reset, addra, dataa, addrb, datab, enc, addrc, datac);
+module Registers(clock, reset, addra, dataa, ass_dataa, addrb, datab, ass_datab, enc, addrc, datac);
 
 //-------------------------------------inputs----------------------
 	input		clock;
@@ -8,17 +8,20 @@ module Registers(clock, reset, addra, dataa, addrb, datab, enc, addrc, datac);
 	input 		enc;
 	input	[4:0]	addrc;
 	input	[31:0]	datac;
-	
+
 //-----------------------------------outputs-----------------------
 
 	output  [31:0]	dataa;
 	output  [31:0]	datab;
-	output 	[31:0]  ass_dataa;	// entrega 5
-	output	[31:0]	ass_datab;	// entrega 5
+	output  [31:0]	ass_dataa;
+	output  [31:0]	ass_datab;
+
 //---------------------------------registers-----------------------
 
 	reg  	[31:0]	dataa;
+	reg  	[31:0]	ass_dataa; // entrega 5
 	reg  	[31:0]	datab;
+	reg  	[31:0]	ass_datab; // entrega 5
 	reg	[31:0]	registers [31:0];
 
 //------------------------------auxiliares-------------------------
@@ -28,13 +31,11 @@ module Registers(clock, reset, addra, dataa, addrb, datab, enc, addrc, datac);
 //-----------------------REGISTERS BANKS---------------------------
 
 
-	
+
 always @(posedge clock) begin
 
 	dataa <= registers[addra];
 	datab <= registers[addrb];
-	
-		
 
 end
 
@@ -49,27 +50,27 @@ always @(posedge clock )begin
 end
 
 // entrega 5
-always @(addra) begin 
-	
+always @(addra) begin
+
 	registers [ass_dataa] <= registers [dataa];
-	
+
 end
 
 // entrega 5
 always @(addrb) begin
 
 	registers [ass_datab] <= registers [datab];
-	
+
 end
 
 genvar counter;
 generate
 
- 
+
 	for (counter = 0; counter < number_of_registers ; counter = counter + 1)begin: RST
-	
+
 		always @(negedge clock  &&  reset) begin
-		
+
 			registers [counter] <= 32'b0;
 
 		end
