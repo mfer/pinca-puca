@@ -14,11 +14,12 @@ module MemControler_tb();
 	parameter begin_time = 0;
 	parameter clock_time = 10;
 	parameter write_time_case1 = 100; //!mem_mc_en & if_mc_en
+	parameter reset_time1 = 160;
 	parameter write_time_case2 = 200; //!mem_mc_rw
-	parameter finishtime = 600;//reset 5 ciclos
+	parameter finishtime = 300;
 
 	initial begin
-		$dumpfile ("MemControler.vcd");
+		$dumpfile ("vcd/MemControler.vcd");
 		$dumpvars;
 		clock <= 1'b1;
 		reset <= 1'b0; 
@@ -32,26 +33,39 @@ module MemControler_tb();
 
     always @(posedge clock or negedge reset )begin
         $display ("----------------------------------------------------------------");
+		$display ("Time = %d Reset = %d mc_if_data = %d",  $time, reset, mc_if_data);
+		
 		case ($time) 
-			begin_time: reset <= 0'b0;
+			begin_time: reset <= 1'b0;
 			write_time_case1: begin //!mem_mc_en & if_mc_en
                 $display ("write_time_case1");
-                mem_mc_en <= 0'b0;
-                if_mc_en <= 1'b0;
+                mem_mc_en <= 1'b1;
+                if_mc_en <= 1'b1; 
+                //TODO: efeito não esperado em mc_ram_wre --> x ao invés de 1
             end
+			reset_time1:  begin
+			    $display ("reseting...");
+			    reset <= 1'b0;
+			end
             write_time_case2: begin //!mem_mc_rw
                 $display ("write_time_case2");
-                mem_mc_rw <= 0'b0;
+                mem_mc_rw <= 1'b1;
             end
 			1: begin
 				reset <= 1'b1;
 		    end
-		endcase		
-		$display ("Time = %d Reset = %d mc_if_data = %d",  $time, reset, mc_if_data);
-		$display ("if_mc_en = %d if_mc_addr = %d", if_mc_en, if_mc_addr); 
-		$display ("mem_mc_rw = %d mem_mc_en = %d",mem_mc_rw, mem_mc_en);
-		$display ("mem_mc_addr = %d mem_mc_data = %d",mem_mc_addr, mem_mc_data);
-		$display ("mc_ram_addr = %d mc_ram_wre = %d mc_ram_data = %d", mc_ram_addr, mc_ram_wre, mc_ram_data);
+		endcase
+	
+		$display ("if_mc_en = %d", if_mc_en);
+		//$display ("if_mc_addr = %d", if_mc_addr);  
+		//$display ("mc_if_data = %d", mc_if_data);
+		//$display ("mem_mc_rw = %d", mem_mc_rw);
+		$display ("mem_mc_en = %d", mem_mc_en);
+		//$display ("mem_mc_addr = %d",mem_mc_addr);
+		//$display ("mem_mc_data = %d",mem_mc_data);
+		//$display ("mc_ram_addr = %d", mc_ram_addr);
+		$display ("mc_ram_wre = %d  ", mc_ram_wre);
+		//$display ("mc_ram_data = %d", mc_ram_data);
 	end
 
 	MemControler dut (.clock(clock), .reset(reset), 
