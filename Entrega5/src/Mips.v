@@ -1,3 +1,11 @@
+`include "Decode.v"
+`include "Execute.v"
+`include "Fetch.v"
+`include "MemControler.v"
+`include "Memory.v"
+`include "Registers.v"
+`include "Writeback.v"
+
 module Mips (
     input clock,
     input reset,
@@ -11,7 +19,7 @@ module Mips (
     output              chip_en
 );
 
-    reg               clock_div;
+    reg               clock_div = 0;
 
     wire              if_mc_en;
     wire    [17:0]    if_mc_addr;
@@ -72,53 +80,58 @@ module Mips (
     assign lb_mask = 1'b0;
     assign chip_en = 1'b0;
 
-    /*Complete here
-        Implement here clock_div driving logic
-        clock_div should be used as clock for most of the instances and it is
-        two times slower than the main clock of this module (input clock)
-    */
+    integer contador0 = 0;
+    integer contador1 = 0;
 
-    MemControler MEMCONTROLLER(.clock(/*Complete here ...*/),.reset(reset),.if_mc_en(if_mc_en),.if_mc_addr(if_mc_addr),
+    always@(posedge clock)begin
+		contador <= contador + 1;
+		if( contador == 2)begin
+			clock_div = ~clock_div;
+			contador = 0;
+		end
+    end
+
+    MemControler MEMCONTROLLER(.clock(clock),.reset(reset),.if_mc_en(if_mc_en),.if_mc_addr(if_mc_addr),
                                .mc_if_data(mc_if_data),.mem_mc_rw(mem_mc_rw),.mem_mc_en(mem_mc_en),
-                               .mem_mc_addr(mem_mc_addr),.mem_mc_data(mem_mc_data),.mc_ram_addr(/*Complete here ...*/),
+                               .mem_mc_addr(mem_mc_addr),.mem_mc_data(mem_mc_data),.mc_ram_addr(mc_ram_addr),
                                .mc_ram_wre(mc_ram_wre),.mc_ram_data(data));
 
-    Fetch FETCH(.clock(clock_div),.reset(reset),.ex_if_stall(/*Complete here ...*/),.if_id_nextpc(if_id_nextpc),
+    Fetch FETCH(.clock(clock_div),.reset(reset),.ex_if_stall(ex_if_stall),.if_id_nextpc(if_id_nextpc),
                 .if_id_instruc(if_id_instruc),.id_if_selpcsource(id_if_selpcsource),.id_if_rega(id_if_rega),
                 .id_if_pcimd2ext(id_if_pcimd2ext),.id_if_pcindex(id_if_pcindex),.id_if_selpctype(id_if_selpctype),
-                .if_mc_en(/*Complete here ...*/),.if_mc_addr(if_mc_addr),.mc_if_data(mc_if_data));
+                .if_mc_en(mem_mc_en),.if_mc_addr(if_mc_addr),.mc_if_data(mc_if_data));
 
-    Memory MEMORY(.clock(/*Complete here ...*/),.reset(reset),.ex_mem_readmem(ex_mem_readmem),.ex_mem_writemem(ex_mem_writemem),
+    Memory MEMORY(.clock(clock_div),.reset(reset),.ex_mem_readmem(ex_mem_readmem),.ex_mem_writemem(ex_mem_writemem),
                   .ex_mem_regb(ex_mem_regb),.ex_mem_selwsource(ex_mem_selwsource),.ex_mem_regdest(ex_mem_regdest),
                   .ex_mem_writereg(ex_mem_writereg),.ex_mem_wbvalue(ex_mem_wbvalue),.mem_mc_rw(mem_mc_rw),
                   .mem_mc_en(mem_mc_en),.mem_mc_addr(mem_mc_addr),.mem_mc_data(mem_mc_data),
-                  .mem_wb_regdest(/*Complete here ...*/),.mem_wb_writereg(mem_wb_writereg),.mem_wb_wbvalue(mem_wb_wbvalue));
+                  .mem_wb_regdest(mem_wb_regdest),.mem_wb_writereg(mem_wb_writereg),.mem_wb_wbvalue(mem_wb_wbvalue));
 
-    Execute EXECUTE(.clock(clock_div),.reset(/*Complete here ...*/),.id_ex_selalushift(id_ex_selalushift),.id_ex_selimregb(id_ex_selimregb),
+    Execute EXECUTE(.clock(clock_div),.reset(reset),.id_ex_selalushift(id_ex_selalushift),.id_ex_selimregb(id_ex_selimregb),
                     .id_ex_aluop(id_ex_aluop),.id_ex_unsig(id_ex_unsig),.id_ex_shiftop(id_ex_shiftop),
                     .id_ex_shiftamt(id_ex_shiftamt),.id_ex_rega(id_ex_rega),.id_ex_readmem(id_ex_readmem),
                     .id_ex_writemem(id_ex_writemem),.id_ex_regb(id_ex_regb),.id_ex_imedext(id_ex_imedext),
                     .id_ex_selwsource(id_ex_selwsource),.id_ex_regdest(id_ex_regdest),.id_ex_writereg(id_ex_writereg),
-                    .id_ex_writeov(id_ex_writeov),.ex_if_stall(ex_if_stall),.ex_mem_readmem(/*Complete here ...*/),
+                    .id_ex_writeov(id_ex_writeov),.ex_if_stall(ex_if_stall),.ex_mem_readmem(ex_mem_readmem),
                     .ex_mem_writemem(ex_mem_writemem),.ex_mem_regb(ex_mem_regb),.ex_mem_selwsource(ex_mem_selwsource),
                     .ex_mem_regdest(ex_mem_regdest),.ex_mem_writereg(ex_mem_writereg),.ex_mem_wbvalue(ex_mem_wbvalue));
 
-    Decode DECODE(.clock(clock_div),.reset(reset),.if_id_instruc(/*Complete here ...*/),.if_id_nextpc(if_id_nextpc),
+    Decode DECODE(.clock(clock_div),.reset(reset),.if_id_instruc(if_id_instruc),.if_id_nextpc(if_id_nextpc),
                   .id_if_selpcsource(id_if_selpcsource),.id_if_rega(id_if_rega),.id_if_pcimd2ext(id_if_pcimd2ext),
                   .id_if_pcindex(id_if_pcindex),.id_if_selpctype(id_if_selpctype),.id_ex_selalushift(id_ex_selalushift),
                   .id_ex_selimregb(id_ex_selimregb),.id_ex_aluop(id_ex_aluop),.id_ex_unsig(id_ex_unsig),
                   .id_ex_shiftop(id_ex_shiftop),.id_ex_shiftamt(id_ex_shiftamt),.id_ex_rega(id_ex_rega),
                   .id_ex_readmem(id_ex_readmem),.id_ex_writemem(id_ex_writemem),.id_ex_regb(id_ex_regb),
-                  .id_ex_imedext(id_ex_imedext),.id_ex_selwsource(/*Complete here ...*/),.id_ex_regdest(id_ex_regdest),
+                  .id_ex_imedext(id_ex_imedext),.id_ex_selwsource(id_ex_se),.id_ex_regdest(id_ex_regdest),
                   .id_ex_writereg(id_ex_writereg),.id_ex_writeov(id_ex_writeov),.id_reg_addra(id_reg_addra),
                   .id_reg_addrb(id_reg_addrb),.reg_id_dataa(reg_id_dataa),.reg_id_datab(reg_id_datab),
                   .reg_id_ass_dataa(reg_id_ass_dataa),.reg_id_ass_datab(reg_id_ass_datab));
 
-    Writeback WRITEBACK(.mem_wb_regdest(mem_wb_regdest),.mem_wb_writereg(mem_wb_writereg),.mem_wb_wbvalue(/*Complete here ...*/),
-                        .wb_reg_en(wb_reg_en),.wb_reg_addr(/*Complete here ...*/),.wb_reg_data(wb_reg_data));
+    Writeback WRITEBACK(.mem_wb_regdest(mem_wb_regdest),.mem_wb_writereg(mem_wb_writereg),.mem_wb_wbvalue(mem_wb_wbvalue),
+                        .wb_reg_en(wb_reg_en),.wb_reg_addr(wb_reg_addr),.wb_reg_data(wb_reg_data));
 
-    Registers REGISTERS(.clock(clock_div),.reset(/*Complete here ...*/),.addra(id_reg_addra),.dataa(reg_id_dataa),
+    Registers REGISTERS(.clock(clock_div),.reset(reset),.addra(id_reg_addra),.dataa(reg_id_dataa),
                         .ass_dataa(reg_id_ass_dataa),.addrb(id_reg_addrb),.datab(reg_id_datab),
-                        .ass_datab(/*Complete here ...*/),.enc(wb_reg_en),.addrc(wb_reg_addr),.datac(wb_reg_data));
+                        .ass_datab(reg_id_ass_datab),.enc(wb_reg_en),.addrc(wb_reg_addr),.datac(wb_reg_data));
 
 endmodule
