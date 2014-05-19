@@ -8,10 +8,13 @@ Mips: init
 	iverilog Mips.v -o ../bin/Mips
 
 tb_Mips: init
-	iverilog Mips.v ../tb/Mips_tb.v -o ../bin/Mips_tb
+	iverilog Mips.v ../tb/Mips_tb.v -o ../bin/tb_Mips
 	
 tb_Mips_run: tb_Mips
-	../bin/Mips_tb
+	../bin/tb_Mips
+
+tb_Mips_vvp: tb_Mips
+	vvp ../bin/tb_Mips > ../log/tb_Mips
 	
 #--------------------------------------------------------------------------------#
 clean:

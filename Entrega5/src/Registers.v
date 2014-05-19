@@ -11,17 +11,13 @@ module Registers(clock, reset, addra, dataa, ass_dataa, addrb, datab, ass_datab,
 
 //-----------------------------------outputs-----------------------
 
-	output  [31:0]	dataa;
-	output  [31:0]	datab;
-	output  [31:0]	ass_dataa;
-	output  [31:0]	ass_datab;
+	output reg  [31:0]	dataa;
+	output reg  [31:0]	datab;
+	output reg  [31:0]	ass_dataa;
+	output reg  [31:0]	ass_datab;
 
 //---------------------------------registers-----------------------
 
-	reg  	[31:0]	dataa;
-	reg  	[31:0]	ass_dataa; // entrega 5
-	reg  	[31:0]	datab;
-	reg  	[31:0]	ass_datab; // entrega 5
 	reg	[31:0]	registers [31:0];
 
 //------------------------------auxiliares-------------------------

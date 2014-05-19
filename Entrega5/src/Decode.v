@@ -5,10 +5,10 @@ module Decode(
 	input		clock,
 	input		reset,
 
-	//fETCH
+	//FETCH
 
-	input	[31:0]	if_id_instruc,
-	input	[31:0]	if_id_nextpc,
+	inout	[31:0]	if_id_instruc,
+	inout	[31:0]	if_id_nextpc,
 	output 		id_if_selpcsource,
 	output	[31:0]	id_if_rega,
 	output	[31:0]	id_if_pcimd2ext,
@@ -35,8 +35,8 @@ module Decode(
 	//Registers
 	output 		[4:0] 	id_reg_addra,
 	output 		[4:0] 	id_reg_addrb,
-	input 		[31:0] 	reg_id_dataa,
-	input 		[31:0] 	reg_id_datab,
+	inout 		[31:0] 	reg_id_dataa,
+	inout 		[31:0] 	reg_id_datab,
 	input 		[31:0] 	reg_id_ass_dataa,
 	input 		[31:0] 	reg_id_ass_datab
 );
@@ -55,7 +55,7 @@ module Decode(
 	wire 		ex_mem_writereg;
 	wire 	[31:0] 	ex_mem_wbvalue;
 	wire		if_mc_en;
-	wire	[31:0]  if_mc_addr;
+	wire	[17:0]  if_mc_addr;
 	wire	[31:0]  mc_if_data;
 	wire		enc;
 	wire	[4:0]	addrc;

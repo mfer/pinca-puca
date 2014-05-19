@@ -33,12 +33,12 @@ module Control_tb();
 				);
 	parameter delay=10;
 	//----------------------------------
-	
+
 	initial begin
 		$dumpfile ("Control.vcd");
 		$dumpvars;
 		op = 6'b000000;
-		
+
 		//Instrução: SLLV
 		fn = 6'b000100;
 		#delay;
@@ -57,7 +57,7 @@ module Control_tb();
 		$display("selpctype: %b em xx", selpctype);
 		$display("compop: %b em xxx", compop);
 		$display("unsig :%b em x\n", unsig);
-		
+
 		//Instrução: SRLV
 		fn=6'b000110;
 		#delay;
@@ -76,7 +76,7 @@ module Control_tb();
 		$display("selpctype: %b em xx", selpctype);
 		$display("compop: %b em xxx", compop);
 		$display("unsig :%b em x\n", unsig);
-		
+
 		//Instrução: SRVA
 		fn = 6'b000111;
 		#delay;
@@ -95,7 +95,7 @@ module Control_tb();
 		$display("selpctype: %b em xx", selpctype);
 		$display("compop: %b em xxx", compop);
 		$display("unsig :%b em x\n", unsig);
-		
+
 		//Instrução: JR
 		fn = 6'b001000;
 		#delay;
@@ -114,7 +114,7 @@ module Control_tb();
 		$display("selpctype: %b em 01", selpctype);
 		$display("compop: %b em xxx", compop);
 		$display("unsig :%b em x\n", unsig);
-		
+
 		//Instrução: ADD
 		fn = 6'b100000;
 		#delay;
@@ -133,7 +133,7 @@ module Control_tb();
 		$display("selpctype: %b em xx", selpctype);
 		$display("compop: %b em xxx", compop);
 		$display("unsig :%b em 0\n", unsig);
-		
+
 		//Instrução: ADDU
 		fn = 6'b100001;
 		#delay;
@@ -152,7 +152,7 @@ module Control_tb();
 		$display("selpctype: %b em xx", selpctype);
 		$display("compop: %b em xxx", compop);
 		$display("unsig :%b em 1\n", unsig);
-		
+
 		//Instrução: SUB
 		fn = 6'b100010;
 		#delay;
@@ -171,7 +171,7 @@ module Control_tb();
 		$display("selpctype: %b em xx", selpctype);
 		$display("compop: %b em xxx", compop);
 		$display("unsig :%b em x\n", unsig);
-		
+
 		//Instrução: SUBU
 		fn = 6'b100011;
 		#delay;
@@ -190,7 +190,7 @@ module Control_tb();
 		$display("selpctype: %b em xx", selpctype);
 		$display("compop: %b em xxx", compop);
 		$display("unsig :%b em 1\n", unsig);
-		
+
 		//Instrução: AND
 		fn = 6'b100100;
 		#delay;
@@ -209,7 +209,7 @@ module Control_tb();
 		$display("selpctype: %b em xx", selpctype);
 		$display("compop: %b em xxx", compop);
 		$display("unsig :%b em x\n", unsig);
-		
+
 		//Instrução: OP
 		fn = 6'b100101;
 		#delay;
@@ -228,7 +228,7 @@ module Control_tb();
 		$display("selpctype: %b em xx", selpctype);
 		$display("compop: %b em xxx", compop);
 		$display("unsig :%b em x\n", unsig);
-		
+
 		//Instrução: XOR
 		fn = 6'b100110;
 		#delay;
@@ -247,7 +247,7 @@ module Control_tb();
 		$display("selpctype: %b em xx", selpctype);
 		$display("compop: %b em xxx", compop);
 		$display("unsig :%b em x\n", unsig);
-		
+
 		//Instrução: NOR
 		fn = 6'b100111;
 		#delay;
@@ -266,11 +266,11 @@ module Control_tb();
 		$display("selpctype: %b em xx", selpctype);
 		$display("compop: %b em xxx", compop);
 		$display("unsig :%b em x\n", unsig);
-		
+
 		//Instrução: BEQ
 		op <= 6'b000100;
 		fn <= $random;
-		#delay;		
+		#delay;
 		$display("Instrução: BEQ\nOP: %b\nFN: %b", op, fn);
 		$display("selregdest: %b em xxx", selwsource);
 		$display("selregdest: %b em xx", selregdest);
@@ -286,11 +286,11 @@ module Control_tb();
 		$display("selpctype: %b em 00", selpctype);
 		$display("compop: %b em 000", compop);
 		$display("unsig: %b em 0\n", unsig);
-		
+
 		//Instrução: BNE
 		op <= 6'b000101;
 		fn <= $random;
-		#delay;		
+		#delay;
 		$display("Instrução: BNE\nOP: %b\nFN: %b", op, fn);
 		$display("selregdest: %b em xxx", selwsource);
 		$display("selregdest: %b em xx", selregdest);
@@ -306,11 +306,11 @@ module Control_tb();
 		$display("selpctype: %b em 00", selpctype);
 		$display("compop: %b em 101", compop);
 		$display("unsig: %b em 0\n", unsig);
-		
+
 		//Instrução: BLEZ
 		op <= 6'b000110;
 		fn <= $random;
-		#delay;		
+		#delay;
 		$display("Instrução: BLEZ\nOP: %b\nFN: %b", op, fn);
 		$display("selregdest: %b em xxx", selwsource);
 		$display("selregdest: %b em xx", selregdest);
@@ -326,11 +326,11 @@ module Control_tb();
 		$display("selpctype: %b em 00", selpctype);
 		$display("compop: %b em 010", compop);
 		$display("unsig: %b em 0\n", unsig);
-		
+
 		//Instrução: BGTZ
 		op <= 6'b000111;
 		fn <= $random;
-		#delay;		
+		#delay;
 		$display("Instrução: BGTZ\nOP: %b\nFN: %b", op, fn);
 		$display("selregdest: %b em xxx", selwsource);
 		$display("selregdest: %b em xx", selregdest);
@@ -346,11 +346,11 @@ module Control_tb();
 		$display("selpctype: %b em 00", selpctype);
 		$display("compop: %b em 011", compop);
 		$display("unsig: %b em 0\n", unsig);
-		
+
 		//Instrução: ADDI
 		op <= 6'b001000;
 		fn <= $random;
-		#delay;		
+		#delay;
 		$display("Instrução: ADDI\nOP: %b\nFN: %b", op, fn);
 		$display("selregdest: %b em 000", selwsource);
 		$display("selregdest: %b em 00", selregdest);
@@ -366,11 +366,11 @@ module Control_tb();
 		$display("selpctype: %b em xx", selpctype);
 		$display("compop: %b em xxx", compop);
 		$display("unsig: %b em 0\n", unsig);
-		
+
 		//Instrução: ADDIU
 		op <= 6'b001001;
 		fn <= $random;
-		#delay;		
+		#delay;
 		$display("Instrução: ADDIU\nOP: %b\nFN: %b", op, fn);
 		$display("selregdest: %b em 000", selwsource);
 		$display("selregdest: %b em 00", selregdest);
@@ -386,11 +386,11 @@ module Control_tb();
 		$display("selpctype: %b em xx", selpctype);
 		$display("compop: %b em xxx", compop);
 		$display("unsig: %b em 1\n", unsig);
-		
+
 		//Instrução: ANDI
 		op <= 6'b001100;
 		fn <= $random;
-		#delay;		
+		#delay;
 		$display("Instrução: ANDI\nOP: %b\nFN: %b", op, fn);
 		$display("selregdest: %b em 000", selwsource);
 		$display("selregdest: %b em 00", selregdest);
@@ -406,11 +406,11 @@ module Control_tb();
 		$display("selpctype: %b em xx", selpctype);
 		$display("compop: %b em xxx", compop);
 		$display("unsig: %b em x\n", unsig);
-		
+
 		//Instrução: ORI
 		op <= 6'b001101;
 		fn <= $random;
-		#delay;		
+		#delay;
 		$display("Instrução: ORI\nOP: %b\nFN: %b", op, fn);
 		$display("selregdest: %b em 000", selwsource);
 		$display("selregdest: %b em 00", selregdest);
@@ -426,11 +426,11 @@ module Control_tb();
 		$display("selpctype: %b em xx", selpctype);
 		$display("compop: %b em xxx", compop);
 		$display("unsig: %b em x\n", unsig);
-		
+
 		//InstruçãO: XORI
 		op <= 6'b001110;
 		fn <= $random;
-		#delay;		
+		#delay;
 		$display("Instrução: xORI\nOP: %b\nFN: %b", op, fn);
 		$display("selregdest: %b em 000", selwsource);
 		$display("selregdest: %b em 00", selregdest);
@@ -446,11 +446,11 @@ module Control_tb();
 		$display("selpctype: %b em xx", selpctype);
 		$display("compop: %b em xxx", compop);
 		$display("unsig: %b em x\n", unsig);
-		
+
 		//Instrução: SW
 		op <= 6'b101011;
 		fn <= $random;
-		#delay;		
+		#delay;
 		$display("Instrução: SW\nOP: %b\nFN: %b", op, fn);
 		$display("selregdest: %b em xxx", selwsource);
 		$display("selregdest: %b em xx", selregdest);
