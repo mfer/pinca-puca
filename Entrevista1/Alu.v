@@ -7,7 +7,7 @@ module Alu (
 	output reg 			compout,
 	output reg			overflow
 );	
-	always @(op or a or b or unsig)
+	always @(*)
 	begin
 		case (op)
 			3'b000	: aluout <= a&b;
