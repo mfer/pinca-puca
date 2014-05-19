@@ -3,88 +3,100 @@ module OutConverter(input [3:0] aluout, output reg [6:0] dhex);
 	always @(*)begin
 		case (aluout)
 
-			1'h0:begin
+			4'b0000:begin
+
+					dhex[0] <= 1'b0;
+					dhex[1] <= 1'b0;
+					dhex[2] <= 1'b0;
+					dhex[3] <= 1'b0;
+					dhex[4] <= 1'b0;
+					dhex[5] <= 1'b0;
+					dhex[6] <= 1'b1;
+
+				end
+			4'b0001:begin
 
 					dhex[0] <= 1'b1;
-					dhex[1] <= 1'b1;
-					dhex[2] <= 1'b1;
+					dhex[1] <= 1'b0;
+					dhex[2] <= 1'b0;
 					dhex[3] <= 1'b1;
+					dhex[4] <= 1'b1;
+					dhex[5] <= 1'b1;
+					dhex[6] <= 1'b1;
+
+				end
+			4'b0010:begin
+
+					dhex[0] <= 1'b0;
+					dhex[1] <= 1'b0;
+					dhex[2] <= 1'b1;
+					dhex[3] <= 1'b0;
+					dhex[4] <= 1'b0;
+					dhex[5] <= 1'b1;
+					dhex[6] <= 1'b0;
+
+				end
+			4'b0011:begin
+
+					dhex[0] <= 1'b0;
+					dhex[1] <= 1'b0;
+					dhex[2] <= 1'b0;
+					dhex[3] <= 1'b0;
 					dhex[4] <= 1'b1;
 					dhex[5] <= 1'b1;
 					dhex[6] <= 1'b0;
 
 				end
-			1'h1:begin
-
-					dhex[0] <= 1'b0;
-					dhex[1] <= 1'b1;
-					dhex[2] <= 1'b1;
-					dhex[3] <= 1'b0;
-					dhex[4] <= 1'b0;
-					dhex[5] <= 1'b0;
-					dhex[6] <= 1'b0;
-
-				end
-			1'h2:begin
+			4'b0100:begin
 
 					dhex[0] <= 1'b1;
-					dhex[1] <= 1'b1;
+					dhex[1] <= 1'b0;
 					dhex[2] <= 1'b0;
 					dhex[3] <= 1'b1;
 					dhex[4] <= 1'b1;
 					dhex[5] <= 1'b0;
-					dhex[6] <= 1'b1;
+					dhex[6] <= 1'b0;
 
 				end
-			1'h3:begin
-
-					dhex[0] <= 1'b1;
-					dhex[1] <= 1'b1;
-					dhex[2] <= 1'b1;
-					dhex[3] <= 1'b1;
-					dhex[4] <= 1'b0;
-					dhex[5] <= 1'b0;
-					dhex[6] <= 1'b1;
-
-				end
-			1'h4:begin
+			4'b0101:begin
 
 					dhex[0] <= 1'b0;
 					dhex[1] <= 1'b1;
-					dhex[2] <= 1'b1;
+					dhex[2] <= 1'b0;
+					dhex[3] <= 1'b0;
+					dhex[4] <= 1'b1;
+					dhex[5] <= 1'b0;
+					dhex[6] <= 1'b0;
+
+				end
+			4'b0110:begin
+
+					dhex[0] <= 1'b0;
+					dhex[1] <= 1'b1;
+					dhex[2] <= 1'b0;
 					dhex[3] <= 1'b0;
 					dhex[4] <= 1'b0;
-					dhex[5] <= 1'b1;
-					dhex[6] <= 1'b1;
+					dhex[5] <= 1'b0;
+					dhex[6] <= 1'b0;
 
 				end
-			1'h5:begin
+			4'b0111:begin
 
-					dhex[0] <= 1'b1;
+					dhex[0] <= 1'b0;
 					dhex[1] <= 1'b0;
-					dhex[2] <= 1'b1;
-					dhex[3] <= 1'b1;
-					dhex[4] <= 1'b0;
-					dhex[5] <= 1'b1;
-					dhex[6] <= 1'b1;
-
-				end
-			1'h6:begin
-
-					dhex[0] <= 1'b1;
-					dhex[1] <= 1'b0;
-					dhex[2] <= 1'b1;
+					dhex[2] <= 1'b0;
 					dhex[3] <= 1'b1;
 					dhex[4] <= 1'b1;
 					dhex[5] <= 1'b1;
 					dhex[6] <= 1'b1;
 
 				end
-			1'h7:begin
 
-					dhex[0] <= 1'b1;
-					dhex[1] <= 1'b1;
-					dhex[2] <= 1'b1;
+			4'b1000:begin
+
+					dhex[0] <= 1'b0;
+					dhex[1] <= 1'b0;
+					dhex[2] <= 1'b0;
 					dhex[3] <= 1'b0;
 					dhex[4] <= 1'b0;
 					dhex[5] <= 1'b0;
@@ -92,98 +104,86 @@ module OutConverter(input [3:0] aluout, output reg [6:0] dhex);
 
 				end
 
-			1'h8:begin
+			4'b1001:begin
 
-					dhex[0] <= 1'b1;
-					dhex[1] <= 1'b1;
-					dhex[2] <= 1'b1;
-					dhex[3] <= 1'b1;
+					dhex[0] <= 1'b0;
+					dhex[1] <= 1'b0;
+					dhex[2] <= 1'b0;
+					dhex[3] <= 1'b0;
 					dhex[4] <= 1'b1;
-					dhex[5] <= 1'b1;
-					dhex[6] <= 1'b1;
-
-				end
-
-			1'h9:begin
-
-					dhex[0] <= 1'b1;
-					dhex[1] <= 1'b1;
-					dhex[2] <= 1'b1;
-					dhex[3] <= 1'b1;
-					dhex[4] <= 1'b0;
-					dhex[5] <= 1'b1;
-					dhex[6] <= 1'b1;
+					dhex[5] <= 1'b0;
+					dhex[6] <= 1'b0;
 
 				end
 		
-			1'hA:begin
-
-					dhex[0] <= 1'b1;
-					dhex[1] <= 1'b1;
-					dhex[2] <= 1'b1;
-					dhex[3] <= 1'b0;
-					dhex[4] <= 1'b1;
-					dhex[5] <= 1'b1;
-					dhex[6] <= 1'b1;
-
-				end
-			1'hB:begin
+			4'b1010:begin
 
 					dhex[0] <= 1'b0;
 					dhex[1] <= 1'b0;
-					dhex[2] <= 1'b1;
-					dhex[3] <= 1'b0;
-					dhex[4] <= 1'b1;
-					dhex[5] <= 1'b1;
-					dhex[6] <= 1'b1;
-
-				end
-
-			1'hC:begin
-
-					dhex[0] <= 1'b0;
-					dhex[1] <= 1'b1;
 					dhex[2] <= 1'b0;
 					dhex[3] <= 1'b1;
-					dhex[4] <= 1'b1;
-					dhex[5] <= 1'b1;
-					dhex[6] <= 1'b1;
+					dhex[4] <= 1'b0;
+					dhex[5] <= 1'b0;
+					dhex[6] <= 1'b0;
+
+				end
+			4'b1011:begin
+
+					dhex[0] <= 1'b1;
+					dhex[1] <= 1'b1;
+					dhex[2] <= 1'b0;
+					dhex[3] <= 1'b0;
+					dhex[4] <= 1'b0;
+					dhex[5] <= 1'b0;
+					dhex[6] <= 1'b0;
 
 				end
 
-			1'hD:begin
+			4'b1100:begin
 
 					dhex[0] <= 1'b0;
 					dhex[1] <= 1'b1;
 					dhex[2] <= 1'b1;
-					dhex[3] <= 1'b1;
-					dhex[4] <= 1'b1;
+					dhex[3] <= 1'b0;
+					dhex[4] <= 1'b0;
 					dhex[5] <= 1'b0;
 					dhex[6] <= 1'b1;
 
 				end
 
-			1'hE:begin
-
-					dhex[0] <= 1'b1;
-					dhex[1] <= 1'b0;
-					dhex[2] <= 1'b0;
-					dhex[3] <= 1'b1;
-					dhex[4] <= 1'b1;
-					dhex[5] <= 1'b1;
-					dhex[6] <= 1'b1;
-
-				end
-
-			1'hF:begin
+			4'b1101:begin
 
 					dhex[0] <= 1'b1;
 					dhex[1] <= 1'b0;
 					dhex[2] <= 1'b0;
 					dhex[3] <= 1'b0;
-					dhex[4] <= 1'b1;
+					dhex[4] <= 1'b0;
 					dhex[5] <= 1'b1;
-					dhex[6] <= 1'b1;
+					dhex[6] <= 1'b0;
+
+				end
+
+			4'b1110:begin
+
+					dhex[0] <= 1'b0;
+					dhex[1] <= 1'b1;
+					dhex[2] <= 1'b1;
+					dhex[3] <= 1'b0;
+					dhex[4] <= 1'b0;
+					dhex[5] <= 1'b0;
+					dhex[6] <= 1'b0;
+
+				end
+
+			4'b1111:begin
+
+					dhex[0] <= 1'b0;
+					dhex[1] <= 1'b1;
+					dhex[2] <= 1'b1;
+					dhex[3] <= 1'b1;
+					dhex[4] <= 1'b0;
+					dhex[5] <= 1'b0;
+					dhex[6] <= 1'b0;
 
 				end
 		endcase
