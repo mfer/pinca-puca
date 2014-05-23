@@ -14,8 +14,15 @@ module Mips_tb();
     parameter begin_time = 0;
     parameter clock_time = 10;
     parameter reset_time = 20;
-    parameter ram_time = 40;
-    parameter finishtime = 300;
+    parameter first_instruction_time = 40;
+    parameter secon_instruction_time = 80;
+    parameter third_instruction_time = 120;
+    parameter fourt_instruction_time = 160;
+    parameter fifth_instruction_time = 200;
+    parameter sixth_instruction_time = 240;
+    parameter seven_instruction_time = 280;
+    parameter eight_instruction_time = 320;
+    parameter finishtime = 400;
     parameter row = 8;
     parameter pos = 32;
 
@@ -32,7 +39,9 @@ module Mips_tb();
     end
 
     initial $readmemh("../tb/testall.hex", data_read);
-    integer i,j, cont;
+    integer instruction;
+    reg addr_counter = 32'h00400000;
+//TODO    wre = 1'b1;
 
     initial
         #finishtime $finish;
@@ -41,20 +50,25 @@ module Mips_tb();
         $display ("----------------------------------------------------------------");
         $display ("Time = %d Reset = %d",  $time, reset);
 
+        data_read[instruction] <= data;
+        addr_counter <= addr;
+
         case ($time)
             begin_time: reset <= 1'b0;
             reset_time:  begin
                 $display ("reseting...");
                 reset <= 1'b0;
             end
-            ram_time:  begin
-                $display ("ram time...");
-                cont = 0;
-                for (i=0; i < row; i=i+1) begin
-                    $display("%d:%h",i,data_read[i]);
-                    //data_read[i]<= data[cont];
-
-                end
+            first_instruction_time:  begin
+                $display ("from the very first time...");
+                instruction = 0;
+                $display("%d:%h",instruction,data_read[instruction]);
+            end
+            secon_instruction_time:  begin
+                $display ("second instruction...");
+                instruction = instruction + 1;
+                addr_counter = addr_counter + 32'h00000004;
+                $display("%d:%h",instruction,data_read[instruction]);
             end
         endcase
     end
