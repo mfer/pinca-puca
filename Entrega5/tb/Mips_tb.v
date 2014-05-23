@@ -17,7 +17,7 @@ module Mips_tb();
     parameter ram_time = 40;
     parameter finishtime = 300;
     parameter row = 8;
-    parameter pos = 16;
+    parameter pos = 32;
 
     reg [pos-1:0] data_read [0:row-1];
 
@@ -31,7 +31,7 @@ module Mips_tb();
         end
     end
 
-    initial $readmemh("../data/vectors.txt", data_read);
+    initial $readmemh("../tb/testall.hex", data_read);
     integer i,j, cont;
 
     initial
