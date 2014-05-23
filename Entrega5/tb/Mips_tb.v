@@ -23,7 +23,7 @@ module Mips_tb();
     parameter seven_instruction_time = 280;
     parameter eight_instruction_time = 320;
     parameter finishtime = 400;
-    parameter row = 8;
+    parameter row = 16;
     parameter pos = 16;
 
     reg [pos-1:0] data_read [0:row-1];
@@ -41,7 +41,7 @@ module Mips_tb();
     initial $readmemh("../tb/testall.hex", data_read);
     integer half_inst=-1;
     reg addr_counter = 32'h003FFFFE;
-//TODO    wre = 1'b1;
+    reg wre_control = 1'b0;
 
     initial
         #finishtime $finish;
@@ -52,6 +52,7 @@ module Mips_tb();
 
         data_read[half_inst] <= data;
         addr_counter <= addr;
+        wre_control <= wre;
 
         case ($time)
             begin_time: reset <= 1'b0;
@@ -62,26 +63,35 @@ module Mips_tb();
             first_instruction_time:  begin
                 $display ("from the very first time...");
 
+                wre_control = 1'b0;
                 half_inst = half_inst + 1;
                 addr_counter = addr_counter + 32'h00000002;
+                wre_control = 1'b1;
                 $display ("first half");
                 $display("%d:%h",half_inst,data_read[half_inst]);
 
+
+                wre_control = 1'b0;
                 half_inst = half_inst + 1;
                 addr_counter = addr_counter + 32'h00000002;
+                wre_control = 1'b1;
                 $display ("second half");
                 $display("%d:%h",half_inst,data_read[half_inst]);
             end
             secon_instruction_time:  begin
                 $display ("second instruction...");
 
+                wre_control = 1'b0;
                 half_inst = half_inst + 1;
                 addr_counter = addr_counter + 32'h00000002;
+                wre_control = 1'b1;
                 $display ("first half");
                 $display("%d:%h",half_inst,data_read[half_inst]);
 
+                wre_control = 1'b0;
                 half_inst = half_inst + 1;
                 addr_counter = addr_counter + 32'h00000002;
+                wre_control = 1'b1;
                 $display ("second half");
                 $display("%d:%h",half_inst,data_read[half_inst]);
             end
