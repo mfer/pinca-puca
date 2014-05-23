@@ -5,7 +5,6 @@
 `include "Memory.v"
 `include "Registers.v"
 `include "Writeback.v"
-
 module Mips (
     input clock,
     input reset,
@@ -82,15 +81,16 @@ module Mips (
 
     integer contador0 = 0;
     integer contador1 = 0;
-
+    
     always@(posedge clock)begin
-		contador0 <= contador0 + 1;
-		if( contador0 == 2)begin
-			clock_div = ~clock_div;
-			contador0 = 0;
+		if(clock_div)begin
+			clock_div = 0;
+		end else begin
+		    clock_div = 1;
 		end
     end
-
+    
+    
     MemControler MEMCONTROLLER(.clock(clock),.reset(reset),.if_mc_en(if_mc_en),.if_mc_addr(if_mc_addr),
                                .mc_if_data(mc_if_data),.mem_mc_rw(mem_mc_rw),.mem_mc_en(mem_mc_en),
                                .mem_mc_addr(mem_mc_addr),.mem_mc_data(mem_mc_data),.mc_ram_addr(mc_ram_addr),
@@ -134,4 +134,4 @@ module Mips (
                         .ass_dataa(reg_id_ass_dataa),.addrb(id_reg_addrb),.datab(reg_id_datab),
                         .ass_datab(reg_id_ass_datab),.enc(wb_reg_en),.addrc(wb_reg_addr),.datac(wb_reg_data));
 
-endmodule
+endmodule 
