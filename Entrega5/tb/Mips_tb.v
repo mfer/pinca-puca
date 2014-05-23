@@ -24,7 +24,7 @@ module Mips_tb();
     parameter eight_instruction_time = 320;
     parameter finishtime = 400;
     parameter row = 8;
-    parameter pos = 32;
+    parameter pos = 16;
 
     reg [pos-1:0] data_read [0:row-1];
 
@@ -39,8 +39,8 @@ module Mips_tb();
     end
 
     initial $readmemh("../tb/testall.hex", data_read);
-    integer instruction;
-    reg addr_counter = 32'h00400000;
+    integer half_inst=-1;
+    reg addr_counter = 32'h003FFFFE;
 //TODO    wre = 1'b1;
 
     initial
@@ -50,7 +50,7 @@ module Mips_tb();
         $display ("----------------------------------------------------------------");
         $display ("Time = %d Reset = %d",  $time, reset);
 
-        data_read[instruction] <= data;
+        data_read[half_inst] <= data;
         addr_counter <= addr;
 
         case ($time)
@@ -61,14 +61,107 @@ module Mips_tb();
             end
             first_instruction_time:  begin
                 $display ("from the very first time...");
-                instruction = 0;
-                $display("%d:%h",instruction,data_read[instruction]);
+
+                half_inst = half_inst + 1;
+                addr_counter = addr_counter + 32'h00000002;
+                $display ("first half");
+                $display("%d:%h",half_inst,data_read[half_inst]);
+
+                half_inst = half_inst + 1;
+                addr_counter = addr_counter + 32'h00000002;
+                $display ("second half");
+                $display("%d:%h",half_inst,data_read[half_inst]);
             end
             secon_instruction_time:  begin
                 $display ("second instruction...");
-                instruction = instruction + 1;
-                addr_counter = addr_counter + 32'h00000004;
-                $display("%d:%h",instruction,data_read[instruction]);
+
+                half_inst = half_inst + 1;
+                addr_counter = addr_counter + 32'h00000002;
+                $display ("first half");
+                $display("%d:%h",half_inst,data_read[half_inst]);
+
+                half_inst = half_inst + 1;
+                addr_counter = addr_counter + 32'h00000002;
+                $display ("second half");
+                $display("%d:%h",half_inst,data_read[half_inst]);
+            end
+            third_instruction_time:  begin
+                $display ("third instruction...");
+
+                half_inst = half_inst + 1;
+                addr_counter = addr_counter + 32'h00000002;
+                $display ("first half");
+                $display("%d:%h",half_inst,data_read[half_inst]);
+
+                half_inst = half_inst + 1;
+                addr_counter = addr_counter + 32'h00000002;
+                $display ("second half");
+                $display("%d:%h",half_inst,data_read[half_inst]);
+            end
+            fourt_instruction_time:  begin
+                $display ("fourth instruction...");
+
+                half_inst = half_inst + 1;
+                addr_counter = addr_counter + 32'h00000002;
+                $display ("first half");
+                $display("%d:%h",half_inst,data_read[half_inst]);
+
+                half_inst = half_inst + 1;
+                addr_counter = addr_counter + 32'h00000002;
+                $display ("second half");
+                $display("%d:%h",half_inst,data_read[half_inst]);
+            end
+            fifth_instruction_time:  begin
+                $display ("fifth instruction...");
+
+                half_inst = half_inst + 1;
+                addr_counter = addr_counter + 32'h00000002;
+                $display ("first half");
+                $display("%d:%h",half_inst,data_read[half_inst]);
+
+                half_inst = half_inst + 1;
+                addr_counter = addr_counter + 32'h00000002;
+                $display ("second half");
+                $display("%d:%h",half_inst,data_read[half_inst]);
+            end
+            sixth_instruction_time:  begin
+                $display ("sixth instruction...");
+
+                half_inst = half_inst + 1;
+                addr_counter = addr_counter + 32'h00000002;
+                $display ("first half");
+                $display("%d:%h",half_inst,data_read[half_inst]);
+
+                half_inst = half_inst + 1;
+                addr_counter = addr_counter + 32'h00000002;
+                $display ("second half");
+                $display("%d:%h",half_inst,data_read[half_inst]);
+            end
+            seven_instruction_time:  begin
+                $display ("seventh of a seventh instruction...");
+
+                half_inst = half_inst + 1;
+                addr_counter = addr_counter + 32'h00000002;
+                $display ("first half");
+                $display("%d:%h",half_inst,data_read[half_inst]);
+
+                half_inst = half_inst + 1;
+                addr_counter = addr_counter + 32'h00000002;
+                $display ("second half");
+                $display("%d:%h",half_inst,data_read[half_inst]);
+            end
+            eight_instruction_time:  begin
+                $display ("eigth instruction...");
+
+                half_inst = half_inst + 1;
+                addr_counter = addr_counter + 32'h00000002;
+                $display ("first half");
+                $display("%d:%h",half_inst,data_read[half_inst]);
+
+                half_inst = half_inst + 1;
+                addr_counter = addr_counter + 32'h00000002;
+                $display ("second half");
+                $display("%d:%h",half_inst,data_read[half_inst]);
             end
         endcase
     end
