@@ -1,5 +1,3 @@
-Resetar todos os registradores
-
 	J INICIO
 LABEL1 	1
 LABEL2 	74
@@ -8,7 +6,7 @@ INICIO	LOAD R1, R0(LABEL1) // R1 = 1
 	LOAD R10, R0(LABEL2) // R10 = 74
 	LOAD R11, R0(LABEL2) // R11 = 424.910
 LOOP1 	ADD R5, R5, R1 // R5 = 74
-	BNE R5, R10, LOOP1 // AO FINAL DESTE LOOP, R5 TERÁ QUE VALER 74
+	BNE R5, R10, LOOP1 // AO FINAL DESTE LOOP, R5 TER�? QUE VALER 74
 	SUB R4, R11, R10 // R4 = R11 - R10 = 424.910 - 74 = 424.836
 	AND R6, R11, R5 // R6 = R11 AND R5 = 424.910 AND 74 = 74
 	OR R7, R11, R5 // R7 = R11 OR R5 = 424.910 OR 74 = 424.910
@@ -39,6 +37,3 @@ LOOP1 	ADD R5, R5, R1 // R5 = 74
 	tipo R opcode, op1, op2, destino, shamt, function
 	tipo I opcode, base, destino, endereço imediato
 	tipo J opcode, endereço imediato
-	
-	
-	

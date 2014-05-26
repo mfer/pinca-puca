@@ -1,0 +1,11 @@
+`include "MemControler.v"
+
+module Top(KEY, SW , SRAM_ADDR, SRAM_WE_N, SRAM_DQ );
+
+	input 	[1] 	KEY;
+	input		SW;
+	input	[17:0]	SRAM_ADDR;
+	input		SRAM_WE_N;
+	output		SRAM_DQ
+
+endmodule
