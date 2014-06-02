@@ -8,7 +8,7 @@ Mips: init
 	iverilog Mips.v -o ../bin/Mips
 
 tb_Mips: init
-	iverilog Mips.v ../tb/Mips_tb.v -o ../bin/tb_Mips
+	iverilog Mips.v ../tb/Mips_tb.v ../tb/im.v -o ../bin/tb_Mips
 	
 tb_Mips_run: tb_Mips
 	../bin/tb_Mips

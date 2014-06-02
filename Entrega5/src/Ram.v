@@ -30,5 +30,4 @@ module Ram (
             memory[addr] = d[15:0];
         end
     end
-
 endmodule
