@@ -1,5 +1,5 @@
 $date
-	Mon Jun  2 16:51:14 2014
+	Tue Jun  3 17:42:06 2014
 $end
 $version
 	Icarus Verilog
@@ -8,7 +8,7 @@ $timescale
 	1s
 $end
 $scope module Mips_tb $end
-$var wire 18 ! addr [17:0] $end
+$var wire 1 ! addr $end
 $var wire 1 " chip_en $end
 $var wire 16 # data [15:0] $end
 $var wire 1 $ hb_mask $end
@@ -16,9 +16,9 @@ $var wire 1 % lb_mask $end
 $var wire 1 & oute $end
 $var wire 1 ' reset $end
 $var wire 1 ( wre $end
-$var reg 1 ) clk $end
-$var integer 32 * i [31:0] $end
-$var reg 32 + pc [31:0] $end
+$var reg 18 ) addr_aux [17:0] $end
+$var reg 1 * clk $end
+$var integer 32 + i [31:0] $end
 $scope module RAM $end
 $var wire 18 , addr [17:0] $end
 $var wire 1 " chip_en $end
@@ -796,10 +796,10 @@ bx 0
 bx /
 bx .
 bx -
-bx ,
+b0x ,
 b0 +
-b0 *
-0)
+0*
+b0 )
 x(
 z'
 0&
@@ -807,7 +807,7 @@ z'
 0$
 bx #
 0"
-bx !
+x!
 $end
 #5
 0'"
@@ -855,32 +855,28 @@ bx t
 bx W
 bx l
 bx v
-bx !
-bx ,
 bx 0
 1g
 1|
-b1 *
-1)
+b1 +
+1*
 11
 #10
-0)
+0*
 01
 #15
 bx t
 bx W
 bx l
 bx v
-bx !
-bx ,
 bx 0
-b10 *
+b10 +
 0g
 0|
-1)
+1*
 11
 #20
-0)
+0*
 01
 #25
 0d#
@@ -899,32 +895,28 @@ bx t
 bx W
 bx l
 bx v
-bx !
-bx ,
 bx 0
 1g
 1|
-b11 *
-1)
+b11 +
+1*
 11
 #30
-0)
+0*
 01
 #35
 bx t
 bx W
 bx l
 bx v
-bx !
-bx ,
 bx 0
-b100 *
+b100 +
 0g
 0|
-1)
+1*
 11
 #40
-0)
+0*
 01
 #45
 13"
@@ -934,571 +926,499 @@ bx t
 bx W
 bx l
 bx v
-bx !
-bx ,
 bx 0
 1g
 1|
-b101 *
-1)
+b101 +
+1*
 11
 #50
-0)
+0*
 01
 #55
 bx t
 bx W
 bx l
 bx v
-bx !
-bx ,
 bx 0
-b110 *
+b110 +
 0g
 0|
-1)
+1*
 11
 #60
-0)
+0*
 01
 #65
 bx t
 bx W
 bx l
 bx v
-bx !
-bx ,
 bx 0
 1g
 1|
-b111 *
-1)
+b111 +
+1*
 11
 #70
-0)
+0*
 01
 #75
 bx t
 bx W
 bx l
 bx v
-bx !
-bx ,
 bx 0
-b1000 *
+b1000 +
 0g
 0|
-1)
+1*
 11
 #80
-0)
+0*
 01
 #85
 bx t
 bx W
 bx l
 bx v
-bx !
-bx ,
 bx 0
 1g
 1|
-b1001 *
-1)
+b1001 +
+1*
 11
 #90
-0)
+0*
 01
 #95
 bx t
 bx W
 bx l
 bx v
-bx !
-bx ,
 bx 0
-b1010 *
+b1010 +
 0g
 0|
-1)
+1*
 11
 #100
-0)
+0*
 01
 #105
 bx t
 bx W
 bx l
 bx v
-bx !
-bx ,
 bx 0
 1g
 1|
-b1011 *
-1)
+b1011 +
+1*
 11
 #110
-0)
+0*
 01
 #115
 bx t
 bx W
 bx l
 bx v
-bx !
-bx ,
 bx 0
-b1100 *
+b1100 +
 0g
 0|
-1)
+1*
 11
 #120
-0)
+0*
 01
 #125
 bx t
 bx W
 bx l
 bx v
-bx !
-bx ,
 bx 0
 1g
 1|
-b1101 *
-1)
+b1101 +
+1*
 11
 #130
-0)
+0*
 01
 #135
 bx t
 bx W
 bx l
 bx v
-bx !
-bx ,
 bx 0
-b1110 *
+b1110 +
 0g
 0|
-1)
+1*
 11
 #140
-0)
+0*
 01
 #145
 bx t
 bx W
 bx l
 bx v
-bx !
-bx ,
 bx 0
 1g
 1|
-b1111 *
-1)
+b1111 +
+1*
 11
 #150
-0)
+0*
 01
 #155
 bx t
 bx W
 bx l
 bx v
-bx !
-bx ,
 bx 0
-b10000 *
+b10000 +
 0g
 0|
-1)
+1*
 11
 #160
-0)
+0*
 01
 #165
 bx t
 bx W
 bx l
 bx v
-bx !
-bx ,
 bx 0
 1g
 1|
-b10001 *
-1)
+b10001 +
+1*
 11
 #170
-0)
+0*
 01
 #175
 bx t
 bx W
 bx l
 bx v
-bx !
-bx ,
 bx 0
-b10010 *
+b10010 +
 0g
 0|
-1)
+1*
 11
 #180
-0)
+0*
 01
 #185
 bx t
 bx W
 bx l
 bx v
-bx !
-bx ,
 bx 0
 1g
 1|
-b10011 *
-1)
+b10011 +
+1*
 11
 #190
-0)
+0*
 01
 #195
 bx t
 bx W
 bx l
 bx v
-bx !
-bx ,
 bx 0
-b10100 *
+b10100 +
 0g
 0|
-1)
+1*
 11
 #200
-0)
+0*
 01
 #205
 bx t
 bx W
 bx l
 bx v
-bx !
-bx ,
 bx 0
 1g
 1|
-b10101 *
-1)
+b10101 +
+1*
 11
 #210
-0)
+0*
 01
 #215
 bx t
 bx W
 bx l
 bx v
-bx !
-bx ,
 bx 0
-b10110 *
+b10110 +
 0g
 0|
-1)
+1*
 11
 #220
-0)
+0*
 01
 #225
 bx t
 bx W
 bx l
 bx v
-bx !
-bx ,
 bx 0
 1g
 1|
-b10111 *
-1)
+b10111 +
+1*
 11
 #230
-0)
+0*
 01
 #235
 bx t
 bx W
 bx l
 bx v
-bx !
-bx ,
 bx 0
-b11000 *
+b11000 +
 0g
 0|
-1)
+1*
 11
 #240
-0)
+0*
 01
 #245
 bx t
 bx W
 bx l
 bx v
-bx !
-bx ,
 bx 0
 1g
 1|
-b11001 *
-1)
+b11001 +
+1*
 11
 #250
-0)
+0*
 01
 #255
 bx t
 bx W
 bx l
 bx v
-bx !
-bx ,
 bx 0
-b11010 *
+b11010 +
 0g
 0|
-1)
+1*
 11
 #260
-0)
+0*
 01
 #265
 bx t
 bx W
 bx l
 bx v
-bx !
-bx ,
 bx 0
 1g
 1|
-b11011 *
-1)
+b11011 +
+1*
 11
 #270
-0)
+0*
 01
 #275
 bx t
 bx W
 bx l
 bx v
-bx !
-bx ,
 bx 0
-b11100 *
+b11100 +
 0g
 0|
-1)
+1*
 11
 #280
-0)
+0*
 01
 #285
 bx t
 bx W
 bx l
 bx v
-bx !
-bx ,
 bx 0
 1g
 1|
-b11101 *
-1)
+b11101 +
+1*
 11
 #290
-0)
+0*
 01
 #295
 bx t
 bx W
 bx l
 bx v
-bx !
-bx ,
 bx 0
-b11110 *
+b11110 +
 0g
 0|
-1)
+1*
 11
 #300
-0)
+0*
 01
 #305
 bx t
 bx W
 bx l
 bx v
-bx !
-bx ,
 bx 0
 1g
 1|
-b11111 *
-1)
+b11111 +
+1*
 11
 #310
-0)
+0*
 01
 #315
 bx t
 bx W
 bx l
 bx v
-bx !
-bx ,
 bx 0
-b100000 *
+b100000 +
 0g
 0|
-1)
+1*
 11
 #320
-0)
+0*
 01
 #325
 bx t
 bx W
 bx l
 bx v
-bx !
-bx ,
 bx 0
 1g
 1|
-b100001 *
-1)
+b100001 +
+1*
 11
 #330
-0)
+0*
 01
 #335
 bx t
 bx W
 bx l
 bx v
-bx !
-bx ,
 bx 0
-b100010 *
+b100010 +
 0g
 0|
-1)
+1*
 11
 #340
-0)
+0*
 01
 #345
 bx t
 bx W
 bx l
 bx v
-bx !
-bx ,
 bx 0
 1g
 1|
-b100011 *
-1)
+b100011 +
+1*
 11
 #350
-0)
+0*
 01
 #355
 bx t
 bx W
 bx l
 bx v
-bx !
-bx ,
 bx 0
-b100100 *
+b100100 +
 0g
 0|
-1)
+1*
 11
 #360
-0)
+0*
 01
 #365
 bx t
 bx W
 bx l
 bx v
-bx !
-bx ,
 bx 0
 1g
 1|
-b100101 *
-1)
+b100101 +
+1*
 11
 #370
-0)
+0*
 01
 #375
 bx t
 bx W
 bx l
 bx v
-bx !
-bx ,
 bx 0
-b100110 *
+b100110 +
 0g
 0|
-1)
+1*
 11
 #380
-0)
+0*
 01
 #385
 bx t
 bx W
 bx l
 bx v
-bx !
-bx ,
 bx 0
 1g
 1|
-b100111 *
-1)
+b100111 +
+1*
 11
 #390
-0)
+0*
 01
 #395
 bx t
 bx W
 bx l
 bx v
-bx !
-bx ,
 bx 0
-b100010 *
+b1000100 +
 0g
 0|
-1)
+1*
 11

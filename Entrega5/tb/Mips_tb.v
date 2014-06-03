@@ -14,11 +14,6 @@ module Mips_tb();
 	wire lb_mask;
 	wire chip_en;
 
-
-	reg  [31:0] pc;
-	initial begin
-		pc <= 32'd0;
-	end
     /*
      * Given a 32-bit address the data is latched and driven
      * on the rising edge of the clock.
@@ -37,13 +32,14 @@ module Mips_tb();
      * of lines in the file (wc -l ../tb/testall.hex).
      *  
      */
-	parameter NMEM = 34;   // Number of memory entries, not the same as the memory size
+	parameter NMEM = 68;   // Number of memory entries, not the same as the memory size
 	parameter IM_DATA = "../tb/testall.hex";  // file to read data from
-	reg [31:0] mem [0:NMEM];  // 32-bit memory with NMEM entries
 	initial begin
-		$readmemh(IM_DATA, mem, 0, NMEM-1);
+		$readmemh(IM_DATA, RAM.memory, 0, NMEM);
 	end
-	assign data = mem[pc[8:2]][31:0];
+
+    reg [17:0] addr_aux;
+    assign RAM.addr = addr_aux;
 
     Ram RAM(
         .addr(addr),
@@ -76,18 +72,20 @@ module Mips_tb();
 		$dumpfile("../vcd/Mips_tb.vcd");
 		$dumpvars(0, Mips_tb);
 
+		addr_aux <= 18'b0;
 		clk <= 1'b0;
+		#5;
 
 		$display("addr, data, wre, oute, hb_mask, lb_mask, chip_en");
-		$monitor("%x, %x, %x, %x, %x, %x, %x",
-					addr, data, wre, oute,
+		$monitor("%x, %x, %x, %x, %x, %x, %x, %x",
+					RAM.addr, data, wre, oute,
 					hb_mask, lb_mask, chip_en);
 		for (i = 0; i < N + 5; i = i + 1) begin
 			@(posedge clk);
 		end
 
 		for (i = 0; i < NMEM; i = i + 1) begin
-            $display("%d:%h",i,mem[i]);
+            $display("%d:%h-%b",i,RAM.memory[i],addr_aux);
 		end
 
 		$finish;
