@@ -55,7 +55,7 @@ module Alu (
 							end
 						end
 					end
-			default	: aluout <= aluout; //tratar exceção 
+			default	: aluout <= 0; //tratar exceção 
 		endcase
 		if (unsig == 0)
 		begin

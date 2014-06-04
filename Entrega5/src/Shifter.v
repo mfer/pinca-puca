@@ -12,6 +12,7 @@ module Shifter(
 					2'b00 : result <= in >> shiftamt;
 					2'b01 : result <= in >>> shiftamt;
 					2'b10 : result <= in << shiftamt;
+					default : result <= 32'b0;
 				endcase
 			end
 endmodule
