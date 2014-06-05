@@ -1,4 +1,4 @@
-module Registers(clock, reset, addra, dataa, ass_dataa, addrb, datab, ass_datab, enc, addrc, datac, addrout, regout);
+module Registers(clock, reset, addra, dataa, ass_dataa, addrb, datab, ass_datab, enc, addrc, datac, addrout);
 
 //-------------------------------------inputs----------------------
 	input		clock;
@@ -8,7 +8,7 @@ module Registers(clock, reset, addra, dataa, ass_dataa, addrb, datab, ass_datab,
 	input 		enc;
 	input	[4:0]	addrc;
 	input	[31:0]	datac;
-	input 	[4:0]		addrout;
+	input 	[4:0]	addrout;
 
 //-----------------------------------outputs-----------------------
 
@@ -16,7 +16,6 @@ module Registers(clock, reset, addra, dataa, ass_dataa, addrb, datab, ass_datab,
 	output reg  [31:0]	datab;
 	output reg  [31:0]	ass_dataa;
 	output reg  [31:0]	ass_datab;
-	output 		[31:0]	regout;
 
 //---------------------------------registers-----------------------
 
@@ -29,7 +28,6 @@ module Registers(clock, reset, addra, dataa, ass_dataa, addrb, datab, ass_datab,
 //-----------------------REGISTERS BANKS---------------------------
 
 
-assign regout = registers[addrout];
 
 always @(posedge clock) begin
 

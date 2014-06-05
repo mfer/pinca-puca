@@ -38,6 +38,8 @@ module Registers_tb();
 		$dumpvars;
 		clock=0;
 		
+		addra=1;
+		addrb=1;
 		//Testando se o Reset funciona
 		reset=1;
 		#delay;
@@ -45,8 +47,8 @@ module Registers_tb();
 		for(i=0; i<32; i=i+1)begin
 			addra=i;
 			addrb=i;
-			$display("Registrador Ass A: %b\nRegistrador Ass B: %b\nEndereço: %d\n",ass_dataa,ass_datab,i);
-			$display("Registrador A: %b\nRegistrador B: %b\nEndereço: %d\n",dataa,datab,i);
+			$display("Oi Registrador Ass A: %b\nRegistrador Ass B: %b\nEndereço: %d\n",ass_dataa,ass_datab,i);
+			$display("Oi Registrador A: %b\nRegistrador B: %b\nEndereço: %d\n",dataa,datab,i);
 			#delay;
 			
 			//Subindo o clock
@@ -91,7 +93,7 @@ module Registers_tb();
 			#delay;
 			datac=$random;
 			#delay;
-			$display("Registrador Ass A: %b\nRegistrador Ass B: %b\nEndereço: %d\n",ass_dataa,ass_datab);
+			$display("Registrador Ass A: %b\nRegistrador Ass B: %b\nEndereço: %d\n",ass_dataa,ass_datab,i);
 			//Subindo o clock
 			clock=~clock;
 			#delay;
@@ -106,6 +108,18 @@ module Registers_tb();
 			clock=~clock;
 			$display("Foi pedido para escrever: %d no enrereço: %d e o que tem e: %d\n",datac,i,dataa);
 		end
+		
+		$display("Testando se ass_dataa e ass_datab sao assincronos\n");
+		addrc = 9;
+		#5;
+		datac=99;
+		clock=~clock;
+		clock=~clock;
+		#5;
+		addra = 9;
+		
+		#5;
+		$display("ass_dataa: %d ass_datab: %d Endereço: %d\n",ass_dataa,datac,addrc);
 		$finish;
     end
 endmodule

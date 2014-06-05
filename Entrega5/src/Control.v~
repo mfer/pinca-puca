@@ -23,6 +23,7 @@ module Control
 	always @ (op or fn)
 		casex(op)
 			6'b000000 : begin // SLLV,SRLV,SRAV,JR,ADD,ADDU,SUB,SUBU,AND,OR,XOR,NOR
+						//$display("@%0dns SLLV,SRLV,SRAV,JR,ADD,ADDU,SUB,SUBU,AND,OR,XOR,NOR op %b",$time,op);
 					casex(fn)
 						6'b000100 : begin // SLLV,
 									//$display("@%0dns SLLV, op %b",$time,op);
@@ -76,6 +77,7 @@ module Control
 									unsig <= 1'bx;
 								end
 						6'b001000 : begin // JR,
+									//$display("@%0dns JR, op %b",$time,op);
 									selwsource <= 3'bxxx;
 									selregdest <= 2'bxx; // Nenhum
 									writereg <= 1'b0;
