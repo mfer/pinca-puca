@@ -11,8 +11,8 @@ module Mips_tb();
 	wire lb_mask;
 	wire chip_en;
 
-    parameter clock_time = 10;
-    parameter finish_time = 100;
+    parameter clock_time = 5;
+    parameter finish_time = 200;
     parameter NMEM = 68;   // 262144
     parameter IM_DATA = "../tb/testall.hex";
     integer i;
