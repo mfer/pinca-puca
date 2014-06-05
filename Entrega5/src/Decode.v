@@ -1,8 +1,8 @@
 `include "Control.v"
 `include "Comparator.v"
-`include "Fetch.v"
-`include "Registers.v"
-`include "Execute.v"
+//`include "Fetch.v"
+//`include "Registers.v"
+//`include "Execute.v"
 
 module Decode(
 	input		clock,

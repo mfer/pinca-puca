@@ -8,10 +8,7 @@ module Mips (
     output              oute,
     output              hb_mask,
     output              lb_mask,
-    output              chip_en,
-	 output	[31:0]		memout,
-	 output	[31:0]	   regout,
-	 output	[4:0]			addrout
+    output              chip_en
 );
 
     reg               clock_div = 0;
@@ -88,7 +85,7 @@ module Mips (
     
     
     MemControler MEMCONTROLLER(.clock(clock),.reset(reset),.if_mc_en(if_mc_en),.if_mc_addr(if_mc_addr),
-                               .mc_if_data(memout),.mem_mc_rw(mem_mc_rw),.mem_mc_en(mem_mc_en),
+                               .mc_if_data(mc_if_data),.mem_mc_rw(mem_mc_rw),.mem_mc_en(mem_mc_en),
                                .mem_mc_addr(mem_mc_addr),.mem_mc_data(mem_mc_data),.mc_ram_addr(mc_ram_addr),
                                .mc_ram_wre(mc_ram_wre),.mc_ram_data(data));
 

@@ -28,12 +28,11 @@ always @(posedge clock or negedge reset)begin
 
 	if(reset == 1'b0 )begin
 
-	pc <= 32'b0;
-	pc_anterior <= 32'b0;
-	if_mc_en <= 1'b0;
-	if_id_nextpc <= 32'b0;
-	if_id_instruc <= 32'b0;
-
+	    pc <= 32'b0;
+	    pc_anterior <= 32'b0;
+	    if_mc_en <= 1'b0;
+	    if_id_nextpc <= 32'b0;
+	    if_id_instruc <= 32'b0;
 
 	end
 
@@ -41,7 +40,6 @@ always @(posedge clock or negedge reset)begin
 
 		if_id_instruc <=32'd0;//nop 32'd0
 		if_id_nextpc <= pc_anterior;//pc anterior atribuido ao if_id_nextpc
-
 
 	end
 

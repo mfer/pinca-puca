@@ -5,6 +5,7 @@
 `include "Memory.v"
 `include "Registers.v"
 `include "Writeback.v"
+`include "Ram.v"
 module Mips (
     input clock,
     input reset,
