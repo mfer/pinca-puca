@@ -1,45 +1,67 @@
 /* sudolshw@gmail.com */
 
 module Mips_tb();
-
-	parameter N = 35;
-	integer i = 0;
 	reg			clk;
+    reg         rst;
+	reg [17:0] addr;
+	wire [15:0] data;
+	reg wre;
+	reg oute;
+	reg hb_mask;
+	reg lb_mask;
+	reg chip_en;
 
-	wire [17:0] addr;
-	wire [15:0]	data;
-	wire wre;
-	wire oute;
-	wire hb_mask;
-	wire lb_mask;
-	wire chip_en;
+    parameter begin_time = 0;
+    parameter clock_time = 10;
+    parameter addr0_time = 20;
+    parameter addr1_time = 40;
+    parameter addr2_time = 60;
+    parameter finish_time = 400;
 
-    /*
-     * Given a 32-bit address the data is latched and driven
-     * on the rising edge of the clock.
-     *
-     * Currently it supports 7 address bits resulting in
-     * 128 bytes of memory.  The lowest two bits are assumed
-     * to be byte indexes and ignored.  Bits 8 down to 2
-     * are used to construct the address.
-     *
-     * The memory is initialized using the Verilog $readmemh
-     * (read memory in hex format, ascii) operation. 
-     * The file to read from can be configured using .IM_DATA
-     * parameter and it defaults to "../tb/testall.hex".
-     * The number of memory records can be specified using the
-     * .NMEM parameter.  This should be the same as the number
-     * of lines in the file (wc -l ../tb/testall.hex).
-     *  
-     */
-	parameter NMEM = 68;   // Number of memory entries, not the same as the memory size
-	parameter IM_DATA = "../tb/testall.hex";  // file to read data from
+    parameter NMEM = 68;   // 262144
+    parameter IM_DATA = "../tb/testall.hex";
+    initial begin
+        $readmemh(IM_DATA, RAM.memory, 0, NMEM);
+    end
+
 	initial begin
-		$readmemh(IM_DATA, RAM.memory, 0, NMEM);
+		$dumpfile("../vcd/Mips_tb.vcd");
+		$dumpvars(0, Mips_tb);
+        clk <= 1'b1;
+        rst <= 1'b0;
+        forever begin
+            #clock_time clk = ~clk;
+        end
 	end
 
-    reg [17:0] addr_aux;
-    assign RAM.addr = addr_aux;
+    initial
+        #finish_time $finish;
+
+    always @(posedge clk or negedge rst )begin
+        $display ("----------------------------------------------------------------");
+        $display ("Time = %d Reset = %d",  $time, rst);
+
+        case ($time)
+            begin_time:  begin
+                $display ("reseting...");
+                rst <= 1'b0;
+            end
+            addr0_time:  begin
+                $display ("addr...");
+                addr <= 18'h00000;
+            end
+            addr1_time:  begin
+                $display ("addr1...");
+                $display ("%h",addr);
+                rst <= 1'b0;
+            end
+            addr2_time:  begin
+                $display ("addr2... MIPS.addr");
+                //$display ("%h:%h",MIPS.addr,MIPS.data[]);
+                rst <= 1'b0;
+            end
+        endcase
+    end
 
     Ram RAM(
         .addr(addr),
@@ -53,42 +75,13 @@ module Mips_tb();
 
     Mips MIPS (
         .clock(clk),
-        .reset(reset),
-        .addr(addr),
-        .data(data),
-        .wre(wre),
-        .oute(oute),
-        .hb_mask(hb_mask),
-        .lb_mask(lb_mask),
-        .chip_en(chip_en)
+        .reset(rst),
+        .addr(RAM.addr),
+        .data(RAM.data),
+        .wre(RAM.wre),
+        .oute(RAM.oute),
+        .hb_mask(RAM.hb_mask),
+        .lb_mask(RAM.lb_mask),
+        .chip_en(RAM.chip_en)
     );
-
-	always begin
-		clk <= ~clk;
-		#5;
-	end
-
-	initial begin
-		$dumpfile("../vcd/Mips_tb.vcd");
-		$dumpvars(0, Mips_tb);
-
-		addr_aux <= 18'b0;
-		clk <= 1'b0;
-		#5;
-
-		$display("addr, data, wre, oute, hb_mask, lb_mask, chip_en");
-		$monitor("%x, %x, %x, %x, %x, %x, %x, %x",
-					RAM.addr, data, wre, oute,
-					hb_mask, lb_mask, chip_en);
-		for (i = 0; i < N + 5; i = i + 1) begin
-			@(posedge clk);
-		end
-
-		for (i = 0; i < NMEM; i = i + 1) begin
-            $display("%d:%h-%b",i,RAM.memory[i],addr_aux);
-		end
-
-		$finish;
-	end
-
 endmodule
