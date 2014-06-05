@@ -15,6 +15,9 @@ tb_Mips_run: tb_Mips
 
 tb_Mips_vvp: tb_Mips
 	vvp ../bin/tb_Mips > ../log/tb_Mips
+
+tb_Mips_wave: tb_Mips_run
+	gtkwave ../vcd/Mips_tb.vcd
 	
 #--------------------------------------------------------------------------------#
 clean:
