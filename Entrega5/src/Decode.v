@@ -127,7 +127,7 @@ always @(posedge clock or negedge reset)begin
 	end
 end
 
-	Control ControlModule (.op(if_id_instruc [31:26]), .fn(if_id_instruc[5:0]), .selwsource(selwsource_helper), .selregdest(selregdest), .writereg(writereg), .writeov(writeov), .selimregb(rgb), .selalushift(alushift), .aluop(id_ex_aluop), .shiftop(shiftop), .readmem(readmem), .writemem(writemem), .selbrjumpz(selbrjumpz), .selpctype(id_if_selpctype), .compop(compop), .unsig(unsig));
+	Control ControlModule (.op(if_id_instruc [31:26]), .fn(if_id_instruc[5:0]), .selwsource(selwsource_helper), .selregdest(selregdest), .writereg(writereg), .writeov(writeov), .selimregb(rgb), .selalushift(alushift), .aluop(aluop), .shiftop(shiftop), .readmem(readmem), .writemem(writemem), .selbrjumpz(selbrjumpz), .selpctype(id_if_selpctype), .compop(compop), .unsig(unsig));
 
 	Registers RegisterModule (.clock(clock), .reset(reset), .addra(id_reg_addra), .dataa(reg_id_dataa) , .ass_dataa(reg_id_ass_dataa), .addrb(id_reg_addrb), .datab(reg_id_datab), .ass_datab(reg_id_ass_datab), .enc(enc), .addrc(addrc), .datac(datac));
 	

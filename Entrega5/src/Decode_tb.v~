@@ -73,8 +73,6 @@ initial
 	a= 32'b00000000001000100000100000000100;
 	c = 8;
 	d = 2;
-	reg_id_ass_dataa = 8;
-	reg_id_ass_datab = 2;
 	b = 4;
 	clock = ~clock;
 	clock = ~clock;

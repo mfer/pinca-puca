@@ -104,6 +104,9 @@ initial
 
 	// TESTA JR 1 R1 R3 R31 de 1
 	a= 32'b00000000001000100001111111001000;
+	c = 8;
+	d = 2;
+	b = 4;
 	clock = ~clock;
 	clock = ~clock;
 	#10
@@ -134,6 +137,9 @@ initial
 	
 	// 1 add R1 R3 R31 
 	a= 32'b00000000001000100001111111100000;
+	c = 8;
+	d = 2;
+	b = 4;
 	clock = ~clock;
 	clock = ~clock;
 	#10
@@ -164,6 +170,9 @@ initial
 
 	// 1 jump 0
 	a= 32'b00001000000000000000000000000001;
+	c = 8;
+	d = 2;
+	b = 4;
 	clock = ~clock;
 	clock = ~clock;
 	#10
@@ -195,6 +204,9 @@ initial
 
 	// 1 beq R1 R3 0
 	a= 32'b00000000001000100000000000000001;
+	c = 8;
+	d = 2;
+	b = 4;
 	clock = ~clock;
 	clock = ~clock;
 	$display("BEQ:\nid_if_selpcsource:  Valor Real %b\n",id_if_selpcsource);
@@ -224,6 +236,9 @@ initial
 	
 	// 1 bgtz R1 0
 	a= 32'b00011100001000000000000000000000;
+	c = 8;
+	d = 2;
+	b = 4;
 	clock = ~clock;
 	clock = ~clock;
 	#10
@@ -252,6 +267,9 @@ initial
 
 	// addi R1 0 Shift de 1
 	a= 32'b00100000001000100000000000000001;
+	c = 8;
+	d = 2;
+	b = 4;
 	clock = ~clock;
 	clock = ~clock;
 	#10
@@ -282,6 +300,9 @@ initial
 
 	// lw r1 r2 0
 	a= 32'b10001100001000100000000000000010;
+	c = 8;
+	d = 2;
+	b = 4;
 	clock = ~clock;
 	clock = ~clock;
 	#10
@@ -312,6 +333,9 @@ initial
 	
 	// sw r1 r2 0
 	a= 32'b10101100001000100000000000000001;
+	c = 8;
+	d = 2;
+	b = 4;
 	clock = ~clock;
 	clock = ~clock;
 	#10
