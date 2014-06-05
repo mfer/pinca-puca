@@ -1,0 +1,1204 @@
+Analysis & Synthesis report for Top
+Thu Jun 05 17:57:21 2014
+Quartus II 32-bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Parameter Settings for User Entity Instance: Mips:comb_3|Decode:DECODE|Registers:RegisterModule
+  6. Parameter Settings for User Entity Instance: Mips:comb_3|Registers:REGISTERS
+  7. Port Connectivity Checks: "OutConverter:H7"
+  8. Port Connectivity Checks: "OutConverter:H6"
+  9. Port Connectivity Checks: "OutConverter:H5"
+ 10. Port Connectivity Checks: "OutConverter:H4"
+ 11. Port Connectivity Checks: "OutConverter:H3"
+ 12. Port Connectivity Checks: "OutConverter:H2"
+ 13. Port Connectivity Checks: "OutConverter:H1"
+ 14. Port Connectivity Checks: "OutConverter:H0"
+ 15. Port Connectivity Checks: "Mips:comb_3|Registers:REGISTERS"
+ 16. Port Connectivity Checks: "Mips:comb_3|Decode:DECODE|Execute:ExecuteModule"
+ 17. Port Connectivity Checks: "Mips:comb_3|Decode:DECODE|Fetch:FetchModule"
+ 18. Port Connectivity Checks: "Mips:comb_3|Decode:DECODE|Registers:RegisterModule"
+ 19. Port Connectivity Checks: "Mips:comb_3|Decode:DECODE|Control:ControlModule"
+ 20. Port Connectivity Checks: "Mips:comb_3|Decode:DECODE"
+ 21. Port Connectivity Checks: "Mips:comb_3|Execute:EXECUTE|Alu:ALU"
+ 22. Port Connectivity Checks: "Mips:comb_3"
+ 23. Analysis & Synthesis Messages
+ 24. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++---------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                    ;
++------------------------------------+--------------------------------------------+
+; Analysis & Synthesis Status        ; Failed - Thu Jun 05 17:57:20 2014          ;
+; Quartus II 32-bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
+; Revision Name                      ; Top                                        ;
+; Top-level Entity Name              ; Top                                        ;
+; Family                             ; Cyclone IV E                               ;
+; Total logic elements               ; N/A until Partition Merge                  ;
+;     Total combinational functions  ; N/A until Partition Merge                  ;
+;     Dedicated logic registers      ; N/A until Partition Merge                  ;
+; Total registers                    ; N/A until Partition Merge                  ;
+; Total pins                         ; N/A until Partition Merge                  ;
+; Total virtual pins                 ; N/A until Partition Merge                  ;
+; Total memory bits                  ; N/A until Partition Merge                  ;
+; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                  ;
+; Total PLLs                         ; N/A until Partition Merge                  ;
++------------------------------------+--------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP4CE115F29C7      ;                    ;
+; Top-level entity name                                                      ; Top                ; Top                ;
+; Family name                                                                ; Cyclone IV E       ; Cyclone IV GX      ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                 ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM Block Balancing                                                   ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; On                 ; On                 ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 2      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++-------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Mips:comb_3|Decode:DECODE|Registers:RegisterModule ;
++---------------------+-------+-------------------------------------------------------------------+
+; Parameter Name      ; Value ; Type                                                              ;
++---------------------+-------+-------------------------------------------------------------------+
+; number_of_registers ; 32    ; Signed Integer                                                    ;
++---------------------+-------+-------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Mips:comb_3|Registers:REGISTERS ;
++---------------------+-------+------------------------------------------------+
+; Parameter Name      ; Value ; Type                                           ;
++---------------------+-------+------------------------------------------------+
+; number_of_registers ; 32    ; Signed Integer                                 ;
++---------------------+-------+------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "OutConverter:H7"                                                                                                                                                      ;
++------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                                                                               ;
++------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; seg  ; Output ; Warning  ; Output or bidir port (7 bits) is smaller than the port expression (8 bits) it drives.  The 1 most-significant bit(s) in the port expression will be connected to GND. ;
++------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "OutConverter:H6"                                                                                                                                                      ;
++------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                                                                               ;
++------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; seg  ; Output ; Warning  ; Output or bidir port (7 bits) is smaller than the port expression (8 bits) it drives.  The 1 most-significant bit(s) in the port expression will be connected to GND. ;
++------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "OutConverter:H5"                                                                                                                                                      ;
++------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                                                                               ;
++------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; seg  ; Output ; Warning  ; Output or bidir port (7 bits) is smaller than the port expression (8 bits) it drives.  The 1 most-significant bit(s) in the port expression will be connected to GND. ;
++------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "OutConverter:H4"                                                                                                                                                      ;
++------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                                                                               ;
++------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; seg  ; Output ; Warning  ; Output or bidir port (7 bits) is smaller than the port expression (8 bits) it drives.  The 1 most-significant bit(s) in the port expression will be connected to GND. ;
++------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "OutConverter:H3"                                                                                                                                                      ;
++------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                                                                               ;
++------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; seg  ; Output ; Warning  ; Output or bidir port (7 bits) is smaller than the port expression (8 bits) it drives.  The 1 most-significant bit(s) in the port expression will be connected to GND. ;
++------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "OutConverter:H2"                                                                                                                                                      ;
++------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                                                                               ;
++------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; seg  ; Output ; Warning  ; Output or bidir port (7 bits) is smaller than the port expression (8 bits) it drives.  The 1 most-significant bit(s) in the port expression will be connected to GND. ;
++------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "OutConverter:H1"                                                                                                                                                      ;
++------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                                                                               ;
++------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; seg  ; Output ; Warning  ; Output or bidir port (7 bits) is smaller than the port expression (8 bits) it drives.  The 1 most-significant bit(s) in the port expression will be connected to GND. ;
++------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "OutConverter:H0"                                                                                                                                                      ;
++------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                                                                               ;
++------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; seg  ; Output ; Warning  ; Output or bidir port (7 bits) is smaller than the port expression (8 bits) it drives.  The 1 most-significant bit(s) in the port expression will be connected to GND. ;
++------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Mips:comb_3|Registers:REGISTERS"                                                                                                                ;
++---------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                                                                                      ;
++---------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; addrout ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; regout  ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
++---------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Mips:comb_3|Decode:DECODE|Execute:ExecuteModule"                                                 ;
++-------------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port              ; Type   ; Severity ; Details                                                                             ;
++-------------------+--------+----------+-------------------------------------------------------------------------------------+
+; ex_mem_readmem    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; ex_mem_writemem   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; ex_mem_regb       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; ex_mem_selwsource ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; ex_mem_regdest    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; ex_mem_writereg   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; ex_mem_wbvalue    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Mips:comb_3|Decode:DECODE|Fetch:FetchModule"                                                         ;
++-----------------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port                  ; Type   ; Severity ; Details                                                                             ;
++-----------------------+--------+----------+-------------------------------------------------------------------------------------+
+; id_if_pcimd2ext[1..0] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; id_if_pcindex[31..30] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; id_if_pcindex[1..0]   ; Input  ; Info     ; Stuck at GND                                                                        ;
+; if_mc_en              ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; if_mc_addr            ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Mips:comb_3|Decode:DECODE|Registers:RegisterModule"                                                                                             ;
++---------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                                                                                      ;
++---------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; addrout ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; regout  ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
++---------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Mips:comb_3|Decode:DECODE|Control:ControlModule"                                                ;
++------------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port             ; Type   ; Severity ; Details                                                                             ;
++------------------+--------+----------+-------------------------------------------------------------------------------------+
+; selwsource[2..1] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; selregdest[1]    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Mips:comb_3|Decode:DECODE"                                                                      ;
++------------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port             ; Type   ; Severity ; Details                                                                             ;
++------------------+--------+----------+-------------------------------------------------------------------------------------+
+; id_ex_selwsource ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; reg_id_dataa     ; Bidir  ; Warning  ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; reg_id_datab     ; Bidir  ; Warning  ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Mips:comb_3|Execute:EXECUTE|Alu:ALU"                                                   ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                             ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; compout ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Mips:comb_3"                                                                                                                                                                ;
++---------+--------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                                                                                                                  ;
++---------+--------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; addr    ; Output ; Warning  ; Output or bidir port (18 bits) is smaller than the port expression (20 bits) it drives.  The 2 most-significant bit(s) in the port expression will be connected to GND.  ;
+; data    ; Bidir  ; Warning  ; Output or bidir port (16 bits) is smaller than the port expression (32 bits) it drives.  The 16 most-significant bit(s) in the port expression will be connected to GND. ;
+; wre     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                      ;
+; memout  ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                                                 ;
+; regout  ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                                                 ;
+; addrout ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                                                 ;
++---------+--------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 32-bit Analysis & Synthesis
+    Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
+    Info: Processing started: Thu Jun 05 17:57:17 2014
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Entrevista3 -c Top
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 1 design units, including 1 entities, in source file top.v
+    Info (12023): Found entity 1: Top
+Info (12021): Found 1 design units, including 1 entities, in source file writeback.v
+    Info (12023): Found entity 1: Writeback
+Info (12021): Found 1 design units, including 1 entities, in source file shifter.v
+    Info (12023): Found entity 1: Shifter
+Info (12021): Found 1 design units, including 1 entities, in source file registers.v
+    Info (12023): Found entity 1: Registers
+Info (12021): Found 1 design units, including 1 entities, in source file ram.v
+    Info (12023): Found entity 1: Ram
+Info (12021): Found 1 design units, including 1 entities, in source file outconverter.v
+    Info (12023): Found entity 1: OutConverter
+Info (12021): Found 1 design units, including 1 entities, in source file mips.v
+    Info (12023): Found entity 1: Mips
+Info (12021): Found 1 design units, including 1 entities, in source file memory.v
+    Info (12023): Found entity 1: Memory
+Info (12021): Found 1 design units, including 1 entities, in source file memcontroler.v
+    Info (12023): Found entity 1: MemControler
+Info (12021): Found 1 design units, including 1 entities, in source file fetch.v
+    Info (12023): Found entity 1: Fetch
+Info (12021): Found 1 design units, including 1 entities, in source file execute.v
+    Info (12023): Found entity 1: Execute
+Info (12021): Found 1 design units, including 1 entities, in source file decode.v
+    Info (12023): Found entity 1: Decode
+Info (12021): Found 1 design units, including 1 entities, in source file control.v
+    Info (12023): Found entity 1: Control
+Info (12021): Found 1 design units, including 1 entities, in source file comparator.v
+    Info (12023): Found entity 1: Comparator
+Info (12021): Found 1 design units, including 1 entities, in source file alu.v
+    Info (12023): Found entity 1: Alu
+Warning (10236): Verilog HDL Implicit Net warning at Mips.v(121): created implicit net for "id_ex_se"
+Warning (10236): Verilog HDL Implicit Net warning at Decode.v(132): created implicit net for "id_ex_writeovi"
+Critical Warning (10846): Verilog HDL Instantiation warning at Top.v(27): instance has no name
+Info (12127): Elaborating entity "Top" for the top level hierarchy
+Info (12128): Elaborating entity "Mips" for hierarchy "Mips:comb_3"
+Warning (10036): Verilog HDL or VHDL warning at Mips.v(78): object "contador0" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at Mips.v(79): object "contador1" assigned a value but never read
+Warning (10034): Output port "regout" at Mips.v(13) has no driver
+Warning (10034): Output port "addrout" at Mips.v(15) has no driver
+Info (12128): Elaborating entity "MemControler" for hierarchy "Mips:comb_3|MemControler:MEMCONTROLLER"
+Warning (10230): Verilog HDL assignment warning at MemControler.v(32): truncated value with size 48 to match size of target (32)
+Info (12128): Elaborating entity "Ram" for hierarchy "Mips:comb_3|MemControler:MEMCONTROLLER|Ram:ram_module"
+Warning (10240): Verilog HDL Always Construct warning at Ram.v(21): inferring latch(es) for variable "d", which holds its previous value in one or more paths through the always construct
+Info (12128): Elaborating entity "Fetch" for hierarchy "Mips:comb_3|Fetch:FETCH"
+Warning (10230): Verilog HDL assignment warning at Fetch.v(25): truncated value with size 32 to match size of target (18)
+Info (12128): Elaborating entity "Memory" for hierarchy "Mips:comb_3|Memory:MEMORY"
+Info (12128): Elaborating entity "Execute" for hierarchy "Mips:comb_3|Execute:EXECUTE"
+Info (12128): Elaborating entity "Alu" for hierarchy "Mips:comb_3|Execute:EXECUTE|Alu:ALU"
+Warning (10235): Verilog HDL Always Construct warning at Alu.v(18): variable "aluout" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at Alu.v(24): variable "aluout" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10240): Verilog HDL Always Construct warning at Alu.v(11): inferring latch(es) for variable "overflow", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at Alu.v(11): inferring latch(es) for variable "compout", which holds its previous value in one or more paths through the always construct
+Info (10041): Inferred latch for "overflow" at Alu.v(11)
+Info (12128): Elaborating entity "Shifter" for hierarchy "Mips:comb_3|Execute:EXECUTE|Shifter:SHIFTER"
+Info (12128): Elaborating entity "Decode" for hierarchy "Mips:comb_3|Decode:DECODE"
+Warning (10230): Verilog HDL assignment warning at Decode.v(79): truncated value with size 32 to match size of target (5)
+Info (12128): Elaborating entity "Control" for hierarchy "Mips:comb_3|Decode:DECODE|Control:ControlModule"
+Warning (10270): Verilog HDL Case Statement warning at Control.v(24): incomplete case statement has no default case item
+Warning (10240): Verilog HDL Always Construct warning at Control.v(21): inferring latch(es) for variable "selwsource", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at Control.v(21): inferring latch(es) for variable "selregdest", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at Control.v(21): inferring latch(es) for variable "writereg", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at Control.v(21): inferring latch(es) for variable "writeov", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at Control.v(21): inferring latch(es) for variable "selimregb", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at Control.v(21): inferring latch(es) for variable "selalushift", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at Control.v(21): inferring latch(es) for variable "aluop", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at Control.v(21): inferring latch(es) for variable "shiftop", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at Control.v(21): inferring latch(es) for variable "readmem", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at Control.v(21): inferring latch(es) for variable "writemem", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at Control.v(21): inferring latch(es) for variable "selbrjumpz", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at Control.v(21): inferring latch(es) for variable "selpctype", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at Control.v(21): inferring latch(es) for variable "compop", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at Control.v(21): inferring latch(es) for variable "unsig", which holds its previous value in one or more paths through the always construct
+Info (10041): Inferred latch for "unsig" at Control.v(21)
+Info (10041): Inferred latch for "compop[0]" at Control.v(21)
+Info (10041): Inferred latch for "compop[1]" at Control.v(21)
+Info (10041): Inferred latch for "compop[2]" at Control.v(21)
+Info (10041): Inferred latch for "selpctype[0]" at Control.v(21)
+Info (10041): Inferred latch for "selpctype[1]" at Control.v(21)
+Info (10041): Inferred latch for "selbrjumpz[0]" at Control.v(21)
+Info (10041): Inferred latch for "selbrjumpz[1]" at Control.v(21)
+Info (10041): Inferred latch for "writemem" at Control.v(21)
+Info (10041): Inferred latch for "readmem" at Control.v(21)
+Info (10041): Inferred latch for "shiftop[0]" at Control.v(21)
+Info (10041): Inferred latch for "shiftop[1]" at Control.v(21)
+Info (10041): Inferred latch for "aluop[0]" at Control.v(21)
+Info (10041): Inferred latch for "aluop[1]" at Control.v(21)
+Info (10041): Inferred latch for "aluop[2]" at Control.v(21)
+Info (10041): Inferred latch for "selalushift" at Control.v(21)
+Info (10041): Inferred latch for "selimregb" at Control.v(21)
+Info (10041): Inferred latch for "writeov" at Control.v(21)
+Info (10041): Inferred latch for "writereg" at Control.v(21)
+Info (10041): Inferred latch for "selregdest[0]" at Control.v(21)
+Info (10041): Inferred latch for "selregdest[1]" at Control.v(21)
+Info (10041): Inferred latch for "selwsource[0]" at Control.v(21)
+Info (10041): Inferred latch for "selwsource[1]" at Control.v(21)
+Info (10041): Inferred latch for "selwsource[2]" at Control.v(21)
+Info (12128): Elaborating entity "Registers" for hierarchy "Mips:comb_3|Decode:DECODE|Registers:RegisterModule"
+Info (12128): Elaborating entity "Comparator" for hierarchy "Mips:comb_3|Decode:DECODE|Comparator:ComparatorModule"
+Info (12128): Elaborating entity "Writeback" for hierarchy "Mips:comb_3|Writeback:WRITEBACK"
+Info (12128): Elaborating entity "OutConverter" for hierarchy "OutConverter:H0"
+Warning (12011): Net is missing source, defaulting to GND
+    Warning (12110): Net "SRAM_DQ[31]" is missing source, defaulting to GND
+    Warning (12110): Net "SRAM_DQ[30]" is missing source, defaulting to GND
+    Warning (12110): Net "SRAM_DQ[29]" is missing source, defaulting to GND
+    Warning (12110): Net "SRAM_DQ[28]" is missing source, defaulting to GND
+    Warning (12110): Net "SRAM_DQ[27]" is missing source, defaulting to GND
+    Warning (12110): Net "SRAM_DQ[26]" is missing source, defaulting to GND
+    Warning (12110): Net "SRAM_DQ[25]" is missing source, defaulting to GND
+    Warning (12110): Net "SRAM_DQ[24]" is missing source, defaulting to GND
+    Warning (12110): Net "SRAM_DQ[23]" is missing source, defaulting to GND
+    Warning (12110): Net "SRAM_DQ[22]" is missing source, defaulting to GND
+    Warning (12110): Net "SRAM_DQ[21]" is missing source, defaulting to GND
+    Warning (12110): Net "SRAM_DQ[20]" is missing source, defaulting to GND
+    Warning (12110): Net "SRAM_DQ[19]" is missing source, defaulting to GND
+    Warning (12110): Net "SRAM_DQ[18]" is missing source, defaulting to GND
+    Warning (12110): Net "SRAM_DQ[17]" is missing source, defaulting to GND
+    Warning (12110): Net "SRAM_DQ[16]" is missing source, defaulting to GND
+Error (12014): Net "Mips:comb_3|mem_mc_en", which fans out to "Mips:comb_3|MemControler:MEMCONTROLLER|mem_mc_en", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Mips.v Line: 23
+    Error (12015): Net is fed by "Mips:comb_3|Fetch:FETCH|if_mc_en" File: C:/Users/mfer/pinca-puca/Entrevista3/Fetch.v Line: 21
+    Error (12015): Net is fed by "Mips:comb_3|Memory:MEMORY|mem_mc_en" File: C:/Users/mfer/pinca-puca/Entrevista3/Memory.v Line: 14
+Error (12014): Net "Mips:comb_3|if_id_nextpc[31]", which fans out to "Mips:comb_3|Decode:DECODE|if_id_nextpc[31]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Mips.v Line: 29
+    Error (12015): Net is fed by "Mips:comb_3|Fetch:FETCH|if_id_nextpc[31]" File: C:/Users/mfer/pinca-puca/Entrevista3/Fetch.v Line: 40
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|if_id_nextpc[31]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 8
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Fetch:FetchModule|if_id_nextpc[31]" File: C:/Users/mfer/pinca-puca/Entrevista3/Fetch.v Line: 40
+Error (12014): Net "Mips:comb_3|if_id_nextpc[30]", which fans out to "Mips:comb_3|Decode:DECODE|if_id_nextpc[30]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Mips.v Line: 29
+    Error (12015): Net is fed by "Mips:comb_3|Fetch:FETCH|if_id_nextpc[30]" File: C:/Users/mfer/pinca-puca/Entrevista3/Fetch.v Line: 40
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|if_id_nextpc[30]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 8
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Fetch:FetchModule|if_id_nextpc[30]" File: C:/Users/mfer/pinca-puca/Entrevista3/Fetch.v Line: 40
+Error (12014): Net "Mips:comb_3|if_id_nextpc[29]", which fans out to "Mips:comb_3|Decode:DECODE|if_id_nextpc[29]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Mips.v Line: 29
+    Error (12015): Net is fed by "Mips:comb_3|Fetch:FETCH|if_id_nextpc[29]" File: C:/Users/mfer/pinca-puca/Entrevista3/Fetch.v Line: 40
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|if_id_nextpc[29]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 8
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Fetch:FetchModule|if_id_nextpc[29]" File: C:/Users/mfer/pinca-puca/Entrevista3/Fetch.v Line: 40
+Error (12014): Net "Mips:comb_3|if_id_nextpc[28]", which fans out to "Mips:comb_3|Decode:DECODE|if_id_nextpc[28]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Mips.v Line: 29
+    Error (12015): Net is fed by "Mips:comb_3|Fetch:FETCH|if_id_nextpc[28]" File: C:/Users/mfer/pinca-puca/Entrevista3/Fetch.v Line: 40
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|if_id_nextpc[28]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 8
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Fetch:FetchModule|if_id_nextpc[28]" File: C:/Users/mfer/pinca-puca/Entrevista3/Fetch.v Line: 40
+Error (12014): Net "Mips:comb_3|if_id_nextpc[27]", which fans out to "Mips:comb_3|Decode:DECODE|if_id_nextpc[27]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Mips.v Line: 29
+    Error (12015): Net is fed by "Mips:comb_3|Fetch:FETCH|if_id_nextpc[27]" File: C:/Users/mfer/pinca-puca/Entrevista3/Fetch.v Line: 40
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|if_id_nextpc[27]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 8
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Fetch:FetchModule|if_id_nextpc[27]" File: C:/Users/mfer/pinca-puca/Entrevista3/Fetch.v Line: 40
+Error (12014): Net "Mips:comb_3|if_id_nextpc[26]", which fans out to "Mips:comb_3|Decode:DECODE|if_id_nextpc[26]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Mips.v Line: 29
+    Error (12015): Net is fed by "Mips:comb_3|Fetch:FETCH|if_id_nextpc[26]" File: C:/Users/mfer/pinca-puca/Entrevista3/Fetch.v Line: 40
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|if_id_nextpc[26]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 8
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Fetch:FetchModule|if_id_nextpc[26]" File: C:/Users/mfer/pinca-puca/Entrevista3/Fetch.v Line: 40
+Error (12014): Net "Mips:comb_3|if_id_nextpc[25]", which fans out to "Mips:comb_3|Decode:DECODE|if_id_nextpc[25]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Mips.v Line: 29
+    Error (12015): Net is fed by "Mips:comb_3|Fetch:FETCH|if_id_nextpc[25]" File: C:/Users/mfer/pinca-puca/Entrevista3/Fetch.v Line: 40
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|if_id_nextpc[25]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 8
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Fetch:FetchModule|if_id_nextpc[25]" File: C:/Users/mfer/pinca-puca/Entrevista3/Fetch.v Line: 40
+Error (12014): Net "Mips:comb_3|if_id_nextpc[24]", which fans out to "Mips:comb_3|Decode:DECODE|if_id_nextpc[24]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Mips.v Line: 29
+    Error (12015): Net is fed by "Mips:comb_3|Fetch:FETCH|if_id_nextpc[24]" File: C:/Users/mfer/pinca-puca/Entrevista3/Fetch.v Line: 40
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|if_id_nextpc[24]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 8
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Fetch:FetchModule|if_id_nextpc[24]" File: C:/Users/mfer/pinca-puca/Entrevista3/Fetch.v Line: 40
+Error (12014): Net "Mips:comb_3|if_id_nextpc[23]", which fans out to "Mips:comb_3|Decode:DECODE|if_id_nextpc[23]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Mips.v Line: 29
+    Error (12015): Net is fed by "Mips:comb_3|Fetch:FETCH|if_id_nextpc[23]" File: C:/Users/mfer/pinca-puca/Entrevista3/Fetch.v Line: 40
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|if_id_nextpc[23]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 8
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Fetch:FetchModule|if_id_nextpc[23]" File: C:/Users/mfer/pinca-puca/Entrevista3/Fetch.v Line: 40
+Error (12014): Net "Mips:comb_3|if_id_nextpc[22]", which fans out to "Mips:comb_3|Decode:DECODE|if_id_nextpc[22]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Mips.v Line: 29
+    Error (12015): Net is fed by "Mips:comb_3|Fetch:FETCH|if_id_nextpc[22]" File: C:/Users/mfer/pinca-puca/Entrevista3/Fetch.v Line: 40
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|if_id_nextpc[22]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 8
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Fetch:FetchModule|if_id_nextpc[22]" File: C:/Users/mfer/pinca-puca/Entrevista3/Fetch.v Line: 40
+Error (12014): Net "Mips:comb_3|if_id_nextpc[21]", which fans out to "Mips:comb_3|Decode:DECODE|if_id_nextpc[21]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Mips.v Line: 29
+    Error (12015): Net is fed by "Mips:comb_3|Fetch:FETCH|if_id_nextpc[21]" File: C:/Users/mfer/pinca-puca/Entrevista3/Fetch.v Line: 40
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|if_id_nextpc[21]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 8
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Fetch:FetchModule|if_id_nextpc[21]" File: C:/Users/mfer/pinca-puca/Entrevista3/Fetch.v Line: 40
+Error (12014): Net "Mips:comb_3|if_id_nextpc[20]", which fans out to "Mips:comb_3|Decode:DECODE|if_id_nextpc[20]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Mips.v Line: 29
+    Error (12015): Net is fed by "Mips:comb_3|Fetch:FETCH|if_id_nextpc[20]" File: C:/Users/mfer/pinca-puca/Entrevista3/Fetch.v Line: 40
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|if_id_nextpc[20]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 8
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Fetch:FetchModule|if_id_nextpc[20]" File: C:/Users/mfer/pinca-puca/Entrevista3/Fetch.v Line: 40
+Error (12014): Net "Mips:comb_3|if_id_nextpc[19]", which fans out to "Mips:comb_3|Decode:DECODE|if_id_nextpc[19]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Mips.v Line: 29
+    Error (12015): Net is fed by "Mips:comb_3|Fetch:FETCH|if_id_nextpc[19]" File: C:/Users/mfer/pinca-puca/Entrevista3/Fetch.v Line: 40
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|if_id_nextpc[19]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 8
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Fetch:FetchModule|if_id_nextpc[19]" File: C:/Users/mfer/pinca-puca/Entrevista3/Fetch.v Line: 40
+Error (12014): Net "Mips:comb_3|if_id_nextpc[18]", which fans out to "Mips:comb_3|Decode:DECODE|if_id_nextpc[18]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Mips.v Line: 29
+    Error (12015): Net is fed by "Mips:comb_3|Fetch:FETCH|if_id_nextpc[18]" File: C:/Users/mfer/pinca-puca/Entrevista3/Fetch.v Line: 40
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|if_id_nextpc[18]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 8
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Fetch:FetchModule|if_id_nextpc[18]" File: C:/Users/mfer/pinca-puca/Entrevista3/Fetch.v Line: 40
+Error (12014): Net "Mips:comb_3|if_id_nextpc[17]", which fans out to "Mips:comb_3|Decode:DECODE|if_id_nextpc[17]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Mips.v Line: 29
+    Error (12015): Net is fed by "Mips:comb_3|Fetch:FETCH|if_id_nextpc[17]" File: C:/Users/mfer/pinca-puca/Entrevista3/Fetch.v Line: 40
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|if_id_nextpc[17]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 8
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Fetch:FetchModule|if_id_nextpc[17]" File: C:/Users/mfer/pinca-puca/Entrevista3/Fetch.v Line: 40
+Error (12014): Net "Mips:comb_3|if_id_nextpc[16]", which fans out to "Mips:comb_3|Decode:DECODE|if_id_nextpc[16]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Mips.v Line: 29
+    Error (12015): Net is fed by "Mips:comb_3|Fetch:FETCH|if_id_nextpc[16]" File: C:/Users/mfer/pinca-puca/Entrevista3/Fetch.v Line: 40
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|if_id_nextpc[16]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 8
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Fetch:FetchModule|if_id_nextpc[16]" File: C:/Users/mfer/pinca-puca/Entrevista3/Fetch.v Line: 40
+Error (12014): Net "Mips:comb_3|if_id_nextpc[15]", which fans out to "Mips:comb_3|Decode:DECODE|if_id_nextpc[15]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Mips.v Line: 29
+    Error (12015): Net is fed by "Mips:comb_3|Fetch:FETCH|if_id_nextpc[15]" File: C:/Users/mfer/pinca-puca/Entrevista3/Fetch.v Line: 40
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|if_id_nextpc[15]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 8
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Fetch:FetchModule|if_id_nextpc[15]" File: C:/Users/mfer/pinca-puca/Entrevista3/Fetch.v Line: 40
+Error (12014): Net "Mips:comb_3|if_id_nextpc[14]", which fans out to "Mips:comb_3|Decode:DECODE|if_id_nextpc[14]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Mips.v Line: 29
+    Error (12015): Net is fed by "Mips:comb_3|Fetch:FETCH|if_id_nextpc[14]" File: C:/Users/mfer/pinca-puca/Entrevista3/Fetch.v Line: 40
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|if_id_nextpc[14]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 8
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Fetch:FetchModule|if_id_nextpc[14]" File: C:/Users/mfer/pinca-puca/Entrevista3/Fetch.v Line: 40
+Error (12014): Net "Mips:comb_3|if_id_nextpc[13]", which fans out to "Mips:comb_3|Decode:DECODE|if_id_nextpc[13]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Mips.v Line: 29
+    Error (12015): Net is fed by "Mips:comb_3|Fetch:FETCH|if_id_nextpc[13]" File: C:/Users/mfer/pinca-puca/Entrevista3/Fetch.v Line: 40
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|if_id_nextpc[13]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 8
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Fetch:FetchModule|if_id_nextpc[13]" File: C:/Users/mfer/pinca-puca/Entrevista3/Fetch.v Line: 40
+Error (12014): Net "Mips:comb_3|if_id_nextpc[12]", which fans out to "Mips:comb_3|Decode:DECODE|if_id_nextpc[12]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Mips.v Line: 29
+    Error (12015): Net is fed by "Mips:comb_3|Fetch:FETCH|if_id_nextpc[12]" File: C:/Users/mfer/pinca-puca/Entrevista3/Fetch.v Line: 40
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|if_id_nextpc[12]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 8
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Fetch:FetchModule|if_id_nextpc[12]" File: C:/Users/mfer/pinca-puca/Entrevista3/Fetch.v Line: 40
+Error (12014): Net "Mips:comb_3|if_id_nextpc[11]", which fans out to "Mips:comb_3|Decode:DECODE|if_id_nextpc[11]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Mips.v Line: 29
+    Error (12015): Net is fed by "Mips:comb_3|Fetch:FETCH|if_id_nextpc[11]" File: C:/Users/mfer/pinca-puca/Entrevista3/Fetch.v Line: 40
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|if_id_nextpc[11]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 8
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Fetch:FetchModule|if_id_nextpc[11]" File: C:/Users/mfer/pinca-puca/Entrevista3/Fetch.v Line: 40
+Error (12014): Net "Mips:comb_3|if_id_nextpc[10]", which fans out to "Mips:comb_3|Decode:DECODE|if_id_nextpc[10]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Mips.v Line: 29
+    Error (12015): Net is fed by "Mips:comb_3|Fetch:FETCH|if_id_nextpc[10]" File: C:/Users/mfer/pinca-puca/Entrevista3/Fetch.v Line: 40
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|if_id_nextpc[10]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 8
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Fetch:FetchModule|if_id_nextpc[10]" File: C:/Users/mfer/pinca-puca/Entrevista3/Fetch.v Line: 40
+Error (12014): Net "Mips:comb_3|if_id_nextpc[9]", which fans out to "Mips:comb_3|Decode:DECODE|if_id_nextpc[9]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Mips.v Line: 29
+    Error (12015): Net is fed by "Mips:comb_3|Fetch:FETCH|if_id_nextpc[9]" File: C:/Users/mfer/pinca-puca/Entrevista3/Fetch.v Line: 40
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|if_id_nextpc[9]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 8
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Fetch:FetchModule|if_id_nextpc[9]" File: C:/Users/mfer/pinca-puca/Entrevista3/Fetch.v Line: 40
+Error (12014): Net "Mips:comb_3|if_id_nextpc[8]", which fans out to "Mips:comb_3|Decode:DECODE|if_id_nextpc[8]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Mips.v Line: 29
+    Error (12015): Net is fed by "Mips:comb_3|Fetch:FETCH|if_id_nextpc[8]" File: C:/Users/mfer/pinca-puca/Entrevista3/Fetch.v Line: 40
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|if_id_nextpc[8]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 8
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Fetch:FetchModule|if_id_nextpc[8]" File: C:/Users/mfer/pinca-puca/Entrevista3/Fetch.v Line: 40
+Error (12014): Net "Mips:comb_3|if_id_nextpc[7]", which fans out to "Mips:comb_3|Decode:DECODE|if_id_nextpc[7]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Mips.v Line: 29
+    Error (12015): Net is fed by "Mips:comb_3|Fetch:FETCH|if_id_nextpc[7]" File: C:/Users/mfer/pinca-puca/Entrevista3/Fetch.v Line: 40
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|if_id_nextpc[7]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 8
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Fetch:FetchModule|if_id_nextpc[7]" File: C:/Users/mfer/pinca-puca/Entrevista3/Fetch.v Line: 40
+Error (12014): Net "Mips:comb_3|if_id_nextpc[6]", which fans out to "Mips:comb_3|Decode:DECODE|if_id_nextpc[6]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Mips.v Line: 29
+    Error (12015): Net is fed by "Mips:comb_3|Fetch:FETCH|if_id_nextpc[6]" File: C:/Users/mfer/pinca-puca/Entrevista3/Fetch.v Line: 40
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|if_id_nextpc[6]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 8
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Fetch:FetchModule|if_id_nextpc[6]" File: C:/Users/mfer/pinca-puca/Entrevista3/Fetch.v Line: 40
+Error (12014): Net "Mips:comb_3|if_id_nextpc[5]", which fans out to "Mips:comb_3|Decode:DECODE|if_id_nextpc[5]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Mips.v Line: 29
+    Error (12015): Net is fed by "Mips:comb_3|Fetch:FETCH|if_id_nextpc[5]" File: C:/Users/mfer/pinca-puca/Entrevista3/Fetch.v Line: 40
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|if_id_nextpc[5]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 8
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Fetch:FetchModule|if_id_nextpc[5]" File: C:/Users/mfer/pinca-puca/Entrevista3/Fetch.v Line: 40
+Error (12014): Net "Mips:comb_3|if_id_nextpc[4]", which fans out to "Mips:comb_3|Decode:DECODE|if_id_nextpc[4]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Mips.v Line: 29
+    Error (12015): Net is fed by "Mips:comb_3|Fetch:FETCH|if_id_nextpc[4]" File: C:/Users/mfer/pinca-puca/Entrevista3/Fetch.v Line: 40
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|if_id_nextpc[4]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 8
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Fetch:FetchModule|if_id_nextpc[4]" File: C:/Users/mfer/pinca-puca/Entrevista3/Fetch.v Line: 40
+Error (12014): Net "Mips:comb_3|if_id_nextpc[3]", which fans out to "Mips:comb_3|Decode:DECODE|if_id_nextpc[3]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Mips.v Line: 29
+    Error (12015): Net is fed by "Mips:comb_3|Fetch:FETCH|if_id_nextpc[3]" File: C:/Users/mfer/pinca-puca/Entrevista3/Fetch.v Line: 40
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|if_id_nextpc[3]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 8
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Fetch:FetchModule|if_id_nextpc[3]" File: C:/Users/mfer/pinca-puca/Entrevista3/Fetch.v Line: 40
+Error (12014): Net "Mips:comb_3|if_id_nextpc[2]", which fans out to "Mips:comb_3|Decode:DECODE|if_id_nextpc[2]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Mips.v Line: 29
+    Error (12015): Net is fed by "Mips:comb_3|Fetch:FETCH|if_id_nextpc[2]" File: C:/Users/mfer/pinca-puca/Entrevista3/Fetch.v Line: 40
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|if_id_nextpc[2]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 8
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Fetch:FetchModule|if_id_nextpc[2]" File: C:/Users/mfer/pinca-puca/Entrevista3/Fetch.v Line: 40
+Error (12014): Net "Mips:comb_3|if_id_nextpc[1]", which fans out to "Mips:comb_3|Decode:DECODE|if_id_nextpc[1]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Mips.v Line: 29
+    Error (12015): Net is fed by "Mips:comb_3|Fetch:FETCH|if_id_nextpc[1]" File: C:/Users/mfer/pinca-puca/Entrevista3/Fetch.v Line: 40
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|if_id_nextpc[1]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 8
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Fetch:FetchModule|if_id_nextpc[1]" File: C:/Users/mfer/pinca-puca/Entrevista3/Fetch.v Line: 40
+Error (12014): Net "Mips:comb_3|if_id_nextpc[0]", which fans out to "Mips:comb_3|Decode:DECODE|if_id_nextpc[0]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Mips.v Line: 29
+    Error (12015): Net is fed by "Mips:comb_3|Fetch:FETCH|if_id_nextpc[0]" File: C:/Users/mfer/pinca-puca/Entrevista3/Fetch.v Line: 40
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|if_id_nextpc[0]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 8
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Fetch:FetchModule|if_id_nextpc[0]" File: C:/Users/mfer/pinca-puca/Entrevista3/Fetch.v Line: 40
+Error (12014): Net "Mips:comb_3|if_id_instruc[31]", which fans out to "Mips:comb_3|Decode:DECODE|if_id_instruc[31]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Mips.v Line: 30
+    Error (12015): Net is fed by "Mips:comb_3|Fetch:FETCH|if_id_instruc[31]" File: C:/Users/mfer/pinca-puca/Entrevista3/Fetch.v Line: 40
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|if_id_instruc[31]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 7
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Fetch:FetchModule|if_id_instruc[31]" File: C:/Users/mfer/pinca-puca/Entrevista3/Fetch.v Line: 40
+Error (12014): Net "Mips:comb_3|if_id_instruc[30]", which fans out to "Mips:comb_3|Decode:DECODE|if_id_instruc[30]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Mips.v Line: 30
+    Error (12015): Net is fed by "Mips:comb_3|Fetch:FETCH|if_id_instruc[30]" File: C:/Users/mfer/pinca-puca/Entrevista3/Fetch.v Line: 40
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|if_id_instruc[30]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 7
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Fetch:FetchModule|if_id_instruc[30]" File: C:/Users/mfer/pinca-puca/Entrevista3/Fetch.v Line: 40
+Error (12014): Net "Mips:comb_3|if_id_instruc[29]", which fans out to "Mips:comb_3|Decode:DECODE|if_id_instruc[29]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Mips.v Line: 30
+    Error (12015): Net is fed by "Mips:comb_3|Fetch:FETCH|if_id_instruc[29]" File: C:/Users/mfer/pinca-puca/Entrevista3/Fetch.v Line: 40
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|if_id_instruc[29]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 7
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Fetch:FetchModule|if_id_instruc[29]" File: C:/Users/mfer/pinca-puca/Entrevista3/Fetch.v Line: 40
+Error (12014): Net "Mips:comb_3|if_id_instruc[28]", which fans out to "Mips:comb_3|Decode:DECODE|if_id_instruc[28]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Mips.v Line: 30
+    Error (12015): Net is fed by "Mips:comb_3|Fetch:FETCH|if_id_instruc[28]" File: C:/Users/mfer/pinca-puca/Entrevista3/Fetch.v Line: 40
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|if_id_instruc[28]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 7
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Fetch:FetchModule|if_id_instruc[28]" File: C:/Users/mfer/pinca-puca/Entrevista3/Fetch.v Line: 40
+Error (12014): Net "Mips:comb_3|if_id_instruc[27]", which fans out to "Mips:comb_3|Decode:DECODE|if_id_instruc[27]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Mips.v Line: 30
+    Error (12015): Net is fed by "Mips:comb_3|Fetch:FETCH|if_id_instruc[27]" File: C:/Users/mfer/pinca-puca/Entrevista3/Fetch.v Line: 40
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|if_id_instruc[27]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 7
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Fetch:FetchModule|if_id_instruc[27]" File: C:/Users/mfer/pinca-puca/Entrevista3/Fetch.v Line: 40
+Error (12014): Net "Mips:comb_3|if_id_instruc[26]", which fans out to "Mips:comb_3|Decode:DECODE|if_id_instruc[26]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Mips.v Line: 30
+    Error (12015): Net is fed by "Mips:comb_3|Fetch:FETCH|if_id_instruc[26]" File: C:/Users/mfer/pinca-puca/Entrevista3/Fetch.v Line: 40
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|if_id_instruc[26]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 7
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Fetch:FetchModule|if_id_instruc[26]" File: C:/Users/mfer/pinca-puca/Entrevista3/Fetch.v Line: 40
+Error (12014): Net "Mips:comb_3|if_id_instruc[25]", which fans out to "Mips:comb_3|Decode:DECODE|if_id_instruc[25]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Mips.v Line: 30
+    Error (12015): Net is fed by "Mips:comb_3|Fetch:FETCH|if_id_instruc[25]" File: C:/Users/mfer/pinca-puca/Entrevista3/Fetch.v Line: 40
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|if_id_instruc[25]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 7
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Fetch:FetchModule|if_id_instruc[25]" File: C:/Users/mfer/pinca-puca/Entrevista3/Fetch.v Line: 40
+Error (12014): Net "Mips:comb_3|if_id_instruc[24]", which fans out to "Mips:comb_3|Decode:DECODE|if_id_instruc[24]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Mips.v Line: 30
+    Error (12015): Net is fed by "Mips:comb_3|Fetch:FETCH|if_id_instruc[24]" File: C:/Users/mfer/pinca-puca/Entrevista3/Fetch.v Line: 40
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|if_id_instruc[24]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 7
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Fetch:FetchModule|if_id_instruc[24]" File: C:/Users/mfer/pinca-puca/Entrevista3/Fetch.v Line: 40
+Error (12014): Net "Mips:comb_3|if_id_instruc[23]", which fans out to "Mips:comb_3|Decode:DECODE|if_id_instruc[23]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Mips.v Line: 30
+    Error (12015): Net is fed by "Mips:comb_3|Fetch:FETCH|if_id_instruc[23]" File: C:/Users/mfer/pinca-puca/Entrevista3/Fetch.v Line: 40
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|if_id_instruc[23]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 7
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Fetch:FetchModule|if_id_instruc[23]" File: C:/Users/mfer/pinca-puca/Entrevista3/Fetch.v Line: 40
+Error (12014): Net "Mips:comb_3|if_id_instruc[22]", which fans out to "Mips:comb_3|Decode:DECODE|if_id_instruc[22]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Mips.v Line: 30
+    Error (12015): Net is fed by "Mips:comb_3|Fetch:FETCH|if_id_instruc[22]" File: C:/Users/mfer/pinca-puca/Entrevista3/Fetch.v Line: 40
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|if_id_instruc[22]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 7
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Fetch:FetchModule|if_id_instruc[22]" File: C:/Users/mfer/pinca-puca/Entrevista3/Fetch.v Line: 40
+Error (12014): Net "Mips:comb_3|if_id_instruc[21]", which fans out to "Mips:comb_3|Decode:DECODE|if_id_instruc[21]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Mips.v Line: 30
+    Error (12015): Net is fed by "Mips:comb_3|Fetch:FETCH|if_id_instruc[21]" File: C:/Users/mfer/pinca-puca/Entrevista3/Fetch.v Line: 40
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|if_id_instruc[21]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 7
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Fetch:FetchModule|if_id_instruc[21]" File: C:/Users/mfer/pinca-puca/Entrevista3/Fetch.v Line: 40
+Error (12014): Net "Mips:comb_3|if_id_instruc[20]", which fans out to "Mips:comb_3|Decode:DECODE|if_id_instruc[20]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Mips.v Line: 30
+    Error (12015): Net is fed by "Mips:comb_3|Fetch:FETCH|if_id_instruc[20]" File: C:/Users/mfer/pinca-puca/Entrevista3/Fetch.v Line: 40
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|if_id_instruc[20]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 7
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Fetch:FetchModule|if_id_instruc[20]" File: C:/Users/mfer/pinca-puca/Entrevista3/Fetch.v Line: 40
+Error (12014): Net "Mips:comb_3|if_id_instruc[19]", which fans out to "Mips:comb_3|Decode:DECODE|if_id_instruc[19]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Mips.v Line: 30
+    Error (12015): Net is fed by "Mips:comb_3|Fetch:FETCH|if_id_instruc[19]" File: C:/Users/mfer/pinca-puca/Entrevista3/Fetch.v Line: 40
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|if_id_instruc[19]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 7
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Fetch:FetchModule|if_id_instruc[19]" File: C:/Users/mfer/pinca-puca/Entrevista3/Fetch.v Line: 40
+Error (12014): Net "Mips:comb_3|if_id_instruc[18]", which fans out to "Mips:comb_3|Decode:DECODE|if_id_instruc[18]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Mips.v Line: 30
+    Error (12015): Net is fed by "Mips:comb_3|Fetch:FETCH|if_id_instruc[18]" File: C:/Users/mfer/pinca-puca/Entrevista3/Fetch.v Line: 40
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|if_id_instruc[18]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 7
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Fetch:FetchModule|if_id_instruc[18]" File: C:/Users/mfer/pinca-puca/Entrevista3/Fetch.v Line: 40
+Error (12014): Net "Mips:comb_3|if_id_instruc[17]", which fans out to "Mips:comb_3|Decode:DECODE|if_id_instruc[17]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Mips.v Line: 30
+    Error (12015): Net is fed by "Mips:comb_3|Fetch:FETCH|if_id_instruc[17]" File: C:/Users/mfer/pinca-puca/Entrevista3/Fetch.v Line: 40
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|if_id_instruc[17]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 7
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Fetch:FetchModule|if_id_instruc[17]" File: C:/Users/mfer/pinca-puca/Entrevista3/Fetch.v Line: 40
+Error (12014): Net "Mips:comb_3|if_id_instruc[16]", which fans out to "Mips:comb_3|Decode:DECODE|if_id_instruc[16]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Mips.v Line: 30
+    Error (12015): Net is fed by "Mips:comb_3|Fetch:FETCH|if_id_instruc[16]" File: C:/Users/mfer/pinca-puca/Entrevista3/Fetch.v Line: 40
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|if_id_instruc[16]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 7
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Fetch:FetchModule|if_id_instruc[16]" File: C:/Users/mfer/pinca-puca/Entrevista3/Fetch.v Line: 40
+Error (12014): Net "Mips:comb_3|if_id_instruc[15]", which fans out to "Mips:comb_3|Decode:DECODE|if_id_instruc[15]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Mips.v Line: 30
+    Error (12015): Net is fed by "Mips:comb_3|Fetch:FETCH|if_id_instruc[15]" File: C:/Users/mfer/pinca-puca/Entrevista3/Fetch.v Line: 40
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|if_id_instruc[15]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 7
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Fetch:FetchModule|if_id_instruc[15]" File: C:/Users/mfer/pinca-puca/Entrevista3/Fetch.v Line: 40
+Error (12014): Net "Mips:comb_3|if_id_instruc[14]", which fans out to "Mips:comb_3|Decode:DECODE|if_id_instruc[14]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Mips.v Line: 30
+    Error (12015): Net is fed by "Mips:comb_3|Fetch:FETCH|if_id_instruc[14]" File: C:/Users/mfer/pinca-puca/Entrevista3/Fetch.v Line: 40
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|if_id_instruc[14]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 7
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Fetch:FetchModule|if_id_instruc[14]" File: C:/Users/mfer/pinca-puca/Entrevista3/Fetch.v Line: 40
+Error (12014): Net "Mips:comb_3|if_id_instruc[13]", which fans out to "Mips:comb_3|Decode:DECODE|if_id_instruc[13]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Mips.v Line: 30
+    Error (12015): Net is fed by "Mips:comb_3|Fetch:FETCH|if_id_instruc[13]" File: C:/Users/mfer/pinca-puca/Entrevista3/Fetch.v Line: 40
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|if_id_instruc[13]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 7
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Fetch:FetchModule|if_id_instruc[13]" File: C:/Users/mfer/pinca-puca/Entrevista3/Fetch.v Line: 40
+Error (12014): Net "Mips:comb_3|if_id_instruc[12]", which fans out to "Mips:comb_3|Decode:DECODE|if_id_instruc[12]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Mips.v Line: 30
+    Error (12015): Net is fed by "Mips:comb_3|Fetch:FETCH|if_id_instruc[12]" File: C:/Users/mfer/pinca-puca/Entrevista3/Fetch.v Line: 40
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|if_id_instruc[12]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 7
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Fetch:FetchModule|if_id_instruc[12]" File: C:/Users/mfer/pinca-puca/Entrevista3/Fetch.v Line: 40
+Error (12014): Net "Mips:comb_3|if_id_instruc[11]", which fans out to "Mips:comb_3|Decode:DECODE|if_id_instruc[11]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Mips.v Line: 30
+    Error (12015): Net is fed by "Mips:comb_3|Fetch:FETCH|if_id_instruc[11]" File: C:/Users/mfer/pinca-puca/Entrevista3/Fetch.v Line: 40
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|if_id_instruc[11]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 7
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Fetch:FetchModule|if_id_instruc[11]" File: C:/Users/mfer/pinca-puca/Entrevista3/Fetch.v Line: 40
+Error (12014): Net "Mips:comb_3|if_id_instruc[10]", which fans out to "Mips:comb_3|Decode:DECODE|if_id_instruc[10]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Mips.v Line: 30
+    Error (12015): Net is fed by "Mips:comb_3|Fetch:FETCH|if_id_instruc[10]" File: C:/Users/mfer/pinca-puca/Entrevista3/Fetch.v Line: 40
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|if_id_instruc[10]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 7
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Fetch:FetchModule|if_id_instruc[10]" File: C:/Users/mfer/pinca-puca/Entrevista3/Fetch.v Line: 40
+Error (12014): Net "Mips:comb_3|if_id_instruc[9]", which fans out to "Mips:comb_3|Decode:DECODE|if_id_instruc[9]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Mips.v Line: 30
+    Error (12015): Net is fed by "Mips:comb_3|Fetch:FETCH|if_id_instruc[9]" File: C:/Users/mfer/pinca-puca/Entrevista3/Fetch.v Line: 40
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|if_id_instruc[9]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 7
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Fetch:FetchModule|if_id_instruc[9]" File: C:/Users/mfer/pinca-puca/Entrevista3/Fetch.v Line: 40
+Error (12014): Net "Mips:comb_3|if_id_instruc[8]", which fans out to "Mips:comb_3|Decode:DECODE|if_id_instruc[8]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Mips.v Line: 30
+    Error (12015): Net is fed by "Mips:comb_3|Fetch:FETCH|if_id_instruc[8]" File: C:/Users/mfer/pinca-puca/Entrevista3/Fetch.v Line: 40
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|if_id_instruc[8]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 7
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Fetch:FetchModule|if_id_instruc[8]" File: C:/Users/mfer/pinca-puca/Entrevista3/Fetch.v Line: 40
+Error (12014): Net "Mips:comb_3|if_id_instruc[7]", which fans out to "Mips:comb_3|Decode:DECODE|if_id_instruc[7]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Mips.v Line: 30
+    Error (12015): Net is fed by "Mips:comb_3|Fetch:FETCH|if_id_instruc[7]" File: C:/Users/mfer/pinca-puca/Entrevista3/Fetch.v Line: 40
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|if_id_instruc[7]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 7
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Fetch:FetchModule|if_id_instruc[7]" File: C:/Users/mfer/pinca-puca/Entrevista3/Fetch.v Line: 40
+Error (12014): Net "Mips:comb_3|if_id_instruc[6]", which fans out to "Mips:comb_3|Decode:DECODE|if_id_instruc[6]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Mips.v Line: 30
+    Error (12015): Net is fed by "Mips:comb_3|Fetch:FETCH|if_id_instruc[6]" File: C:/Users/mfer/pinca-puca/Entrevista3/Fetch.v Line: 40
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|if_id_instruc[6]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 7
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Fetch:FetchModule|if_id_instruc[6]" File: C:/Users/mfer/pinca-puca/Entrevista3/Fetch.v Line: 40
+Error (12014): Net "Mips:comb_3|if_id_instruc[5]", which fans out to "Mips:comb_3|Decode:DECODE|if_id_instruc[5]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Mips.v Line: 30
+    Error (12015): Net is fed by "Mips:comb_3|Fetch:FETCH|if_id_instruc[5]" File: C:/Users/mfer/pinca-puca/Entrevista3/Fetch.v Line: 40
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|if_id_instruc[5]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 7
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Fetch:FetchModule|if_id_instruc[5]" File: C:/Users/mfer/pinca-puca/Entrevista3/Fetch.v Line: 40
+Error (12014): Net "Mips:comb_3|if_id_instruc[4]", which fans out to "Mips:comb_3|Decode:DECODE|if_id_instruc[4]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Mips.v Line: 30
+    Error (12015): Net is fed by "Mips:comb_3|Fetch:FETCH|if_id_instruc[4]" File: C:/Users/mfer/pinca-puca/Entrevista3/Fetch.v Line: 40
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|if_id_instruc[4]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 7
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Fetch:FetchModule|if_id_instruc[4]" File: C:/Users/mfer/pinca-puca/Entrevista3/Fetch.v Line: 40
+Error (12014): Net "Mips:comb_3|if_id_instruc[3]", which fans out to "Mips:comb_3|Decode:DECODE|if_id_instruc[3]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Mips.v Line: 30
+    Error (12015): Net is fed by "Mips:comb_3|Fetch:FETCH|if_id_instruc[3]" File: C:/Users/mfer/pinca-puca/Entrevista3/Fetch.v Line: 40
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|if_id_instruc[3]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 7
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Fetch:FetchModule|if_id_instruc[3]" File: C:/Users/mfer/pinca-puca/Entrevista3/Fetch.v Line: 40
+Error (12014): Net "Mips:comb_3|if_id_instruc[2]", which fans out to "Mips:comb_3|Decode:DECODE|if_id_instruc[2]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Mips.v Line: 30
+    Error (12015): Net is fed by "Mips:comb_3|Fetch:FETCH|if_id_instruc[2]" File: C:/Users/mfer/pinca-puca/Entrevista3/Fetch.v Line: 40
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|if_id_instruc[2]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 7
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Fetch:FetchModule|if_id_instruc[2]" File: C:/Users/mfer/pinca-puca/Entrevista3/Fetch.v Line: 40
+Error (12014): Net "Mips:comb_3|if_id_instruc[1]", which fans out to "Mips:comb_3|Decode:DECODE|if_id_instruc[1]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Mips.v Line: 30
+    Error (12015): Net is fed by "Mips:comb_3|Fetch:FETCH|if_id_instruc[1]" File: C:/Users/mfer/pinca-puca/Entrevista3/Fetch.v Line: 40
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|if_id_instruc[1]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 7
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Fetch:FetchModule|if_id_instruc[1]" File: C:/Users/mfer/pinca-puca/Entrevista3/Fetch.v Line: 40
+Error (12014): Net "Mips:comb_3|if_id_instruc[0]", which fans out to "Mips:comb_3|Decode:DECODE|if_id_instruc[0]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Mips.v Line: 30
+    Error (12015): Net is fed by "Mips:comb_3|Fetch:FETCH|if_id_instruc[0]" File: C:/Users/mfer/pinca-puca/Entrevista3/Fetch.v Line: 40
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|if_id_instruc[0]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 7
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Fetch:FetchModule|if_id_instruc[0]" File: C:/Users/mfer/pinca-puca/Entrevista3/Fetch.v Line: 40
+Error (12014): Net "Mips:comb_3|reg_id_dataa[31]", which fans out to "Mips:comb_3|Decode:DECODE|reg_id_dataa[31]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Mips.v Line: 63
+    Error (12015): Net is fed by "Mips:comb_3|Registers:REGISTERS|dataa[31]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 34
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|reg_id_dataa[31]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 35
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Registers:RegisterModule|dataa[31]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 34
+Error (12014): Net "Mips:comb_3|reg_id_dataa[30]", which fans out to "Mips:comb_3|Decode:DECODE|reg_id_dataa[30]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Mips.v Line: 63
+    Error (12015): Net is fed by "Mips:comb_3|Registers:REGISTERS|dataa[30]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 34
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|reg_id_dataa[30]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 35
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Registers:RegisterModule|dataa[30]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 34
+Error (12014): Net "Mips:comb_3|reg_id_dataa[29]", which fans out to "Mips:comb_3|Decode:DECODE|reg_id_dataa[29]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Mips.v Line: 63
+    Error (12015): Net is fed by "Mips:comb_3|Registers:REGISTERS|dataa[29]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 34
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|reg_id_dataa[29]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 35
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Registers:RegisterModule|dataa[29]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 34
+Error (12014): Net "Mips:comb_3|reg_id_dataa[28]", which fans out to "Mips:comb_3|Decode:DECODE|reg_id_dataa[28]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Mips.v Line: 63
+    Error (12015): Net is fed by "Mips:comb_3|Registers:REGISTERS|dataa[28]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 34
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|reg_id_dataa[28]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 35
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Registers:RegisterModule|dataa[28]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 34
+Error (12014): Net "Mips:comb_3|reg_id_dataa[27]", which fans out to "Mips:comb_3|Decode:DECODE|reg_id_dataa[27]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Mips.v Line: 63
+    Error (12015): Net is fed by "Mips:comb_3|Registers:REGISTERS|dataa[27]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 34
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|reg_id_dataa[27]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 35
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Registers:RegisterModule|dataa[27]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 34
+Error (12014): Net "Mips:comb_3|reg_id_dataa[26]", which fans out to "Mips:comb_3|Decode:DECODE|reg_id_dataa[26]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Mips.v Line: 63
+    Error (12015): Net is fed by "Mips:comb_3|Registers:REGISTERS|dataa[26]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 34
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|reg_id_dataa[26]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 35
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Registers:RegisterModule|dataa[26]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 34
+Error (12014): Net "Mips:comb_3|reg_id_dataa[25]", which fans out to "Mips:comb_3|Decode:DECODE|reg_id_dataa[25]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Mips.v Line: 63
+    Error (12015): Net is fed by "Mips:comb_3|Registers:REGISTERS|dataa[25]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 34
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|reg_id_dataa[25]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 35
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Registers:RegisterModule|dataa[25]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 34
+Error (12014): Net "Mips:comb_3|reg_id_dataa[24]", which fans out to "Mips:comb_3|Decode:DECODE|reg_id_dataa[24]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Mips.v Line: 63
+    Error (12015): Net is fed by "Mips:comb_3|Registers:REGISTERS|dataa[24]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 34
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|reg_id_dataa[24]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 35
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Registers:RegisterModule|dataa[24]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 34
+Error (12014): Net "Mips:comb_3|reg_id_dataa[23]", which fans out to "Mips:comb_3|Decode:DECODE|reg_id_dataa[23]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Mips.v Line: 63
+    Error (12015): Net is fed by "Mips:comb_3|Registers:REGISTERS|dataa[23]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 34
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|reg_id_dataa[23]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 35
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Registers:RegisterModule|dataa[23]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 34
+Error (12014): Net "Mips:comb_3|reg_id_dataa[22]", which fans out to "Mips:comb_3|Decode:DECODE|reg_id_dataa[22]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Mips.v Line: 63
+    Error (12015): Net is fed by "Mips:comb_3|Registers:REGISTERS|dataa[22]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 34
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|reg_id_dataa[22]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 35
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Registers:RegisterModule|dataa[22]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 34
+Error (12014): Net "Mips:comb_3|reg_id_dataa[21]", which fans out to "Mips:comb_3|Decode:DECODE|reg_id_dataa[21]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Mips.v Line: 63
+    Error (12015): Net is fed by "Mips:comb_3|Registers:REGISTERS|dataa[21]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 34
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|reg_id_dataa[21]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 35
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Registers:RegisterModule|dataa[21]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 34
+Error (12014): Net "Mips:comb_3|reg_id_dataa[20]", which fans out to "Mips:comb_3|Decode:DECODE|reg_id_dataa[20]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Mips.v Line: 63
+    Error (12015): Net is fed by "Mips:comb_3|Registers:REGISTERS|dataa[20]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 34
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|reg_id_dataa[20]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 35
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Registers:RegisterModule|dataa[20]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 34
+Error (12014): Net "Mips:comb_3|reg_id_dataa[19]", which fans out to "Mips:comb_3|Decode:DECODE|reg_id_dataa[19]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Mips.v Line: 63
+    Error (12015): Net is fed by "Mips:comb_3|Registers:REGISTERS|dataa[19]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 34
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|reg_id_dataa[19]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 35
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Registers:RegisterModule|dataa[19]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 34
+Error (12014): Net "Mips:comb_3|reg_id_dataa[18]", which fans out to "Mips:comb_3|Decode:DECODE|reg_id_dataa[18]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Mips.v Line: 63
+    Error (12015): Net is fed by "Mips:comb_3|Registers:REGISTERS|dataa[18]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 34
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|reg_id_dataa[18]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 35
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Registers:RegisterModule|dataa[18]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 34
+Error (12014): Net "Mips:comb_3|reg_id_dataa[17]", which fans out to "Mips:comb_3|Decode:DECODE|reg_id_dataa[17]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Mips.v Line: 63
+    Error (12015): Net is fed by "Mips:comb_3|Registers:REGISTERS|dataa[17]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 34
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|reg_id_dataa[17]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 35
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Registers:RegisterModule|dataa[17]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 34
+Error (12014): Net "Mips:comb_3|reg_id_dataa[16]", which fans out to "Mips:comb_3|Decode:DECODE|reg_id_dataa[16]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Mips.v Line: 63
+    Error (12015): Net is fed by "Mips:comb_3|Registers:REGISTERS|dataa[16]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 34
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|reg_id_dataa[16]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 35
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Registers:RegisterModule|dataa[16]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 34
+Error (12014): Net "Mips:comb_3|reg_id_dataa[15]", which fans out to "Mips:comb_3|Decode:DECODE|reg_id_dataa[15]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Mips.v Line: 63
+    Error (12015): Net is fed by "Mips:comb_3|Registers:REGISTERS|dataa[15]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 34
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|reg_id_dataa[15]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 35
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Registers:RegisterModule|dataa[15]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 34
+Error (12014): Net "Mips:comb_3|reg_id_dataa[14]", which fans out to "Mips:comb_3|Decode:DECODE|reg_id_dataa[14]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Mips.v Line: 63
+    Error (12015): Net is fed by "Mips:comb_3|Registers:REGISTERS|dataa[14]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 34
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|reg_id_dataa[14]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 35
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Registers:RegisterModule|dataa[14]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 34
+Error (12014): Net "Mips:comb_3|reg_id_dataa[13]", which fans out to "Mips:comb_3|Decode:DECODE|reg_id_dataa[13]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Mips.v Line: 63
+    Error (12015): Net is fed by "Mips:comb_3|Registers:REGISTERS|dataa[13]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 34
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|reg_id_dataa[13]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 35
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Registers:RegisterModule|dataa[13]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 34
+Error (12014): Net "Mips:comb_3|reg_id_dataa[12]", which fans out to "Mips:comb_3|Decode:DECODE|reg_id_dataa[12]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Mips.v Line: 63
+    Error (12015): Net is fed by "Mips:comb_3|Registers:REGISTERS|dataa[12]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 34
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|reg_id_dataa[12]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 35
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Registers:RegisterModule|dataa[12]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 34
+Error (12014): Net "Mips:comb_3|reg_id_dataa[11]", which fans out to "Mips:comb_3|Decode:DECODE|reg_id_dataa[11]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Mips.v Line: 63
+    Error (12015): Net is fed by "Mips:comb_3|Registers:REGISTERS|dataa[11]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 34
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|reg_id_dataa[11]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 35
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Registers:RegisterModule|dataa[11]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 34
+Error (12014): Net "Mips:comb_3|reg_id_dataa[10]", which fans out to "Mips:comb_3|Decode:DECODE|reg_id_dataa[10]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Mips.v Line: 63
+    Error (12015): Net is fed by "Mips:comb_3|Registers:REGISTERS|dataa[10]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 34
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|reg_id_dataa[10]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 35
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Registers:RegisterModule|dataa[10]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 34
+Error (12014): Net "Mips:comb_3|reg_id_dataa[9]", which fans out to "Mips:comb_3|Decode:DECODE|reg_id_dataa[9]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Mips.v Line: 63
+    Error (12015): Net is fed by "Mips:comb_3|Registers:REGISTERS|dataa[9]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 34
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|reg_id_dataa[9]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 35
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Registers:RegisterModule|dataa[9]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 34
+Error (12014): Net "Mips:comb_3|reg_id_dataa[8]", which fans out to "Mips:comb_3|Decode:DECODE|reg_id_dataa[8]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Mips.v Line: 63
+    Error (12015): Net is fed by "Mips:comb_3|Registers:REGISTERS|dataa[8]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 34
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|reg_id_dataa[8]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 35
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Registers:RegisterModule|dataa[8]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 34
+Error (12014): Net "Mips:comb_3|reg_id_dataa[7]", which fans out to "Mips:comb_3|Decode:DECODE|reg_id_dataa[7]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Mips.v Line: 63
+    Error (12015): Net is fed by "Mips:comb_3|Registers:REGISTERS|dataa[7]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 34
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|reg_id_dataa[7]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 35
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Registers:RegisterModule|dataa[7]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 34
+Error (12014): Net "Mips:comb_3|reg_id_dataa[6]", which fans out to "Mips:comb_3|Decode:DECODE|reg_id_dataa[6]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Mips.v Line: 63
+    Error (12015): Net is fed by "Mips:comb_3|Registers:REGISTERS|dataa[6]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 34
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|reg_id_dataa[6]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 35
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Registers:RegisterModule|dataa[6]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 34
+Error (12014): Net "Mips:comb_3|reg_id_dataa[5]", which fans out to "Mips:comb_3|Decode:DECODE|reg_id_dataa[5]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Mips.v Line: 63
+    Error (12015): Net is fed by "Mips:comb_3|Registers:REGISTERS|dataa[5]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 34
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|reg_id_dataa[5]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 35
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Registers:RegisterModule|dataa[5]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 34
+Error (12014): Net "Mips:comb_3|reg_id_dataa[4]", which fans out to "Mips:comb_3|Decode:DECODE|reg_id_dataa[4]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Mips.v Line: 63
+    Error (12015): Net is fed by "Mips:comb_3|Registers:REGISTERS|dataa[4]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 34
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|reg_id_dataa[4]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 35
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Registers:RegisterModule|dataa[4]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 34
+Error (12014): Net "Mips:comb_3|reg_id_dataa[3]", which fans out to "Mips:comb_3|Decode:DECODE|reg_id_dataa[3]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Mips.v Line: 63
+    Error (12015): Net is fed by "Mips:comb_3|Registers:REGISTERS|dataa[3]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 34
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|reg_id_dataa[3]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 35
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Registers:RegisterModule|dataa[3]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 34
+Error (12014): Net "Mips:comb_3|reg_id_dataa[2]", which fans out to "Mips:comb_3|Decode:DECODE|reg_id_dataa[2]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Mips.v Line: 63
+    Error (12015): Net is fed by "Mips:comb_3|Registers:REGISTERS|dataa[2]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 34
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|reg_id_dataa[2]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 35
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Registers:RegisterModule|dataa[2]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 34
+Error (12014): Net "Mips:comb_3|reg_id_dataa[1]", which fans out to "Mips:comb_3|Decode:DECODE|reg_id_dataa[1]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Mips.v Line: 63
+    Error (12015): Net is fed by "Mips:comb_3|Registers:REGISTERS|dataa[1]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 34
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|reg_id_dataa[1]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 35
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Registers:RegisterModule|dataa[1]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 34
+Error (12014): Net "Mips:comb_3|reg_id_dataa[0]", which fans out to "Mips:comb_3|Decode:DECODE|reg_id_dataa[0]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Mips.v Line: 63
+    Error (12015): Net is fed by "Mips:comb_3|Registers:REGISTERS|dataa[0]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 34
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|reg_id_dataa[0]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 35
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Registers:RegisterModule|dataa[0]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 34
+Error (12014): Net "Mips:comb_3|reg_id_datab[31]", which fans out to "Mips:comb_3|Decode:DECODE|reg_id_datab[31]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Mips.v Line: 64
+    Error (12015): Net is fed by "Mips:comb_3|Registers:REGISTERS|datab[31]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 34
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|reg_id_datab[31]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 36
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Registers:RegisterModule|datab[31]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 34
+Error (12014): Net "Mips:comb_3|reg_id_datab[30]", which fans out to "Mips:comb_3|Decode:DECODE|reg_id_datab[30]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Mips.v Line: 64
+    Error (12015): Net is fed by "Mips:comb_3|Registers:REGISTERS|datab[30]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 34
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|reg_id_datab[30]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 36
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Registers:RegisterModule|datab[30]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 34
+Error (12014): Net "Mips:comb_3|reg_id_datab[29]", which fans out to "Mips:comb_3|Decode:DECODE|reg_id_datab[29]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Mips.v Line: 64
+    Error (12015): Net is fed by "Mips:comb_3|Registers:REGISTERS|datab[29]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 34
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|reg_id_datab[29]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 36
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Registers:RegisterModule|datab[29]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 34
+Error (12014): Net "Mips:comb_3|reg_id_datab[28]", which fans out to "Mips:comb_3|Decode:DECODE|reg_id_datab[28]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Mips.v Line: 64
+    Error (12015): Net is fed by "Mips:comb_3|Registers:REGISTERS|datab[28]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 34
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|reg_id_datab[28]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 36
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Registers:RegisterModule|datab[28]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 34
+Error (12014): Net "Mips:comb_3|reg_id_datab[27]", which fans out to "Mips:comb_3|Decode:DECODE|reg_id_datab[27]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Mips.v Line: 64
+    Error (12015): Net is fed by "Mips:comb_3|Registers:REGISTERS|datab[27]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 34
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|reg_id_datab[27]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 36
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Registers:RegisterModule|datab[27]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 34
+Error (12014): Net "Mips:comb_3|reg_id_datab[26]", which fans out to "Mips:comb_3|Decode:DECODE|reg_id_datab[26]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Mips.v Line: 64
+    Error (12015): Net is fed by "Mips:comb_3|Registers:REGISTERS|datab[26]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 34
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|reg_id_datab[26]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 36
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Registers:RegisterModule|datab[26]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 34
+Error (12014): Net "Mips:comb_3|reg_id_datab[25]", which fans out to "Mips:comb_3|Decode:DECODE|reg_id_datab[25]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Mips.v Line: 64
+    Error (12015): Net is fed by "Mips:comb_3|Registers:REGISTERS|datab[25]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 34
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|reg_id_datab[25]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 36
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Registers:RegisterModule|datab[25]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 34
+Error (12014): Net "Mips:comb_3|reg_id_datab[24]", which fans out to "Mips:comb_3|Decode:DECODE|reg_id_datab[24]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Mips.v Line: 64
+    Error (12015): Net is fed by "Mips:comb_3|Registers:REGISTERS|datab[24]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 34
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|reg_id_datab[24]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 36
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Registers:RegisterModule|datab[24]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 34
+Error (12014): Net "Mips:comb_3|reg_id_datab[23]", which fans out to "Mips:comb_3|Decode:DECODE|reg_id_datab[23]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Mips.v Line: 64
+    Error (12015): Net is fed by "Mips:comb_3|Registers:REGISTERS|datab[23]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 34
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|reg_id_datab[23]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 36
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Registers:RegisterModule|datab[23]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 34
+Error (12014): Net "Mips:comb_3|reg_id_datab[22]", which fans out to "Mips:comb_3|Decode:DECODE|reg_id_datab[22]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Mips.v Line: 64
+    Error (12015): Net is fed by "Mips:comb_3|Registers:REGISTERS|datab[22]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 34
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|reg_id_datab[22]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 36
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Registers:RegisterModule|datab[22]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 34
+Error (12014): Net "Mips:comb_3|reg_id_datab[21]", which fans out to "Mips:comb_3|Decode:DECODE|reg_id_datab[21]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Mips.v Line: 64
+    Error (12015): Net is fed by "Mips:comb_3|Registers:REGISTERS|datab[21]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 34
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|reg_id_datab[21]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 36
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Registers:RegisterModule|datab[21]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 34
+Error (12014): Net "Mips:comb_3|reg_id_datab[20]", which fans out to "Mips:comb_3|Decode:DECODE|reg_id_datab[20]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Mips.v Line: 64
+    Error (12015): Net is fed by "Mips:comb_3|Registers:REGISTERS|datab[20]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 34
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|reg_id_datab[20]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 36
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Registers:RegisterModule|datab[20]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 34
+Error (12014): Net "Mips:comb_3|reg_id_datab[19]", which fans out to "Mips:comb_3|Decode:DECODE|reg_id_datab[19]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Mips.v Line: 64
+    Error (12015): Net is fed by "Mips:comb_3|Registers:REGISTERS|datab[19]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 34
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|reg_id_datab[19]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 36
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Registers:RegisterModule|datab[19]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 34
+Error (12014): Net "Mips:comb_3|reg_id_datab[18]", which fans out to "Mips:comb_3|Decode:DECODE|reg_id_datab[18]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Mips.v Line: 64
+    Error (12015): Net is fed by "Mips:comb_3|Registers:REGISTERS|datab[18]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 34
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|reg_id_datab[18]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 36
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Registers:RegisterModule|datab[18]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 34
+Error (12014): Net "Mips:comb_3|reg_id_datab[17]", which fans out to "Mips:comb_3|Decode:DECODE|reg_id_datab[17]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Mips.v Line: 64
+    Error (12015): Net is fed by "Mips:comb_3|Registers:REGISTERS|datab[17]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 34
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|reg_id_datab[17]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 36
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Registers:RegisterModule|datab[17]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 34
+Error (12014): Net "Mips:comb_3|reg_id_datab[16]", which fans out to "Mips:comb_3|Decode:DECODE|reg_id_datab[16]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Mips.v Line: 64
+    Error (12015): Net is fed by "Mips:comb_3|Registers:REGISTERS|datab[16]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 34
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|reg_id_datab[16]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 36
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Registers:RegisterModule|datab[16]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 34
+Error (12014): Net "Mips:comb_3|reg_id_datab[15]", which fans out to "Mips:comb_3|Decode:DECODE|reg_id_datab[15]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Mips.v Line: 64
+    Error (12015): Net is fed by "Mips:comb_3|Registers:REGISTERS|datab[15]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 34
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|reg_id_datab[15]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 36
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Registers:RegisterModule|datab[15]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 34
+Error (12014): Net "Mips:comb_3|reg_id_datab[14]", which fans out to "Mips:comb_3|Decode:DECODE|reg_id_datab[14]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Mips.v Line: 64
+    Error (12015): Net is fed by "Mips:comb_3|Registers:REGISTERS|datab[14]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 34
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|reg_id_datab[14]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 36
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Registers:RegisterModule|datab[14]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 34
+Error (12014): Net "Mips:comb_3|reg_id_datab[13]", which fans out to "Mips:comb_3|Decode:DECODE|reg_id_datab[13]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Mips.v Line: 64
+    Error (12015): Net is fed by "Mips:comb_3|Registers:REGISTERS|datab[13]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 34
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|reg_id_datab[13]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 36
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Registers:RegisterModule|datab[13]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 34
+Error (12014): Net "Mips:comb_3|reg_id_datab[12]", which fans out to "Mips:comb_3|Decode:DECODE|reg_id_datab[12]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Mips.v Line: 64
+    Error (12015): Net is fed by "Mips:comb_3|Registers:REGISTERS|datab[12]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 34
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|reg_id_datab[12]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 36
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Registers:RegisterModule|datab[12]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 34
+Error (12014): Net "Mips:comb_3|reg_id_datab[11]", which fans out to "Mips:comb_3|Decode:DECODE|reg_id_datab[11]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Mips.v Line: 64
+    Error (12015): Net is fed by "Mips:comb_3|Registers:REGISTERS|datab[11]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 34
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|reg_id_datab[11]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 36
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Registers:RegisterModule|datab[11]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 34
+Error (12014): Net "Mips:comb_3|reg_id_datab[10]", which fans out to "Mips:comb_3|Decode:DECODE|reg_id_datab[10]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Mips.v Line: 64
+    Error (12015): Net is fed by "Mips:comb_3|Registers:REGISTERS|datab[10]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 34
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|reg_id_datab[10]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 36
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Registers:RegisterModule|datab[10]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 34
+Error (12014): Net "Mips:comb_3|reg_id_datab[9]", which fans out to "Mips:comb_3|Decode:DECODE|reg_id_datab[9]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Mips.v Line: 64
+    Error (12015): Net is fed by "Mips:comb_3|Registers:REGISTERS|datab[9]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 34
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|reg_id_datab[9]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 36
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Registers:RegisterModule|datab[9]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 34
+Error (12014): Net "Mips:comb_3|reg_id_datab[8]", which fans out to "Mips:comb_3|Decode:DECODE|reg_id_datab[8]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Mips.v Line: 64
+    Error (12015): Net is fed by "Mips:comb_3|Registers:REGISTERS|datab[8]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 34
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|reg_id_datab[8]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 36
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Registers:RegisterModule|datab[8]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 34
+Error (12014): Net "Mips:comb_3|reg_id_datab[7]", which fans out to "Mips:comb_3|Decode:DECODE|reg_id_datab[7]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Mips.v Line: 64
+    Error (12015): Net is fed by "Mips:comb_3|Registers:REGISTERS|datab[7]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 34
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|reg_id_datab[7]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 36
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Registers:RegisterModule|datab[7]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 34
+Error (12014): Net "Mips:comb_3|reg_id_datab[6]", which fans out to "Mips:comb_3|Decode:DECODE|reg_id_datab[6]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Mips.v Line: 64
+    Error (12015): Net is fed by "Mips:comb_3|Registers:REGISTERS|datab[6]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 34
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|reg_id_datab[6]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 36
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Registers:RegisterModule|datab[6]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 34
+Error (12014): Net "Mips:comb_3|reg_id_datab[5]", which fans out to "Mips:comb_3|Decode:DECODE|reg_id_datab[5]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Mips.v Line: 64
+    Error (12015): Net is fed by "Mips:comb_3|Registers:REGISTERS|datab[5]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 34
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|reg_id_datab[5]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 36
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Registers:RegisterModule|datab[5]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 34
+Error (12014): Net "Mips:comb_3|reg_id_datab[4]", which fans out to "Mips:comb_3|Decode:DECODE|reg_id_datab[4]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Mips.v Line: 64
+    Error (12015): Net is fed by "Mips:comb_3|Registers:REGISTERS|datab[4]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 34
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|reg_id_datab[4]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 36
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Registers:RegisterModule|datab[4]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 34
+Error (12014): Net "Mips:comb_3|reg_id_datab[3]", which fans out to "Mips:comb_3|Decode:DECODE|reg_id_datab[3]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Mips.v Line: 64
+    Error (12015): Net is fed by "Mips:comb_3|Registers:REGISTERS|datab[3]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 34
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|reg_id_datab[3]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 36
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Registers:RegisterModule|datab[3]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 34
+Error (12014): Net "Mips:comb_3|reg_id_datab[2]", which fans out to "Mips:comb_3|Decode:DECODE|reg_id_datab[2]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Mips.v Line: 64
+    Error (12015): Net is fed by "Mips:comb_3|Registers:REGISTERS|datab[2]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 34
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|reg_id_datab[2]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 36
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Registers:RegisterModule|datab[2]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 34
+Error (12014): Net "Mips:comb_3|reg_id_datab[1]", which fans out to "Mips:comb_3|Decode:DECODE|reg_id_datab[1]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Mips.v Line: 64
+    Error (12015): Net is fed by "Mips:comb_3|Registers:REGISTERS|datab[1]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 34
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|reg_id_datab[1]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 36
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Registers:RegisterModule|datab[1]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 34
+Error (12014): Net "Mips:comb_3|reg_id_datab[0]", which fans out to "Mips:comb_3|Decode:DECODE|reg_id_datab[0]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Mips.v Line: 64
+    Error (12015): Net is fed by "Mips:comb_3|Registers:REGISTERS|datab[0]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 34
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|reg_id_datab[0]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 36
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Registers:RegisterModule|datab[0]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 34
+Error (12014): Net "Mips:comb_3|Decode:DECODE|reg_id_ass_dataa[31]", which fans out to "Mips:comb_3|Decode:DECODE|Fetch:FetchModule|id_if_rega[31]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 37
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Registers:RegisterModule|ass_dataa[31]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 17
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|reg_id_ass_dataa[31]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 37
+Error (12014): Net "Mips:comb_3|Decode:DECODE|reg_id_ass_dataa[30]", which fans out to "Mips:comb_3|Decode:DECODE|Fetch:FetchModule|id_if_rega[30]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 37
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Registers:RegisterModule|ass_dataa[30]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 17
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|reg_id_ass_dataa[30]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 37
+Error (12014): Net "Mips:comb_3|Decode:DECODE|reg_id_ass_dataa[29]", which fans out to "Mips:comb_3|Decode:DECODE|Fetch:FetchModule|id_if_rega[29]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 37
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Registers:RegisterModule|ass_dataa[29]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 17
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|reg_id_ass_dataa[29]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 37
+Error (12014): Net "Mips:comb_3|Decode:DECODE|reg_id_ass_dataa[28]", which fans out to "Mips:comb_3|Decode:DECODE|Fetch:FetchModule|id_if_rega[28]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 37
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Registers:RegisterModule|ass_dataa[28]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 17
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|reg_id_ass_dataa[28]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 37
+Error (12014): Net "Mips:comb_3|Decode:DECODE|reg_id_ass_dataa[27]", which fans out to "Mips:comb_3|Decode:DECODE|Fetch:FetchModule|id_if_rega[27]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 37
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Registers:RegisterModule|ass_dataa[27]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 17
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|reg_id_ass_dataa[27]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 37
+Error (12014): Net "Mips:comb_3|Decode:DECODE|reg_id_ass_dataa[26]", which fans out to "Mips:comb_3|Decode:DECODE|Fetch:FetchModule|id_if_rega[26]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 37
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Registers:RegisterModule|ass_dataa[26]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 17
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|reg_id_ass_dataa[26]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 37
+Error (12014): Net "Mips:comb_3|Decode:DECODE|reg_id_ass_dataa[25]", which fans out to "Mips:comb_3|Decode:DECODE|Fetch:FetchModule|id_if_rega[25]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 37
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Registers:RegisterModule|ass_dataa[25]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 17
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|reg_id_ass_dataa[25]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 37
+Error (12014): Net "Mips:comb_3|Decode:DECODE|reg_id_ass_dataa[24]", which fans out to "Mips:comb_3|Decode:DECODE|Fetch:FetchModule|id_if_rega[24]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 37
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Registers:RegisterModule|ass_dataa[24]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 17
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|reg_id_ass_dataa[24]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 37
+Error (12014): Net "Mips:comb_3|Decode:DECODE|reg_id_ass_dataa[23]", which fans out to "Mips:comb_3|Decode:DECODE|Fetch:FetchModule|id_if_rega[23]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 37
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Registers:RegisterModule|ass_dataa[23]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 17
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|reg_id_ass_dataa[23]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 37
+Error (12014): Net "Mips:comb_3|Decode:DECODE|reg_id_ass_dataa[22]", which fans out to "Mips:comb_3|Decode:DECODE|Fetch:FetchModule|id_if_rega[22]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 37
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Registers:RegisterModule|ass_dataa[22]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 17
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|reg_id_ass_dataa[22]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 37
+Error (12014): Net "Mips:comb_3|Decode:DECODE|reg_id_ass_dataa[21]", which fans out to "Mips:comb_3|Decode:DECODE|Fetch:FetchModule|id_if_rega[21]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 37
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Registers:RegisterModule|ass_dataa[21]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 17
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|reg_id_ass_dataa[21]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 37
+Error (12014): Net "Mips:comb_3|Decode:DECODE|reg_id_ass_dataa[20]", which fans out to "Mips:comb_3|Decode:DECODE|Fetch:FetchModule|id_if_rega[20]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 37
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Registers:RegisterModule|ass_dataa[20]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 17
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|reg_id_ass_dataa[20]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 37
+Error (12014): Net "Mips:comb_3|Decode:DECODE|reg_id_ass_dataa[19]", which fans out to "Mips:comb_3|Decode:DECODE|Fetch:FetchModule|id_if_rega[19]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 37
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Registers:RegisterModule|ass_dataa[19]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 17
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|reg_id_ass_dataa[19]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 37
+Error (12014): Net "Mips:comb_3|Decode:DECODE|reg_id_ass_dataa[18]", which fans out to "Mips:comb_3|Decode:DECODE|Fetch:FetchModule|id_if_rega[18]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 37
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Registers:RegisterModule|ass_dataa[18]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 17
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|reg_id_ass_dataa[18]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 37
+Error (12014): Net "Mips:comb_3|Decode:DECODE|reg_id_ass_dataa[17]", which fans out to "Mips:comb_3|Decode:DECODE|Fetch:FetchModule|id_if_rega[17]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 37
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Registers:RegisterModule|ass_dataa[17]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 17
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|reg_id_ass_dataa[17]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 37
+Error (12014): Net "Mips:comb_3|Decode:DECODE|reg_id_ass_dataa[16]", which fans out to "Mips:comb_3|Decode:DECODE|Fetch:FetchModule|id_if_rega[16]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 37
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Registers:RegisterModule|ass_dataa[16]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 17
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|reg_id_ass_dataa[16]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 37
+Error (12014): Net "Mips:comb_3|Decode:DECODE|reg_id_ass_dataa[15]", which fans out to "Mips:comb_3|Decode:DECODE|Fetch:FetchModule|id_if_rega[15]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 37
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Registers:RegisterModule|ass_dataa[15]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 17
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|reg_id_ass_dataa[15]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 37
+Error (12014): Net "Mips:comb_3|Decode:DECODE|reg_id_ass_dataa[14]", which fans out to "Mips:comb_3|Decode:DECODE|Fetch:FetchModule|id_if_rega[14]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 37
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Registers:RegisterModule|ass_dataa[14]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 17
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|reg_id_ass_dataa[14]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 37
+Error (12014): Net "Mips:comb_3|Decode:DECODE|reg_id_ass_dataa[13]", which fans out to "Mips:comb_3|Decode:DECODE|Fetch:FetchModule|id_if_rega[13]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 37
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Registers:RegisterModule|ass_dataa[13]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 17
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|reg_id_ass_dataa[13]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 37
+Error (12014): Net "Mips:comb_3|Decode:DECODE|reg_id_ass_dataa[12]", which fans out to "Mips:comb_3|Decode:DECODE|Fetch:FetchModule|id_if_rega[12]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 37
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Registers:RegisterModule|ass_dataa[12]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 17
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|reg_id_ass_dataa[12]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 37
+Error (12014): Net "Mips:comb_3|Decode:DECODE|reg_id_ass_dataa[11]", which fans out to "Mips:comb_3|Decode:DECODE|Fetch:FetchModule|id_if_rega[11]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 37
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Registers:RegisterModule|ass_dataa[11]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 17
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|reg_id_ass_dataa[11]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 37
+Error (12014): Net "Mips:comb_3|Decode:DECODE|reg_id_ass_dataa[10]", which fans out to "Mips:comb_3|Decode:DECODE|Fetch:FetchModule|id_if_rega[10]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 37
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Registers:RegisterModule|ass_dataa[10]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 17
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|reg_id_ass_dataa[10]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 37
+Error (12014): Net "Mips:comb_3|Decode:DECODE|reg_id_ass_dataa[9]", which fans out to "Mips:comb_3|Decode:DECODE|Fetch:FetchModule|id_if_rega[9]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 37
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Registers:RegisterModule|ass_dataa[9]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 17
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|reg_id_ass_dataa[9]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 37
+Error (12014): Net "Mips:comb_3|Decode:DECODE|reg_id_ass_dataa[8]", which fans out to "Mips:comb_3|Decode:DECODE|Fetch:FetchModule|id_if_rega[8]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 37
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Registers:RegisterModule|ass_dataa[8]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 17
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|reg_id_ass_dataa[8]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 37
+Error (12014): Net "Mips:comb_3|Decode:DECODE|reg_id_ass_dataa[7]", which fans out to "Mips:comb_3|Decode:DECODE|Fetch:FetchModule|id_if_rega[7]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 37
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Registers:RegisterModule|ass_dataa[7]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 17
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|reg_id_ass_dataa[7]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 37
+Error (12014): Net "Mips:comb_3|Decode:DECODE|reg_id_ass_dataa[6]", which fans out to "Mips:comb_3|Decode:DECODE|Fetch:FetchModule|id_if_rega[6]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 37
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Registers:RegisterModule|ass_dataa[6]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 17
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|reg_id_ass_dataa[6]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 37
+Error (12014): Net "Mips:comb_3|Decode:DECODE|reg_id_ass_dataa[5]", which fans out to "Mips:comb_3|Decode:DECODE|Fetch:FetchModule|id_if_rega[5]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 37
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Registers:RegisterModule|ass_dataa[5]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 17
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|reg_id_ass_dataa[5]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 37
+Error (12014): Net "Mips:comb_3|Decode:DECODE|reg_id_ass_dataa[4]", which fans out to "Mips:comb_3|Decode:DECODE|Fetch:FetchModule|id_if_rega[4]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 37
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Registers:RegisterModule|ass_dataa[4]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 17
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|reg_id_ass_dataa[4]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 37
+Error (12014): Net "Mips:comb_3|Decode:DECODE|reg_id_ass_dataa[3]", which fans out to "Mips:comb_3|Decode:DECODE|Fetch:FetchModule|id_if_rega[3]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 37
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Registers:RegisterModule|ass_dataa[3]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 17
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|reg_id_ass_dataa[3]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 37
+Error (12014): Net "Mips:comb_3|Decode:DECODE|reg_id_ass_dataa[2]", which fans out to "Mips:comb_3|Decode:DECODE|Fetch:FetchModule|id_if_rega[2]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 37
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Registers:RegisterModule|ass_dataa[2]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 17
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|reg_id_ass_dataa[2]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 37
+Error (12014): Net "Mips:comb_3|Decode:DECODE|reg_id_ass_dataa[1]", which fans out to "Mips:comb_3|Decode:DECODE|Fetch:FetchModule|id_if_rega[1]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 37
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Registers:RegisterModule|ass_dataa[1]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 17
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|reg_id_ass_dataa[1]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 37
+Error (12014): Net "Mips:comb_3|Decode:DECODE|reg_id_ass_dataa[0]", which fans out to "Mips:comb_3|Decode:DECODE|Fetch:FetchModule|id_if_rega[0]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 37
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Registers:RegisterModule|ass_dataa[0]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 17
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|reg_id_ass_dataa[0]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 37
+Error (12014): Net "Mips:comb_3|Decode:DECODE|reg_id_ass_datab[31]", which fans out to "Mips:comb_3|Decode:DECODE|Comparator:ComparatorModule|b[31]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 39
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Registers:RegisterModule|ass_datab[31]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 18
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|reg_id_ass_datab[31]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 39
+Error (12014): Net "Mips:comb_3|Decode:DECODE|reg_id_ass_datab[30]", which fans out to "Mips:comb_3|Decode:DECODE|Comparator:ComparatorModule|b[30]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 39
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Registers:RegisterModule|ass_datab[30]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 18
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|reg_id_ass_datab[30]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 39
+Error (12014): Net "Mips:comb_3|Decode:DECODE|reg_id_ass_datab[29]", which fans out to "Mips:comb_3|Decode:DECODE|Comparator:ComparatorModule|b[29]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 39
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Registers:RegisterModule|ass_datab[29]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 18
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|reg_id_ass_datab[29]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 39
+Error (12014): Net "Mips:comb_3|Decode:DECODE|reg_id_ass_datab[28]", which fans out to "Mips:comb_3|Decode:DECODE|Comparator:ComparatorModule|b[28]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 39
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Registers:RegisterModule|ass_datab[28]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 18
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|reg_id_ass_datab[28]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 39
+Error (12014): Net "Mips:comb_3|Decode:DECODE|reg_id_ass_datab[27]", which fans out to "Mips:comb_3|Decode:DECODE|Comparator:ComparatorModule|b[27]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 39
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Registers:RegisterModule|ass_datab[27]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 18
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|reg_id_ass_datab[27]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 39
+Error (12014): Net "Mips:comb_3|Decode:DECODE|reg_id_ass_datab[26]", which fans out to "Mips:comb_3|Decode:DECODE|Comparator:ComparatorModule|b[26]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 39
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Registers:RegisterModule|ass_datab[26]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 18
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|reg_id_ass_datab[26]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 39
+Error (12014): Net "Mips:comb_3|Decode:DECODE|reg_id_ass_datab[25]", which fans out to "Mips:comb_3|Decode:DECODE|Comparator:ComparatorModule|b[25]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 39
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Registers:RegisterModule|ass_datab[25]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 18
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|reg_id_ass_datab[25]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 39
+Error (12014): Net "Mips:comb_3|Decode:DECODE|reg_id_ass_datab[24]", which fans out to "Mips:comb_3|Decode:DECODE|Comparator:ComparatorModule|b[24]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 39
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Registers:RegisterModule|ass_datab[24]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 18
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|reg_id_ass_datab[24]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 39
+Error (12014): Net "Mips:comb_3|Decode:DECODE|reg_id_ass_datab[23]", which fans out to "Mips:comb_3|Decode:DECODE|Comparator:ComparatorModule|b[23]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 39
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Registers:RegisterModule|ass_datab[23]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 18
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|reg_id_ass_datab[23]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 39
+Error (12014): Net "Mips:comb_3|Decode:DECODE|reg_id_ass_datab[22]", which fans out to "Mips:comb_3|Decode:DECODE|Comparator:ComparatorModule|b[22]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 39
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Registers:RegisterModule|ass_datab[22]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 18
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|reg_id_ass_datab[22]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 39
+Error (12014): Net "Mips:comb_3|Decode:DECODE|reg_id_ass_datab[21]", which fans out to "Mips:comb_3|Decode:DECODE|Comparator:ComparatorModule|b[21]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 39
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Registers:RegisterModule|ass_datab[21]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 18
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|reg_id_ass_datab[21]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 39
+Error (12014): Net "Mips:comb_3|Decode:DECODE|reg_id_ass_datab[20]", which fans out to "Mips:comb_3|Decode:DECODE|Comparator:ComparatorModule|b[20]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 39
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Registers:RegisterModule|ass_datab[20]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 18
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|reg_id_ass_datab[20]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 39
+Error (12014): Net "Mips:comb_3|Decode:DECODE|reg_id_ass_datab[19]", which fans out to "Mips:comb_3|Decode:DECODE|Comparator:ComparatorModule|b[19]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 39
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Registers:RegisterModule|ass_datab[19]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 18
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|reg_id_ass_datab[19]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 39
+Error (12014): Net "Mips:comb_3|Decode:DECODE|reg_id_ass_datab[18]", which fans out to "Mips:comb_3|Decode:DECODE|Comparator:ComparatorModule|b[18]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 39
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Registers:RegisterModule|ass_datab[18]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 18
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|reg_id_ass_datab[18]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 39
+Error (12014): Net "Mips:comb_3|Decode:DECODE|reg_id_ass_datab[17]", which fans out to "Mips:comb_3|Decode:DECODE|Comparator:ComparatorModule|b[17]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 39
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Registers:RegisterModule|ass_datab[17]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 18
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|reg_id_ass_datab[17]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 39
+Error (12014): Net "Mips:comb_3|Decode:DECODE|reg_id_ass_datab[16]", which fans out to "Mips:comb_3|Decode:DECODE|Comparator:ComparatorModule|b[16]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 39
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Registers:RegisterModule|ass_datab[16]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 18
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|reg_id_ass_datab[16]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 39
+Error (12014): Net "Mips:comb_3|Decode:DECODE|reg_id_ass_datab[15]", which fans out to "Mips:comb_3|Decode:DECODE|Comparator:ComparatorModule|b[15]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 39
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Registers:RegisterModule|ass_datab[15]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 18
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|reg_id_ass_datab[15]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 39
+Error (12014): Net "Mips:comb_3|Decode:DECODE|reg_id_ass_datab[14]", which fans out to "Mips:comb_3|Decode:DECODE|Comparator:ComparatorModule|b[14]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 39
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Registers:RegisterModule|ass_datab[14]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 18
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|reg_id_ass_datab[14]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 39
+Error (12014): Net "Mips:comb_3|Decode:DECODE|reg_id_ass_datab[13]", which fans out to "Mips:comb_3|Decode:DECODE|Comparator:ComparatorModule|b[13]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 39
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Registers:RegisterModule|ass_datab[13]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 18
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|reg_id_ass_datab[13]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 39
+Error (12014): Net "Mips:comb_3|Decode:DECODE|reg_id_ass_datab[12]", which fans out to "Mips:comb_3|Decode:DECODE|Comparator:ComparatorModule|b[12]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 39
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Registers:RegisterModule|ass_datab[12]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 18
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|reg_id_ass_datab[12]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 39
+Error (12014): Net "Mips:comb_3|Decode:DECODE|reg_id_ass_datab[11]", which fans out to "Mips:comb_3|Decode:DECODE|Comparator:ComparatorModule|b[11]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 39
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Registers:RegisterModule|ass_datab[11]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 18
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|reg_id_ass_datab[11]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 39
+Error (12014): Net "Mips:comb_3|Decode:DECODE|reg_id_ass_datab[10]", which fans out to "Mips:comb_3|Decode:DECODE|Comparator:ComparatorModule|b[10]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 39
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Registers:RegisterModule|ass_datab[10]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 18
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|reg_id_ass_datab[10]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 39
+Error (12014): Net "Mips:comb_3|Decode:DECODE|reg_id_ass_datab[9]", which fans out to "Mips:comb_3|Decode:DECODE|Comparator:ComparatorModule|b[9]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 39
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Registers:RegisterModule|ass_datab[9]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 18
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|reg_id_ass_datab[9]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 39
+Error (12014): Net "Mips:comb_3|Decode:DECODE|reg_id_ass_datab[8]", which fans out to "Mips:comb_3|Decode:DECODE|Comparator:ComparatorModule|b[8]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 39
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Registers:RegisterModule|ass_datab[8]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 18
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|reg_id_ass_datab[8]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 39
+Error (12014): Net "Mips:comb_3|Decode:DECODE|reg_id_ass_datab[7]", which fans out to "Mips:comb_3|Decode:DECODE|Comparator:ComparatorModule|b[7]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 39
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Registers:RegisterModule|ass_datab[7]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 18
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|reg_id_ass_datab[7]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 39
+Error (12014): Net "Mips:comb_3|Decode:DECODE|reg_id_ass_datab[6]", which fans out to "Mips:comb_3|Decode:DECODE|Comparator:ComparatorModule|b[6]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 39
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Registers:RegisterModule|ass_datab[6]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 18
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|reg_id_ass_datab[6]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 39
+Error (12014): Net "Mips:comb_3|Decode:DECODE|reg_id_ass_datab[5]", which fans out to "Mips:comb_3|Decode:DECODE|Comparator:ComparatorModule|b[5]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 39
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Registers:RegisterModule|ass_datab[5]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 18
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|reg_id_ass_datab[5]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 39
+Error (12014): Net "Mips:comb_3|Decode:DECODE|reg_id_ass_datab[4]", which fans out to "Mips:comb_3|Decode:DECODE|Comparator:ComparatorModule|b[4]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 39
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Registers:RegisterModule|ass_datab[4]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 18
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|reg_id_ass_datab[4]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 39
+Error (12014): Net "Mips:comb_3|Decode:DECODE|reg_id_ass_datab[3]", which fans out to "Mips:comb_3|Decode:DECODE|Comparator:ComparatorModule|b[3]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 39
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Registers:RegisterModule|ass_datab[3]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 18
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|reg_id_ass_datab[3]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 39
+Error (12014): Net "Mips:comb_3|Decode:DECODE|reg_id_ass_datab[2]", which fans out to "Mips:comb_3|Decode:DECODE|Comparator:ComparatorModule|b[2]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 39
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Registers:RegisterModule|ass_datab[2]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 18
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|reg_id_ass_datab[2]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 39
+Error (12014): Net "Mips:comb_3|Decode:DECODE|reg_id_ass_datab[1]", which fans out to "Mips:comb_3|Decode:DECODE|Comparator:ComparatorModule|b[1]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 39
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Registers:RegisterModule|ass_datab[1]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 18
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|reg_id_ass_datab[1]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 39
+Error (12014): Net "Mips:comb_3|Decode:DECODE|reg_id_ass_datab[0]", which fans out to "Mips:comb_3|Decode:DECODE|Comparator:ComparatorModule|b[0]", cannot be assigned more than one value File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 39
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|Registers:RegisterModule|ass_datab[0]" File: C:/Users/mfer/pinca-puca/Entrevista3/Registers.v Line: 18
+    Error (12015): Net is fed by "Mips:comb_3|Decode:DECODE|reg_id_ass_datab[0]" File: C:/Users/mfer/pinca-puca/Entrevista3/Decode.v Line: 39
+Warning (12241): 12 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info (144001): Generated suppressed messages file C:/Users/mfer/pinca-puca/Entrevista3/output_files/Top.map.smsg
+Error: Quartus II 32-bit Analysis & Synthesis was unsuccessful. 707 errors, 49 warnings
+    Error: Peak virtual memory: 360 megabytes
+    Error: Processing ended: Thu Jun 05 17:57:21 2014
+    Error: Elapsed time: 00:00:04
+    Error: Total CPU time (on all processors): 00:00:04
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in C:/Users/mfer/pinca-puca/Entrevista3/output_files/Top.map.smsg.
+
+

@@ -1,0 +1,6675 @@
+SLVL:
+id_if_selpcsource: Valor Esperado: 0 Valor Real: 0
+
+id_if_rega: Valor Esperado:          8 Valor Real:          8
+
+reg_id_dataa:          x reg_id_datab:          x
+
+reg_id_ass_dataa: Valor Esperado:          x Valor Real:          8
+ reg_id_ass_datab: Valor Esperado:          x Valor Real:          2
+
+id_if_pcimd2ext: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_pcindex: 00xxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_selpctype: Valor Esperado: XX Valor Real: xx
+
+id_ex_selalushift: Valor Esperado: 1 Valor Real: x
+
+id_ex_selimregb: Valor Esperado: 0 Valor Real: x
+
+id_ex_aluop: Valor Esperado: XXX Valor Real: xxx
+
+id_ex_unsig: Valor Esperado: X Valor Real: x
+
+id_ex_shiftop: Valor Esperado: 10 Valor Real: xx
+
+id_ex_shiftamt: Valor Esperado:  x Valor Real:  x
+
+id_ex_rega: Valor Esperado:          x Valor Real:          x
+
+id_ex_readmem: Valor Esperado: 0 Valor Real: x
+
+id_ex_writemem:  Valor Esperado: 0 Valor Real: x
+
+id_ex_regb: Valor Esperado:          x Valor Real:          x
+
+id_ex_imedext: Valor Esperado: 00000000000000000000100000000100 Valor Real: xxxxxxxxxxxxxxxx0000000000000000
+
+id_ex_selwsource: Valor Esperado: 0 Valor Real: x
+
+id_ex_regdest: Valor Esperado: 00001 Valor Real xxxxx
+
+id_ex_writereg: Valor Esperado: 1 Valor Real: x
+
+id_ex_writeov: Valor Esperado: 1 Valor Real: x
+
+id_reg_addra: Valor Esperado: 00001 Valor Real: xxxxx
+
+id_reg_addrb: Valor Esperado: 00010 Valor Real: xxxxx
+
+JR:
+id_if_selpcsource: Valor Esperado: 1 Valor Real: 0
+
+id_if_rega: Valor Esperado:          8 Valor Real:          8
+
+reg_id_dataa:          x reg_id_datab:          x
+
+reg_id_ass_dataa: Valor Esperado:          x Valor Real:          8
+ reg_id_ass_datab: Valor Esperado:          x Valor Real:          2
+
+id_if_pcimd2ext: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_pcindex: 00xxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_selpctype: Valor Esperado: 01 Valor Real: xx
+
+id_ex_selalushift: Valor Esperado: X Valor Real: 1
+
+id_ex_selimregb: Valor Esperado: X Valor Real: 0
+
+id_ex_aluop: Valor Esperado: XXX Valor Real: xxx
+
+id_ex_unsig: Valor Esperado: X Valor Real: x
+
+id_ex_shiftop: Valor Esperado: XX Valor Real: 10
+
+id_ex_shiftamt: Valor Esperado: 11111 Valor Real:  x
+
+id_ex_rega: Valor Esperado:          x Valor Real:          x
+
+id_ex_readmem: Valor Esperado: 0 Valor Real: 0
+
+id_ex_writemem:  Valor Esperado: 0 Valor Real: 0
+
+id_ex_regb: Valor Esperado:          x Valor Real:          x
+
+id_ex_imedext: Valor Esperado: 00000000000000000001111111001000 Valor Real: xxxxxxxxxxxxxxxx0000000000000000
+
+id_ex_selwsource: Valor Esperado: X Valor Real: 0
+
+id_ex_regdest: Valor Esperado: 00011 Valor Real xxxxx
+
+id_ex_writereg: Valor Esperado: 0 Valor Real: 1
+
+id_ex_writeov: Valor Esperado: X Valor Real: 1
+
+id_reg_addra: Valor Esperado: 00001 Valor Real: xxxxx
+
+id_reg_addrb: Valor Esperado: 00010 Valor Real: xxxxx
+
+ADD:
+id_if_selpcsource: Valor Esperado: 0 Valor Real: 0
+
+id_if_rega: Valor Esperado:          8 Valor Real:          8
+
+reg_id_dataa:          x reg_id_datab:          x
+
+reg_id_ass_dataa: Valor Esperado:          x Valor Real:          8
+ reg_id_ass_datab: Valor Esperado:          x Valor Real:          2
+
+id_if_pcimd2ext: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_pcindex: 00xxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_selpctype: Valor Esperado: XX Valor Real: xx
+
+id_ex_selalushift: Valor Esperado: 0 Valor Real: 1
+
+id_ex_selimregb: Valor Esperado: 0 Valor Real: 0
+
+id_ex_aluop: Valor Esperado: 010 Valor Real: xxx
+
+id_ex_unsig: Valor Esperado: 0 Valor Real: x
+
+id_ex_shiftop: Valor Esperado: XX Valor Real: 10
+
+id_ex_shiftamt: Valor Esperado: 11111 Valor Real:  x
+
+id_ex_rega: Valor Esperado:          x Valor Real:          x
+
+id_ex_readmem: Valor Esperado: 0 Valor Real: 0
+
+id_ex_writemem:  Valor Esperado: 0 Valor Real: 0
+
+id_ex_regb: Valor Esperado:          x Valor Real:          x
+
+id_ex_imedext: Valor Esperado: 00000000000000000001111111100000 Valor Real: xxxxxxxxxxxxxxxx0000000000000000
+
+id_ex_selwsource: Valor Esperado: 0 Valor Real: 0
+
+id_ex_regdest: Valor Esperado: 00011 Valor Real xxxxx
+
+id_ex_writereg: Valor Esperado: 1 Valor Real: 1
+
+id_ex_writeov: Valor Esperado: 0 Valor Real: 1
+
+id_reg_addra: Valor Esperado: 00001 Valor Real: xxxxx
+
+id_reg_addrb: Valor Esperado: 00010 Valor Real: xxxxx
+
+JUMP:
+id_if_selpcsource: Valor Esperado: 1 Valor Real: 0
+
+id_if_rega: Valor Esperado:          8 Valor Real:          8
+
+reg_id_dataa:          x reg_id_datab:          x
+
+reg_id_ass_dataa: Valor Esperado:          x Valor Real:          8
+ reg_id_ass_datab: Valor Esperado:          x Valor Real:          2
+
+id_if_pcimd2ext: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_pcindex: 00xxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_selpctype: Valor Esperado: 10 Valor Real: xx
+
+id_ex_selalushift: Valor Esperado: X Valor Real: 1
+
+id_ex_selimregb: Valor Esperado: X Valor Real: 0
+
+id_ex_aluop: Valor Esperado: XXX Valor Real: xxx
+
+id_ex_unsig: Valor Esperado: X Valor Real: x
+
+id_ex_shiftop: Valor Esperado: XX Valor Real: 10
+
+id_ex_shiftamt: Valor Esperado: 00000 Valor Real:  x
+
+id_ex_rega: Valor Esperado:          x Valor Real:          x
+
+id_ex_readmem: Valor Esperado: 0 Valor Real: 0
+
+id_ex_writemem:  Valor Esperado: 0 Valor Real: 0
+
+id_ex_regb: Valor Esperado:          x Valor Real:          x
+
+id_ex_imedext: Valor Esperado: 00000000000000000000000000000001 Valor Real: xxxxxxxxxxxxxxxx0000000000000000
+
+id_ex_selwsource: Valor Esperado: X Valor Real: 0
+
+id_ex_regdest: Valor Esperado: 00000 Valor Real xxxxx
+
+id_ex_writereg: Valor Esperado: 0 Valor Real: 1
+
+id_ex_writeov: Valor Esperado: X Valor Real: 1
+
+id_reg_addra: Valor Esperado: 00000 Valor Real: xxxxx
+
+id_reg_addrb: Valor Esperado: 00000 Valor Real: xxxxx
+
+BEQ:
+id_if_selpcsource:  Valor Real 0
+
+id_if_rega: Valor Esperado:          8 Valor Real:          8
+
+reg_id_dataa:          x reg_id_datab:          x
+
+reg_id_ass_dataa: Valor Esperado:          x Valor Real:          8
+ reg_id_ass_datab: Valor Esperado:          x Valor Real:          2
+
+id_if_pcimd2ext: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_pcindex: 00xxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_selpctype: Valor Esperado: 00 Valor Real: xx
+
+id_ex_selalushift: Valor Esperado: X Valor Real: 1
+
+id_ex_selimregb: Valor Esperado: X Valor Real: 0
+
+id_ex_aluop: Valor Esperado: XXX Valor Real: xxx
+
+id_ex_unsig: Valor Esperado: 0 Valor Real: x
+
+id_ex_shiftop: Valor Esperado: XX Valor Real: 10
+
+id_ex_shiftamt: Valor Esperado: 00000 Valor Real:  x
+
+id_ex_rega: Valor Esperado:          x Valor Real:          x
+
+id_ex_readmem: Valor Esperado: 0 Valor Real: 0
+
+id_ex_writemem:  Valor Esperado: 0 Valor Real: 0
+
+id_ex_regb: Valor Esperado:          x Valor Real:          x
+
+id_ex_imedext: Valor Esperado: 00000000000000000000000000000001 Valor Real: xxxxxxxxxxxxxxxx0000000000000000
+
+id_ex_selwsource: Valor Esperado: X Valor Real: 0
+
+id_ex_regdest: Valor Esperado: 00000 Valor Real xxxxx
+
+id_ex_writereg: Valor Esperado: 0 Valor Real: 1
+
+id_ex_writeov: Valor Esperado: X Valor Real: 1
+
+id_reg_addra: Valor Esperado: 00001 Valor Real: xxxxx
+
+id_reg_addrb: Valor Esperado: 00010 Valor Real: xxxxx
+
+BGTZ:
+id_if_selpcsource: 0
+
+id_if_rega: 00000000000000000000000000001000
+
+id_if_pcimd2ext: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_pcindex: 00xxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_selpctype: xx
+
+id_ex_selalushift: 1
+
+id_ex_selimregb: 0
+
+id_ex_aluop: xxx
+
+id_ex_unsig: x
+
+id_ex_shiftop: 10
+
+id_ex_shiftamt: xxxxx
+
+id_ex_rega: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+id_ex_readmem: 0
+
+id_ex_writemem: 0
+
+id_ex_regb: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+id_ex_imedext: xxxxxxxxxxxxxxxx0000000000000000
+
+id_ex_selwsource: 0
+
+id_ex_regdest: xxxxx
+
+id_ex_writereg: 1
+
+id_ex_writeov'': 1
+
+id_reg_addra: xxxxx
+
+id_reg_addrb: xxxxx
+
+ADDI:
+id_if_selpcsource: Valor Esperado 0 0
+
+id_if_rega: Valor Esperado:          8 Valor Real:          8
+
+reg_id_dataa:          x reg_id_datab:          x
+
+reg_id_ass_dataa: Valor Esperado:          x Valor Real:          8
+ reg_id_ass_datab: Valor Esperado:          x Valor Real:          2
+
+id_if_pcimd2ext: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_pcindex: 00xxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_selpctype: Valor Esperado: xx Valor Real: xx
+
+id_ex_selalushift: Valor Esperado: 0 Valor Real: 1
+
+id_ex_selimregb: Valor Esperado: 1 Valor Real: 0
+
+id_ex_aluop: Valor Esperado: 010 Valor Real: xxx
+
+id_ex_unsig: Valor Esperado: 0 Valor Real: x
+
+id_ex_shiftop: Valor Esperado: XX Valor Real: 10
+
+id_ex_shiftamt: Valor Esperado: 00000 Valor Real:  x
+
+id_ex_rega: Valor Esperado:          x Valor Real:          x
+
+id_ex_readmem: Valor Esperado: 0 Valor Real: 0
+
+id_ex_writemem:  Valor Esperado: 0 Valor Real: 0
+
+id_ex_regb: Valor Esperado:          x Valor Real:          x
+
+id_ex_imedext: Valor Esperado: 00000000000000000000000000000001 Valor Real: xxxxxxxxxxxxxxxx0000000000000000
+
+id_ex_selwsource: Valor Esperado: 0 Valor Real: 0
+
+id_ex_regdest: Valor Esperado: 00000 Valor Real xxxxx
+
+id_ex_writereg: Valor Esperado: 1 Valor Real: 1
+
+id_ex_writeov: Valor Esperado: 0 Valor Real: 1
+
+id_reg_addra: Valor Esperado: 00001 Valor Real: xxxxx
+
+id_reg_addrb: Valor Esperado: 00010 Valor Real: xxxxx
+
+LOAD:
+id_if_selpcsource: Valor Esperado: 0 Valor Real: 0
+
+id_if_rega: Valor Esperado:          8 Valor Real:          8
+
+reg_id_dataa:          x reg_id_datab:          x
+
+reg_id_ass_dataa: Valor Esperado:          x Valor Real:          8
+ reg_id_ass_datab: Valor Esperado:          x Valor Real:          2
+
+id_if_pcimd2ext: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_pcindex: 00xxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_selpctype: Valor Esperado: xx Valor Real: xx
+
+id_ex_selalushift: Valor Esperado: 0 Valor Real: 1
+
+id_ex_selimregb: Valor Esperado: 1 Valor Real: 0
+
+id_ex_aluop: Valor Esperado: 010 Valor Real: xxx
+
+id_ex_unsig: Valor Esperado: 0 Valor Real: x
+
+id_ex_shiftop: Valor Esperado: XX Valor Real: 10
+
+id_ex_shiftamt: Valor Esperado: 00000 Valor Real:  x
+
+id_ex_rega: Valor Esperado:          x Valor Real:          x
+
+id_ex_readmem: Valor Esperado: 1Valor Real: 0
+
+id_ex_writemem:  Valor Esperado: 0 Valor Real: 0
+
+id_ex_regb: Valor Esperado:          x Valor Real:          x
+
+id_ex_imedext: Valor Esperado: 00000000000000000000000000000001 Valor Real: xxxxxxxxxxxxxxxx0000000000000000
+
+id_ex_selwsource: Valor Esperado: 1 Valor Real: 0
+
+id_ex_regdest: Valor Esperado: 00000 Valor Real xxxxx
+
+id_ex_writereg: Valor Esperado: 1 Valor Real: 1
+
+id_ex_writeov: Valor Esperado: 1 Valor Real: 1
+
+id_reg_addra: Valor Esperado: 00001 Valor Real: xxxxx
+
+id_reg_addrb: Valor Esperado: 00010 Valor Real: xxxxx
+
+STORE:
+id_if_selpcsource: Valor Esperado: 0 Valor Real: 0
+
+id_if_rega: Valor Esperado:          8 Valor Real:          8
+
+reg_id_dataa:          x reg_id_datab:          x
+
+reg_id_ass_dataa: Valor Esperado:          x Valor Real:          8
+ reg_id_ass_datab: Valor Esperado:          x Valor Real:          2
+
+id_if_pcimd2ext: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_pcindex: 00xxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_selpctype: Valor Esperado: xx Valor Real: xx
+
+id_ex_selalushift: Valor Esperado: 0 Valor Real: 1
+
+id_ex_selimregb: Valor Esperado: 1 Valor Real: 0
+
+id_ex_aluop: Valor Esperado: 010 Valor Real: xxx
+
+id_ex_unsig: Valor Esperado: 0 Valor Real: x
+
+id_ex_shiftop: Valor Esperado: XX Valor Real: 10
+
+id_ex_shiftamt: Valor Esperado: 00000 Valor Real:  x
+
+id_ex_rega: Valor Esperado:          x Valor Real:          x
+
+id_ex_readmem: Valor Esperado: 0 Valor Real: 0
+
+id_ex_writemem:  Valor Esperado: 1 Valor Real: 0
+
+id_ex_regb: Valor Esperado:          x Valor Real:          x
+
+id_ex_imedext: Valor Esperado: 00000000000000000000000000000001 Valor Real: xxxxxxxxxxxxxxxx0000000000000000
+
+id_ex_selwsource: Valor Esperado: x Valor Real: 0
+
+id_ex_regdest: Valor Esperado: 00000 Valor Real xxxxx
+
+id_ex_writereg: Valor Esperado: 0 Valor Real: 1
+
+id_ex_writeov: Valor Esperado: x Valor Real: 1
+
+id_reg_addra: Valor Esperado: 00001 Valor Real: xxxxx
+
+id_reg_addrb: Valor Esperado: 00010 Valor Real: xxxxx
+
+SLVL:
+id_if_selpcsource: Valor Esperado: 0 Valor Real: 0
+
+id_if_rega: Valor Esperado:          8 Valor Real:          x
+
+reg_id_dataa:          x reg_id_datab:          x
+
+reg_id_ass_dataa: Valor Esperado:          x Valor Real:          8
+ reg_id_ass_datab: Valor Esperado:          x Valor Real:          2
+
+id_if_pcimd2ext: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_pcindex: 00xxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_selpctype: Valor Esperado: XX Valor Real: xx
+
+id_ex_selalushift: Valor Esperado: 1 Valor Real: x
+
+id_ex_selimregb: Valor Esperado: 0 Valor Real: x
+
+id_ex_aluop: Valor Esperado: XXX Valor Real: xxx
+
+id_ex_unsig: Valor Esperado: X Valor Real: x
+
+id_ex_shiftop: Valor Esperado: 10 Valor Real: xx
+
+id_ex_shiftamt: Valor Esperado:  x Valor Real:  x
+
+id_ex_rega: Valor Esperado:          x Valor Real:          x
+
+id_ex_readmem: Valor Esperado: 0 Valor Real: x
+
+id_ex_writemem:  Valor Esperado: 0 Valor Real: x
+
+id_ex_regb: Valor Esperado:          x Valor Real:          x
+
+id_ex_imedext: Valor Esperado: 00000000000000000000100000000100 Valor Real: xxxxxxxxxxxxxxxx0000000000000000
+
+id_ex_selwsource: Valor Esperado: 0 Valor Real: x
+
+id_ex_regdest: Valor Esperado: 00001 Valor Real xxxxx
+
+id_ex_writereg: Valor Esperado: 1 Valor Real: x
+
+id_ex_writeov: Valor Esperado: 1 Valor Real: x
+
+id_reg_addra: Valor Esperado: 00001 Valor Real: xxxxx
+
+id_reg_addrb: Valor Esperado: 00010 Valor Real: xxxxx
+
+JR:
+id_if_selpcsource: Valor Esperado: 1 Valor Real: 0
+
+id_if_rega: Valor Esperado:          8 Valor Real:          x
+
+reg_id_dataa:          x reg_id_datab:          x
+
+reg_id_ass_dataa: Valor Esperado:          x Valor Real:          8
+ reg_id_ass_datab: Valor Esperado:          x Valor Real:          2
+
+id_if_pcimd2ext: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_pcindex: 00xxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_selpctype: Valor Esperado: 01 Valor Real: xx
+
+id_ex_selalushift: Valor Esperado: X Valor Real: 1
+
+id_ex_selimregb: Valor Esperado: X Valor Real: 0
+
+id_ex_aluop: Valor Esperado: XXX Valor Real: xxx
+
+id_ex_unsig: Valor Esperado: X Valor Real: x
+
+id_ex_shiftop: Valor Esperado: XX Valor Real: 10
+
+id_ex_shiftamt: Valor Esperado: 11111 Valor Real:  x
+
+id_ex_rega: Valor Esperado:          x Valor Real:          x
+
+id_ex_readmem: Valor Esperado: 0 Valor Real: 0
+
+id_ex_writemem:  Valor Esperado: 0 Valor Real: 0
+
+id_ex_regb: Valor Esperado:          x Valor Real:          x
+
+id_ex_imedext: Valor Esperado: 00000000000000000001111111001000 Valor Real: xxxxxxxxxxxxxxxx0000000000000000
+
+id_ex_selwsource: Valor Esperado: X Valor Real: 0
+
+id_ex_regdest: Valor Esperado: 00011 Valor Real xxxxx
+
+id_ex_writereg: Valor Esperado: 0 Valor Real: 1
+
+id_ex_writeov: Valor Esperado: X Valor Real: 1
+
+id_reg_addra: Valor Esperado: 00001 Valor Real: xxxxx
+
+id_reg_addrb: Valor Esperado: 00010 Valor Real: xxxxx
+
+ADD:
+id_if_selpcsource: Valor Esperado: 0 Valor Real: 0
+
+id_if_rega: Valor Esperado:          8 Valor Real:          x
+
+reg_id_dataa:          x reg_id_datab:          x
+
+reg_id_ass_dataa: Valor Esperado:          x Valor Real:          8
+ reg_id_ass_datab: Valor Esperado:          x Valor Real:          2
+
+id_if_pcimd2ext: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_pcindex: 00xxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_selpctype: Valor Esperado: XX Valor Real: xx
+
+id_ex_selalushift: Valor Esperado: 0 Valor Real: 1
+
+id_ex_selimregb: Valor Esperado: 0 Valor Real: 0
+
+id_ex_aluop: Valor Esperado: 010 Valor Real: xxx
+
+id_ex_unsig: Valor Esperado: 0 Valor Real: x
+
+id_ex_shiftop: Valor Esperado: XX Valor Real: 10
+
+id_ex_shiftamt: Valor Esperado: 11111 Valor Real:  x
+
+id_ex_rega: Valor Esperado:          x Valor Real:          x
+
+id_ex_readmem: Valor Esperado: 0 Valor Real: 0
+
+id_ex_writemem:  Valor Esperado: 0 Valor Real: 0
+
+id_ex_regb: Valor Esperado:          x Valor Real:          x
+
+id_ex_imedext: Valor Esperado: 00000000000000000001111111100000 Valor Real: xxxxxxxxxxxxxxxx0000000000000000
+
+id_ex_selwsource: Valor Esperado: 0 Valor Real: 0
+
+id_ex_regdest: Valor Esperado: 00011 Valor Real xxxxx
+
+id_ex_writereg: Valor Esperado: 1 Valor Real: 1
+
+id_ex_writeov: Valor Esperado: 0 Valor Real: 1
+
+id_reg_addra: Valor Esperado: 00001 Valor Real: xxxxx
+
+id_reg_addrb: Valor Esperado: 00010 Valor Real: xxxxx
+
+JUMP:
+id_if_selpcsource: Valor Esperado: 1 Valor Real: 0
+
+id_if_rega: Valor Esperado:          8 Valor Real:          x
+
+reg_id_dataa:          x reg_id_datab:          x
+
+reg_id_ass_dataa: Valor Esperado:          x Valor Real:          8
+ reg_id_ass_datab: Valor Esperado:          x Valor Real:          2
+
+id_if_pcimd2ext: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_pcindex: 00xxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_selpctype: Valor Esperado: 10 Valor Real: xx
+
+id_ex_selalushift: Valor Esperado: X Valor Real: 1
+
+id_ex_selimregb: Valor Esperado: X Valor Real: 0
+
+id_ex_aluop: Valor Esperado: XXX Valor Real: xxx
+
+id_ex_unsig: Valor Esperado: X Valor Real: x
+
+id_ex_shiftop: Valor Esperado: XX Valor Real: 10
+
+id_ex_shiftamt: Valor Esperado: 00000 Valor Real:  x
+
+id_ex_rega: Valor Esperado:          x Valor Real:          x
+
+id_ex_readmem: Valor Esperado: 0 Valor Real: 0
+
+id_ex_writemem:  Valor Esperado: 0 Valor Real: 0
+
+id_ex_regb: Valor Esperado:          x Valor Real:          x
+
+id_ex_imedext: Valor Esperado: 00000000000000000000000000000001 Valor Real: xxxxxxxxxxxxxxxx0000000000000000
+
+id_ex_selwsource: Valor Esperado: X Valor Real: 0
+
+id_ex_regdest: Valor Esperado: 00000 Valor Real xxxxx
+
+id_ex_writereg: Valor Esperado: 0 Valor Real: 1
+
+id_ex_writeov: Valor Esperado: X Valor Real: 1
+
+id_reg_addra: Valor Esperado: 00000 Valor Real: xxxxx
+
+id_reg_addrb: Valor Esperado: 00000 Valor Real: xxxxx
+
+BEQ:
+id_if_selpcsource:  Valor Real 0
+
+id_if_rega: Valor Esperado:          8 Valor Real:          x
+
+reg_id_dataa:          x reg_id_datab:          x
+
+reg_id_ass_dataa: Valor Esperado:          x Valor Real:          8
+ reg_id_ass_datab: Valor Esperado:          x Valor Real:          2
+
+id_if_pcimd2ext: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_pcindex: 00xxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_selpctype: Valor Esperado: 00 Valor Real: xx
+
+id_ex_selalushift: Valor Esperado: X Valor Real: 1
+
+id_ex_selimregb: Valor Esperado: X Valor Real: 0
+
+id_ex_aluop: Valor Esperado: XXX Valor Real: xxx
+
+id_ex_unsig: Valor Esperado: 0 Valor Real: x
+
+id_ex_shiftop: Valor Esperado: XX Valor Real: 10
+
+id_ex_shiftamt: Valor Esperado: 00000 Valor Real:  x
+
+id_ex_rega: Valor Esperado:          x Valor Real:          x
+
+id_ex_readmem: Valor Esperado: 0 Valor Real: 0
+
+id_ex_writemem:  Valor Esperado: 0 Valor Real: 0
+
+id_ex_regb: Valor Esperado:          x Valor Real:          x
+
+id_ex_imedext: Valor Esperado: 00000000000000000000000000000001 Valor Real: xxxxxxxxxxxxxxxx0000000000000000
+
+id_ex_selwsource: Valor Esperado: X Valor Real: 0
+
+id_ex_regdest: Valor Esperado: 00000 Valor Real xxxxx
+
+id_ex_writereg: Valor Esperado: 0 Valor Real: 1
+
+id_ex_writeov: Valor Esperado: X Valor Real: 1
+
+id_reg_addra: Valor Esperado: 00001 Valor Real: xxxxx
+
+id_reg_addrb: Valor Esperado: 00010 Valor Real: xxxxx
+
+BGTZ:
+id_if_selpcsource: 0
+
+id_if_rega: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+id_if_pcimd2ext: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_pcindex: 00xxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_selpctype: xx
+
+id_ex_selalushift: 1
+
+id_ex_selimregb: 0
+
+id_ex_aluop: xxx
+
+id_ex_unsig: x
+
+id_ex_shiftop: 10
+
+id_ex_shiftamt: xxxxx
+
+id_ex_rega: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+id_ex_readmem: 0
+
+id_ex_writemem: 0
+
+id_ex_regb: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+id_ex_imedext: xxxxxxxxxxxxxxxx0000000000000000
+
+id_ex_selwsource: 0
+
+id_ex_regdest: xxxxx
+
+id_ex_writereg: 1
+
+id_ex_writeov'': 1
+
+id_reg_addra: xxxxx
+
+id_reg_addrb: xxxxx
+
+ADDI:
+id_if_selpcsource: Valor Esperado 0 0
+
+id_if_rega: Valor Esperado:          8 Valor Real:          x
+
+reg_id_dataa:          x reg_id_datab:          x
+
+reg_id_ass_dataa: Valor Esperado:          x Valor Real:          8
+ reg_id_ass_datab: Valor Esperado:          x Valor Real:          2
+
+id_if_pcimd2ext: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_pcindex: 00xxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_selpctype: Valor Esperado: xx Valor Real: xx
+
+id_ex_selalushift: Valor Esperado: 0 Valor Real: 1
+
+id_ex_selimregb: Valor Esperado: 1 Valor Real: 0
+
+id_ex_aluop: Valor Esperado: 010 Valor Real: xxx
+
+id_ex_unsig: Valor Esperado: 0 Valor Real: x
+
+id_ex_shiftop: Valor Esperado: XX Valor Real: 10
+
+id_ex_shiftamt: Valor Esperado: 00000 Valor Real:  x
+
+id_ex_rega: Valor Esperado:          x Valor Real:          x
+
+id_ex_readmem: Valor Esperado: 0 Valor Real: 0
+
+id_ex_writemem:  Valor Esperado: 0 Valor Real: 0
+
+id_ex_regb: Valor Esperado:          x Valor Real:          x
+
+id_ex_imedext: Valor Esperado: 00000000000000000000000000000001 Valor Real: xxxxxxxxxxxxxxxx0000000000000000
+
+id_ex_selwsource: Valor Esperado: 0 Valor Real: 0
+
+id_ex_regdest: Valor Esperado: 00000 Valor Real xxxxx
+
+id_ex_writereg: Valor Esperado: 1 Valor Real: 1
+
+id_ex_writeov: Valor Esperado: 0 Valor Real: 1
+
+id_reg_addra: Valor Esperado: 00001 Valor Real: xxxxx
+
+id_reg_addrb: Valor Esperado: 00010 Valor Real: xxxxx
+
+LOAD:
+id_if_selpcsource: Valor Esperado: 0 Valor Real: 0
+
+id_if_rega: Valor Esperado:          8 Valor Real:          x
+
+reg_id_dataa:          x reg_id_datab:          x
+
+reg_id_ass_dataa: Valor Esperado:          x Valor Real:          8
+ reg_id_ass_datab: Valor Esperado:          x Valor Real:          2
+
+id_if_pcimd2ext: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_pcindex: 00xxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_selpctype: Valor Esperado: xx Valor Real: xx
+
+id_ex_selalushift: Valor Esperado: 0 Valor Real: 1
+
+id_ex_selimregb: Valor Esperado: 1 Valor Real: 0
+
+id_ex_aluop: Valor Esperado: 010 Valor Real: xxx
+
+id_ex_unsig: Valor Esperado: 0 Valor Real: x
+
+id_ex_shiftop: Valor Esperado: XX Valor Real: 10
+
+id_ex_shiftamt: Valor Esperado: 00000 Valor Real:  x
+
+id_ex_rega: Valor Esperado:          x Valor Real:          x
+
+id_ex_readmem: Valor Esperado: 1Valor Real: 0
+
+id_ex_writemem:  Valor Esperado: 0 Valor Real: 0
+
+id_ex_regb: Valor Esperado:          x Valor Real:          x
+
+id_ex_imedext: Valor Esperado: 00000000000000000000000000000001 Valor Real: xxxxxxxxxxxxxxxx0000000000000000
+
+id_ex_selwsource: Valor Esperado: 1 Valor Real: 0
+
+id_ex_regdest: Valor Esperado: 00000 Valor Real xxxxx
+
+id_ex_writereg: Valor Esperado: 1 Valor Real: 1
+
+id_ex_writeov: Valor Esperado: 1 Valor Real: 1
+
+id_reg_addra: Valor Esperado: 00001 Valor Real: xxxxx
+
+id_reg_addrb: Valor Esperado: 00010 Valor Real: xxxxx
+
+STORE:
+id_if_selpcsource: Valor Esperado: 0 Valor Real: 0
+
+id_if_rega: Valor Esperado:          8 Valor Real:          x
+
+reg_id_dataa:          x reg_id_datab:          x
+
+reg_id_ass_dataa: Valor Esperado:          x Valor Real:          8
+ reg_id_ass_datab: Valor Esperado:          x Valor Real:          2
+
+id_if_pcimd2ext: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_pcindex: 00xxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_selpctype: Valor Esperado: xx Valor Real: xx
+
+id_ex_selalushift: Valor Esperado: 0 Valor Real: 1
+
+id_ex_selimregb: Valor Esperado: 1 Valor Real: 0
+
+id_ex_aluop: Valor Esperado: 010 Valor Real: xxx
+
+id_ex_unsig: Valor Esperado: 0 Valor Real: x
+
+id_ex_shiftop: Valor Esperado: XX Valor Real: 10
+
+id_ex_shiftamt: Valor Esperado: 00000 Valor Real:  x
+
+id_ex_rega: Valor Esperado:          x Valor Real:          x
+
+id_ex_readmem: Valor Esperado: 0 Valor Real: 0
+
+id_ex_writemem:  Valor Esperado: 1 Valor Real: 0
+
+id_ex_regb: Valor Esperado:          x Valor Real:          x
+
+id_ex_imedext: Valor Esperado: 00000000000000000000000000000001 Valor Real: xxxxxxxxxxxxxxxx0000000000000000
+
+id_ex_selwsource: Valor Esperado: x Valor Real: 0
+
+id_ex_regdest: Valor Esperado: 00000 Valor Real xxxxx
+
+id_ex_writereg: Valor Esperado: 0 Valor Real: 1
+
+id_ex_writeov: Valor Esperado: x Valor Real: 1
+
+id_reg_addra: Valor Esperado: 00001 Valor Real: xxxxx
+
+id_reg_addrb: Valor Esperado: 00010 Valor Real: xxxxx
+
+SLVL:
+id_if_selpcsource: Valor Esperado: 0 Valor Real: 0
+
+id_if_rega: Valor Esperado:          8 Valor Real:          x
+
+reg_id_dataa:          x reg_id_datab:          x
+
+reg_id_ass_dataa: Valor Esperado:          x Valor Real:          8
+ reg_id_ass_datab: Valor Esperado:          x Valor Real:          2
+
+id_if_pcimd2ext: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_pcindex: 00xxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_selpctype: Valor Esperado: XX Valor Real: xx
+
+id_ex_selalushift: Valor Esperado: 1 Valor Real: x
+
+id_ex_selimregb: Valor Esperado: 0 Valor Real: x
+
+id_ex_aluop: Valor Esperado: XXX Valor Real: xxx
+
+id_ex_unsig: Valor Esperado: X Valor Real: x
+
+id_ex_shiftop: Valor Esperado: 10 Valor Real: xx
+
+id_ex_shiftamt: Valor Esperado:  x Valor Real:  x
+
+id_ex_rega: Valor Esperado:          x Valor Real:          x
+
+id_ex_readmem: Valor Esperado: 0 Valor Real: x
+
+id_ex_writemem:  Valor Esperado: 0 Valor Real: x
+
+id_ex_regb: Valor Esperado:          x Valor Real:          x
+
+id_ex_imedext: Valor Esperado: 00000000000000000000100000000100 Valor Real: xxxxxxxxxxxxxxxx0000000000000000
+
+id_ex_selwsource: Valor Esperado: 0 Valor Real: x
+
+id_ex_regdest: Valor Esperado: 00001 Valor Real xxxxx
+
+id_ex_writereg: Valor Esperado: 1 Valor Real: x
+
+id_ex_writeov: Valor Esperado: 1 Valor Real: x
+
+id_reg_addra: Valor Esperado: 00001 Valor Real: xxxxx
+
+id_reg_addrb: Valor Esperado: 00010 Valor Real: xxxxx
+
+JR:
+id_if_selpcsource: Valor Esperado: 1 Valor Real: 0
+
+id_if_rega: Valor Esperado:          8 Valor Real:          x
+
+reg_id_dataa:          x reg_id_datab:          x
+
+reg_id_ass_dataa: Valor Esperado:          x Valor Real:          8
+ reg_id_ass_datab: Valor Esperado:          x Valor Real:          2
+
+id_if_pcimd2ext: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_pcindex: 00xxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_selpctype: Valor Esperado: 01 Valor Real: xx
+
+id_ex_selalushift: Valor Esperado: X Valor Real: 1
+
+id_ex_selimregb: Valor Esperado: X Valor Real: 0
+
+id_ex_aluop: Valor Esperado: XXX Valor Real: xxx
+
+id_ex_unsig: Valor Esperado: X Valor Real: x
+
+id_ex_shiftop: Valor Esperado: XX Valor Real: 10
+
+id_ex_shiftamt: Valor Esperado: 11111 Valor Real:  x
+
+id_ex_rega: Valor Esperado:          x Valor Real:          x
+
+id_ex_readmem: Valor Esperado: 0 Valor Real: 0
+
+id_ex_writemem:  Valor Esperado: 0 Valor Real: 0
+
+id_ex_regb: Valor Esperado:          x Valor Real:          x
+
+id_ex_imedext: Valor Esperado: 00000000000000000001111111001000 Valor Real: xxxxxxxxxxxxxxxx0000000000000000
+
+id_ex_selwsource: Valor Esperado: X Valor Real: 0
+
+id_ex_regdest: Valor Esperado: 00011 Valor Real xxxxx
+
+id_ex_writereg: Valor Esperado: 0 Valor Real: 1
+
+id_ex_writeov: Valor Esperado: X Valor Real: 1
+
+id_reg_addra: Valor Esperado: 00001 Valor Real: xxxxx
+
+id_reg_addrb: Valor Esperado: 00010 Valor Real: xxxxx
+
+ADD:
+id_if_selpcsource: Valor Esperado: 0 Valor Real: 0
+
+id_if_rega: Valor Esperado:          8 Valor Real:          x
+
+reg_id_dataa:          x reg_id_datab:          x
+
+reg_id_ass_dataa: Valor Esperado:          x Valor Real:          8
+ reg_id_ass_datab: Valor Esperado:          x Valor Real:          2
+
+id_if_pcimd2ext: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_pcindex: 00xxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_selpctype: Valor Esperado: XX Valor Real: xx
+
+id_ex_selalushift: Valor Esperado: 0 Valor Real: 1
+
+id_ex_selimregb: Valor Esperado: 0 Valor Real: 0
+
+id_ex_aluop: Valor Esperado: 010 Valor Real: xxx
+
+id_ex_unsig: Valor Esperado: 0 Valor Real: x
+
+id_ex_shiftop: Valor Esperado: XX Valor Real: 10
+
+id_ex_shiftamt: Valor Esperado: 11111 Valor Real:  x
+
+id_ex_rega: Valor Esperado:          x Valor Real:          x
+
+id_ex_readmem: Valor Esperado: 0 Valor Real: 0
+
+id_ex_writemem:  Valor Esperado: 0 Valor Real: 0
+
+id_ex_regb: Valor Esperado:          x Valor Real:          x
+
+id_ex_imedext: Valor Esperado: 00000000000000000001111111100000 Valor Real: xxxxxxxxxxxxxxxx0000000000000000
+
+id_ex_selwsource: Valor Esperado: 0 Valor Real: 0
+
+id_ex_regdest: Valor Esperado: 00011 Valor Real xxxxx
+
+id_ex_writereg: Valor Esperado: 1 Valor Real: 1
+
+id_ex_writeov: Valor Esperado: 0 Valor Real: 1
+
+id_reg_addra: Valor Esperado: 00001 Valor Real: xxxxx
+
+id_reg_addrb: Valor Esperado: 00010 Valor Real: xxxxx
+
+JUMP:
+id_if_selpcsource: Valor Esperado: 1 Valor Real: 0
+
+id_if_rega: Valor Esperado:          8 Valor Real:          x
+
+reg_id_dataa:          x reg_id_datab:          x
+
+reg_id_ass_dataa: Valor Esperado:          x Valor Real:          8
+ reg_id_ass_datab: Valor Esperado:          x Valor Real:          2
+
+id_if_pcimd2ext: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_pcindex: 00xxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_selpctype: Valor Esperado: 10 Valor Real: xx
+
+id_ex_selalushift: Valor Esperado: X Valor Real: 1
+
+id_ex_selimregb: Valor Esperado: X Valor Real: 0
+
+id_ex_aluop: Valor Esperado: XXX Valor Real: xxx
+
+id_ex_unsig: Valor Esperado: X Valor Real: x
+
+id_ex_shiftop: Valor Esperado: XX Valor Real: 10
+
+id_ex_shiftamt: Valor Esperado: 00000 Valor Real:  x
+
+id_ex_rega: Valor Esperado:          x Valor Real:          x
+
+id_ex_readmem: Valor Esperado: 0 Valor Real: 0
+
+id_ex_writemem:  Valor Esperado: 0 Valor Real: 0
+
+id_ex_regb: Valor Esperado:          x Valor Real:          x
+
+id_ex_imedext: Valor Esperado: 00000000000000000000000000000001 Valor Real: xxxxxxxxxxxxxxxx0000000000000000
+
+id_ex_selwsource: Valor Esperado: X Valor Real: 0
+
+id_ex_regdest: Valor Esperado: 00000 Valor Real xxxxx
+
+id_ex_writereg: Valor Esperado: 0 Valor Real: 1
+
+id_ex_writeov: Valor Esperado: X Valor Real: 1
+
+id_reg_addra: Valor Esperado: 00000 Valor Real: xxxxx
+
+id_reg_addrb: Valor Esperado: 00000 Valor Real: xxxxx
+
+BEQ:
+id_if_selpcsource:  Valor Real 0
+
+id_if_rega: Valor Esperado:          8 Valor Real:          x
+
+reg_id_dataa:          x reg_id_datab:          x
+
+reg_id_ass_dataa: Valor Esperado:          x Valor Real:          8
+ reg_id_ass_datab: Valor Esperado:          x Valor Real:          2
+
+id_if_pcimd2ext: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_pcindex: 00xxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_selpctype: Valor Esperado: 00 Valor Real: xx
+
+id_ex_selalushift: Valor Esperado: X Valor Real: 1
+
+id_ex_selimregb: Valor Esperado: X Valor Real: 0
+
+id_ex_aluop: Valor Esperado: XXX Valor Real: xxx
+
+id_ex_unsig: Valor Esperado: 0 Valor Real: x
+
+id_ex_shiftop: Valor Esperado: XX Valor Real: 10
+
+id_ex_shiftamt: Valor Esperado: 00000 Valor Real:  x
+
+id_ex_rega: Valor Esperado:          x Valor Real:          x
+
+id_ex_readmem: Valor Esperado: 0 Valor Real: 0
+
+id_ex_writemem:  Valor Esperado: 0 Valor Real: 0
+
+id_ex_regb: Valor Esperado:          x Valor Real:          x
+
+id_ex_imedext: Valor Esperado: 00000000000000000000000000000001 Valor Real: xxxxxxxxxxxxxxxx0000000000000000
+
+id_ex_selwsource: Valor Esperado: X Valor Real: 0
+
+id_ex_regdest: Valor Esperado: 00000 Valor Real xxxxx
+
+id_ex_writereg: Valor Esperado: 0 Valor Real: 1
+
+id_ex_writeov: Valor Esperado: X Valor Real: 1
+
+id_reg_addra: Valor Esperado: 00001 Valor Real: xxxxx
+
+id_reg_addrb: Valor Esperado: 00010 Valor Real: xxxxx
+
+BGTZ:
+id_if_selpcsource: 0
+
+id_if_rega: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+id_if_pcimd2ext: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_pcindex: 00xxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_selpctype: xx
+
+id_ex_selalushift: 1
+
+id_ex_selimregb: 0
+
+id_ex_aluop: xxx
+
+id_ex_unsig: x
+
+id_ex_shiftop: 10
+
+id_ex_shiftamt: xxxxx
+
+id_ex_rega: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+id_ex_readmem: 0
+
+id_ex_writemem: 0
+
+id_ex_regb: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+id_ex_imedext: xxxxxxxxxxxxxxxx0000000000000000
+
+id_ex_selwsource: 0
+
+id_ex_regdest: xxxxx
+
+id_ex_writereg: 1
+
+id_ex_writeov'': 1
+
+id_reg_addra: xxxxx
+
+id_reg_addrb: xxxxx
+
+ADDI:
+id_if_selpcsource: Valor Esperado 0 0
+
+id_if_rega: Valor Esperado:          8 Valor Real:          x
+
+reg_id_dataa:          x reg_id_datab:          x
+
+reg_id_ass_dataa: Valor Esperado:          x Valor Real:          8
+ reg_id_ass_datab: Valor Esperado:          x Valor Real:          2
+
+id_if_pcimd2ext: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_pcindex: 00xxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_selpctype: Valor Esperado: xx Valor Real: xx
+
+id_ex_selalushift: Valor Esperado: 0 Valor Real: 1
+
+id_ex_selimregb: Valor Esperado: 1 Valor Real: 0
+
+id_ex_aluop: Valor Esperado: 010 Valor Real: xxx
+
+id_ex_unsig: Valor Esperado: 0 Valor Real: x
+
+id_ex_shiftop: Valor Esperado: XX Valor Real: 10
+
+id_ex_shiftamt: Valor Esperado: 00000 Valor Real:  x
+
+id_ex_rega: Valor Esperado:          x Valor Real:          x
+
+id_ex_readmem: Valor Esperado: 0 Valor Real: 0
+
+id_ex_writemem:  Valor Esperado: 0 Valor Real: 0
+
+id_ex_regb: Valor Esperado:          x Valor Real:          x
+
+id_ex_imedext: Valor Esperado: 00000000000000000000000000000001 Valor Real: xxxxxxxxxxxxxxxx0000000000000000
+
+id_ex_selwsource: Valor Esperado: 0 Valor Real: 0
+
+id_ex_regdest: Valor Esperado: 00000 Valor Real xxxxx
+
+id_ex_writereg: Valor Esperado: 1 Valor Real: 1
+
+id_ex_writeov: Valor Esperado: 0 Valor Real: 1
+
+id_reg_addra: Valor Esperado: 00001 Valor Real: xxxxx
+
+id_reg_addrb: Valor Esperado: 00010 Valor Real: xxxxx
+
+LOAD:
+id_if_selpcsource: Valor Esperado: 0 Valor Real: 0
+
+id_if_rega: Valor Esperado:          8 Valor Real:          x
+
+reg_id_dataa:          x reg_id_datab:          x
+
+reg_id_ass_dataa: Valor Esperado:          x Valor Real:          8
+ reg_id_ass_datab: Valor Esperado:          x Valor Real:          2
+
+id_if_pcimd2ext: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_pcindex: 00xxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_selpctype: Valor Esperado: xx Valor Real: xx
+
+id_ex_selalushift: Valor Esperado: 0 Valor Real: 1
+
+id_ex_selimregb: Valor Esperado: 1 Valor Real: 0
+
+id_ex_aluop: Valor Esperado: 010 Valor Real: xxx
+
+id_ex_unsig: Valor Esperado: 0 Valor Real: x
+
+id_ex_shiftop: Valor Esperado: XX Valor Real: 10
+
+id_ex_shiftamt: Valor Esperado: 00000 Valor Real:  x
+
+id_ex_rega: Valor Esperado:          x Valor Real:          x
+
+id_ex_readmem: Valor Esperado: 1Valor Real: 0
+
+id_ex_writemem:  Valor Esperado: 0 Valor Real: 0
+
+id_ex_regb: Valor Esperado:          x Valor Real:          x
+
+id_ex_imedext: Valor Esperado: 00000000000000000000000000000001 Valor Real: xxxxxxxxxxxxxxxx0000000000000000
+
+id_ex_selwsource: Valor Esperado: 1 Valor Real: 0
+
+id_ex_regdest: Valor Esperado: 00000 Valor Real xxxxx
+
+id_ex_writereg: Valor Esperado: 1 Valor Real: 1
+
+id_ex_writeov: Valor Esperado: 1 Valor Real: 1
+
+id_reg_addra: Valor Esperado: 00001 Valor Real: xxxxx
+
+id_reg_addrb: Valor Esperado: 00010 Valor Real: xxxxx
+
+STORE:
+id_if_selpcsource: Valor Esperado: 0 Valor Real: 0
+
+id_if_rega: Valor Esperado:          8 Valor Real:          x
+
+reg_id_dataa:          x reg_id_datab:          x
+
+reg_id_ass_dataa: Valor Esperado:          x Valor Real:          8
+ reg_id_ass_datab: Valor Esperado:          x Valor Real:          2
+
+id_if_pcimd2ext: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_pcindex: 00xxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_selpctype: Valor Esperado: xx Valor Real: xx
+
+id_ex_selalushift: Valor Esperado: 0 Valor Real: 1
+
+id_ex_selimregb: Valor Esperado: 1 Valor Real: 0
+
+id_ex_aluop: Valor Esperado: 010 Valor Real: xxx
+
+id_ex_unsig: Valor Esperado: 0 Valor Real: x
+
+id_ex_shiftop: Valor Esperado: XX Valor Real: 10
+
+id_ex_shiftamt: Valor Esperado: 00000 Valor Real:  x
+
+id_ex_rega: Valor Esperado:          x Valor Real:          x
+
+id_ex_readmem: Valor Esperado: 0 Valor Real: 0
+
+id_ex_writemem:  Valor Esperado: 1 Valor Real: 0
+
+id_ex_regb: Valor Esperado:          x Valor Real:          x
+
+id_ex_imedext: Valor Esperado: 00000000000000000000000000000001 Valor Real: xxxxxxxxxxxxxxxx0000000000000000
+
+id_ex_selwsource: Valor Esperado: x Valor Real: 0
+
+id_ex_regdest: Valor Esperado: 00000 Valor Real xxxxx
+
+id_ex_writereg: Valor Esperado: 0 Valor Real: 1
+
+id_ex_writeov: Valor Esperado: x Valor Real: 1
+
+id_reg_addra: Valor Esperado: 00001 Valor Real: xxxxx
+
+id_reg_addrb: Valor Esperado: 00010 Valor Real: xxxxx
+
+SLVL:
+id_if_selpcsource: Valor Esperado: 0 Valor Real: 0
+
+id_if_rega: Valor Esperado:          8 Valor Real:          x
+
+reg_id_dataa:          x reg_id_datab:          x
+
+reg_id_ass_dataa: Valor Esperado:          x Valor Real:          8
+ reg_id_ass_datab: Valor Esperado:          x Valor Real:          2
+
+id_if_pcimd2ext: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_pcindex: 00xxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_selpctype: Valor Esperado: XX Valor Real: xx
+
+id_ex_selalushift: Valor Esperado: 1 Valor Real: x
+
+id_ex_selimregb: Valor Esperado: 0 Valor Real: x
+
+id_ex_aluop: Valor Esperado: XXX Valor Real: xxx
+
+id_ex_unsig: Valor Esperado: X Valor Real: x
+
+id_ex_shiftop: Valor Esperado: 10 Valor Real: xx
+
+id_ex_shiftamt: Valor Esperado:  x Valor Real:  x
+
+id_ex_rega: Valor Esperado:          x Valor Real:          x
+
+id_ex_readmem: Valor Esperado: 0 Valor Real: x
+
+id_ex_writemem:  Valor Esperado: 0 Valor Real: x
+
+id_ex_regb: Valor Esperado:          x Valor Real:          x
+
+id_ex_imedext: Valor Esperado: 00000000000000000000100000000100 Valor Real: xxxxxxxxxxxxxxxx0000000000000000
+
+id_ex_selwsource: Valor Esperado: 0 Valor Real: x
+
+id_ex_regdest: Valor Esperado: 00001 Valor Real xxxxx
+
+id_ex_writereg: Valor Esperado: 1 Valor Real: x
+
+id_ex_writeov: Valor Esperado: 1 Valor Real: x
+
+id_reg_addra: Valor Esperado: 00001 Valor Real: xxxxx
+
+id_reg_addrb: Valor Esperado: 00010 Valor Real: xxxxx
+
+JR:
+id_if_selpcsource: Valor Esperado: 1 Valor Real: 0
+
+id_if_rega: Valor Esperado:          8 Valor Real:          x
+
+reg_id_dataa:          x reg_id_datab:          x
+
+reg_id_ass_dataa: Valor Esperado:          x Valor Real:          8
+ reg_id_ass_datab: Valor Esperado:          x Valor Real:          2
+
+id_if_pcimd2ext: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_pcindex: 00xxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_selpctype: Valor Esperado: 01 Valor Real: xx
+
+id_ex_selalushift: Valor Esperado: X Valor Real: 1
+
+id_ex_selimregb: Valor Esperado: X Valor Real: 0
+
+id_ex_aluop: Valor Esperado: XXX Valor Real: xxx
+
+id_ex_unsig: Valor Esperado: X Valor Real: x
+
+id_ex_shiftop: Valor Esperado: XX Valor Real: 10
+
+id_ex_shiftamt: Valor Esperado: 11111 Valor Real:  x
+
+id_ex_rega: Valor Esperado:          x Valor Real:          x
+
+id_ex_readmem: Valor Esperado: 0 Valor Real: 0
+
+id_ex_writemem:  Valor Esperado: 0 Valor Real: 0
+
+id_ex_regb: Valor Esperado:          x Valor Real:          x
+
+id_ex_imedext: Valor Esperado: 00000000000000000001111111001000 Valor Real: xxxxxxxxxxxxxxxx0000000000000000
+
+id_ex_selwsource: Valor Esperado: X Valor Real: 0
+
+id_ex_regdest: Valor Esperado: 00011 Valor Real xxxxx
+
+id_ex_writereg: Valor Esperado: 0 Valor Real: 1
+
+id_ex_writeov: Valor Esperado: X Valor Real: 1
+
+id_reg_addra: Valor Esperado: 00001 Valor Real: xxxxx
+
+id_reg_addrb: Valor Esperado: 00010 Valor Real: xxxxx
+
+ADD:
+id_if_selpcsource: Valor Esperado: 0 Valor Real: 0
+
+id_if_rega: Valor Esperado:          8 Valor Real:          x
+
+reg_id_dataa:          x reg_id_datab:          x
+
+reg_id_ass_dataa: Valor Esperado:          x Valor Real:          8
+ reg_id_ass_datab: Valor Esperado:          x Valor Real:          2
+
+id_if_pcimd2ext: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_pcindex: 00xxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_selpctype: Valor Esperado: XX Valor Real: xx
+
+id_ex_selalushift: Valor Esperado: 0 Valor Real: 1
+
+id_ex_selimregb: Valor Esperado: 0 Valor Real: 0
+
+id_ex_aluop: Valor Esperado: 010 Valor Real: xxx
+
+id_ex_unsig: Valor Esperado: 0 Valor Real: x
+
+id_ex_shiftop: Valor Esperado: XX Valor Real: 10
+
+id_ex_shiftamt: Valor Esperado: 11111 Valor Real:  x
+
+id_ex_rega: Valor Esperado:          x Valor Real:          x
+
+id_ex_readmem: Valor Esperado: 0 Valor Real: 0
+
+id_ex_writemem:  Valor Esperado: 0 Valor Real: 0
+
+id_ex_regb: Valor Esperado:          x Valor Real:          x
+
+id_ex_imedext: Valor Esperado: 00000000000000000001111111100000 Valor Real: xxxxxxxxxxxxxxxx0000000000000000
+
+id_ex_selwsource: Valor Esperado: 0 Valor Real: 0
+
+id_ex_regdest: Valor Esperado: 00011 Valor Real xxxxx
+
+id_ex_writereg: Valor Esperado: 1 Valor Real: 1
+
+id_ex_writeov: Valor Esperado: 0 Valor Real: 1
+
+id_reg_addra: Valor Esperado: 00001 Valor Real: xxxxx
+
+id_reg_addrb: Valor Esperado: 00010 Valor Real: xxxxx
+
+JUMP:
+id_if_selpcsource: Valor Esperado: 1 Valor Real: 0
+
+id_if_rega: Valor Esperado:          8 Valor Real:          x
+
+reg_id_dataa:          x reg_id_datab:          x
+
+reg_id_ass_dataa: Valor Esperado:          x Valor Real:          8
+ reg_id_ass_datab: Valor Esperado:          x Valor Real:          2
+
+id_if_pcimd2ext: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_pcindex: 00xxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_selpctype: Valor Esperado: 10 Valor Real: xx
+
+id_ex_selalushift: Valor Esperado: X Valor Real: 1
+
+id_ex_selimregb: Valor Esperado: X Valor Real: 0
+
+id_ex_aluop: Valor Esperado: XXX Valor Real: xxx
+
+id_ex_unsig: Valor Esperado: X Valor Real: x
+
+id_ex_shiftop: Valor Esperado: XX Valor Real: 10
+
+id_ex_shiftamt: Valor Esperado: 00000 Valor Real:  x
+
+id_ex_rega: Valor Esperado:          x Valor Real:          x
+
+id_ex_readmem: Valor Esperado: 0 Valor Real: 0
+
+id_ex_writemem:  Valor Esperado: 0 Valor Real: 0
+
+id_ex_regb: Valor Esperado:          x Valor Real:          x
+
+id_ex_imedext: Valor Esperado: 00000000000000000000000000000001 Valor Real: xxxxxxxxxxxxxxxx0000000000000000
+
+id_ex_selwsource: Valor Esperado: X Valor Real: 0
+
+id_ex_regdest: Valor Esperado: 00000 Valor Real xxxxx
+
+id_ex_writereg: Valor Esperado: 0 Valor Real: 1
+
+id_ex_writeov: Valor Esperado: X Valor Real: 1
+
+id_reg_addra: Valor Esperado: 00000 Valor Real: xxxxx
+
+id_reg_addrb: Valor Esperado: 00000 Valor Real: xxxxx
+
+BEQ:
+id_if_selpcsource:  Valor Real 0
+
+id_if_rega: Valor Esperado:          8 Valor Real:          x
+
+reg_id_dataa:          x reg_id_datab:          x
+
+reg_id_ass_dataa: Valor Esperado:          x Valor Real:          8
+ reg_id_ass_datab: Valor Esperado:          x Valor Real:          2
+
+id_if_pcimd2ext: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_pcindex: 00xxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_selpctype: Valor Esperado: 00 Valor Real: xx
+
+id_ex_selalushift: Valor Esperado: X Valor Real: 1
+
+id_ex_selimregb: Valor Esperado: X Valor Real: 0
+
+id_ex_aluop: Valor Esperado: XXX Valor Real: xxx
+
+id_ex_unsig: Valor Esperado: 0 Valor Real: x
+
+id_ex_shiftop: Valor Esperado: XX Valor Real: 10
+
+id_ex_shiftamt: Valor Esperado: 00000 Valor Real:  x
+
+id_ex_rega: Valor Esperado:          x Valor Real:          x
+
+id_ex_readmem: Valor Esperado: 0 Valor Real: 0
+
+id_ex_writemem:  Valor Esperado: 0 Valor Real: 0
+
+id_ex_regb: Valor Esperado:          x Valor Real:          x
+
+id_ex_imedext: Valor Esperado: 00000000000000000000000000000001 Valor Real: xxxxxxxxxxxxxxxx0000000000000000
+
+id_ex_selwsource: Valor Esperado: X Valor Real: 0
+
+id_ex_regdest: Valor Esperado: 00000 Valor Real xxxxx
+
+id_ex_writereg: Valor Esperado: 0 Valor Real: 1
+
+id_ex_writeov: Valor Esperado: X Valor Real: 1
+
+id_reg_addra: Valor Esperado: 00001 Valor Real: xxxxx
+
+id_reg_addrb: Valor Esperado: 00010 Valor Real: xxxxx
+
+BGTZ:
+id_if_selpcsource: 0
+
+id_if_rega: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+id_if_pcimd2ext: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_pcindex: 00xxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_selpctype: xx
+
+id_ex_selalushift: 1
+
+id_ex_selimregb: 0
+
+id_ex_aluop: xxx
+
+id_ex_unsig: x
+
+id_ex_shiftop: 10
+
+id_ex_shiftamt: xxxxx
+
+id_ex_rega: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+id_ex_readmem: 0
+
+id_ex_writemem: 0
+
+id_ex_regb: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+id_ex_imedext: xxxxxxxxxxxxxxxx0000000000000000
+
+id_ex_selwsource: 0
+
+id_ex_regdest: xxxxx
+
+id_ex_writereg: 1
+
+id_ex_writeov'': 1
+
+id_reg_addra: xxxxx
+
+id_reg_addrb: xxxxx
+
+ADDI:
+id_if_selpcsource: Valor Esperado 0 0
+
+id_if_rega: Valor Esperado:          8 Valor Real:          x
+
+reg_id_dataa:          x reg_id_datab:          x
+
+reg_id_ass_dataa: Valor Esperado:          x Valor Real:          8
+ reg_id_ass_datab: Valor Esperado:          x Valor Real:          2
+
+id_if_pcimd2ext: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_pcindex: 00xxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_selpctype: Valor Esperado: xx Valor Real: xx
+
+id_ex_selalushift: Valor Esperado: 0 Valor Real: 1
+
+id_ex_selimregb: Valor Esperado: 1 Valor Real: 0
+
+id_ex_aluop: Valor Esperado: 010 Valor Real: xxx
+
+id_ex_unsig: Valor Esperado: 0 Valor Real: x
+
+id_ex_shiftop: Valor Esperado: XX Valor Real: 10
+
+id_ex_shiftamt: Valor Esperado: 00000 Valor Real:  x
+
+id_ex_rega: Valor Esperado:          x Valor Real:          x
+
+id_ex_readmem: Valor Esperado: 0 Valor Real: 0
+
+id_ex_writemem:  Valor Esperado: 0 Valor Real: 0
+
+id_ex_regb: Valor Esperado:          x Valor Real:          x
+
+id_ex_imedext: Valor Esperado: 00000000000000000000000000000001 Valor Real: xxxxxxxxxxxxxxxx0000000000000000
+
+id_ex_selwsource: Valor Esperado: 0 Valor Real: 0
+
+id_ex_regdest: Valor Esperado: 00000 Valor Real xxxxx
+
+id_ex_writereg: Valor Esperado: 1 Valor Real: 1
+
+id_ex_writeov: Valor Esperado: 0 Valor Real: 1
+
+id_reg_addra: Valor Esperado: 00001 Valor Real: xxxxx
+
+id_reg_addrb: Valor Esperado: 00010 Valor Real: xxxxx
+
+LOAD:
+id_if_selpcsource: Valor Esperado: 0 Valor Real: 0
+
+id_if_rega: Valor Esperado:          8 Valor Real:          x
+
+reg_id_dataa:          x reg_id_datab:          x
+
+reg_id_ass_dataa: Valor Esperado:          x Valor Real:          8
+ reg_id_ass_datab: Valor Esperado:          x Valor Real:          2
+
+id_if_pcimd2ext: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_pcindex: 00xxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_selpctype: Valor Esperado: xx Valor Real: xx
+
+id_ex_selalushift: Valor Esperado: 0 Valor Real: 1
+
+id_ex_selimregb: Valor Esperado: 1 Valor Real: 0
+
+id_ex_aluop: Valor Esperado: 010 Valor Real: xxx
+
+id_ex_unsig: Valor Esperado: 0 Valor Real: x
+
+id_ex_shiftop: Valor Esperado: XX Valor Real: 10
+
+id_ex_shiftamt: Valor Esperado: 00000 Valor Real:  x
+
+id_ex_rega: Valor Esperado:          x Valor Real:          x
+
+id_ex_readmem: Valor Esperado: 1Valor Real: 0
+
+id_ex_writemem:  Valor Esperado: 0 Valor Real: 0
+
+id_ex_regb: Valor Esperado:          x Valor Real:          x
+
+id_ex_imedext: Valor Esperado: 00000000000000000000000000000001 Valor Real: xxxxxxxxxxxxxxxx0000000000000000
+
+id_ex_selwsource: Valor Esperado: 1 Valor Real: 0
+
+id_ex_regdest: Valor Esperado: 00000 Valor Real xxxxx
+
+id_ex_writereg: Valor Esperado: 1 Valor Real: 1
+
+id_ex_writeov: Valor Esperado: 1 Valor Real: 1
+
+id_reg_addra: Valor Esperado: 00001 Valor Real: xxxxx
+
+id_reg_addrb: Valor Esperado: 00010 Valor Real: xxxxx
+
+STORE:
+id_if_selpcsource: Valor Esperado: 0 Valor Real: 0
+
+id_if_rega: Valor Esperado:          8 Valor Real:          x
+
+reg_id_dataa:          x reg_id_datab:          x
+
+reg_id_ass_dataa: Valor Esperado:          x Valor Real:          8
+ reg_id_ass_datab: Valor Esperado:          x Valor Real:          2
+
+id_if_pcimd2ext: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_pcindex: 00xxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_selpctype: Valor Esperado: xx Valor Real: xx
+
+id_ex_selalushift: Valor Esperado: 0 Valor Real: 1
+
+id_ex_selimregb: Valor Esperado: 1 Valor Real: 0
+
+id_ex_aluop: Valor Esperado: 010 Valor Real: xxx
+
+id_ex_unsig: Valor Esperado: 0 Valor Real: x
+
+id_ex_shiftop: Valor Esperado: XX Valor Real: 10
+
+id_ex_shiftamt: Valor Esperado: 00000 Valor Real:  x
+
+id_ex_rega: Valor Esperado:          x Valor Real:          x
+
+id_ex_readmem: Valor Esperado: 0 Valor Real: 0
+
+id_ex_writemem:  Valor Esperado: 1 Valor Real: 0
+
+id_ex_regb: Valor Esperado:          x Valor Real:          x
+
+id_ex_imedext: Valor Esperado: 00000000000000000000000000000001 Valor Real: xxxxxxxxxxxxxxxx0000000000000000
+
+id_ex_selwsource: Valor Esperado: x Valor Real: 0
+
+id_ex_regdest: Valor Esperado: 00000 Valor Real xxxxx
+
+id_ex_writereg: Valor Esperado: 0 Valor Real: 1
+
+id_ex_writeov: Valor Esperado: x Valor Real: 1
+
+id_reg_addra: Valor Esperado: 00001 Valor Real: xxxxx
+
+id_reg_addrb: Valor Esperado: 00010 Valor Real: xxxxx
+
+SLVL:
+id_if_selpcsource: Valor Esperado: 0 Valor Real: 0
+
+id_if_rega: Valor Esperado:          8 Valor Real:          x
+
+reg_id_dataa:          x reg_id_datab:          x
+
+reg_id_ass_dataa: Valor Esperado:          x Valor Real:          8
+ reg_id_ass_datab: Valor Esperado:          x Valor Real:          2
+
+id_if_pcimd2ext: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_pcindex: 00xxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_selpctype: Valor Esperado: XX Valor Real: xx
+
+id_ex_selalushift: Valor Esperado: 1 Valor Real: x
+
+id_ex_selimregb: Valor Esperado: 0 Valor Real: x
+
+id_ex_aluop: Valor Esperado: XXX Valor Real: xxx
+
+id_ex_unsig: Valor Esperado: X Valor Real: x
+
+id_ex_shiftop: Valor Esperado: 10 Valor Real: xx
+
+id_ex_shiftamt: Valor Esperado:  x Valor Real:  x
+
+id_ex_rega: Valor Esperado:          x Valor Real:          x
+
+id_ex_readmem: Valor Esperado: 0 Valor Real: x
+
+id_ex_writemem:  Valor Esperado: 0 Valor Real: x
+
+id_ex_regb: Valor Esperado:          x Valor Real:          x
+
+id_ex_imedext: Valor Esperado: 00000000000000000000100000000100 Valor Real: xxxxxxxxxxxxxxxx0000000000000000
+
+id_ex_selwsource: Valor Esperado: 0 Valor Real: x
+
+id_ex_regdest: Valor Esperado: 00001 Valor Real xxxxx
+
+id_ex_writereg: Valor Esperado: 1 Valor Real: x
+
+id_ex_writeov: Valor Esperado: 1 Valor Real: x
+
+id_reg_addra: Valor Esperado: 00001 Valor Real: xxxxx
+
+id_reg_addrb: Valor Esperado: 00010 Valor Real: xxxxx
+
+JR:
+id_if_selpcsource: Valor Esperado: 1 Valor Real: 0
+
+id_if_rega: Valor Esperado:          8 Valor Real:          x
+
+reg_id_dataa:          x reg_id_datab:          x
+
+reg_id_ass_dataa: Valor Esperado:          x Valor Real:          8
+ reg_id_ass_datab: Valor Esperado:          x Valor Real:          2
+
+id_if_pcimd2ext: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_pcindex: 00xxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_selpctype: Valor Esperado: 01 Valor Real: xx
+
+id_ex_selalushift: Valor Esperado: X Valor Real: 1
+
+id_ex_selimregb: Valor Esperado: X Valor Real: 0
+
+id_ex_aluop: Valor Esperado: XXX Valor Real: xxx
+
+id_ex_unsig: Valor Esperado: X Valor Real: x
+
+id_ex_shiftop: Valor Esperado: XX Valor Real: 10
+
+id_ex_shiftamt: Valor Esperado: 11111 Valor Real:  x
+
+id_ex_rega: Valor Esperado:          x Valor Real:          x
+
+id_ex_readmem: Valor Esperado: 0 Valor Real: 0
+
+id_ex_writemem:  Valor Esperado: 0 Valor Real: 0
+
+id_ex_regb: Valor Esperado:          x Valor Real:          x
+
+id_ex_imedext: Valor Esperado: 00000000000000000001111111001000 Valor Real: xxxxxxxxxxxxxxxx0000000000000000
+
+id_ex_selwsource: Valor Esperado: X Valor Real: 0
+
+id_ex_regdest: Valor Esperado: 00011 Valor Real xxxxx
+
+id_ex_writereg: Valor Esperado: 0 Valor Real: 1
+
+id_ex_writeov: Valor Esperado: X Valor Real: 1
+
+id_reg_addra: Valor Esperado: 00001 Valor Real: xxxxx
+
+id_reg_addrb: Valor Esperado: 00010 Valor Real: xxxxx
+
+ADD:
+id_if_selpcsource: Valor Esperado: 0 Valor Real: 0
+
+id_if_rega: Valor Esperado:          8 Valor Real:          x
+
+reg_id_dataa:          x reg_id_datab:          x
+
+reg_id_ass_dataa: Valor Esperado:          x Valor Real:          8
+ reg_id_ass_datab: Valor Esperado:          x Valor Real:          2
+
+id_if_pcimd2ext: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_pcindex: 00xxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_selpctype: Valor Esperado: XX Valor Real: xx
+
+id_ex_selalushift: Valor Esperado: 0 Valor Real: 1
+
+id_ex_selimregb: Valor Esperado: 0 Valor Real: 0
+
+id_ex_aluop: Valor Esperado: 010 Valor Real: xxx
+
+id_ex_unsig: Valor Esperado: 0 Valor Real: x
+
+id_ex_shiftop: Valor Esperado: XX Valor Real: 10
+
+id_ex_shiftamt: Valor Esperado: 11111 Valor Real:  x
+
+id_ex_rega: Valor Esperado:          x Valor Real:          x
+
+id_ex_readmem: Valor Esperado: 0 Valor Real: 0
+
+id_ex_writemem:  Valor Esperado: 0 Valor Real: 0
+
+id_ex_regb: Valor Esperado:          x Valor Real:          x
+
+id_ex_imedext: Valor Esperado: 00000000000000000001111111100000 Valor Real: xxxxxxxxxxxxxxxx0000000000000000
+
+id_ex_selwsource: Valor Esperado: 0 Valor Real: 0
+
+id_ex_regdest: Valor Esperado: 00011 Valor Real xxxxx
+
+id_ex_writereg: Valor Esperado: 1 Valor Real: 1
+
+id_ex_writeov: Valor Esperado: 0 Valor Real: 1
+
+id_reg_addra: Valor Esperado: 00001 Valor Real: xxxxx
+
+id_reg_addrb: Valor Esperado: 00010 Valor Real: xxxxx
+
+JUMP:
+id_if_selpcsource: Valor Esperado: 1 Valor Real: 0
+
+id_if_rega: Valor Esperado:          8 Valor Real:          x
+
+reg_id_dataa:          x reg_id_datab:          x
+
+reg_id_ass_dataa: Valor Esperado:          x Valor Real:          8
+ reg_id_ass_datab: Valor Esperado:          x Valor Real:          2
+
+id_if_pcimd2ext: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_pcindex: 00xxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_selpctype: Valor Esperado: 10 Valor Real: xx
+
+id_ex_selalushift: Valor Esperado: X Valor Real: 1
+
+id_ex_selimregb: Valor Esperado: X Valor Real: 0
+
+id_ex_aluop: Valor Esperado: XXX Valor Real: xxx
+
+id_ex_unsig: Valor Esperado: X Valor Real: x
+
+id_ex_shiftop: Valor Esperado: XX Valor Real: 10
+
+id_ex_shiftamt: Valor Esperado: 00000 Valor Real:  x
+
+id_ex_rega: Valor Esperado:          x Valor Real:          x
+
+id_ex_readmem: Valor Esperado: 0 Valor Real: 0
+
+id_ex_writemem:  Valor Esperado: 0 Valor Real: 0
+
+id_ex_regb: Valor Esperado:          x Valor Real:          x
+
+id_ex_imedext: Valor Esperado: 00000000000000000000000000000001 Valor Real: xxxxxxxxxxxxxxxx0000000000000000
+
+id_ex_selwsource: Valor Esperado: X Valor Real: 0
+
+id_ex_regdest: Valor Esperado: 00000 Valor Real xxxxx
+
+id_ex_writereg: Valor Esperado: 0 Valor Real: 1
+
+id_ex_writeov: Valor Esperado: X Valor Real: 1
+
+id_reg_addra: Valor Esperado: 00000 Valor Real: xxxxx
+
+id_reg_addrb: Valor Esperado: 00000 Valor Real: xxxxx
+
+BEQ:
+id_if_selpcsource:  Valor Real 0
+
+id_if_rega: Valor Esperado:          8 Valor Real:          x
+
+reg_id_dataa:          x reg_id_datab:          x
+
+reg_id_ass_dataa: Valor Esperado:          x Valor Real:          8
+ reg_id_ass_datab: Valor Esperado:          x Valor Real:          2
+
+id_if_pcimd2ext: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_pcindex: 00xxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_selpctype: Valor Esperado: 00 Valor Real: xx
+
+id_ex_selalushift: Valor Esperado: X Valor Real: 1
+
+id_ex_selimregb: Valor Esperado: X Valor Real: 0
+
+id_ex_aluop: Valor Esperado: XXX Valor Real: xxx
+
+id_ex_unsig: Valor Esperado: 0 Valor Real: x
+
+id_ex_shiftop: Valor Esperado: XX Valor Real: 10
+
+id_ex_shiftamt: Valor Esperado: 00000 Valor Real:  x
+
+id_ex_rega: Valor Esperado:          x Valor Real:          x
+
+id_ex_readmem: Valor Esperado: 0 Valor Real: 0
+
+id_ex_writemem:  Valor Esperado: 0 Valor Real: 0
+
+id_ex_regb: Valor Esperado:          x Valor Real:          x
+
+id_ex_imedext: Valor Esperado: 00000000000000000000000000000001 Valor Real: xxxxxxxxxxxxxxxx0000000000000000
+
+id_ex_selwsource: Valor Esperado: X Valor Real: 0
+
+id_ex_regdest: Valor Esperado: 00000 Valor Real xxxxx
+
+id_ex_writereg: Valor Esperado: 0 Valor Real: 1
+
+id_ex_writeov: Valor Esperado: X Valor Real: 1
+
+id_reg_addra: Valor Esperado: 00001 Valor Real: xxxxx
+
+id_reg_addrb: Valor Esperado: 00010 Valor Real: xxxxx
+
+BGTZ:
+id_if_selpcsource: 0
+
+id_if_rega: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+id_if_pcimd2ext: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_pcindex: 00xxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_selpctype: xx
+
+id_ex_selalushift: 1
+
+id_ex_selimregb: 0
+
+id_ex_aluop: xxx
+
+id_ex_unsig: x
+
+id_ex_shiftop: 10
+
+id_ex_shiftamt: xxxxx
+
+id_ex_rega: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+id_ex_readmem: 0
+
+id_ex_writemem: 0
+
+id_ex_regb: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+id_ex_imedext: xxxxxxxxxxxxxxxx0000000000000000
+
+id_ex_selwsource: 0
+
+id_ex_regdest: xxxxx
+
+id_ex_writereg: 1
+
+id_ex_writeov'': 1
+
+id_reg_addra: xxxxx
+
+id_reg_addrb: xxxxx
+
+ADDI:
+id_if_selpcsource: Valor Esperado 0 0
+
+id_if_rega: Valor Esperado:          8 Valor Real:          x
+
+reg_id_dataa:          x reg_id_datab:          x
+
+reg_id_ass_dataa: Valor Esperado:          x Valor Real:          8
+ reg_id_ass_datab: Valor Esperado:          x Valor Real:          2
+
+id_if_pcimd2ext: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_pcindex: 00xxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_selpctype: Valor Esperado: xx Valor Real: xx
+
+id_ex_selalushift: Valor Esperado: 0 Valor Real: 1
+
+id_ex_selimregb: Valor Esperado: 1 Valor Real: 0
+
+id_ex_aluop: Valor Esperado: 010 Valor Real: xxx
+
+id_ex_unsig: Valor Esperado: 0 Valor Real: x
+
+id_ex_shiftop: Valor Esperado: XX Valor Real: 10
+
+id_ex_shiftamt: Valor Esperado: 00000 Valor Real:  x
+
+id_ex_rega: Valor Esperado:          x Valor Real:          x
+
+id_ex_readmem: Valor Esperado: 0 Valor Real: 0
+
+id_ex_writemem:  Valor Esperado: 0 Valor Real: 0
+
+id_ex_regb: Valor Esperado:          x Valor Real:          x
+
+id_ex_imedext: Valor Esperado: 00000000000000000000000000000001 Valor Real: xxxxxxxxxxxxxxxx0000000000000000
+
+id_ex_selwsource: Valor Esperado: 0 Valor Real: 0
+
+id_ex_regdest: Valor Esperado: 00000 Valor Real xxxxx
+
+id_ex_writereg: Valor Esperado: 1 Valor Real: 1
+
+id_ex_writeov: Valor Esperado: 0 Valor Real: 1
+
+id_reg_addra: Valor Esperado: 00001 Valor Real: xxxxx
+
+id_reg_addrb: Valor Esperado: 00010 Valor Real: xxxxx
+
+LOAD:
+id_if_selpcsource: Valor Esperado: 0 Valor Real: 0
+
+id_if_rega: Valor Esperado:          8 Valor Real:          x
+
+reg_id_dataa:          x reg_id_datab:          x
+
+reg_id_ass_dataa: Valor Esperado:          x Valor Real:          8
+ reg_id_ass_datab: Valor Esperado:          x Valor Real:          2
+
+id_if_pcimd2ext: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_pcindex: 00xxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_selpctype: Valor Esperado: xx Valor Real: xx
+
+id_ex_selalushift: Valor Esperado: 0 Valor Real: 1
+
+id_ex_selimregb: Valor Esperado: 1 Valor Real: 0
+
+id_ex_aluop: Valor Esperado: 010 Valor Real: xxx
+
+id_ex_unsig: Valor Esperado: 0 Valor Real: x
+
+id_ex_shiftop: Valor Esperado: XX Valor Real: 10
+
+id_ex_shiftamt: Valor Esperado: 00000 Valor Real:  x
+
+id_ex_rega: Valor Esperado:          x Valor Real:          x
+
+id_ex_readmem: Valor Esperado: 1Valor Real: 0
+
+id_ex_writemem:  Valor Esperado: 0 Valor Real: 0
+
+id_ex_regb: Valor Esperado:          x Valor Real:          x
+
+id_ex_imedext: Valor Esperado: 00000000000000000000000000000001 Valor Real: xxxxxxxxxxxxxxxx0000000000000000
+
+id_ex_selwsource: Valor Esperado: 1 Valor Real: 0
+
+id_ex_regdest: Valor Esperado: 00000 Valor Real xxxxx
+
+id_ex_writereg: Valor Esperado: 1 Valor Real: 1
+
+id_ex_writeov: Valor Esperado: 1 Valor Real: 1
+
+id_reg_addra: Valor Esperado: 00001 Valor Real: xxxxx
+
+id_reg_addrb: Valor Esperado: 00010 Valor Real: xxxxx
+
+STORE:
+id_if_selpcsource: Valor Esperado: 0 Valor Real: 0
+
+id_if_rega: Valor Esperado:          8 Valor Real:          x
+
+reg_id_dataa:          x reg_id_datab:          x
+
+reg_id_ass_dataa: Valor Esperado:          x Valor Real:          8
+ reg_id_ass_datab: Valor Esperado:          x Valor Real:          2
+
+id_if_pcimd2ext: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_pcindex: 00xxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_selpctype: Valor Esperado: xx Valor Real: xx
+
+id_ex_selalushift: Valor Esperado: 0 Valor Real: 1
+
+id_ex_selimregb: Valor Esperado: 1 Valor Real: 0
+
+id_ex_aluop: Valor Esperado: 010 Valor Real: xxx
+
+id_ex_unsig: Valor Esperado: 0 Valor Real: x
+
+id_ex_shiftop: Valor Esperado: XX Valor Real: 10
+
+id_ex_shiftamt: Valor Esperado: 00000 Valor Real:  x
+
+id_ex_rega: Valor Esperado:          x Valor Real:          x
+
+id_ex_readmem: Valor Esperado: 0 Valor Real: 0
+
+id_ex_writemem:  Valor Esperado: 1 Valor Real: 0
+
+id_ex_regb: Valor Esperado:          x Valor Real:          x
+
+id_ex_imedext: Valor Esperado: 00000000000000000000000000000001 Valor Real: xxxxxxxxxxxxxxxx0000000000000000
+
+id_ex_selwsource: Valor Esperado: x Valor Real: 0
+
+id_ex_regdest: Valor Esperado: 00000 Valor Real xxxxx
+
+id_ex_writereg: Valor Esperado: 0 Valor Real: 1
+
+id_ex_writeov: Valor Esperado: x Valor Real: 1
+
+id_reg_addra: Valor Esperado: 00001 Valor Real: xxxxx
+
+id_reg_addrb: Valor Esperado: 00010 Valor Real: xxxxx
+
+SLVL:
+id_if_selpcsource: Valor Esperado: 0 Valor Real: 0
+
+id_if_rega: Valor Esperado:          8 Valor Real:          x
+
+reg_id_dataa:          x reg_id_datab:          x
+
+reg_id_ass_dataa: Valor Esperado:          x Valor Real:          8
+ reg_id_ass_datab: Valor Esperado:          x Valor Real:          2
+
+id_if_pcimd2ext: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_pcindex: 00xxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_selpctype: Valor Esperado: XX Valor Real: xx
+
+id_ex_selalushift: Valor Esperado: 1 Valor Real: x
+
+id_ex_selimregb: Valor Esperado: 0 Valor Real: x
+
+id_ex_aluop: Valor Esperado: XXX Valor Real: xxx
+
+id_ex_unsig: Valor Esperado: X Valor Real: x
+
+id_ex_shiftop: Valor Esperado: 10 Valor Real: xx
+
+id_ex_shiftamt: Valor Esperado:  x Valor Real:  x
+
+id_ex_rega: Valor Esperado:          x Valor Real:          x
+
+id_ex_readmem: Valor Esperado: 0 Valor Real: x
+
+id_ex_writemem:  Valor Esperado: 0 Valor Real: x
+
+id_ex_regb: Valor Esperado:          x Valor Real:          x
+
+id_ex_imedext: Valor Esperado: 00000000000000000000100000000100 Valor Real: xxxxxxxxxxxxxxxx0000000000000000
+
+id_ex_selwsource: Valor Esperado: 0 Valor Real: x
+
+id_ex_regdest: Valor Esperado: 00001 Valor Real xxxxx
+
+id_ex_writereg: Valor Esperado: 1 Valor Real: x
+
+id_ex_writeov: Valor Esperado: 1 Valor Real: x
+
+id_reg_addra: Valor Esperado: 00001 Valor Real: xxxxx
+
+id_reg_addrb: Valor Esperado: 00010 Valor Real: xxxxx
+
+JR:
+id_if_selpcsource: Valor Esperado: 1 Valor Real: 0
+
+id_if_rega: Valor Esperado:          8 Valor Real:          x
+
+reg_id_dataa:          x reg_id_datab:          x
+
+reg_id_ass_dataa: Valor Esperado:          x Valor Real:          8
+ reg_id_ass_datab: Valor Esperado:          x Valor Real:          2
+
+id_if_pcimd2ext: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_pcindex: 00xxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_selpctype: Valor Esperado: 01 Valor Real: xx
+
+id_ex_selalushift: Valor Esperado: X Valor Real: 1
+
+id_ex_selimregb: Valor Esperado: X Valor Real: 0
+
+id_ex_aluop: Valor Esperado: XXX Valor Real: xxx
+
+id_ex_unsig: Valor Esperado: X Valor Real: x
+
+id_ex_shiftop: Valor Esperado: XX Valor Real: 10
+
+id_ex_shiftamt: Valor Esperado: 11111 Valor Real:  x
+
+id_ex_rega: Valor Esperado:          x Valor Real:          x
+
+id_ex_readmem: Valor Esperado: 0 Valor Real: 0
+
+id_ex_writemem:  Valor Esperado: 0 Valor Real: 0
+
+id_ex_regb: Valor Esperado:          x Valor Real:          x
+
+id_ex_imedext: Valor Esperado: 00000000000000000001111111001000 Valor Real: xxxxxxxxxxxxxxxx0000000000000000
+
+id_ex_selwsource: Valor Esperado: X Valor Real: 0
+
+id_ex_regdest: Valor Esperado: 00011 Valor Real xxxxx
+
+id_ex_writereg: Valor Esperado: 0 Valor Real: 1
+
+id_ex_writeov: Valor Esperado: X Valor Real: 1
+
+id_reg_addra: Valor Esperado: 00001 Valor Real: xxxxx
+
+id_reg_addrb: Valor Esperado: 00010 Valor Real: xxxxx
+
+ADD:
+id_if_selpcsource: Valor Esperado: 0 Valor Real: 0
+
+id_if_rega: Valor Esperado:          8 Valor Real:          x
+
+reg_id_dataa:          x reg_id_datab:          x
+
+reg_id_ass_dataa: Valor Esperado:          x Valor Real:          8
+ reg_id_ass_datab: Valor Esperado:          x Valor Real:          2
+
+id_if_pcimd2ext: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_pcindex: 00xxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_selpctype: Valor Esperado: XX Valor Real: xx
+
+id_ex_selalushift: Valor Esperado: 0 Valor Real: 1
+
+id_ex_selimregb: Valor Esperado: 0 Valor Real: 0
+
+id_ex_aluop: Valor Esperado: 010 Valor Real: xxx
+
+id_ex_unsig: Valor Esperado: 0 Valor Real: x
+
+id_ex_shiftop: Valor Esperado: XX Valor Real: 10
+
+id_ex_shiftamt: Valor Esperado: 11111 Valor Real:  x
+
+id_ex_rega: Valor Esperado:          x Valor Real:          x
+
+id_ex_readmem: Valor Esperado: 0 Valor Real: 0
+
+id_ex_writemem:  Valor Esperado: 0 Valor Real: 0
+
+id_ex_regb: Valor Esperado:          x Valor Real:          x
+
+id_ex_imedext: Valor Esperado: 00000000000000000001111111100000 Valor Real: xxxxxxxxxxxxxxxx0000000000000000
+
+id_ex_selwsource: Valor Esperado: 0 Valor Real: 0
+
+id_ex_regdest: Valor Esperado: 00011 Valor Real xxxxx
+
+id_ex_writereg: Valor Esperado: 1 Valor Real: 1
+
+id_ex_writeov: Valor Esperado: 0 Valor Real: 1
+
+id_reg_addra: Valor Esperado: 00001 Valor Real: xxxxx
+
+id_reg_addrb: Valor Esperado: 00010 Valor Real: xxxxx
+
+JUMP:
+id_if_selpcsource: Valor Esperado: 1 Valor Real: 0
+
+id_if_rega: Valor Esperado:          8 Valor Real:          x
+
+reg_id_dataa:          x reg_id_datab:          x
+
+reg_id_ass_dataa: Valor Esperado:          x Valor Real:          8
+ reg_id_ass_datab: Valor Esperado:          x Valor Real:          2
+
+id_if_pcimd2ext: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_pcindex: 00xxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_selpctype: Valor Esperado: 10 Valor Real: xx
+
+id_ex_selalushift: Valor Esperado: X Valor Real: 1
+
+id_ex_selimregb: Valor Esperado: X Valor Real: 0
+
+id_ex_aluop: Valor Esperado: XXX Valor Real: xxx
+
+id_ex_unsig: Valor Esperado: X Valor Real: x
+
+id_ex_shiftop: Valor Esperado: XX Valor Real: 10
+
+id_ex_shiftamt: Valor Esperado: 00000 Valor Real:  x
+
+id_ex_rega: Valor Esperado:          x Valor Real:          x
+
+id_ex_readmem: Valor Esperado: 0 Valor Real: 0
+
+id_ex_writemem:  Valor Esperado: 0 Valor Real: 0
+
+id_ex_regb: Valor Esperado:          x Valor Real:          x
+
+id_ex_imedext: Valor Esperado: 00000000000000000000000000000001 Valor Real: xxxxxxxxxxxxxxxx0000000000000000
+
+id_ex_selwsource: Valor Esperado: X Valor Real: 0
+
+id_ex_regdest: Valor Esperado: 00000 Valor Real xxxxx
+
+id_ex_writereg: Valor Esperado: 0 Valor Real: 1
+
+id_ex_writeov: Valor Esperado: X Valor Real: 1
+
+id_reg_addra: Valor Esperado: 00000 Valor Real: xxxxx
+
+id_reg_addrb: Valor Esperado: 00000 Valor Real: xxxxx
+
+BEQ:
+id_if_selpcsource:  Valor Real 0
+
+id_if_rega: Valor Esperado:          8 Valor Real:          x
+
+reg_id_dataa:          x reg_id_datab:          x
+
+reg_id_ass_dataa: Valor Esperado:          x Valor Real:          8
+ reg_id_ass_datab: Valor Esperado:          x Valor Real:          2
+
+id_if_pcimd2ext: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_pcindex: 00xxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_selpctype: Valor Esperado: 00 Valor Real: xx
+
+id_ex_selalushift: Valor Esperado: X Valor Real: 1
+
+id_ex_selimregb: Valor Esperado: X Valor Real: 0
+
+id_ex_aluop: Valor Esperado: XXX Valor Real: xxx
+
+id_ex_unsig: Valor Esperado: 0 Valor Real: x
+
+id_ex_shiftop: Valor Esperado: XX Valor Real: 10
+
+id_ex_shiftamt: Valor Esperado: 00000 Valor Real:  x
+
+id_ex_rega: Valor Esperado:          x Valor Real:          x
+
+id_ex_readmem: Valor Esperado: 0 Valor Real: 0
+
+id_ex_writemem:  Valor Esperado: 0 Valor Real: 0
+
+id_ex_regb: Valor Esperado:          x Valor Real:          x
+
+id_ex_imedext: Valor Esperado: 00000000000000000000000000000001 Valor Real: xxxxxxxxxxxxxxxx0000000000000000
+
+id_ex_selwsource: Valor Esperado: X Valor Real: 0
+
+id_ex_regdest: Valor Esperado: 00000 Valor Real xxxxx
+
+id_ex_writereg: Valor Esperado: 0 Valor Real: 1
+
+id_ex_writeov: Valor Esperado: X Valor Real: 1
+
+id_reg_addra: Valor Esperado: 00001 Valor Real: xxxxx
+
+id_reg_addrb: Valor Esperado: 00010 Valor Real: xxxxx
+
+BGTZ:
+id_if_selpcsource: 0
+
+id_if_rega: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+id_if_pcimd2ext: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_pcindex: 00xxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_selpctype: xx
+
+id_ex_selalushift: 1
+
+id_ex_selimregb: 0
+
+id_ex_aluop: xxx
+
+id_ex_unsig: x
+
+id_ex_shiftop: 10
+
+id_ex_shiftamt: xxxxx
+
+id_ex_rega: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+id_ex_readmem: 0
+
+id_ex_writemem: 0
+
+id_ex_regb: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+id_ex_imedext: xxxxxxxxxxxxxxxx0000000000000000
+
+id_ex_selwsource: 0
+
+id_ex_regdest: xxxxx
+
+id_ex_writereg: 1
+
+id_ex_writeov'': 1
+
+id_reg_addra: xxxxx
+
+id_reg_addrb: xxxxx
+
+ADDI:
+id_if_selpcsource: Valor Esperado 0 0
+
+id_if_rega: Valor Esperado:          8 Valor Real:          x
+
+reg_id_dataa:          x reg_id_datab:          x
+
+reg_id_ass_dataa: Valor Esperado:          x Valor Real:          8
+ reg_id_ass_datab: Valor Esperado:          x Valor Real:          2
+
+id_if_pcimd2ext: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_pcindex: 00xxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_selpctype: Valor Esperado: xx Valor Real: xx
+
+id_ex_selalushift: Valor Esperado: 0 Valor Real: 1
+
+id_ex_selimregb: Valor Esperado: 1 Valor Real: 0
+
+id_ex_aluop: Valor Esperado: 010 Valor Real: xxx
+
+id_ex_unsig: Valor Esperado: 0 Valor Real: x
+
+id_ex_shiftop: Valor Esperado: XX Valor Real: 10
+
+id_ex_shiftamt: Valor Esperado: 00000 Valor Real:  x
+
+id_ex_rega: Valor Esperado:          x Valor Real:          x
+
+id_ex_readmem: Valor Esperado: 0 Valor Real: 0
+
+id_ex_writemem:  Valor Esperado: 0 Valor Real: 0
+
+id_ex_regb: Valor Esperado:          x Valor Real:          x
+
+id_ex_imedext: Valor Esperado: 00000000000000000000000000000001 Valor Real: xxxxxxxxxxxxxxxx0000000000000000
+
+id_ex_selwsource: Valor Esperado: 0 Valor Real: 0
+
+id_ex_regdest: Valor Esperado: 00000 Valor Real xxxxx
+
+id_ex_writereg: Valor Esperado: 1 Valor Real: 1
+
+id_ex_writeov: Valor Esperado: 0 Valor Real: 1
+
+id_reg_addra: Valor Esperado: 00001 Valor Real: xxxxx
+
+id_reg_addrb: Valor Esperado: 00010 Valor Real: xxxxx
+
+LOAD:
+id_if_selpcsource: Valor Esperado: 0 Valor Real: 0
+
+id_if_rega: Valor Esperado:          8 Valor Real:          x
+
+reg_id_dataa:          x reg_id_datab:          x
+
+reg_id_ass_dataa: Valor Esperado:          x Valor Real:          8
+ reg_id_ass_datab: Valor Esperado:          x Valor Real:          2
+
+id_if_pcimd2ext: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_pcindex: 00xxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_selpctype: Valor Esperado: xx Valor Real: xx
+
+id_ex_selalushift: Valor Esperado: 0 Valor Real: 1
+
+id_ex_selimregb: Valor Esperado: 1 Valor Real: 0
+
+id_ex_aluop: Valor Esperado: 010 Valor Real: xxx
+
+id_ex_unsig: Valor Esperado: 0 Valor Real: x
+
+id_ex_shiftop: Valor Esperado: XX Valor Real: 10
+
+id_ex_shiftamt: Valor Esperado: 00000 Valor Real:  x
+
+id_ex_rega: Valor Esperado:          x Valor Real:          x
+
+id_ex_readmem: Valor Esperado: 1Valor Real: 0
+
+id_ex_writemem:  Valor Esperado: 0 Valor Real: 0
+
+id_ex_regb: Valor Esperado:          x Valor Real:          x
+
+id_ex_imedext: Valor Esperado: 00000000000000000000000000000001 Valor Real: xxxxxxxxxxxxxxxx0000000000000000
+
+id_ex_selwsource: Valor Esperado: 1 Valor Real: 0
+
+id_ex_regdest: Valor Esperado: 00000 Valor Real xxxxx
+
+id_ex_writereg: Valor Esperado: 1 Valor Real: 1
+
+id_ex_writeov: Valor Esperado: 1 Valor Real: 1
+
+id_reg_addra: Valor Esperado: 00001 Valor Real: xxxxx
+
+id_reg_addrb: Valor Esperado: 00010 Valor Real: xxxxx
+
+STORE:
+id_if_selpcsource: Valor Esperado: 0 Valor Real: 0
+
+id_if_rega: Valor Esperado:          8 Valor Real:          x
+
+reg_id_dataa:          x reg_id_datab:          x
+
+reg_id_ass_dataa: Valor Esperado:          x Valor Real:          8
+ reg_id_ass_datab: Valor Esperado:          x Valor Real:          2
+
+id_if_pcimd2ext: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_pcindex: 00xxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_selpctype: Valor Esperado: xx Valor Real: xx
+
+id_ex_selalushift: Valor Esperado: 0 Valor Real: 1
+
+id_ex_selimregb: Valor Esperado: 1 Valor Real: 0
+
+id_ex_aluop: Valor Esperado: 010 Valor Real: xxx
+
+id_ex_unsig: Valor Esperado: 0 Valor Real: x
+
+id_ex_shiftop: Valor Esperado: XX Valor Real: 10
+
+id_ex_shiftamt: Valor Esperado: 00000 Valor Real:  x
+
+id_ex_rega: Valor Esperado:          x Valor Real:          x
+
+id_ex_readmem: Valor Esperado: 0 Valor Real: 0
+
+id_ex_writemem:  Valor Esperado: 1 Valor Real: 0
+
+id_ex_regb: Valor Esperado:          x Valor Real:          x
+
+id_ex_imedext: Valor Esperado: 00000000000000000000000000000001 Valor Real: xxxxxxxxxxxxxxxx0000000000000000
+
+id_ex_selwsource: Valor Esperado: x Valor Real: 0
+
+id_ex_regdest: Valor Esperado: 00000 Valor Real xxxxx
+
+id_ex_writereg: Valor Esperado: 0 Valor Real: 1
+
+id_ex_writeov: Valor Esperado: x Valor Real: 1
+
+id_reg_addra: Valor Esperado: 00001 Valor Real: xxxxx
+
+id_reg_addrb: Valor Esperado: 00010 Valor Real: xxxxx
+
+SLVL:
+id_if_selpcsource: Valor Esperado: 0 Valor Real: 0
+
+id_if_rega: Valor Esperado:          8 Valor Real:          x
+
+reg_id_dataa:          x reg_id_datab:          x
+
+reg_id_ass_dataa: Valor Esperado:          x Valor Real:          8
+ reg_id_ass_datab: Valor Esperado:          x Valor Real:          2
+
+id_if_pcimd2ext: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_pcindex: 00xxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_selpctype: Valor Esperado: XX Valor Real: xx
+
+id_ex_selalushift: Valor Esperado: 1 Valor Real: x
+
+id_ex_selimregb: Valor Esperado: 0 Valor Real: x
+
+id_ex_aluop: Valor Esperado: XXX Valor Real: xxx
+
+id_ex_unsig: Valor Esperado: X Valor Real: x
+
+id_ex_shiftop: Valor Esperado: 10 Valor Real: xx
+
+id_ex_shiftamt: Valor Esperado:  x Valor Real:  x
+
+id_ex_rega: Valor Esperado:          x Valor Real:          x
+
+id_ex_readmem: Valor Esperado: 0 Valor Real: x
+
+id_ex_writemem:  Valor Esperado: 0 Valor Real: x
+
+id_ex_regb: Valor Esperado:          x Valor Real:          x
+
+id_ex_imedext: Valor Esperado: 00000000000000000000100000000100 Valor Real: xxxxxxxxxxxxxxxx0000000000000000
+
+id_ex_selwsource: Valor Esperado: 0 Valor Real: x
+
+id_ex_regdest: Valor Esperado: 00001 Valor Real xxxxx
+
+id_ex_writereg: Valor Esperado: 1 Valor Real: x
+
+id_ex_writeov: Valor Esperado: 1 Valor Real: x
+
+id_reg_addra: Valor Esperado: 00001 Valor Real: xxxxx
+
+id_reg_addrb: Valor Esperado: 00010 Valor Real: xxxxx
+
+JR:
+id_if_selpcsource: Valor Esperado: 1 Valor Real: 0
+
+id_if_rega: Valor Esperado:          8 Valor Real:          x
+
+reg_id_dataa:          x reg_id_datab:          x
+
+reg_id_ass_dataa: Valor Esperado:          x Valor Real:          8
+ reg_id_ass_datab: Valor Esperado:          x Valor Real:          2
+
+id_if_pcimd2ext: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_pcindex: 00xxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_selpctype: Valor Esperado: 01 Valor Real: xx
+
+id_ex_selalushift: Valor Esperado: X Valor Real: 1
+
+id_ex_selimregb: Valor Esperado: X Valor Real: 0
+
+id_ex_aluop: Valor Esperado: XXX Valor Real: xxx
+
+id_ex_unsig: Valor Esperado: X Valor Real: x
+
+id_ex_shiftop: Valor Esperado: XX Valor Real: 10
+
+id_ex_shiftamt: Valor Esperado: 11111 Valor Real:  x
+
+id_ex_rega: Valor Esperado:          x Valor Real:          x
+
+id_ex_readmem: Valor Esperado: 0 Valor Real: 0
+
+id_ex_writemem:  Valor Esperado: 0 Valor Real: 0
+
+id_ex_regb: Valor Esperado:          x Valor Real:          x
+
+id_ex_imedext: Valor Esperado: 00000000000000000001111111001000 Valor Real: xxxxxxxxxxxxxxxx0000000000000000
+
+id_ex_selwsource: Valor Esperado: X Valor Real: 0
+
+id_ex_regdest: Valor Esperado: 00011 Valor Real xxxxx
+
+id_ex_writereg: Valor Esperado: 0 Valor Real: 1
+
+id_ex_writeov: Valor Esperado: X Valor Real: 1
+
+id_reg_addra: Valor Esperado: 00001 Valor Real: xxxxx
+
+id_reg_addrb: Valor Esperado: 00010 Valor Real: xxxxx
+
+ADD:
+id_if_selpcsource: Valor Esperado: 0 Valor Real: 0
+
+id_if_rega: Valor Esperado:          8 Valor Real:          x
+
+reg_id_dataa:          x reg_id_datab:          x
+
+reg_id_ass_dataa: Valor Esperado:          x Valor Real:          8
+ reg_id_ass_datab: Valor Esperado:          x Valor Real:          2
+
+id_if_pcimd2ext: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_pcindex: 00xxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_selpctype: Valor Esperado: XX Valor Real: xx
+
+id_ex_selalushift: Valor Esperado: 0 Valor Real: 1
+
+id_ex_selimregb: Valor Esperado: 0 Valor Real: 0
+
+id_ex_aluop: Valor Esperado: 010 Valor Real: xxx
+
+id_ex_unsig: Valor Esperado: 0 Valor Real: x
+
+id_ex_shiftop: Valor Esperado: XX Valor Real: 10
+
+id_ex_shiftamt: Valor Esperado: 11111 Valor Real:  x
+
+id_ex_rega: Valor Esperado:          x Valor Real:          x
+
+id_ex_readmem: Valor Esperado: 0 Valor Real: 0
+
+id_ex_writemem:  Valor Esperado: 0 Valor Real: 0
+
+id_ex_regb: Valor Esperado:          x Valor Real:          x
+
+id_ex_imedext: Valor Esperado: 00000000000000000001111111100000 Valor Real: xxxxxxxxxxxxxxxx0000000000000000
+
+id_ex_selwsource: Valor Esperado: 0 Valor Real: 0
+
+id_ex_regdest: Valor Esperado: 00011 Valor Real xxxxx
+
+id_ex_writereg: Valor Esperado: 1 Valor Real: 1
+
+id_ex_writeov: Valor Esperado: 0 Valor Real: 1
+
+id_reg_addra: Valor Esperado: 00001 Valor Real: xxxxx
+
+id_reg_addrb: Valor Esperado: 00010 Valor Real: xxxxx
+
+JUMP:
+id_if_selpcsource: Valor Esperado: 1 Valor Real: 0
+
+id_if_rega: Valor Esperado:          8 Valor Real:          x
+
+reg_id_dataa:          x reg_id_datab:          x
+
+reg_id_ass_dataa: Valor Esperado:          x Valor Real:          8
+ reg_id_ass_datab: Valor Esperado:          x Valor Real:          2
+
+id_if_pcimd2ext: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_pcindex: 00xxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_selpctype: Valor Esperado: 10 Valor Real: xx
+
+id_ex_selalushift: Valor Esperado: X Valor Real: 1
+
+id_ex_selimregb: Valor Esperado: X Valor Real: 0
+
+id_ex_aluop: Valor Esperado: XXX Valor Real: xxx
+
+id_ex_unsig: Valor Esperado: X Valor Real: x
+
+id_ex_shiftop: Valor Esperado: XX Valor Real: 10
+
+id_ex_shiftamt: Valor Esperado: 00000 Valor Real:  x
+
+id_ex_rega: Valor Esperado:          x Valor Real:          x
+
+id_ex_readmem: Valor Esperado: 0 Valor Real: 0
+
+id_ex_writemem:  Valor Esperado: 0 Valor Real: 0
+
+id_ex_regb: Valor Esperado:          x Valor Real:          x
+
+id_ex_imedext: Valor Esperado: 00000000000000000000000000000001 Valor Real: xxxxxxxxxxxxxxxx0000000000000000
+
+id_ex_selwsource: Valor Esperado: X Valor Real: 0
+
+id_ex_regdest: Valor Esperado: 00000 Valor Real xxxxx
+
+id_ex_writereg: Valor Esperado: 0 Valor Real: 1
+
+id_ex_writeov: Valor Esperado: X Valor Real: 1
+
+id_reg_addra: Valor Esperado: 00000 Valor Real: xxxxx
+
+id_reg_addrb: Valor Esperado: 00000 Valor Real: xxxxx
+
+BEQ:
+id_if_selpcsource:  Valor Real 0
+
+id_if_rega: Valor Esperado:          8 Valor Real:          x
+
+reg_id_dataa:          x reg_id_datab:          x
+
+reg_id_ass_dataa: Valor Esperado:          x Valor Real:          8
+ reg_id_ass_datab: Valor Esperado:          x Valor Real:          2
+
+id_if_pcimd2ext: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_pcindex: 00xxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_selpctype: Valor Esperado: 00 Valor Real: xx
+
+id_ex_selalushift: Valor Esperado: X Valor Real: 1
+
+id_ex_selimregb: Valor Esperado: X Valor Real: 0
+
+id_ex_aluop: Valor Esperado: XXX Valor Real: xxx
+
+id_ex_unsig: Valor Esperado: 0 Valor Real: x
+
+id_ex_shiftop: Valor Esperado: XX Valor Real: 10
+
+id_ex_shiftamt: Valor Esperado: 00000 Valor Real:  x
+
+id_ex_rega: Valor Esperado:          x Valor Real:          x
+
+id_ex_readmem: Valor Esperado: 0 Valor Real: 0
+
+id_ex_writemem:  Valor Esperado: 0 Valor Real: 0
+
+id_ex_regb: Valor Esperado:          x Valor Real:          x
+
+id_ex_imedext: Valor Esperado: 00000000000000000000000000000001 Valor Real: xxxxxxxxxxxxxxxx0000000000000000
+
+id_ex_selwsource: Valor Esperado: X Valor Real: 0
+
+id_ex_regdest: Valor Esperado: 00000 Valor Real xxxxx
+
+id_ex_writereg: Valor Esperado: 0 Valor Real: 1
+
+id_ex_writeov: Valor Esperado: X Valor Real: 1
+
+id_reg_addra: Valor Esperado: 00001 Valor Real: xxxxx
+
+id_reg_addrb: Valor Esperado: 00010 Valor Real: xxxxx
+
+BGTZ:
+id_if_selpcsource: 0
+
+id_if_rega: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+id_if_pcimd2ext: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_pcindex: 00xxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_selpctype: xx
+
+id_ex_selalushift: 1
+
+id_ex_selimregb: 0
+
+id_ex_aluop: xxx
+
+id_ex_unsig: x
+
+id_ex_shiftop: 10
+
+id_ex_shiftamt: xxxxx
+
+id_ex_rega: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+id_ex_readmem: 0
+
+id_ex_writemem: 0
+
+id_ex_regb: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+id_ex_imedext: xxxxxxxxxxxxxxxx0000000000000000
+
+id_ex_selwsource: 0
+
+id_ex_regdest: xxxxx
+
+id_ex_writereg: 1
+
+id_ex_writeov'': 1
+
+id_reg_addra: xxxxx
+
+id_reg_addrb: xxxxx
+
+ADDI:
+id_if_selpcsource: Valor Esperado 0 0
+
+id_if_rega: Valor Esperado:          8 Valor Real:          x
+
+reg_id_dataa:          x reg_id_datab:          x
+
+reg_id_ass_dataa: Valor Esperado:          x Valor Real:          8
+ reg_id_ass_datab: Valor Esperado:          x Valor Real:          2
+
+id_if_pcimd2ext: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_pcindex: 00xxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_selpctype: Valor Esperado: xx Valor Real: xx
+
+id_ex_selalushift: Valor Esperado: 0 Valor Real: 1
+
+id_ex_selimregb: Valor Esperado: 1 Valor Real: 0
+
+id_ex_aluop: Valor Esperado: 010 Valor Real: xxx
+
+id_ex_unsig: Valor Esperado: 0 Valor Real: x
+
+id_ex_shiftop: Valor Esperado: XX Valor Real: 10
+
+id_ex_shiftamt: Valor Esperado: 00000 Valor Real:  x
+
+id_ex_rega: Valor Esperado:          x Valor Real:          x
+
+id_ex_readmem: Valor Esperado: 0 Valor Real: 0
+
+id_ex_writemem:  Valor Esperado: 0 Valor Real: 0
+
+id_ex_regb: Valor Esperado:          x Valor Real:          x
+
+id_ex_imedext: Valor Esperado: 00000000000000000000000000000001 Valor Real: xxxxxxxxxxxxxxxx0000000000000000
+
+id_ex_selwsource: Valor Esperado: 0 Valor Real: 0
+
+id_ex_regdest: Valor Esperado: 00000 Valor Real xxxxx
+
+id_ex_writereg: Valor Esperado: 1 Valor Real: 1
+
+id_ex_writeov: Valor Esperado: 0 Valor Real: 1
+
+id_reg_addra: Valor Esperado: 00001 Valor Real: xxxxx
+
+id_reg_addrb: Valor Esperado: 00010 Valor Real: xxxxx
+
+LOAD:
+id_if_selpcsource: Valor Esperado: 0 Valor Real: 0
+
+id_if_rega: Valor Esperado:          8 Valor Real:          x
+
+reg_id_dataa:          x reg_id_datab:          x
+
+reg_id_ass_dataa: Valor Esperado:          x Valor Real:          8
+ reg_id_ass_datab: Valor Esperado:          x Valor Real:          2
+
+id_if_pcimd2ext: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_pcindex: 00xxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_selpctype: Valor Esperado: xx Valor Real: xx
+
+id_ex_selalushift: Valor Esperado: 0 Valor Real: 1
+
+id_ex_selimregb: Valor Esperado: 1 Valor Real: 0
+
+id_ex_aluop: Valor Esperado: 010 Valor Real: xxx
+
+id_ex_unsig: Valor Esperado: 0 Valor Real: x
+
+id_ex_shiftop: Valor Esperado: XX Valor Real: 10
+
+id_ex_shiftamt: Valor Esperado: 00000 Valor Real:  x
+
+id_ex_rega: Valor Esperado:          x Valor Real:          x
+
+id_ex_readmem: Valor Esperado: 1Valor Real: 0
+
+id_ex_writemem:  Valor Esperado: 0 Valor Real: 0
+
+id_ex_regb: Valor Esperado:          x Valor Real:          x
+
+id_ex_imedext: Valor Esperado: 00000000000000000000000000000001 Valor Real: xxxxxxxxxxxxxxxx0000000000000000
+
+id_ex_selwsource: Valor Esperado: 1 Valor Real: 0
+
+id_ex_regdest: Valor Esperado: 00000 Valor Real xxxxx
+
+id_ex_writereg: Valor Esperado: 1 Valor Real: 1
+
+id_ex_writeov: Valor Esperado: 1 Valor Real: 1
+
+id_reg_addra: Valor Esperado: 00001 Valor Real: xxxxx
+
+id_reg_addrb: Valor Esperado: 00010 Valor Real: xxxxx
+
+STORE:
+id_if_selpcsource: Valor Esperado: 0 Valor Real: 0
+
+id_if_rega: Valor Esperado:          8 Valor Real:          x
+
+reg_id_dataa:          x reg_id_datab:          x
+
+reg_id_ass_dataa: Valor Esperado:          x Valor Real:          8
+ reg_id_ass_datab: Valor Esperado:          x Valor Real:          2
+
+id_if_pcimd2ext: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_pcindex: 00xxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_selpctype: Valor Esperado: xx Valor Real: xx
+
+id_ex_selalushift: Valor Esperado: 0 Valor Real: 1
+
+id_ex_selimregb: Valor Esperado: 1 Valor Real: 0
+
+id_ex_aluop: Valor Esperado: 010 Valor Real: xxx
+
+id_ex_unsig: Valor Esperado: 0 Valor Real: x
+
+id_ex_shiftop: Valor Esperado: XX Valor Real: 10
+
+id_ex_shiftamt: Valor Esperado: 00000 Valor Real:  x
+
+id_ex_rega: Valor Esperado:          x Valor Real:          x
+
+id_ex_readmem: Valor Esperado: 0 Valor Real: 0
+
+id_ex_writemem:  Valor Esperado: 1 Valor Real: 0
+
+id_ex_regb: Valor Esperado:          x Valor Real:          x
+
+id_ex_imedext: Valor Esperado: 00000000000000000000000000000001 Valor Real: xxxxxxxxxxxxxxxx0000000000000000
+
+id_ex_selwsource: Valor Esperado: x Valor Real: 0
+
+id_ex_regdest: Valor Esperado: 00000 Valor Real xxxxx
+
+id_ex_writereg: Valor Esperado: 0 Valor Real: 1
+
+id_ex_writeov: Valor Esperado: x Valor Real: 1
+
+id_reg_addra: Valor Esperado: 00001 Valor Real: xxxxx
+
+id_reg_addrb: Valor Esperado: 00010 Valor Real: xxxxx
+
+SLVL:
+id_if_selpcsource: Valor Esperado: 0 Valor Real: 0
+
+id_if_rega: Valor Esperado:          8 Valor Real:          x
+
+reg_id_dataa:          x reg_id_datab:          x
+
+reg_id_ass_dataa: Valor Esperado:          x Valor Real:          8
+ reg_id_ass_datab: Valor Esperado:          x Valor Real:          2
+
+id_if_pcimd2ext: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_pcindex: 00xxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_selpctype: Valor Esperado: XX Valor Real: xx
+
+id_ex_selalushift: Valor Esperado: 1 Valor Real: x
+
+id_ex_selimregb: Valor Esperado: 0 Valor Real: x
+
+id_ex_aluop: Valor Esperado: XXX Valor Real: xxx
+
+id_ex_unsig: Valor Esperado: X Valor Real: x
+
+id_ex_shiftop: Valor Esperado: 10 Valor Real: xx
+
+id_ex_shiftamt: Valor Esperado:  x Valor Real:  x
+
+id_ex_rega: Valor Esperado:          x Valor Real:          x
+
+id_ex_readmem: Valor Esperado: 0 Valor Real: x
+
+id_ex_writemem:  Valor Esperado: 0 Valor Real: x
+
+id_ex_regb: Valor Esperado:          x Valor Real:          x
+
+id_ex_imedext: Valor Esperado: 00000000000000000000100000000100 Valor Real: xxxxxxxxxxxxxxxx0000000000000000
+
+id_ex_selwsource: Valor Esperado: 0 Valor Real: x
+
+id_ex_regdest: Valor Esperado: 00001 Valor Real xxxxx
+
+id_ex_writereg: Valor Esperado: 1 Valor Real: x
+
+id_ex_writeov: Valor Esperado: 1 Valor Real: x
+
+id_reg_addra: Valor Esperado: 00001 Valor Real: xxxxx
+
+id_reg_addrb: Valor Esperado: 00010 Valor Real: xxxxx
+
+JR:
+id_if_selpcsource: Valor Esperado: 1 Valor Real: 0
+
+id_if_rega: Valor Esperado:          8 Valor Real:          x
+
+reg_id_dataa:          x reg_id_datab:          x
+
+reg_id_ass_dataa: Valor Esperado:          x Valor Real:          8
+ reg_id_ass_datab: Valor Esperado:          x Valor Real:          2
+
+id_if_pcimd2ext: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_pcindex: 00xxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_selpctype: Valor Esperado: 01 Valor Real: xx
+
+id_ex_selalushift: Valor Esperado: X Valor Real: 1
+
+id_ex_selimregb: Valor Esperado: X Valor Real: 0
+
+id_ex_aluop: Valor Esperado: XXX Valor Real: xxx
+
+id_ex_unsig: Valor Esperado: X Valor Real: x
+
+id_ex_shiftop: Valor Esperado: XX Valor Real: 10
+
+id_ex_shiftamt: Valor Esperado: 11111 Valor Real:  x
+
+id_ex_rega: Valor Esperado:          x Valor Real:          x
+
+id_ex_readmem: Valor Esperado: 0 Valor Real: 0
+
+id_ex_writemem:  Valor Esperado: 0 Valor Real: 0
+
+id_ex_regb: Valor Esperado:          x Valor Real:          x
+
+id_ex_imedext: Valor Esperado: 00000000000000000001111111001000 Valor Real: xxxxxxxxxxxxxxxx0000000000000000
+
+id_ex_selwsource: Valor Esperado: X Valor Real: 0
+
+id_ex_regdest: Valor Esperado: 00011 Valor Real xxxxx
+
+id_ex_writereg: Valor Esperado: 0 Valor Real: 1
+
+id_ex_writeov: Valor Esperado: X Valor Real: 1
+
+id_reg_addra: Valor Esperado: 00001 Valor Real: xxxxx
+
+id_reg_addrb: Valor Esperado: 00010 Valor Real: xxxxx
+
+ADD:
+id_if_selpcsource: Valor Esperado: 0 Valor Real: 0
+
+id_if_rega: Valor Esperado:          8 Valor Real:          x
+
+reg_id_dataa:          x reg_id_datab:          x
+
+reg_id_ass_dataa: Valor Esperado:          x Valor Real:          8
+ reg_id_ass_datab: Valor Esperado:          x Valor Real:          2
+
+id_if_pcimd2ext: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_pcindex: 00xxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_selpctype: Valor Esperado: XX Valor Real: xx
+
+id_ex_selalushift: Valor Esperado: 0 Valor Real: 1
+
+id_ex_selimregb: Valor Esperado: 0 Valor Real: 0
+
+id_ex_aluop: Valor Esperado: 010 Valor Real: xxx
+
+id_ex_unsig: Valor Esperado: 0 Valor Real: x
+
+id_ex_shiftop: Valor Esperado: XX Valor Real: 10
+
+id_ex_shiftamt: Valor Esperado: 11111 Valor Real:  x
+
+id_ex_rega: Valor Esperado:          x Valor Real:          x
+
+id_ex_readmem: Valor Esperado: 0 Valor Real: 0
+
+id_ex_writemem:  Valor Esperado: 0 Valor Real: 0
+
+id_ex_regb: Valor Esperado:          x Valor Real:          x
+
+id_ex_imedext: Valor Esperado: 00000000000000000001111111100000 Valor Real: xxxxxxxxxxxxxxxx0000000000000000
+
+id_ex_selwsource: Valor Esperado: 0 Valor Real: 0
+
+id_ex_regdest: Valor Esperado: 00011 Valor Real xxxxx
+
+id_ex_writereg: Valor Esperado: 1 Valor Real: 1
+
+id_ex_writeov: Valor Esperado: 0 Valor Real: 1
+
+id_reg_addra: Valor Esperado: 00001 Valor Real: xxxxx
+
+id_reg_addrb: Valor Esperado: 00010 Valor Real: xxxxx
+
+JUMP:
+id_if_selpcsource: Valor Esperado: 1 Valor Real: 0
+
+id_if_rega: Valor Esperado:          8 Valor Real:          x
+
+reg_id_dataa:          x reg_id_datab:          x
+
+reg_id_ass_dataa: Valor Esperado:          x Valor Real:          8
+ reg_id_ass_datab: Valor Esperado:          x Valor Real:          2
+
+id_if_pcimd2ext: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_pcindex: 00xxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_selpctype: Valor Esperado: 10 Valor Real: xx
+
+id_ex_selalushift: Valor Esperado: X Valor Real: 1
+
+id_ex_selimregb: Valor Esperado: X Valor Real: 0
+
+id_ex_aluop: Valor Esperado: XXX Valor Real: xxx
+
+id_ex_unsig: Valor Esperado: X Valor Real: x
+
+id_ex_shiftop: Valor Esperado: XX Valor Real: 10
+
+id_ex_shiftamt: Valor Esperado: 00000 Valor Real:  x
+
+id_ex_rega: Valor Esperado:          x Valor Real:          x
+
+id_ex_readmem: Valor Esperado: 0 Valor Real: 0
+
+id_ex_writemem:  Valor Esperado: 0 Valor Real: 0
+
+id_ex_regb: Valor Esperado:          x Valor Real:          x
+
+id_ex_imedext: Valor Esperado: 00000000000000000000000000000001 Valor Real: xxxxxxxxxxxxxxxx0000000000000000
+
+id_ex_selwsource: Valor Esperado: X Valor Real: 0
+
+id_ex_regdest: Valor Esperado: 00000 Valor Real xxxxx
+
+id_ex_writereg: Valor Esperado: 0 Valor Real: 1
+
+id_ex_writeov: Valor Esperado: X Valor Real: 1
+
+id_reg_addra: Valor Esperado: 00000 Valor Real: xxxxx
+
+id_reg_addrb: Valor Esperado: 00000 Valor Real: xxxxx
+
+BEQ:
+id_if_selpcsource:  Valor Real 0
+
+id_if_rega: Valor Esperado:          8 Valor Real:          x
+
+reg_id_dataa:          x reg_id_datab:          x
+
+reg_id_ass_dataa: Valor Esperado:          x Valor Real:          8
+ reg_id_ass_datab: Valor Esperado:          x Valor Real:          2
+
+id_if_pcimd2ext: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_pcindex: 00xxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_selpctype: Valor Esperado: 00 Valor Real: xx
+
+id_ex_selalushift: Valor Esperado: X Valor Real: 1
+
+id_ex_selimregb: Valor Esperado: X Valor Real: 0
+
+id_ex_aluop: Valor Esperado: XXX Valor Real: xxx
+
+id_ex_unsig: Valor Esperado: 0 Valor Real: x
+
+id_ex_shiftop: Valor Esperado: XX Valor Real: 10
+
+id_ex_shiftamt: Valor Esperado: 00000 Valor Real:  x
+
+id_ex_rega: Valor Esperado:          x Valor Real:          x
+
+id_ex_readmem: Valor Esperado: 0 Valor Real: 0
+
+id_ex_writemem:  Valor Esperado: 0 Valor Real: 0
+
+id_ex_regb: Valor Esperado:          x Valor Real:          x
+
+id_ex_imedext: Valor Esperado: 00000000000000000000000000000001 Valor Real: xxxxxxxxxxxxxxxx0000000000000000
+
+id_ex_selwsource: Valor Esperado: X Valor Real: 0
+
+id_ex_regdest: Valor Esperado: 00000 Valor Real xxxxx
+
+id_ex_writereg: Valor Esperado: 0 Valor Real: 1
+
+id_ex_writeov: Valor Esperado: X Valor Real: 1
+
+id_reg_addra: Valor Esperado: 00001 Valor Real: xxxxx
+
+id_reg_addrb: Valor Esperado: 00010 Valor Real: xxxxx
+
+BGTZ:
+id_if_selpcsource: 0
+
+id_if_rega: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+id_if_pcimd2ext: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_pcindex: 00xxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_selpctype: xx
+
+id_ex_selalushift: 1
+
+id_ex_selimregb: 0
+
+id_ex_aluop: xxx
+
+id_ex_unsig: x
+
+id_ex_shiftop: 10
+
+id_ex_shiftamt: xxxxx
+
+id_ex_rega: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+id_ex_readmem: 0
+
+id_ex_writemem: 0
+
+id_ex_regb: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+id_ex_imedext: xxxxxxxxxxxxxxxx0000000000000000
+
+id_ex_selwsource: 0
+
+id_ex_regdest: xxxxx
+
+id_ex_writereg: 1
+
+id_ex_writeov'': 1
+
+id_reg_addra: xxxxx
+
+id_reg_addrb: xxxxx
+
+ADDI:
+id_if_selpcsource: Valor Esperado 0 0
+
+id_if_rega: Valor Esperado:          8 Valor Real:          x
+
+reg_id_dataa:          x reg_id_datab:          x
+
+reg_id_ass_dataa: Valor Esperado:          x Valor Real:          8
+ reg_id_ass_datab: Valor Esperado:          x Valor Real:          2
+
+id_if_pcimd2ext: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_pcindex: 00xxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_selpctype: Valor Esperado: xx Valor Real: xx
+
+id_ex_selalushift: Valor Esperado: 0 Valor Real: 1
+
+id_ex_selimregb: Valor Esperado: 1 Valor Real: 0
+
+id_ex_aluop: Valor Esperado: 010 Valor Real: xxx
+
+id_ex_unsig: Valor Esperado: 0 Valor Real: x
+
+id_ex_shiftop: Valor Esperado: XX Valor Real: 10
+
+id_ex_shiftamt: Valor Esperado: 00000 Valor Real:  x
+
+id_ex_rega: Valor Esperado:          x Valor Real:          x
+
+id_ex_readmem: Valor Esperado: 0 Valor Real: 0
+
+id_ex_writemem:  Valor Esperado: 0 Valor Real: 0
+
+id_ex_regb: Valor Esperado:          x Valor Real:          x
+
+id_ex_imedext: Valor Esperado: 00000000000000000000000000000001 Valor Real: xxxxxxxxxxxxxxxx0000000000000000
+
+id_ex_selwsource: Valor Esperado: 0 Valor Real: 0
+
+id_ex_regdest: Valor Esperado: 00000 Valor Real xxxxx
+
+id_ex_writereg: Valor Esperado: 1 Valor Real: 1
+
+id_ex_writeov: Valor Esperado: 0 Valor Real: 1
+
+id_reg_addra: Valor Esperado: 00001 Valor Real: xxxxx
+
+id_reg_addrb: Valor Esperado: 00010 Valor Real: xxxxx
+
+LOAD:
+id_if_selpcsource: Valor Esperado: 0 Valor Real: 0
+
+id_if_rega: Valor Esperado:          8 Valor Real:          x
+
+reg_id_dataa:          x reg_id_datab:          x
+
+reg_id_ass_dataa: Valor Esperado:          x Valor Real:          8
+ reg_id_ass_datab: Valor Esperado:          x Valor Real:          2
+
+id_if_pcimd2ext: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_pcindex: 00xxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_selpctype: Valor Esperado: xx Valor Real: xx
+
+id_ex_selalushift: Valor Esperado: 0 Valor Real: 1
+
+id_ex_selimregb: Valor Esperado: 1 Valor Real: 0
+
+id_ex_aluop: Valor Esperado: 010 Valor Real: xxx
+
+id_ex_unsig: Valor Esperado: 0 Valor Real: x
+
+id_ex_shiftop: Valor Esperado: XX Valor Real: 10
+
+id_ex_shiftamt: Valor Esperado: 00000 Valor Real:  x
+
+id_ex_rega: Valor Esperado:          x Valor Real:          x
+
+id_ex_readmem: Valor Esperado: 1Valor Real: 0
+
+id_ex_writemem:  Valor Esperado: 0 Valor Real: 0
+
+id_ex_regb: Valor Esperado:          x Valor Real:          x
+
+id_ex_imedext: Valor Esperado: 00000000000000000000000000000001 Valor Real: xxxxxxxxxxxxxxxx0000000000000000
+
+id_ex_selwsource: Valor Esperado: 1 Valor Real: 0
+
+id_ex_regdest: Valor Esperado: 00000 Valor Real xxxxx
+
+id_ex_writereg: Valor Esperado: 1 Valor Real: 1
+
+id_ex_writeov: Valor Esperado: 1 Valor Real: 1
+
+id_reg_addra: Valor Esperado: 00001 Valor Real: xxxxx
+
+id_reg_addrb: Valor Esperado: 00010 Valor Real: xxxxx
+
+STORE:
+id_if_selpcsource: Valor Esperado: 0 Valor Real: 0
+
+id_if_rega: Valor Esperado:          8 Valor Real:          x
+
+reg_id_dataa:          x reg_id_datab:          x
+
+reg_id_ass_dataa: Valor Esperado:          x Valor Real:          8
+ reg_id_ass_datab: Valor Esperado:          x Valor Real:          2
+
+id_if_pcimd2ext: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_pcindex: 00xxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_selpctype: Valor Esperado: xx Valor Real: xx
+
+id_ex_selalushift: Valor Esperado: 0 Valor Real: 1
+
+id_ex_selimregb: Valor Esperado: 1 Valor Real: 0
+
+id_ex_aluop: Valor Esperado: 010 Valor Real: xxx
+
+id_ex_unsig: Valor Esperado: 0 Valor Real: x
+
+id_ex_shiftop: Valor Esperado: XX Valor Real: 10
+
+id_ex_shiftamt: Valor Esperado: 00000 Valor Real:  x
+
+id_ex_rega: Valor Esperado:          x Valor Real:          x
+
+id_ex_readmem: Valor Esperado: 0 Valor Real: 0
+
+id_ex_writemem:  Valor Esperado: 1 Valor Real: 0
+
+id_ex_regb: Valor Esperado:          x Valor Real:          x
+
+id_ex_imedext: Valor Esperado: 00000000000000000000000000000001 Valor Real: xxxxxxxxxxxxxxxx0000000000000000
+
+id_ex_selwsource: Valor Esperado: x Valor Real: 0
+
+id_ex_regdest: Valor Esperado: 00000 Valor Real xxxxx
+
+id_ex_writereg: Valor Esperado: 0 Valor Real: 1
+
+id_ex_writeov: Valor Esperado: x Valor Real: 1
+
+id_reg_addra: Valor Esperado: 00001 Valor Real: xxxxx
+
+id_reg_addrb: Valor Esperado: 00010 Valor Real: xxxxx
+
+SLVL:
+id_if_selpcsource: Valor Esperado: 0 Valor Real: 0
+
+id_if_rega: Valor Esperado:          8 Valor Real:          x
+
+reg_id_dataa:          x reg_id_datab:          x
+
+reg_id_ass_dataa: Valor Esperado:          x Valor Real:          8
+ reg_id_ass_datab: Valor Esperado:          x Valor Real:          2
+
+id_if_pcimd2ext: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_pcindex: 00xxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_selpctype: Valor Esperado: XX Valor Real: xx
+
+id_ex_selalushift: Valor Esperado: 1 Valor Real: x
+
+id_ex_selimregb: Valor Esperado: 0 Valor Real: x
+
+id_ex_aluop: Valor Esperado: XXX Valor Real: xxx
+
+id_ex_unsig: Valor Esperado: X Valor Real: x
+
+id_ex_shiftop: Valor Esperado: 10 Valor Real: xx
+
+id_ex_shiftamt: Valor Esperado:  x Valor Real:  x
+
+id_ex_rega: Valor Esperado:          x Valor Real:          x
+
+id_ex_readmem: Valor Esperado: 0 Valor Real: x
+
+id_ex_writemem:  Valor Esperado: 0 Valor Real: x
+
+id_ex_regb: Valor Esperado:          x Valor Real:          x
+
+id_ex_imedext: Valor Esperado: 00000000000000000000100000000100 Valor Real: xxxxxxxxxxxxxxxx0000000000000000
+
+id_ex_selwsource: Valor Esperado: 0 Valor Real: x
+
+id_ex_regdest: Valor Esperado: 00001 Valor Real xxxxx
+
+id_ex_writereg: Valor Esperado: 1 Valor Real: x
+
+id_ex_writeov: Valor Esperado: 1 Valor Real: x
+
+id_reg_addra: Valor Esperado: 00001 Valor Real: xxxxx
+
+id_reg_addrb: Valor Esperado: 00010 Valor Real: xxxxx
+
+JR:
+id_if_selpcsource: Valor Esperado: 1 Valor Real: 0
+
+id_if_rega: Valor Esperado:          8 Valor Real:          x
+
+reg_id_dataa:          x reg_id_datab:          x
+
+reg_id_ass_dataa: Valor Esperado:          x Valor Real:          8
+ reg_id_ass_datab: Valor Esperado:          x Valor Real:          2
+
+id_if_pcimd2ext: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_pcindex: 00xxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_selpctype: Valor Esperado: 01 Valor Real: xx
+
+id_ex_selalushift: Valor Esperado: X Valor Real: 1
+
+id_ex_selimregb: Valor Esperado: X Valor Real: 0
+
+id_ex_aluop: Valor Esperado: XXX Valor Real: xxx
+
+id_ex_unsig: Valor Esperado: X Valor Real: x
+
+id_ex_shiftop: Valor Esperado: XX Valor Real: 10
+
+id_ex_shiftamt: Valor Esperado: 11111 Valor Real:  x
+
+id_ex_rega: Valor Esperado:          x Valor Real:          x
+
+id_ex_readmem: Valor Esperado: 0 Valor Real: 0
+
+id_ex_writemem:  Valor Esperado: 0 Valor Real: 0
+
+id_ex_regb: Valor Esperado:          x Valor Real:          x
+
+id_ex_imedext: Valor Esperado: 00000000000000000001111111001000 Valor Real: xxxxxxxxxxxxxxxx0000000000000000
+
+id_ex_selwsource: Valor Esperado: X Valor Real: 0
+
+id_ex_regdest: Valor Esperado: 00011 Valor Real xxxxx
+
+id_ex_writereg: Valor Esperado: 0 Valor Real: 1
+
+id_ex_writeov: Valor Esperado: X Valor Real: 1
+
+id_reg_addra: Valor Esperado: 00001 Valor Real: xxxxx
+
+id_reg_addrb: Valor Esperado: 00010 Valor Real: xxxxx
+
+ADD:
+id_if_selpcsource: Valor Esperado: 0 Valor Real: 0
+
+id_if_rega: Valor Esperado:          8 Valor Real:          x
+
+reg_id_dataa:          x reg_id_datab:          x
+
+reg_id_ass_dataa: Valor Esperado:          x Valor Real:          8
+ reg_id_ass_datab: Valor Esperado:          x Valor Real:          2
+
+id_if_pcimd2ext: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_pcindex: 00xxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_selpctype: Valor Esperado: XX Valor Real: xx
+
+id_ex_selalushift: Valor Esperado: 0 Valor Real: 1
+
+id_ex_selimregb: Valor Esperado: 0 Valor Real: 0
+
+id_ex_aluop: Valor Esperado: 010 Valor Real: xxx
+
+id_ex_unsig: Valor Esperado: 0 Valor Real: x
+
+id_ex_shiftop: Valor Esperado: XX Valor Real: 10
+
+id_ex_shiftamt: Valor Esperado: 11111 Valor Real:  x
+
+id_ex_rega: Valor Esperado:          x Valor Real:          x
+
+id_ex_readmem: Valor Esperado: 0 Valor Real: 0
+
+id_ex_writemem:  Valor Esperado: 0 Valor Real: 0
+
+id_ex_regb: Valor Esperado:          x Valor Real:          x
+
+id_ex_imedext: Valor Esperado: 00000000000000000001111111100000 Valor Real: xxxxxxxxxxxxxxxx0000000000000000
+
+id_ex_selwsource: Valor Esperado: 0 Valor Real: 0
+
+id_ex_regdest: Valor Esperado: 00011 Valor Real xxxxx
+
+id_ex_writereg: Valor Esperado: 1 Valor Real: 1
+
+id_ex_writeov: Valor Esperado: 0 Valor Real: 1
+
+id_reg_addra: Valor Esperado: 00001 Valor Real: xxxxx
+
+id_reg_addrb: Valor Esperado: 00010 Valor Real: xxxxx
+
+JUMP:
+id_if_selpcsource: Valor Esperado: 1 Valor Real: 0
+
+id_if_rega: Valor Esperado:          8 Valor Real:          x
+
+reg_id_dataa:          x reg_id_datab:          x
+
+reg_id_ass_dataa: Valor Esperado:          x Valor Real:          8
+ reg_id_ass_datab: Valor Esperado:          x Valor Real:          2
+
+id_if_pcimd2ext: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_pcindex: 00xxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_selpctype: Valor Esperado: 10 Valor Real: xx
+
+id_ex_selalushift: Valor Esperado: X Valor Real: 1
+
+id_ex_selimregb: Valor Esperado: X Valor Real: 0
+
+id_ex_aluop: Valor Esperado: XXX Valor Real: xxx
+
+id_ex_unsig: Valor Esperado: X Valor Real: x
+
+id_ex_shiftop: Valor Esperado: XX Valor Real: 10
+
+id_ex_shiftamt: Valor Esperado: 00000 Valor Real:  x
+
+id_ex_rega: Valor Esperado:          x Valor Real:          x
+
+id_ex_readmem: Valor Esperado: 0 Valor Real: 0
+
+id_ex_writemem:  Valor Esperado: 0 Valor Real: 0
+
+id_ex_regb: Valor Esperado:          x Valor Real:          x
+
+id_ex_imedext: Valor Esperado: 00000000000000000000000000000001 Valor Real: xxxxxxxxxxxxxxxx0000000000000000
+
+id_ex_selwsource: Valor Esperado: X Valor Real: 0
+
+id_ex_regdest: Valor Esperado: 00000 Valor Real xxxxx
+
+id_ex_writereg: Valor Esperado: 0 Valor Real: 1
+
+id_ex_writeov: Valor Esperado: X Valor Real: 1
+
+id_reg_addra: Valor Esperado: 00000 Valor Real: xxxxx
+
+id_reg_addrb: Valor Esperado: 00000 Valor Real: xxxxx
+
+BEQ:
+id_if_selpcsource:  Valor Real 0
+
+id_if_rega: Valor Esperado:          8 Valor Real:          x
+
+reg_id_dataa:          x reg_id_datab:          x
+
+reg_id_ass_dataa: Valor Esperado:          x Valor Real:          8
+ reg_id_ass_datab: Valor Esperado:          x Valor Real:          2
+
+id_if_pcimd2ext: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_pcindex: 00xxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_selpctype: Valor Esperado: 00 Valor Real: xx
+
+id_ex_selalushift: Valor Esperado: X Valor Real: 1
+
+id_ex_selimregb: Valor Esperado: X Valor Real: 0
+
+id_ex_aluop: Valor Esperado: XXX Valor Real: xxx
+
+id_ex_unsig: Valor Esperado: 0 Valor Real: x
+
+id_ex_shiftop: Valor Esperado: XX Valor Real: 10
+
+id_ex_shiftamt: Valor Esperado: 00000 Valor Real:  x
+
+id_ex_rega: Valor Esperado:          x Valor Real:          x
+
+id_ex_readmem: Valor Esperado: 0 Valor Real: 0
+
+id_ex_writemem:  Valor Esperado: 0 Valor Real: 0
+
+id_ex_regb: Valor Esperado:          x Valor Real:          x
+
+id_ex_imedext: Valor Esperado: 00000000000000000000000000000001 Valor Real: xxxxxxxxxxxxxxxx0000000000000000
+
+id_ex_selwsource: Valor Esperado: X Valor Real: 0
+
+id_ex_regdest: Valor Esperado: 00000 Valor Real xxxxx
+
+id_ex_writereg: Valor Esperado: 0 Valor Real: 1
+
+id_ex_writeov: Valor Esperado: X Valor Real: 1
+
+id_reg_addra: Valor Esperado: 00001 Valor Real: xxxxx
+
+id_reg_addrb: Valor Esperado: 00010 Valor Real: xxxxx
+
+BGTZ:
+id_if_selpcsource: 0
+
+id_if_rega: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+id_if_pcimd2ext: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_pcindex: 00xxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_selpctype: xx
+
+id_ex_selalushift: 1
+
+id_ex_selimregb: 0
+
+id_ex_aluop: xxx
+
+id_ex_unsig: x
+
+id_ex_shiftop: 10
+
+id_ex_shiftamt: xxxxx
+
+id_ex_rega: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+id_ex_readmem: 0
+
+id_ex_writemem: 0
+
+id_ex_regb: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+id_ex_imedext: xxxxxxxxxxxxxxxx0000000000000000
+
+id_ex_selwsource: 0
+
+id_ex_regdest: xxxxx
+
+id_ex_writereg: 1
+
+id_ex_writeov'': 1
+
+id_reg_addra: xxxxx
+
+id_reg_addrb: xxxxx
+
+ADDI:
+id_if_selpcsource: Valor Esperado 0 0
+
+id_if_rega: Valor Esperado:          8 Valor Real:          x
+
+reg_id_dataa:          x reg_id_datab:          x
+
+reg_id_ass_dataa: Valor Esperado:          x Valor Real:          8
+ reg_id_ass_datab: Valor Esperado:          x Valor Real:          2
+
+id_if_pcimd2ext: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_pcindex: 00xxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_selpctype: Valor Esperado: xx Valor Real: xx
+
+id_ex_selalushift: Valor Esperado: 0 Valor Real: 1
+
+id_ex_selimregb: Valor Esperado: 1 Valor Real: 0
+
+id_ex_aluop: Valor Esperado: 010 Valor Real: xxx
+
+id_ex_unsig: Valor Esperado: 0 Valor Real: x
+
+id_ex_shiftop: Valor Esperado: XX Valor Real: 10
+
+id_ex_shiftamt: Valor Esperado: 00000 Valor Real:  x
+
+id_ex_rega: Valor Esperado:          x Valor Real:          x
+
+id_ex_readmem: Valor Esperado: 0 Valor Real: 0
+
+id_ex_writemem:  Valor Esperado: 0 Valor Real: 0
+
+id_ex_regb: Valor Esperado:          x Valor Real:          x
+
+id_ex_imedext: Valor Esperado: 00000000000000000000000000000001 Valor Real: xxxxxxxxxxxxxxxx0000000000000000
+
+id_ex_selwsource: Valor Esperado: 0 Valor Real: 0
+
+id_ex_regdest: Valor Esperado: 00000 Valor Real xxxxx
+
+id_ex_writereg: Valor Esperado: 1 Valor Real: 1
+
+id_ex_writeov: Valor Esperado: 0 Valor Real: 1
+
+id_reg_addra: Valor Esperado: 00001 Valor Real: xxxxx
+
+id_reg_addrb: Valor Esperado: 00010 Valor Real: xxxxx
+
+LOAD:
+id_if_selpcsource: Valor Esperado: 0 Valor Real: 0
+
+id_if_rega: Valor Esperado:          8 Valor Real:          x
+
+reg_id_dataa:          x reg_id_datab:          x
+
+reg_id_ass_dataa: Valor Esperado:          x Valor Real:          8
+ reg_id_ass_datab: Valor Esperado:          x Valor Real:          2
+
+id_if_pcimd2ext: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_pcindex: 00xxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_selpctype: Valor Esperado: xx Valor Real: xx
+
+id_ex_selalushift: Valor Esperado: 0 Valor Real: 1
+
+id_ex_selimregb: Valor Esperado: 1 Valor Real: 0
+
+id_ex_aluop: Valor Esperado: 010 Valor Real: xxx
+
+id_ex_unsig: Valor Esperado: 0 Valor Real: x
+
+id_ex_shiftop: Valor Esperado: XX Valor Real: 10
+
+id_ex_shiftamt: Valor Esperado: 00000 Valor Real:  x
+
+id_ex_rega: Valor Esperado:          x Valor Real:          x
+
+id_ex_readmem: Valor Esperado: 1Valor Real: 0
+
+id_ex_writemem:  Valor Esperado: 0 Valor Real: 0
+
+id_ex_regb: Valor Esperado:          x Valor Real:          x
+
+id_ex_imedext: Valor Esperado: 00000000000000000000000000000001 Valor Real: xxxxxxxxxxxxxxxx0000000000000000
+
+id_ex_selwsource: Valor Esperado: 1 Valor Real: 0
+
+id_ex_regdest: Valor Esperado: 00000 Valor Real xxxxx
+
+id_ex_writereg: Valor Esperado: 1 Valor Real: 1
+
+id_ex_writeov: Valor Esperado: 1 Valor Real: 1
+
+id_reg_addra: Valor Esperado: 00001 Valor Real: xxxxx
+
+id_reg_addrb: Valor Esperado: 00010 Valor Real: xxxxx
+
+STORE:
+id_if_selpcsource: Valor Esperado: 0 Valor Real: 0
+
+id_if_rega: Valor Esperado:          8 Valor Real:          x
+
+reg_id_dataa:          x reg_id_datab:          x
+
+reg_id_ass_dataa: Valor Esperado:          x Valor Real:          8
+ reg_id_ass_datab: Valor Esperado:          x Valor Real:          2
+
+id_if_pcimd2ext: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_pcindex: 00xxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_selpctype: Valor Esperado: xx Valor Real: xx
+
+id_ex_selalushift: Valor Esperado: 0 Valor Real: 1
+
+id_ex_selimregb: Valor Esperado: 1 Valor Real: 0
+
+id_ex_aluop: Valor Esperado: 010 Valor Real: xxx
+
+id_ex_unsig: Valor Esperado: 0 Valor Real: x
+
+id_ex_shiftop: Valor Esperado: XX Valor Real: 10
+
+id_ex_shiftamt: Valor Esperado: 00000 Valor Real:  x
+
+id_ex_rega: Valor Esperado:          x Valor Real:          x
+
+id_ex_readmem: Valor Esperado: 0 Valor Real: 0
+
+id_ex_writemem:  Valor Esperado: 1 Valor Real: 0
+
+id_ex_regb: Valor Esperado:          x Valor Real:          x
+
+id_ex_imedext: Valor Esperado: 00000000000000000000000000000001 Valor Real: xxxxxxxxxxxxxxxx0000000000000000
+
+id_ex_selwsource: Valor Esperado: x Valor Real: 0
+
+id_ex_regdest: Valor Esperado: 00000 Valor Real xxxxx
+
+id_ex_writereg: Valor Esperado: 0 Valor Real: 1
+
+id_ex_writeov: Valor Esperado: x Valor Real: 1
+
+id_reg_addra: Valor Esperado: 00001 Valor Real: xxxxx
+
+id_reg_addrb: Valor Esperado: 00010 Valor Real: xxxxx
+
+SLVL:
+id_if_selpcsource: Valor Esperado: 0 Valor Real: 0
+
+id_if_rega: Valor Esperado:          8 Valor Real:          X
+
+reg_id_dataa:          x reg_id_datab:          x
+
+reg_id_ass_dataa: Valor Esperado:          x Valor Real:          8
+ reg_id_ass_datab: Valor Esperado:          x Valor Real:          2
+
+id_if_pcimd2ext: 00000000000000000000000000000000
+
+id_if_pcindex: 00000000000000000000000000000000
+
+id_if_selpctype: Valor Esperado: XX Valor Real: xx
+
+id_ex_selalushift: Valor Esperado: 1 Valor Real: 0
+
+id_ex_selimregb: Valor Esperado: 0 Valor Real: 0
+
+id_ex_aluop: Valor Esperado: XXX Valor Real: 000
+
+id_ex_unsig: Valor Esperado: X Valor Real: 0
+
+id_ex_shiftop: Valor Esperado: 10 Valor Real: 00
+
+id_ex_shiftamt: Valor Esperado:  0 Valor Real:  x
+
+id_ex_rega: Valor Esperado:          x Valor Real:          x
+
+id_ex_readmem: Valor Esperado: 0 Valor Real: 0
+
+id_ex_writemem:  Valor Esperado: 0 Valor Real: 0
+
+id_ex_regb: Valor Esperado:          x Valor Real:          x
+
+id_ex_imedext: Valor Esperado: 00000000000000000000100000000100 Valor Real: 00000000000000000000000000000000
+
+id_ex_selwsource: Valor Esperado: 0 Valor Real: 0
+
+id_ex_regdest: Valor Esperado: 00001 Valor Real 00000
+
+id_ex_writereg: Valor Esperado: 1 Valor Real: 0
+
+id_ex_writeov: Valor Esperado: 1 Valor Real: 0
+
+id_reg_addra: Valor Esperado: 00001 Valor Real: 00000
+
+id_reg_addrb: Valor Esperado: 00010 Valor Real: 00000
+
+JR:
+id_if_selpcsource: Valor Esperado: 1 Valor Real: 0
+
+id_if_rega: Valor Esperado:          8 Valor Real:          X
+
+reg_id_dataa:          0 reg_id_datab:          0
+
+reg_id_ass_dataa: Valor Esperado:          0 Valor Real:          8
+ reg_id_ass_datab: Valor Esperado:          0 Valor Real:          2
+
+id_if_pcimd2ext: 00000000000000000000000000000000
+
+id_if_pcindex: 00000000000000000000000000000000
+
+id_if_selpctype: Valor Esperado: 01 Valor Real: xx
+
+id_ex_selalushift: Valor Esperado: X Valor Real: 0
+
+id_ex_selimregb: Valor Esperado: X Valor Real: 0
+
+id_ex_aluop: Valor Esperado: XXX Valor Real: 000
+
+id_ex_unsig: Valor Esperado: X Valor Real: 0
+
+id_ex_shiftop: Valor Esperado: XX Valor Real: 00
+
+id_ex_shiftamt: Valor Esperado: 11111 Valor Real:  0
+
+id_ex_rega: Valor Esperado:          0 Valor Real:          0
+
+id_ex_readmem: Valor Esperado: 0 Valor Real: 0
+
+id_ex_writemem:  Valor Esperado: 0 Valor Real: 0
+
+id_ex_regb: Valor Esperado:          0 Valor Real:          0
+
+id_ex_imedext: Valor Esperado: 00000000000000000001111111001000 Valor Real: 00000000000000000000000000000000
+
+id_ex_selwsource: Valor Esperado: X Valor Real: 0
+
+id_ex_regdest: Valor Esperado: 00011 Valor Real 00000
+
+id_ex_writereg: Valor Esperado: 0 Valor Real: 0
+
+id_ex_writeov: Valor Esperado: X Valor Real: 0
+
+id_reg_addra: Valor Esperado: 00001 Valor Real: 00000
+
+id_reg_addrb: Valor Esperado: 00010 Valor Real: 00000
+
+ADD:
+id_if_selpcsource: Valor Esperado: 0 Valor Real: 0
+
+id_if_rega: Valor Esperado:          8 Valor Real:          X
+
+reg_id_dataa:          0 reg_id_datab:          0
+
+reg_id_ass_dataa: Valor Esperado:          0 Valor Real:          8
+ reg_id_ass_datab: Valor Esperado:          0 Valor Real:          2
+
+id_if_pcimd2ext: 00000000000000000000000000000000
+
+id_if_pcindex: 00000000000000000000000000000000
+
+id_if_selpctype: Valor Esperado: XX Valor Real: xx
+
+id_ex_selalushift: Valor Esperado: 0 Valor Real: 0
+
+id_ex_selimregb: Valor Esperado: 0 Valor Real: 0
+
+id_ex_aluop: Valor Esperado: 010 Valor Real: 000
+
+id_ex_unsig: Valor Esperado: 0 Valor Real: 0
+
+id_ex_shiftop: Valor Esperado: XX Valor Real: 00
+
+id_ex_shiftamt: Valor Esperado: 11111 Valor Real:  0
+
+id_ex_rega: Valor Esperado:          0 Valor Real:          0
+
+id_ex_readmem: Valor Esperado: 0 Valor Real: 0
+
+id_ex_writemem:  Valor Esperado: 0 Valor Real: 0
+
+id_ex_regb: Valor Esperado:          0 Valor Real:          0
+
+id_ex_imedext: Valor Esperado: 00000000000000000001111111100000 Valor Real: 00000000000000000000000000000000
+
+id_ex_selwsource: Valor Esperado: 0 Valor Real: 0
+
+id_ex_regdest: Valor Esperado: 00011 Valor Real 00000
+
+id_ex_writereg: Valor Esperado: 1 Valor Real: 0
+
+id_ex_writeov: Valor Esperado: 0 Valor Real: 0
+
+id_reg_addra: Valor Esperado: 00001 Valor Real: 00000
+
+id_reg_addrb: Valor Esperado: 00010 Valor Real: 00000
+
+JUMP:
+id_if_selpcsource: Valor Esperado: 1 Valor Real: 0
+
+id_if_rega: Valor Esperado:          8 Valor Real:          X
+
+reg_id_dataa:          0 reg_id_datab:          0
+
+reg_id_ass_dataa: Valor Esperado:          0 Valor Real:          8
+ reg_id_ass_datab: Valor Esperado:          0 Valor Real:          2
+
+id_if_pcimd2ext: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_pcindex: 00000000000000000000000000000x00
+
+id_if_selpctype: Valor Esperado: 10 Valor Real: xx
+
+id_ex_selalushift: Valor Esperado: X Valor Real: 0
+
+id_ex_selimregb: Valor Esperado: X Valor Real: 0
+
+id_ex_aluop: Valor Esperado: XXX Valor Real: 000
+
+id_ex_unsig: Valor Esperado: X Valor Real: 0
+
+id_ex_shiftop: Valor Esperado: XX Valor Real: 00
+
+id_ex_shiftamt: Valor Esperado: 00000 Valor Real:  0
+
+id_ex_rega: Valor Esperado:          0 Valor Real:          0
+
+id_ex_readmem: Valor Esperado: 0 Valor Real: 0
+
+id_ex_writemem:  Valor Esperado: 0 Valor Real: 0
+
+id_ex_regb: Valor Esperado:          0 Valor Real:          0
+
+id_ex_imedext: Valor Esperado: 00000000000000000000000000000001 Valor Real: 00000000000000000000000000000000
+
+id_ex_selwsource: Valor Esperado: X Valor Real: 0
+
+id_ex_regdest: Valor Esperado: 00000 Valor Real 00000
+
+id_ex_writereg: Valor Esperado: 0 Valor Real: 0
+
+id_ex_writeov: Valor Esperado: X Valor Real: 0
+
+id_reg_addra: Valor Esperado: 00000 Valor Real: 00000
+
+id_reg_addrb: Valor Esperado: 00000 Valor Real: 00000
+
+BEQ:
+id_if_selpcsource:  Valor Real 0
+
+id_if_rega: Valor Esperado:          8 Valor Real:          X
+
+reg_id_dataa:          0 reg_id_datab:          0
+
+reg_id_ass_dataa: Valor Esperado:          0 Valor Real:          8
+ reg_id_ass_datab: Valor Esperado:          0 Valor Real:          2
+
+id_if_pcimd2ext: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_pcindex: 00000000000000000000000000000x00
+
+id_if_selpctype: Valor Esperado: 00 Valor Real: xx
+
+id_ex_selalushift: Valor Esperado: X Valor Real: 0
+
+id_ex_selimregb: Valor Esperado: X Valor Real: 0
+
+id_ex_aluop: Valor Esperado: XXX Valor Real: 000
+
+id_ex_unsig: Valor Esperado: 0 Valor Real: 0
+
+id_ex_shiftop: Valor Esperado: XX Valor Real: 00
+
+id_ex_shiftamt: Valor Esperado: 00000 Valor Real:  0
+
+id_ex_rega: Valor Esperado:          0 Valor Real:          0
+
+id_ex_readmem: Valor Esperado: 0 Valor Real: 0
+
+id_ex_writemem:  Valor Esperado: 0 Valor Real: 0
+
+id_ex_regb: Valor Esperado:          0 Valor Real:          0
+
+id_ex_imedext: Valor Esperado: 00000000000000000000000000000001 Valor Real: 00000000000000000000000000000000
+
+id_ex_selwsource: Valor Esperado: X Valor Real: 0
+
+id_ex_regdest: Valor Esperado: 00000 Valor Real 00000
+
+id_ex_writereg: Valor Esperado: 0 Valor Real: 0
+
+id_ex_writeov: Valor Esperado: X Valor Real: 0
+
+id_reg_addra: Valor Esperado: 00001 Valor Real: 00000
+
+id_reg_addrb: Valor Esperado: 00010 Valor Real: 00000
+
+BGTZ:
+id_if_selpcsource: 0
+
+id_if_rega: 0000000000000000000000000000x000
+
+id_if_pcimd2ext: 00000000000000000000000000000000
+
+id_if_pcindex: 00000000000000000000000000000000
+
+id_if_selpctype: xx
+
+id_ex_selalushift: 0
+
+id_ex_selimregb: 0
+
+id_ex_aluop: 000
+
+id_ex_unsig: 0
+
+id_ex_shiftop: 00
+
+id_ex_shiftamt: 00000
+
+id_ex_rega: 00000000000000000000000000000000
+
+id_ex_readmem: 0
+
+id_ex_writemem: 0
+
+id_ex_regb: 00000000000000000000000000000000
+
+id_ex_imedext: 00000000000000000000000000000000
+
+id_ex_selwsource: 0
+
+id_ex_regdest: 00000
+
+id_ex_writereg: 0
+
+id_ex_writeov'': 0
+
+id_reg_addra: 00000
+
+id_reg_addrb: 00000
+
+ADDI:
+id_if_selpcsource: Valor Esperado 0 0
+
+id_if_rega: Valor Esperado:          8 Valor Real:          X
+
+reg_id_dataa:          0 reg_id_datab:          0
+
+reg_id_ass_dataa: Valor Esperado:          0 Valor Real:          8
+ reg_id_ass_datab: Valor Esperado:          0 Valor Real:          2
+
+id_if_pcimd2ext: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_pcindex: 00000000000000000000000000000x00
+
+id_if_selpctype: Valor Esperado: xx Valor Real: xx
+
+id_ex_selalushift: Valor Esperado: 0 Valor Real: 0
+
+id_ex_selimregb: Valor Esperado: 1 Valor Real: 0
+
+id_ex_aluop: Valor Esperado: 010 Valor Real: 000
+
+id_ex_unsig: Valor Esperado: 0 Valor Real: 0
+
+id_ex_shiftop: Valor Esperado: XX Valor Real: 00
+
+id_ex_shiftamt: Valor Esperado: 00000 Valor Real:  0
+
+id_ex_rega: Valor Esperado:          0 Valor Real:          0
+
+id_ex_readmem: Valor Esperado: 0 Valor Real: 0
+
+id_ex_writemem:  Valor Esperado: 0 Valor Real: 0
+
+id_ex_regb: Valor Esperado:          0 Valor Real:          0
+
+id_ex_imedext: Valor Esperado: 00000000000000000000000000000001 Valor Real: 00000000000000000000000000000000
+
+id_ex_selwsource: Valor Esperado: 0 Valor Real: 0
+
+id_ex_regdest: Valor Esperado: 00000 Valor Real 00000
+
+id_ex_writereg: Valor Esperado: 1 Valor Real: 0
+
+id_ex_writeov: Valor Esperado: 0 Valor Real: 0
+
+id_reg_addra: Valor Esperado: 00001 Valor Real: 00000
+
+id_reg_addrb: Valor Esperado: 00010 Valor Real: 00000
+
+LOAD:
+id_if_selpcsource: Valor Esperado: 0 Valor Real: 0
+
+id_if_rega: Valor Esperado:          8 Valor Real:          X
+
+reg_id_dataa:          0 reg_id_datab:          0
+
+reg_id_ass_dataa: Valor Esperado:          0 Valor Real:          8
+ reg_id_ass_datab: Valor Esperado:          0 Valor Real:          2
+
+id_if_pcimd2ext: 00000000000000000000000000000000
+
+id_if_pcindex: 00000000000000000000000000000000
+
+id_if_selpctype: Valor Esperado: xx Valor Real: xx
+
+id_ex_selalushift: Valor Esperado: 0 Valor Real: 0
+
+id_ex_selimregb: Valor Esperado: 1 Valor Real: 0
+
+id_ex_aluop: Valor Esperado: 010 Valor Real: 000
+
+id_ex_unsig: Valor Esperado: 0 Valor Real: 0
+
+id_ex_shiftop: Valor Esperado: XX Valor Real: 00
+
+id_ex_shiftamt: Valor Esperado: 00000 Valor Real:  0
+
+id_ex_rega: Valor Esperado:          0 Valor Real:          0
+
+id_ex_readmem: Valor Esperado: 1Valor Real: 0
+
+id_ex_writemem:  Valor Esperado: 0 Valor Real: 0
+
+id_ex_regb: Valor Esperado:          0 Valor Real:          0
+
+id_ex_imedext: Valor Esperado: 00000000000000000000000000000001 Valor Real: 00000000000000000000000000000000
+
+id_ex_selwsource: Valor Esperado: 1 Valor Real: 0
+
+id_ex_regdest: Valor Esperado: 00000 Valor Real 00000
+
+id_ex_writereg: Valor Esperado: 1 Valor Real: 0
+
+id_ex_writeov: Valor Esperado: 1 Valor Real: 0
+
+id_reg_addra: Valor Esperado: 00001 Valor Real: 00000
+
+id_reg_addrb: Valor Esperado: 00010 Valor Real: 00000
+
+STORE:
+id_if_selpcsource: Valor Esperado: 0 Valor Real: 0
+
+id_if_rega: Valor Esperado:          8 Valor Real:          X
+
+reg_id_dataa:          0 reg_id_datab:          0
+
+reg_id_ass_dataa: Valor Esperado:          0 Valor Real:          8
+ reg_id_ass_datab: Valor Esperado:          0 Valor Real:          2
+
+id_if_pcimd2ext: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_pcindex: 00000000000000000000000000000x00
+
+id_if_selpctype: Valor Esperado: xx Valor Real: xx
+
+id_ex_selalushift: Valor Esperado: 0 Valor Real: 0
+
+id_ex_selimregb: Valor Esperado: 1 Valor Real: 0
+
+id_ex_aluop: Valor Esperado: 010 Valor Real: 000
+
+id_ex_unsig: Valor Esperado: 0 Valor Real: 0
+
+id_ex_shiftop: Valor Esperado: XX Valor Real: 00
+
+id_ex_shiftamt: Valor Esperado: 00000 Valor Real:  0
+
+id_ex_rega: Valor Esperado:          0 Valor Real:          0
+
+id_ex_readmem: Valor Esperado: 0 Valor Real: 0
+
+id_ex_writemem:  Valor Esperado: 1 Valor Real: 0
+
+id_ex_regb: Valor Esperado:          0 Valor Real:          0
+
+id_ex_imedext: Valor Esperado: 00000000000000000000000000000001 Valor Real: 00000000000000000000000000000000
+
+id_ex_selwsource: Valor Esperado: x Valor Real: 0
+
+id_ex_regdest: Valor Esperado: 00000 Valor Real 00000
+
+id_ex_writereg: Valor Esperado: 0 Valor Real: 0
+
+id_ex_writeov: Valor Esperado: x Valor Real: 0
+
+id_reg_addra: Valor Esperado: 00001 Valor Real: 00000
+
+id_reg_addrb: Valor Esperado: 00010 Valor Real: 00000
+
+SLVL:
+id_if_selpcsource: Valor Esperado: 0 Valor Real: 0
+
+id_if_rega: Valor Esperado:          x Valor Real:          x
+
+reg_id_dataa:          x reg_id_datab:          x
+
+reg_id_ass_dataa: Valor Esperado:          x Valor Real:          x
+ reg_id_ass_datab: Valor Esperado:          x Valor Real:          x
+
+id_if_pcimd2ext: 00000000000000000000000000000000
+
+id_if_pcindex: 00000000000000000000000000000000
+
+id_if_selpctype: Valor Esperado: XX Valor Real: xx
+
+id_ex_selalushift: Valor Esperado: 1 Valor Real: 0
+
+id_ex_selimregb: Valor Esperado: 0 Valor Real: 0
+
+id_ex_aluop: Valor Esperado: XXX Valor Real: 000
+
+id_ex_unsig: Valor Esperado: X Valor Real: 0
+
+id_ex_shiftop: Valor Esperado: 10 Valor Real: 00
+
+id_ex_shiftamt: Valor Esperado:  0 Valor Real:  x
+
+id_ex_rega: Valor Esperado:          x Valor Real:          x
+
+id_ex_readmem: Valor Esperado: 0 Valor Real: 0
+
+id_ex_writemem:  Valor Esperado: 0 Valor Real: 0
+
+id_ex_regb: Valor Esperado:          x Valor Real:          x
+
+id_ex_imedext: Valor Esperado: 00000000000000000000100000000100 Valor Real: 00000000000000000000000000000000
+
+id_ex_selwsource: Valor Esperado: 0 Valor Real: 0
+
+id_ex_regdest: Valor Esperado: 00001 Valor Real 00000
+
+id_ex_writereg: Valor Esperado: 1 Valor Real: 0
+
+id_ex_writeov: Valor Esperado: 1 Valor Real: 0
+
+id_reg_addra: Valor Esperado: 00001 Valor Real: 00000
+
+id_reg_addrb: Valor Esperado: 00010 Valor Real: 00000
+
+JR:
+id_if_selpcsource: Valor Esperado: 1 Valor Real: 0
+
+id_if_rega: Valor Esperado:          x Valor Real:          x
+
+reg_id_dataa:          0 reg_id_datab:          0
+
+reg_id_ass_dataa: Valor Esperado:          0 Valor Real:          x
+ reg_id_ass_datab: Valor Esperado:          0 Valor Real:          x
+
+id_if_pcimd2ext: 00000000000000000000000000000000
+
+id_if_pcindex: 00000000000000000000000000000000
+
+id_if_selpctype: Valor Esperado: 01 Valor Real: xx
+
+id_ex_selalushift: Valor Esperado: X Valor Real: 0
+
+id_ex_selimregb: Valor Esperado: X Valor Real: 0
+
+id_ex_aluop: Valor Esperado: XXX Valor Real: 000
+
+id_ex_unsig: Valor Esperado: X Valor Real: 0
+
+id_ex_shiftop: Valor Esperado: XX Valor Real: 00
+
+id_ex_shiftamt: Valor Esperado: 11111 Valor Real:  0
+
+id_ex_rega: Valor Esperado:          0 Valor Real:          0
+
+id_ex_readmem: Valor Esperado: 0 Valor Real: 0
+
+id_ex_writemem:  Valor Esperado: 0 Valor Real: 0
+
+id_ex_regb: Valor Esperado:          0 Valor Real:          0
+
+id_ex_imedext: Valor Esperado: 00000000000000000001111111001000 Valor Real: 00000000000000000000000000000000
+
+id_ex_selwsource: Valor Esperado: X Valor Real: 0
+
+id_ex_regdest: Valor Esperado: 00011 Valor Real 00000
+
+id_ex_writereg: Valor Esperado: 0 Valor Real: 0
+
+id_ex_writeov: Valor Esperado: X Valor Real: 0
+
+id_reg_addra: Valor Esperado: 00001 Valor Real: 00000
+
+id_reg_addrb: Valor Esperado: 00010 Valor Real: 00000
+
+ADD:
+id_if_selpcsource: Valor Esperado: 0 Valor Real: 0
+
+id_if_rega: Valor Esperado:          x Valor Real:          x
+
+reg_id_dataa:          0 reg_id_datab:          0
+
+reg_id_ass_dataa: Valor Esperado:          0 Valor Real:          x
+ reg_id_ass_datab: Valor Esperado:          0 Valor Real:          x
+
+id_if_pcimd2ext: 00000000000000000000000000000000
+
+id_if_pcindex: 00000000000000000000000000000000
+
+id_if_selpctype: Valor Esperado: XX Valor Real: xx
+
+id_ex_selalushift: Valor Esperado: 0 Valor Real: 0
+
+id_ex_selimregb: Valor Esperado: 0 Valor Real: 0
+
+id_ex_aluop: Valor Esperado: 010 Valor Real: 000
+
+id_ex_unsig: Valor Esperado: 0 Valor Real: 0
+
+id_ex_shiftop: Valor Esperado: XX Valor Real: 00
+
+id_ex_shiftamt: Valor Esperado: 11111 Valor Real:  0
+
+id_ex_rega: Valor Esperado:          0 Valor Real:          0
+
+id_ex_readmem: Valor Esperado: 0 Valor Real: 0
+
+id_ex_writemem:  Valor Esperado: 0 Valor Real: 0
+
+id_ex_regb: Valor Esperado:          0 Valor Real:          0
+
+id_ex_imedext: Valor Esperado: 00000000000000000001111111100000 Valor Real: 00000000000000000000000000000000
+
+id_ex_selwsource: Valor Esperado: 0 Valor Real: 0
+
+id_ex_regdest: Valor Esperado: 00011 Valor Real 00000
+
+id_ex_writereg: Valor Esperado: 1 Valor Real: 0
+
+id_ex_writeov: Valor Esperado: 0 Valor Real: 0
+
+id_reg_addra: Valor Esperado: 00001 Valor Real: 00000
+
+id_reg_addrb: Valor Esperado: 00010 Valor Real: 00000
+
+JUMP:
+id_if_selpcsource: Valor Esperado: 1 Valor Real: 0
+
+id_if_rega: Valor Esperado:          x Valor Real:          x
+
+reg_id_dataa:          0 reg_id_datab:          0
+
+reg_id_ass_dataa: Valor Esperado:          0 Valor Real:          x
+ reg_id_ass_datab: Valor Esperado:          0 Valor Real:          x
+
+id_if_pcimd2ext: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_pcindex: 00000000000000000000000000000x00
+
+id_if_selpctype: Valor Esperado: 10 Valor Real: xx
+
+id_ex_selalushift: Valor Esperado: X Valor Real: 0
+
+id_ex_selimregb: Valor Esperado: X Valor Real: 0
+
+id_ex_aluop: Valor Esperado: XXX Valor Real: 000
+
+id_ex_unsig: Valor Esperado: X Valor Real: 0
+
+id_ex_shiftop: Valor Esperado: XX Valor Real: 00
+
+id_ex_shiftamt: Valor Esperado: 00000 Valor Real:  0
+
+id_ex_rega: Valor Esperado:          0 Valor Real:          0
+
+id_ex_readmem: Valor Esperado: 0 Valor Real: 0
+
+id_ex_writemem:  Valor Esperado: 0 Valor Real: 0
+
+id_ex_regb: Valor Esperado:          0 Valor Real:          0
+
+id_ex_imedext: Valor Esperado: 00000000000000000000000000000001 Valor Real: 00000000000000000000000000000000
+
+id_ex_selwsource: Valor Esperado: X Valor Real: 0
+
+id_ex_regdest: Valor Esperado: 00000 Valor Real 00000
+
+id_ex_writereg: Valor Esperado: 0 Valor Real: 0
+
+id_ex_writeov: Valor Esperado: X Valor Real: 0
+
+id_reg_addra: Valor Esperado: 00000 Valor Real: 00000
+
+id_reg_addrb: Valor Esperado: 00000 Valor Real: 00000
+
+BEQ:
+id_if_selpcsource:  Valor Real 0
+
+id_if_rega: Valor Esperado:          x Valor Real:          x
+
+reg_id_dataa:          0 reg_id_datab:          0
+
+reg_id_ass_dataa: Valor Esperado:          0 Valor Real:          x
+ reg_id_ass_datab: Valor Esperado:          0 Valor Real:          x
+
+id_if_pcimd2ext: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_pcindex: 00000000000000000000000000000x00
+
+id_if_selpctype: Valor Esperado: 00 Valor Real: xx
+
+id_ex_selalushift: Valor Esperado: X Valor Real: 0
+
+id_ex_selimregb: Valor Esperado: X Valor Real: 0
+
+id_ex_aluop: Valor Esperado: XXX Valor Real: 000
+
+id_ex_unsig: Valor Esperado: 0 Valor Real: 0
+
+id_ex_shiftop: Valor Esperado: XX Valor Real: 00
+
+id_ex_shiftamt: Valor Esperado: 00000 Valor Real:  0
+
+id_ex_rega: Valor Esperado:          0 Valor Real:          0
+
+id_ex_readmem: Valor Esperado: 0 Valor Real: 0
+
+id_ex_writemem:  Valor Esperado: 0 Valor Real: 0
+
+id_ex_regb: Valor Esperado:          0 Valor Real:          0
+
+id_ex_imedext: Valor Esperado: 00000000000000000000000000000001 Valor Real: 00000000000000000000000000000000
+
+id_ex_selwsource: Valor Esperado: X Valor Real: 0
+
+id_ex_regdest: Valor Esperado: 00000 Valor Real 00000
+
+id_ex_writereg: Valor Esperado: 0 Valor Real: 0
+
+id_ex_writeov: Valor Esperado: X Valor Real: 0
+
+id_reg_addra: Valor Esperado: 00001 Valor Real: 00000
+
+id_reg_addrb: Valor Esperado: 00010 Valor Real: 00000
+
+BGTZ:
+id_if_selpcsource: 0
+
+id_if_rega: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+id_if_pcimd2ext: 00000000000000000000000000000000
+
+id_if_pcindex: 00000000000000000000000000000000
+
+id_if_selpctype: xx
+
+id_ex_selalushift: 0
+
+id_ex_selimregb: 0
+
+id_ex_aluop: 000
+
+id_ex_unsig: 0
+
+id_ex_shiftop: 00
+
+id_ex_shiftamt: 00000
+
+id_ex_rega: 00000000000000000000000000000000
+
+id_ex_readmem: 0
+
+id_ex_writemem: 0
+
+id_ex_regb: 00000000000000000000000000000000
+
+id_ex_imedext: 00000000000000000000000000000000
+
+id_ex_selwsource: 0
+
+id_ex_regdest: 00000
+
+id_ex_writereg: 0
+
+id_ex_writeov'': 0
+
+id_reg_addra: 00000
+
+id_reg_addrb: 00000
+
+ADDI:
+id_if_selpcsource: Valor Esperado 0 0
+
+id_if_rega: Valor Esperado:          x Valor Real:          x
+
+reg_id_dataa:          0 reg_id_datab:          0
+
+reg_id_ass_dataa: Valor Esperado:          0 Valor Real:          x
+ reg_id_ass_datab: Valor Esperado:          0 Valor Real:          x
+
+id_if_pcimd2ext: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_pcindex: 00000000000000000000000000000x00
+
+id_if_selpctype: Valor Esperado: xx Valor Real: xx
+
+id_ex_selalushift: Valor Esperado: 0 Valor Real: 0
+
+id_ex_selimregb: Valor Esperado: 1 Valor Real: 0
+
+id_ex_aluop: Valor Esperado: 010 Valor Real: 000
+
+id_ex_unsig: Valor Esperado: 0 Valor Real: 0
+
+id_ex_shiftop: Valor Esperado: XX Valor Real: 00
+
+id_ex_shiftamt: Valor Esperado: 00000 Valor Real:  0
+
+id_ex_rega: Valor Esperado:          0 Valor Real:          0
+
+id_ex_readmem: Valor Esperado: 0 Valor Real: 0
+
+id_ex_writemem:  Valor Esperado: 0 Valor Real: 0
+
+id_ex_regb: Valor Esperado:          0 Valor Real:          0
+
+id_ex_imedext: Valor Esperado: 00000000000000000000000000000001 Valor Real: 00000000000000000000000000000000
+
+id_ex_selwsource: Valor Esperado: 0 Valor Real: 0
+
+id_ex_regdest: Valor Esperado: 00000 Valor Real 00000
+
+id_ex_writereg: Valor Esperado: 1 Valor Real: 0
+
+id_ex_writeov: Valor Esperado: 0 Valor Real: 0
+
+id_reg_addra: Valor Esperado: 00001 Valor Real: 00000
+
+id_reg_addrb: Valor Esperado: 00010 Valor Real: 00000
+
+LOAD:
+id_if_selpcsource: Valor Esperado: 0 Valor Real: 0
+
+id_if_rega: Valor Esperado:          x Valor Real:          x
+
+reg_id_dataa:          0 reg_id_datab:          0
+
+reg_id_ass_dataa: Valor Esperado:          0 Valor Real:          x
+ reg_id_ass_datab: Valor Esperado:          0 Valor Real:          x
+
+id_if_pcimd2ext: 00000000000000000000000000000000
+
+id_if_pcindex: 00000000000000000000000000000000
+
+id_if_selpctype: Valor Esperado: xx Valor Real: xx
+
+id_ex_selalushift: Valor Esperado: 0 Valor Real: 0
+
+id_ex_selimregb: Valor Esperado: 1 Valor Real: 0
+
+id_ex_aluop: Valor Esperado: 010 Valor Real: 000
+
+id_ex_unsig: Valor Esperado: 0 Valor Real: 0
+
+id_ex_shiftop: Valor Esperado: XX Valor Real: 00
+
+id_ex_shiftamt: Valor Esperado: 00000 Valor Real:  0
+
+id_ex_rega: Valor Esperado:          0 Valor Real:          0
+
+id_ex_readmem: Valor Esperado: 1Valor Real: 0
+
+id_ex_writemem:  Valor Esperado: 0 Valor Real: 0
+
+id_ex_regb: Valor Esperado:          0 Valor Real:          0
+
+id_ex_imedext: Valor Esperado: 00000000000000000000000000000001 Valor Real: 00000000000000000000000000000000
+
+id_ex_selwsource: Valor Esperado: 1 Valor Real: 0
+
+id_ex_regdest: Valor Esperado: 00000 Valor Real 00000
+
+id_ex_writereg: Valor Esperado: 1 Valor Real: 0
+
+id_ex_writeov: Valor Esperado: 1 Valor Real: 0
+
+id_reg_addra: Valor Esperado: 00001 Valor Real: 00000
+
+id_reg_addrb: Valor Esperado: 00010 Valor Real: 00000
+
+STORE:
+id_if_selpcsource: Valor Esperado: 0 Valor Real: 0
+
+id_if_rega: Valor Esperado:          x Valor Real:          x
+
+reg_id_dataa:          0 reg_id_datab:          0
+
+reg_id_ass_dataa: Valor Esperado:          0 Valor Real:          x
+ reg_id_ass_datab: Valor Esperado:          0 Valor Real:          x
+
+id_if_pcimd2ext: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_pcindex: 00000000000000000000000000000x00
+
+id_if_selpctype: Valor Esperado: xx Valor Real: xx
+
+id_ex_selalushift: Valor Esperado: 0 Valor Real: 0
+
+id_ex_selimregb: Valor Esperado: 1 Valor Real: 0
+
+id_ex_aluop: Valor Esperado: 010 Valor Real: 000
+
+id_ex_unsig: Valor Esperado: 0 Valor Real: 0
+
+id_ex_shiftop: Valor Esperado: XX Valor Real: 00
+
+id_ex_shiftamt: Valor Esperado: 00000 Valor Real:  0
+
+id_ex_rega: Valor Esperado:          0 Valor Real:          0
+
+id_ex_readmem: Valor Esperado: 0 Valor Real: 0
+
+id_ex_writemem:  Valor Esperado: 1 Valor Real: 0
+
+id_ex_regb: Valor Esperado:          0 Valor Real:          0
+
+id_ex_imedext: Valor Esperado: 00000000000000000000000000000001 Valor Real: 00000000000000000000000000000000
+
+id_ex_selwsource: Valor Esperado: x Valor Real: 0
+
+id_ex_regdest: Valor Esperado: 00000 Valor Real 00000
+
+id_ex_writereg: Valor Esperado: 0 Valor Real: 0
+
+id_ex_writeov: Valor Esperado: x Valor Real: 0
+
+id_reg_addra: Valor Esperado: 00001 Valor Real: 00000
+
+id_reg_addrb: Valor Esperado: 00010 Valor Real: 00000
+
+SLVL:
+id_if_selpcsource: Valor Esperado: 0 Valor Real: 0
+
+id_if_rega: Valor Esperado:          x Valor Real:          x
+
+reg_id_dataa:          x reg_id_datab:          x
+
+reg_id_ass_dataa: Valor Esperado:          x Valor Real:          x
+ reg_id_ass_datab: Valor Esperado:          x Valor Real:          x
+
+id_if_pcimd2ext: 00000000000000000000000000000000
+
+id_if_pcindex: 00000000000000000000000000000000
+
+id_if_selpctype: Valor Esperado: XX Valor Real: xx
+
+id_ex_selalushift: Valor Esperado: 1 Valor Real: 0
+
+id_ex_selimregb: Valor Esperado: 0 Valor Real: 0
+
+id_ex_aluop: Valor Esperado: XXX Valor Real: 000
+
+id_ex_unsig: Valor Esperado: X Valor Real: 0
+
+id_ex_shiftop: Valor Esperado: 10 Valor Real: 00
+
+id_ex_shiftamt: Valor Esperado:  0 Valor Real:  x
+
+id_ex_rega: Valor Esperado:          x Valor Real:          x
+
+id_ex_readmem: Valor Esperado: 0 Valor Real: 0
+
+id_ex_writemem:  Valor Esperado: 0 Valor Real: 0
+
+id_ex_regb: Valor Esperado:          x Valor Real:          x
+
+id_ex_imedext: Valor Esperado: 00000000000000000000100000000100 Valor Real: 00000000000000000000000000000000
+
+id_ex_selwsource: Valor Esperado: 0 Valor Real: 0
+
+id_ex_regdest: Valor Esperado: 00001 Valor Real 00000
+
+id_ex_writereg: Valor Esperado: 1 Valor Real: 0
+
+id_ex_writeov: Valor Esperado: 1 Valor Real: 0
+
+id_reg_addra: Valor Esperado: 00001 Valor Real: 00000
+
+id_reg_addrb: Valor Esperado: 00010 Valor Real: 00000
+
+JR:
+id_if_selpcsource: Valor Esperado: 1 Valor Real: 0
+
+id_if_rega: Valor Esperado:          x Valor Real:          x
+
+reg_id_dataa:          0 reg_id_datab:          0
+
+reg_id_ass_dataa: Valor Esperado:          0 Valor Real:          x
+ reg_id_ass_datab: Valor Esperado:          0 Valor Real:          x
+
+id_if_pcimd2ext: 00000000000000000000000000000000
+
+id_if_pcindex: 00000000000000000000000000000000
+
+id_if_selpctype: Valor Esperado: 01 Valor Real: xx
+
+id_ex_selalushift: Valor Esperado: X Valor Real: 0
+
+id_ex_selimregb: Valor Esperado: X Valor Real: 0
+
+id_ex_aluop: Valor Esperado: XXX Valor Real: 000
+
+id_ex_unsig: Valor Esperado: X Valor Real: 0
+
+id_ex_shiftop: Valor Esperado: XX Valor Real: 00
+
+id_ex_shiftamt: Valor Esperado: 11111 Valor Real:  0
+
+id_ex_rega: Valor Esperado:          0 Valor Real:          0
+
+id_ex_readmem: Valor Esperado: 0 Valor Real: 0
+
+id_ex_writemem:  Valor Esperado: 0 Valor Real: 0
+
+id_ex_regb: Valor Esperado:          0 Valor Real:          0
+
+id_ex_imedext: Valor Esperado: 00000000000000000001111111001000 Valor Real: 00000000000000000000000000000000
+
+id_ex_selwsource: Valor Esperado: X Valor Real: 0
+
+id_ex_regdest: Valor Esperado: 00011 Valor Real 00000
+
+id_ex_writereg: Valor Esperado: 0 Valor Real: 0
+
+id_ex_writeov: Valor Esperado: X Valor Real: 0
+
+id_reg_addra: Valor Esperado: 00001 Valor Real: 00000
+
+id_reg_addrb: Valor Esperado: 00010 Valor Real: 00000
+
+ADD:
+id_if_selpcsource: Valor Esperado: 0 Valor Real: 0
+
+id_if_rega: Valor Esperado:          x Valor Real:          x
+
+reg_id_dataa:          0 reg_id_datab:          0
+
+reg_id_ass_dataa: Valor Esperado:          0 Valor Real:          x
+ reg_id_ass_datab: Valor Esperado:          0 Valor Real:          x
+
+id_if_pcimd2ext: 00000000000000000000000000000000
+
+id_if_pcindex: 00000000000000000000000000000000
+
+id_if_selpctype: Valor Esperado: XX Valor Real: xx
+
+id_ex_selalushift: Valor Esperado: 0 Valor Real: 0
+
+id_ex_selimregb: Valor Esperado: 0 Valor Real: 0
+
+id_ex_aluop: Valor Esperado: 010 Valor Real: 000
+
+id_ex_unsig: Valor Esperado: 0 Valor Real: 0
+
+id_ex_shiftop: Valor Esperado: XX Valor Real: 00
+
+id_ex_shiftamt: Valor Esperado: 11111 Valor Real:  0
+
+id_ex_rega: Valor Esperado:          0 Valor Real:          0
+
+id_ex_readmem: Valor Esperado: 0 Valor Real: 0
+
+id_ex_writemem:  Valor Esperado: 0 Valor Real: 0
+
+id_ex_regb: Valor Esperado:          0 Valor Real:          0
+
+id_ex_imedext: Valor Esperado: 00000000000000000001111111100000 Valor Real: 00000000000000000000000000000000
+
+id_ex_selwsource: Valor Esperado: 0 Valor Real: 0
+
+id_ex_regdest: Valor Esperado: 00011 Valor Real 00000
+
+id_ex_writereg: Valor Esperado: 1 Valor Real: 0
+
+id_ex_writeov: Valor Esperado: 0 Valor Real: 0
+
+id_reg_addra: Valor Esperado: 00001 Valor Real: 00000
+
+id_reg_addrb: Valor Esperado: 00010 Valor Real: 00000
+
+JUMP:
+id_if_selpcsource: Valor Esperado: 1 Valor Real: 0
+
+id_if_rega: Valor Esperado:          x Valor Real:          x
+
+reg_id_dataa:          0 reg_id_datab:          0
+
+reg_id_ass_dataa: Valor Esperado:          0 Valor Real:          x
+ reg_id_ass_datab: Valor Esperado:          0 Valor Real:          x
+
+id_if_pcimd2ext: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_pcindex: 00000000000000000000000000000x00
+
+id_if_selpctype: Valor Esperado: 10 Valor Real: xx
+
+id_ex_selalushift: Valor Esperado: X Valor Real: 0
+
+id_ex_selimregb: Valor Esperado: X Valor Real: 0
+
+id_ex_aluop: Valor Esperado: XXX Valor Real: 000
+
+id_ex_unsig: Valor Esperado: X Valor Real: 0
+
+id_ex_shiftop: Valor Esperado: XX Valor Real: 00
+
+id_ex_shiftamt: Valor Esperado: 00000 Valor Real:  0
+
+id_ex_rega: Valor Esperado:          0 Valor Real:          0
+
+id_ex_readmem: Valor Esperado: 0 Valor Real: 0
+
+id_ex_writemem:  Valor Esperado: 0 Valor Real: 0
+
+id_ex_regb: Valor Esperado:          0 Valor Real:          0
+
+id_ex_imedext: Valor Esperado: 00000000000000000000000000000001 Valor Real: 00000000000000000000000000000000
+
+id_ex_selwsource: Valor Esperado: X Valor Real: 0
+
+id_ex_regdest: Valor Esperado: 00000 Valor Real 00000
+
+id_ex_writereg: Valor Esperado: 0 Valor Real: 0
+
+id_ex_writeov: Valor Esperado: X Valor Real: 0
+
+id_reg_addra: Valor Esperado: 00000 Valor Real: 00000
+
+id_reg_addrb: Valor Esperado: 00000 Valor Real: 00000
+
+BEQ:
+id_if_selpcsource:  Valor Real 0
+
+id_if_rega: Valor Esperado:          x Valor Real:          x
+
+reg_id_dataa:          0 reg_id_datab:          0
+
+reg_id_ass_dataa: Valor Esperado:          0 Valor Real:          x
+ reg_id_ass_datab: Valor Esperado:          0 Valor Real:          x
+
+id_if_pcimd2ext: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_pcindex: 00000000000000000000000000000x00
+
+id_if_selpctype: Valor Esperado: 00 Valor Real: xx
+
+id_ex_selalushift: Valor Esperado: X Valor Real: 0
+
+id_ex_selimregb: Valor Esperado: X Valor Real: 0
+
+id_ex_aluop: Valor Esperado: XXX Valor Real: 000
+
+id_ex_unsig: Valor Esperado: 0 Valor Real: 0
+
+id_ex_shiftop: Valor Esperado: XX Valor Real: 00
+
+id_ex_shiftamt: Valor Esperado: 00000 Valor Real:  0
+
+id_ex_rega: Valor Esperado:          0 Valor Real:          0
+
+id_ex_readmem: Valor Esperado: 0 Valor Real: 0
+
+id_ex_writemem:  Valor Esperado: 0 Valor Real: 0
+
+id_ex_regb: Valor Esperado:          0 Valor Real:          0
+
+id_ex_imedext: Valor Esperado: 00000000000000000000000000000001 Valor Real: 00000000000000000000000000000000
+
+id_ex_selwsource: Valor Esperado: X Valor Real: 0
+
+id_ex_regdest: Valor Esperado: 00000 Valor Real 00000
+
+id_ex_writereg: Valor Esperado: 0 Valor Real: 0
+
+id_ex_writeov: Valor Esperado: X Valor Real: 0
+
+id_reg_addra: Valor Esperado: 00001 Valor Real: 00000
+
+id_reg_addrb: Valor Esperado: 00010 Valor Real: 00000
+
+BGTZ:
+id_if_selpcsource: 0
+
+id_if_rega: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+id_if_pcimd2ext: 00000000000000000000000000000000
+
+id_if_pcindex: 00000000000000000000000000000000
+
+id_if_selpctype: xx
+
+id_ex_selalushift: 0
+
+id_ex_selimregb: 0
+
+id_ex_aluop: 000
+
+id_ex_unsig: 0
+
+id_ex_shiftop: 00
+
+id_ex_shiftamt: 00000
+
+id_ex_rega: 00000000000000000000000000000000
+
+id_ex_readmem: 0
+
+id_ex_writemem: 0
+
+id_ex_regb: 00000000000000000000000000000000
+
+id_ex_imedext: 00000000000000000000000000000000
+
+id_ex_selwsource: 0
+
+id_ex_regdest: 00000
+
+id_ex_writereg: 0
+
+id_ex_writeov'': 0
+
+id_reg_addra: 00000
+
+id_reg_addrb: 00000
+
+ADDI:
+id_if_selpcsource: Valor Esperado 0 0
+
+id_if_rega: Valor Esperado:          x Valor Real:          x
+
+reg_id_dataa:          0 reg_id_datab:          0
+
+reg_id_ass_dataa: Valor Esperado:          0 Valor Real:          x
+ reg_id_ass_datab: Valor Esperado:          0 Valor Real:          x
+
+id_if_pcimd2ext: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_pcindex: 00000000000000000000000000000x00
+
+id_if_selpctype: Valor Esperado: xx Valor Real: xx
+
+id_ex_selalushift: Valor Esperado: 0 Valor Real: 0
+
+id_ex_selimregb: Valor Esperado: 1 Valor Real: 0
+
+id_ex_aluop: Valor Esperado: 010 Valor Real: 000
+
+id_ex_unsig: Valor Esperado: 0 Valor Real: 0
+
+id_ex_shiftop: Valor Esperado: XX Valor Real: 00
+
+id_ex_shiftamt: Valor Esperado: 00000 Valor Real:  0
+
+id_ex_rega: Valor Esperado:          0 Valor Real:          0
+
+id_ex_readmem: Valor Esperado: 0 Valor Real: 0
+
+id_ex_writemem:  Valor Esperado: 0 Valor Real: 0
+
+id_ex_regb: Valor Esperado:          0 Valor Real:          0
+
+id_ex_imedext: Valor Esperado: 00000000000000000000000000000001 Valor Real: 00000000000000000000000000000000
+
+id_ex_selwsource: Valor Esperado: 0 Valor Real: 0
+
+id_ex_regdest: Valor Esperado: 00000 Valor Real 00000
+
+id_ex_writereg: Valor Esperado: 1 Valor Real: 0
+
+id_ex_writeov: Valor Esperado: 0 Valor Real: 0
+
+id_reg_addra: Valor Esperado: 00001 Valor Real: 00000
+
+id_reg_addrb: Valor Esperado: 00010 Valor Real: 00000
+
+LOAD:
+id_if_selpcsource: Valor Esperado: 0 Valor Real: 0
+
+id_if_rega: Valor Esperado:          x Valor Real:          x
+
+reg_id_dataa:          0 reg_id_datab:          0
+
+reg_id_ass_dataa: Valor Esperado:          0 Valor Real:          x
+ reg_id_ass_datab: Valor Esperado:          0 Valor Real:          x
+
+id_if_pcimd2ext: 00000000000000000000000000000000
+
+id_if_pcindex: 00000000000000000000000000000000
+
+id_if_selpctype: Valor Esperado: xx Valor Real: xx
+
+id_ex_selalushift: Valor Esperado: 0 Valor Real: 0
+
+id_ex_selimregb: Valor Esperado: 1 Valor Real: 0
+
+id_ex_aluop: Valor Esperado: 010 Valor Real: 000
+
+id_ex_unsig: Valor Esperado: 0 Valor Real: 0
+
+id_ex_shiftop: Valor Esperado: XX Valor Real: 00
+
+id_ex_shiftamt: Valor Esperado: 00000 Valor Real:  0
+
+id_ex_rega: Valor Esperado:          0 Valor Real:          0
+
+id_ex_readmem: Valor Esperado: 1Valor Real: 0
+
+id_ex_writemem:  Valor Esperado: 0 Valor Real: 0
+
+id_ex_regb: Valor Esperado:          0 Valor Real:          0
+
+id_ex_imedext: Valor Esperado: 00000000000000000000000000000001 Valor Real: 00000000000000000000000000000000
+
+id_ex_selwsource: Valor Esperado: 1 Valor Real: 0
+
+id_ex_regdest: Valor Esperado: 00000 Valor Real 00000
+
+id_ex_writereg: Valor Esperado: 1 Valor Real: 0
+
+id_ex_writeov: Valor Esperado: 1 Valor Real: 0
+
+id_reg_addra: Valor Esperado: 00001 Valor Real: 00000
+
+id_reg_addrb: Valor Esperado: 00010 Valor Real: 00000
+
+STORE:
+id_if_selpcsource: Valor Esperado: 0 Valor Real: 0
+
+id_if_rega: Valor Esperado:          x Valor Real:          x
+
+reg_id_dataa:          0 reg_id_datab:          0
+
+reg_id_ass_dataa: Valor Esperado:          0 Valor Real:          x
+ reg_id_ass_datab: Valor Esperado:          0 Valor Real:          x
+
+id_if_pcimd2ext: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_pcindex: 00000000000000000000000000000x00
+
+id_if_selpctype: Valor Esperado: xx Valor Real: xx
+
+id_ex_selalushift: Valor Esperado: 0 Valor Real: 0
+
+id_ex_selimregb: Valor Esperado: 1 Valor Real: 0
+
+id_ex_aluop: Valor Esperado: 010 Valor Real: 000
+
+id_ex_unsig: Valor Esperado: 0 Valor Real: 0
+
+id_ex_shiftop: Valor Esperado: XX Valor Real: 00
+
+id_ex_shiftamt: Valor Esperado: 00000 Valor Real:  0
+
+id_ex_rega: Valor Esperado:          0 Valor Real:          0
+
+id_ex_readmem: Valor Esperado: 0 Valor Real: 0
+
+id_ex_writemem:  Valor Esperado: 1 Valor Real: 0
+
+id_ex_regb: Valor Esperado:          0 Valor Real:          0
+
+id_ex_imedext: Valor Esperado: 00000000000000000000000000000001 Valor Real: 00000000000000000000000000000000
+
+id_ex_selwsource: Valor Esperado: x Valor Real: 0
+
+id_ex_regdest: Valor Esperado: 00000 Valor Real 00000
+
+id_ex_writereg: Valor Esperado: 0 Valor Real: 0
+
+id_ex_writeov: Valor Esperado: x Valor Real: 0
+
+id_reg_addra: Valor Esperado: 00001 Valor Real: 00000
+
+id_reg_addrb: Valor Esperado: 00010 Valor Real: 00000
+
+SLVL:
+id_if_selpcsource: Valor Esperado: 0 Valor Real: 0
+
+id_if_rega: Valor Esperado:          x Valor Real:          x
+
+reg_id_dataa:          x reg_id_datab:          x
+
+reg_id_ass_dataa: Valor Esperado:          x Valor Real:          x
+ reg_id_ass_datab: Valor Esperado:          x Valor Real:          x
+
+id_if_pcimd2ext: 00000000000000000000000000000000
+
+id_if_pcindex: 00000000000000000000000000000000
+
+id_if_selpctype: Valor Esperado: XX Valor Real: xx
+
+id_ex_selalushift: Valor Esperado: 1 Valor Real: 0
+
+id_ex_selimregb: Valor Esperado: 0 Valor Real: 0
+
+id_ex_aluop: Valor Esperado: XXX Valor Real: 000
+
+id_ex_unsig: Valor Esperado: X Valor Real: 0
+
+id_ex_shiftop: Valor Esperado: 10 Valor Real: 00
+
+id_ex_shiftamt: Valor Esperado:  0 Valor Real:  x
+
+id_ex_rega: Valor Esperado:          x Valor Real:          x
+
+id_ex_readmem: Valor Esperado: 0 Valor Real: 0
+
+id_ex_writemem:  Valor Esperado: 0 Valor Real: 0
+
+id_ex_regb: Valor Esperado:          x Valor Real:          x
+
+id_ex_imedext: Valor Esperado: 00000000000000000000100000000100 Valor Real: 00000000000000000000000000000000
+
+id_ex_selwsource: Valor Esperado: 0 Valor Real: 0
+
+id_ex_regdest: Valor Esperado: 00001 Valor Real 00000
+
+id_ex_writereg: Valor Esperado: 1 Valor Real: 0
+
+id_ex_writeov: Valor Esperado: 1 Valor Real: 0
+
+id_reg_addra: Valor Esperado: 00001 Valor Real: 00000
+
+id_reg_addrb: Valor Esperado: 00010 Valor Real: 00000
+
+JR:
+id_if_selpcsource: Valor Esperado: 1 Valor Real: 0
+
+id_if_rega: Valor Esperado:          x Valor Real:          x
+
+reg_id_dataa:          0 reg_id_datab:          0
+
+reg_id_ass_dataa: Valor Esperado:          0 Valor Real:          x
+ reg_id_ass_datab: Valor Esperado:          0 Valor Real:          x
+
+id_if_pcimd2ext: 00000000000000000000000000000000
+
+id_if_pcindex: 00000000000000000000000000000000
+
+id_if_selpctype: Valor Esperado: 01 Valor Real: xx
+
+id_ex_selalushift: Valor Esperado: X Valor Real: 0
+
+id_ex_selimregb: Valor Esperado: X Valor Real: 0
+
+id_ex_aluop: Valor Esperado: XXX Valor Real: 000
+
+id_ex_unsig: Valor Esperado: X Valor Real: 0
+
+id_ex_shiftop: Valor Esperado: XX Valor Real: 00
+
+id_ex_shiftamt: Valor Esperado: 11111 Valor Real:  0
+
+id_ex_rega: Valor Esperado:          0 Valor Real:          0
+
+id_ex_readmem: Valor Esperado: 0 Valor Real: 0
+
+id_ex_writemem:  Valor Esperado: 0 Valor Real: 0
+
+id_ex_regb: Valor Esperado:          0 Valor Real:          0
+
+id_ex_imedext: Valor Esperado: 00000000000000000001111111001000 Valor Real: 00000000000000000000000000000000
+
+id_ex_selwsource: Valor Esperado: X Valor Real: 0
+
+id_ex_regdest: Valor Esperado: 00011 Valor Real 00000
+
+id_ex_writereg: Valor Esperado: 0 Valor Real: 0
+
+id_ex_writeov: Valor Esperado: X Valor Real: 0
+
+id_reg_addra: Valor Esperado: 00001 Valor Real: 00000
+
+id_reg_addrb: Valor Esperado: 00010 Valor Real: 00000
+
+ADD:
+id_if_selpcsource: Valor Esperado: 0 Valor Real: 0
+
+id_if_rega: Valor Esperado:          x Valor Real:          x
+
+reg_id_dataa:          0 reg_id_datab:          0
+
+reg_id_ass_dataa: Valor Esperado:          0 Valor Real:          x
+ reg_id_ass_datab: Valor Esperado:          0 Valor Real:          x
+
+id_if_pcimd2ext: 00000000000000000000000000000000
+
+id_if_pcindex: 00000000000000000000000000000000
+
+id_if_selpctype: Valor Esperado: XX Valor Real: xx
+
+id_ex_selalushift: Valor Esperado: 0 Valor Real: 0
+
+id_ex_selimregb: Valor Esperado: 0 Valor Real: 0
+
+id_ex_aluop: Valor Esperado: 010 Valor Real: 000
+
+id_ex_unsig: Valor Esperado: 0 Valor Real: 0
+
+id_ex_shiftop: Valor Esperado: XX Valor Real: 00
+
+id_ex_shiftamt: Valor Esperado: 11111 Valor Real:  0
+
+id_ex_rega: Valor Esperado:          0 Valor Real:          0
+
+id_ex_readmem: Valor Esperado: 0 Valor Real: 0
+
+id_ex_writemem:  Valor Esperado: 0 Valor Real: 0
+
+id_ex_regb: Valor Esperado:          0 Valor Real:          0
+
+id_ex_imedext: Valor Esperado: 00000000000000000001111111100000 Valor Real: 00000000000000000000000000000000
+
+id_ex_selwsource: Valor Esperado: 0 Valor Real: 0
+
+id_ex_regdest: Valor Esperado: 00011 Valor Real 00000
+
+id_ex_writereg: Valor Esperado: 1 Valor Real: 0
+
+id_ex_writeov: Valor Esperado: 0 Valor Real: 0
+
+id_reg_addra: Valor Esperado: 00001 Valor Real: 00000
+
+id_reg_addrb: Valor Esperado: 00010 Valor Real: 00000
+
+JUMP:
+id_if_selpcsource: Valor Esperado: 1 Valor Real: 0
+
+id_if_rega: Valor Esperado:          x Valor Real:          x
+
+reg_id_dataa:          0 reg_id_datab:          0
+
+reg_id_ass_dataa: Valor Esperado:          0 Valor Real:          x
+ reg_id_ass_datab: Valor Esperado:          0 Valor Real:          x
+
+id_if_pcimd2ext: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_pcindex: 00000000000000000000000000000x00
+
+id_if_selpctype: Valor Esperado: 10 Valor Real: xx
+
+id_ex_selalushift: Valor Esperado: X Valor Real: 0
+
+id_ex_selimregb: Valor Esperado: X Valor Real: 0
+
+id_ex_aluop: Valor Esperado: XXX Valor Real: 000
+
+id_ex_unsig: Valor Esperado: X Valor Real: 0
+
+id_ex_shiftop: Valor Esperado: XX Valor Real: 00
+
+id_ex_shiftamt: Valor Esperado: 00000 Valor Real:  0
+
+id_ex_rega: Valor Esperado:          0 Valor Real:          0
+
+id_ex_readmem: Valor Esperado: 0 Valor Real: 0
+
+id_ex_writemem:  Valor Esperado: 0 Valor Real: 0
+
+id_ex_regb: Valor Esperado:          0 Valor Real:          0
+
+id_ex_imedext: Valor Esperado: 00000000000000000000000000000001 Valor Real: 00000000000000000000000000000000
+
+id_ex_selwsource: Valor Esperado: X Valor Real: 0
+
+id_ex_regdest: Valor Esperado: 00000 Valor Real 00000
+
+id_ex_writereg: Valor Esperado: 0 Valor Real: 0
+
+id_ex_writeov: Valor Esperado: X Valor Real: 0
+
+id_reg_addra: Valor Esperado: 00000 Valor Real: 00000
+
+id_reg_addrb: Valor Esperado: 00000 Valor Real: 00000
+
+BEQ:
+id_if_selpcsource:  Valor Real 0
+
+id_if_rega: Valor Esperado:          x Valor Real:          x
+
+reg_id_dataa:          0 reg_id_datab:          0
+
+reg_id_ass_dataa: Valor Esperado:          0 Valor Real:          x
+ reg_id_ass_datab: Valor Esperado:          0 Valor Real:          x
+
+id_if_pcimd2ext: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_pcindex: 00000000000000000000000000000x00
+
+id_if_selpctype: Valor Esperado: 00 Valor Real: xx
+
+id_ex_selalushift: Valor Esperado: X Valor Real: 0
+
+id_ex_selimregb: Valor Esperado: X Valor Real: 0
+
+id_ex_aluop: Valor Esperado: XXX Valor Real: 000
+
+id_ex_unsig: Valor Esperado: 0 Valor Real: 0
+
+id_ex_shiftop: Valor Esperado: XX Valor Real: 00
+
+id_ex_shiftamt: Valor Esperado: 00000 Valor Real:  0
+
+id_ex_rega: Valor Esperado:          0 Valor Real:          0
+
+id_ex_readmem: Valor Esperado: 0 Valor Real: 0
+
+id_ex_writemem:  Valor Esperado: 0 Valor Real: 0
+
+id_ex_regb: Valor Esperado:          0 Valor Real:          0
+
+id_ex_imedext: Valor Esperado: 00000000000000000000000000000001 Valor Real: 00000000000000000000000000000000
+
+id_ex_selwsource: Valor Esperado: X Valor Real: 0
+
+id_ex_regdest: Valor Esperado: 00000 Valor Real 00000
+
+id_ex_writereg: Valor Esperado: 0 Valor Real: 0
+
+id_ex_writeov: Valor Esperado: X Valor Real: 0
+
+id_reg_addra: Valor Esperado: 00001 Valor Real: 00000
+
+id_reg_addrb: Valor Esperado: 00010 Valor Real: 00000
+
+BGTZ:
+id_if_selpcsource: 0
+
+id_if_rega: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+id_if_pcimd2ext: 00000000000000000000000000000000
+
+id_if_pcindex: 00000000000000000000000000000000
+
+id_if_selpctype: xx
+
+id_ex_selalushift: 0
+
+id_ex_selimregb: 0
+
+id_ex_aluop: 000
+
+id_ex_unsig: 0
+
+id_ex_shiftop: 00
+
+id_ex_shiftamt: 00000
+
+id_ex_rega: 00000000000000000000000000000000
+
+id_ex_readmem: 0
+
+id_ex_writemem: 0
+
+id_ex_regb: 00000000000000000000000000000000
+
+id_ex_imedext: 00000000000000000000000000000000
+
+id_ex_selwsource: 0
+
+id_ex_regdest: 00000
+
+id_ex_writereg: 0
+
+id_ex_writeov'': 0
+
+id_reg_addra: 00000
+
+id_reg_addrb: 00000
+
+ADDI:
+id_if_selpcsource: Valor Esperado 0 0
+
+id_if_rega: Valor Esperado:          x Valor Real:          x
+
+reg_id_dataa:          0 reg_id_datab:          0
+
+reg_id_ass_dataa: Valor Esperado:          0 Valor Real:          x
+ reg_id_ass_datab: Valor Esperado:          0 Valor Real:          x
+
+id_if_pcimd2ext: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_pcindex: 00000000000000000000000000000x00
+
+id_if_selpctype: Valor Esperado: xx Valor Real: xx
+
+id_ex_selalushift: Valor Esperado: 0 Valor Real: 0
+
+id_ex_selimregb: Valor Esperado: 1 Valor Real: 0
+
+id_ex_aluop: Valor Esperado: 010 Valor Real: 000
+
+id_ex_unsig: Valor Esperado: 0 Valor Real: 0
+
+id_ex_shiftop: Valor Esperado: XX Valor Real: 00
+
+id_ex_shiftamt: Valor Esperado: 00000 Valor Real:  0
+
+id_ex_rega: Valor Esperado:          0 Valor Real:          0
+
+id_ex_readmem: Valor Esperado: 0 Valor Real: 0
+
+id_ex_writemem:  Valor Esperado: 0 Valor Real: 0
+
+id_ex_regb: Valor Esperado:          0 Valor Real:          0
+
+id_ex_imedext: Valor Esperado: 00000000000000000000000000000001 Valor Real: 00000000000000000000000000000000
+
+id_ex_selwsource: Valor Esperado: 0 Valor Real: 0
+
+id_ex_regdest: Valor Esperado: 00000 Valor Real 00000
+
+id_ex_writereg: Valor Esperado: 1 Valor Real: 0
+
+id_ex_writeov: Valor Esperado: 0 Valor Real: 0
+
+id_reg_addra: Valor Esperado: 00001 Valor Real: 00000
+
+id_reg_addrb: Valor Esperado: 00010 Valor Real: 00000
+
+LOAD:
+id_if_selpcsource: Valor Esperado: 0 Valor Real: 0
+
+id_if_rega: Valor Esperado:          x Valor Real:          x
+
+reg_id_dataa:          0 reg_id_datab:          0
+
+reg_id_ass_dataa: Valor Esperado:          0 Valor Real:          x
+ reg_id_ass_datab: Valor Esperado:          0 Valor Real:          x
+
+id_if_pcimd2ext: 00000000000000000000000000000000
+
+id_if_pcindex: 00000000000000000000000000000000
+
+id_if_selpctype: Valor Esperado: xx Valor Real: xx
+
+id_ex_selalushift: Valor Esperado: 0 Valor Real: 0
+
+id_ex_selimregb: Valor Esperado: 1 Valor Real: 0
+
+id_ex_aluop: Valor Esperado: 010 Valor Real: 000
+
+id_ex_unsig: Valor Esperado: 0 Valor Real: 0
+
+id_ex_shiftop: Valor Esperado: XX Valor Real: 00
+
+id_ex_shiftamt: Valor Esperado: 00000 Valor Real:  0
+
+id_ex_rega: Valor Esperado:          0 Valor Real:          0
+
+id_ex_readmem: Valor Esperado: 1Valor Real: 0
+
+id_ex_writemem:  Valor Esperado: 0 Valor Real: 0
+
+id_ex_regb: Valor Esperado:          0 Valor Real:          0
+
+id_ex_imedext: Valor Esperado: 00000000000000000000000000000001 Valor Real: 00000000000000000000000000000000
+
+id_ex_selwsource: Valor Esperado: 1 Valor Real: 0
+
+id_ex_regdest: Valor Esperado: 00000 Valor Real 00000
+
+id_ex_writereg: Valor Esperado: 1 Valor Real: 0
+
+id_ex_writeov: Valor Esperado: 1 Valor Real: 0
+
+id_reg_addra: Valor Esperado: 00001 Valor Real: 00000
+
+id_reg_addrb: Valor Esperado: 00010 Valor Real: 00000
+
+STORE:
+id_if_selpcsource: Valor Esperado: 0 Valor Real: 0
+
+id_if_rega: Valor Esperado:          x Valor Real:          x
+
+reg_id_dataa:          0 reg_id_datab:          0
+
+reg_id_ass_dataa: Valor Esperado:          0 Valor Real:          x
+ reg_id_ass_datab: Valor Esperado:          0 Valor Real:          x
+
+id_if_pcimd2ext: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_pcindex: 00000000000000000000000000000x00
+
+id_if_selpctype: Valor Esperado: xx Valor Real: xx
+
+id_ex_selalushift: Valor Esperado: 0 Valor Real: 0
+
+id_ex_selimregb: Valor Esperado: 1 Valor Real: 0
+
+id_ex_aluop: Valor Esperado: 010 Valor Real: 000
+
+id_ex_unsig: Valor Esperado: 0 Valor Real: 0
+
+id_ex_shiftop: Valor Esperado: XX Valor Real: 00
+
+id_ex_shiftamt: Valor Esperado: 00000 Valor Real:  0
+
+id_ex_rega: Valor Esperado:          0 Valor Real:          0
+
+id_ex_readmem: Valor Esperado: 0 Valor Real: 0
+
+id_ex_writemem:  Valor Esperado: 1 Valor Real: 0
+
+id_ex_regb: Valor Esperado:          0 Valor Real:          0
+
+id_ex_imedext: Valor Esperado: 00000000000000000000000000000001 Valor Real: 00000000000000000000000000000000
+
+id_ex_selwsource: Valor Esperado: x Valor Real: 0
+
+id_ex_regdest: Valor Esperado: 00000 Valor Real 00000
+
+id_ex_writereg: Valor Esperado: 0 Valor Real: 0
+
+id_ex_writeov: Valor Esperado: x Valor Real: 0
+
+id_reg_addra: Valor Esperado: 00001 Valor Real: 00000
+
+id_reg_addrb: Valor Esperado: 00010 Valor Real: 00000
+
+SLVL:
+id_if_selpcsource: Valor Esperado: 0 Valor Real: 0
+
+id_if_rega: Valor Esperado:          x Valor Real:          x
+
+reg_id_dataa:          x reg_id_datab:          x
+
+reg_id_ass_dataa: Valor Esperado:          x Valor Real:          x
+ reg_id_ass_datab: Valor Esperado:          x Valor Real:          x
+
+id_if_pcimd2ext: 00000000000000000000000000000000
+
+id_if_pcindex: 00000000000000000000000000000000
+
+id_if_selpctype: Valor Esperado: XX Valor Real: xx
+
+id_ex_selalushift: Valor Esperado: 1 Valor Real: 0
+
+id_ex_selimregb: Valor Esperado: 0 Valor Real: 0
+
+id_ex_aluop: Valor Esperado: XXX Valor Real: 000
+
+id_ex_unsig: Valor Esperado: X Valor Real: 0
+
+id_ex_shiftop: Valor Esperado: 10 Valor Real: 00
+
+id_ex_shiftamt: Valor Esperado:  0 Valor Real:  x
+
+id_ex_rega: Valor Esperado:          x Valor Real:          x
+
+id_ex_readmem: Valor Esperado: 0 Valor Real: 0
+
+id_ex_writemem:  Valor Esperado: 0 Valor Real: 0
+
+id_ex_regb: Valor Esperado:          x Valor Real:          x
+
+id_ex_imedext: Valor Esperado: 00000000000000000000100000000100 Valor Real: 00000000000000000000000000000000
+
+id_ex_selwsource: Valor Esperado: 0 Valor Real: 0
+
+id_ex_regdest: Valor Esperado: 00001 Valor Real 00000
+
+id_ex_writereg: Valor Esperado: 1 Valor Real: 0
+
+id_ex_writeov: Valor Esperado: 1 Valor Real: 0
+
+id_reg_addra: Valor Esperado: 00001 Valor Real: 00000
+
+id_reg_addrb: Valor Esperado: 00010 Valor Real: 00000
+
+JR:
+id_if_selpcsource: Valor Esperado: 1 Valor Real: 0
+
+id_if_rega: Valor Esperado:          x Valor Real:          x
+
+reg_id_dataa:          0 reg_id_datab:          0
+
+reg_id_ass_dataa: Valor Esperado:          0 Valor Real:          x
+ reg_id_ass_datab: Valor Esperado:          0 Valor Real:          x
+
+id_if_pcimd2ext: 00000000000000000000000000000000
+
+id_if_pcindex: 00000000000000000000000000000000
+
+id_if_selpctype: Valor Esperado: 01 Valor Real: xx
+
+id_ex_selalushift: Valor Esperado: X Valor Real: 0
+
+id_ex_selimregb: Valor Esperado: X Valor Real: 0
+
+id_ex_aluop: Valor Esperado: XXX Valor Real: 000
+
+id_ex_unsig: Valor Esperado: X Valor Real: 0
+
+id_ex_shiftop: Valor Esperado: XX Valor Real: 00
+
+id_ex_shiftamt: Valor Esperado: 11111 Valor Real:  0
+
+id_ex_rega: Valor Esperado:          0 Valor Real:          0
+
+id_ex_readmem: Valor Esperado: 0 Valor Real: 0
+
+id_ex_writemem:  Valor Esperado: 0 Valor Real: 0
+
+id_ex_regb: Valor Esperado:          0 Valor Real:          0
+
+id_ex_imedext: Valor Esperado: 00000000000000000001111111001000 Valor Real: 00000000000000000000000000000000
+
+id_ex_selwsource: Valor Esperado: X Valor Real: 0
+
+id_ex_regdest: Valor Esperado: 00011 Valor Real 00000
+
+id_ex_writereg: Valor Esperado: 0 Valor Real: 0
+
+id_ex_writeov: Valor Esperado: X Valor Real: 0
+
+id_reg_addra: Valor Esperado: 00001 Valor Real: 00000
+
+id_reg_addrb: Valor Esperado: 00010 Valor Real: 00000
+
+ADD:
+id_if_selpcsource: Valor Esperado: 0 Valor Real: 0
+
+id_if_rega: Valor Esperado:          x Valor Real:          x
+
+reg_id_dataa:          0 reg_id_datab:          0
+
+reg_id_ass_dataa: Valor Esperado:          0 Valor Real:          x
+ reg_id_ass_datab: Valor Esperado:          0 Valor Real:          x
+
+id_if_pcimd2ext: 00000000000000000000000000000000
+
+id_if_pcindex: 00000000000000000000000000000000
+
+id_if_selpctype: Valor Esperado: XX Valor Real: xx
+
+id_ex_selalushift: Valor Esperado: 0 Valor Real: 0
+
+id_ex_selimregb: Valor Esperado: 0 Valor Real: 0
+
+id_ex_aluop: Valor Esperado: 010 Valor Real: 000
+
+id_ex_unsig: Valor Esperado: 0 Valor Real: 0
+
+id_ex_shiftop: Valor Esperado: XX Valor Real: 00
+
+id_ex_shiftamt: Valor Esperado: 11111 Valor Real:  0
+
+id_ex_rega: Valor Esperado:          0 Valor Real:          0
+
+id_ex_readmem: Valor Esperado: 0 Valor Real: 0
+
+id_ex_writemem:  Valor Esperado: 0 Valor Real: 0
+
+id_ex_regb: Valor Esperado:          0 Valor Real:          0
+
+id_ex_imedext: Valor Esperado: 00000000000000000001111111100000 Valor Real: 00000000000000000000000000000000
+
+id_ex_selwsource: Valor Esperado: 0 Valor Real: 0
+
+id_ex_regdest: Valor Esperado: 00011 Valor Real 00000
+
+id_ex_writereg: Valor Esperado: 1 Valor Real: 0
+
+id_ex_writeov: Valor Esperado: 0 Valor Real: 0
+
+id_reg_addra: Valor Esperado: 00001 Valor Real: 00000
+
+id_reg_addrb: Valor Esperado: 00010 Valor Real: 00000
+
+JUMP:
+id_if_selpcsource: Valor Esperado: 1 Valor Real: 0
+
+id_if_rega: Valor Esperado:          x Valor Real:          x
+
+reg_id_dataa:          0 reg_id_datab:          0
+
+reg_id_ass_dataa: Valor Esperado:          0 Valor Real:          x
+ reg_id_ass_datab: Valor Esperado:          0 Valor Real:          x
+
+id_if_pcimd2ext: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_pcindex: 00000000000000000000000000000x00
+
+id_if_selpctype: Valor Esperado: 10 Valor Real: xx
+
+id_ex_selalushift: Valor Esperado: X Valor Real: 0
+
+id_ex_selimregb: Valor Esperado: X Valor Real: 0
+
+id_ex_aluop: Valor Esperado: XXX Valor Real: 000
+
+id_ex_unsig: Valor Esperado: X Valor Real: 0
+
+id_ex_shiftop: Valor Esperado: XX Valor Real: 00
+
+id_ex_shiftamt: Valor Esperado: 00000 Valor Real:  0
+
+id_ex_rega: Valor Esperado:          0 Valor Real:          0
+
+id_ex_readmem: Valor Esperado: 0 Valor Real: 0
+
+id_ex_writemem:  Valor Esperado: 0 Valor Real: 0
+
+id_ex_regb: Valor Esperado:          0 Valor Real:          0
+
+id_ex_imedext: Valor Esperado: 00000000000000000000000000000001 Valor Real: 00000000000000000000000000000000
+
+id_ex_selwsource: Valor Esperado: X Valor Real: 0
+
+id_ex_regdest: Valor Esperado: 00000 Valor Real 00000
+
+id_ex_writereg: Valor Esperado: 0 Valor Real: 0
+
+id_ex_writeov: Valor Esperado: X Valor Real: 0
+
+id_reg_addra: Valor Esperado: 00000 Valor Real: 00000
+
+id_reg_addrb: Valor Esperado: 00000 Valor Real: 00000
+
+BEQ:
+id_if_selpcsource:  Valor Real 0
+
+id_if_rega: Valor Esperado:          x Valor Real:          x
+
+reg_id_dataa:          0 reg_id_datab:          0
+
+reg_id_ass_dataa: Valor Esperado:          0 Valor Real:          x
+ reg_id_ass_datab: Valor Esperado:          0 Valor Real:          x
+
+id_if_pcimd2ext: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_pcindex: 00000000000000000000000000000x00
+
+id_if_selpctype: Valor Esperado: 00 Valor Real: xx
+
+id_ex_selalushift: Valor Esperado: X Valor Real: 0
+
+id_ex_selimregb: Valor Esperado: X Valor Real: 0
+
+id_ex_aluop: Valor Esperado: XXX Valor Real: 000
+
+id_ex_unsig: Valor Esperado: 0 Valor Real: 0
+
+id_ex_shiftop: Valor Esperado: XX Valor Real: 00
+
+id_ex_shiftamt: Valor Esperado: 00000 Valor Real:  0
+
+id_ex_rega: Valor Esperado:          0 Valor Real:          0
+
+id_ex_readmem: Valor Esperado: 0 Valor Real: 0
+
+id_ex_writemem:  Valor Esperado: 0 Valor Real: 0
+
+id_ex_regb: Valor Esperado:          0 Valor Real:          0
+
+id_ex_imedext: Valor Esperado: 00000000000000000000000000000001 Valor Real: 00000000000000000000000000000000
+
+id_ex_selwsource: Valor Esperado: X Valor Real: 0
+
+id_ex_regdest: Valor Esperado: 00000 Valor Real 00000
+
+id_ex_writereg: Valor Esperado: 0 Valor Real: 0
+
+id_ex_writeov: Valor Esperado: X Valor Real: 0
+
+id_reg_addra: Valor Esperado: 00001 Valor Real: 00000
+
+id_reg_addrb: Valor Esperado: 00010 Valor Real: 00000
+
+BGTZ:
+id_if_selpcsource: 0
+
+id_if_rega: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+id_if_pcimd2ext: 00000000000000000000000000000000
+
+id_if_pcindex: 00000000000000000000000000000000
+
+id_if_selpctype: xx
+
+id_ex_selalushift: 0
+
+id_ex_selimregb: 0
+
+id_ex_aluop: 000
+
+id_ex_unsig: 0
+
+id_ex_shiftop: 00
+
+id_ex_shiftamt: 00000
+
+id_ex_rega: 00000000000000000000000000000000
+
+id_ex_readmem: 0
+
+id_ex_writemem: 0
+
+id_ex_regb: 00000000000000000000000000000000
+
+id_ex_imedext: 00000000000000000000000000000000
+
+id_ex_selwsource: 0
+
+id_ex_regdest: 00000
+
+id_ex_writereg: 0
+
+id_ex_writeov'': 0
+
+id_reg_addra: 00000
+
+id_reg_addrb: 00000
+
+ADDI:
+id_if_selpcsource: Valor Esperado 0 0
+
+id_if_rega: Valor Esperado:          x Valor Real:          x
+
+reg_id_dataa:          0 reg_id_datab:          0
+
+reg_id_ass_dataa: Valor Esperado:          0 Valor Real:          x
+ reg_id_ass_datab: Valor Esperado:          0 Valor Real:          x
+
+id_if_pcimd2ext: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_pcindex: 00000000000000000000000000000x00
+
+id_if_selpctype: Valor Esperado: xx Valor Real: xx
+
+id_ex_selalushift: Valor Esperado: 0 Valor Real: 0
+
+id_ex_selimregb: Valor Esperado: 1 Valor Real: 0
+
+id_ex_aluop: Valor Esperado: 010 Valor Real: 000
+
+id_ex_unsig: Valor Esperado: 0 Valor Real: 0
+
+id_ex_shiftop: Valor Esperado: XX Valor Real: 00
+
+id_ex_shiftamt: Valor Esperado: 00000 Valor Real:  0
+
+id_ex_rega: Valor Esperado:          0 Valor Real:          0
+
+id_ex_readmem: Valor Esperado: 0 Valor Real: 0
+
+id_ex_writemem:  Valor Esperado: 0 Valor Real: 0
+
+id_ex_regb: Valor Esperado:          0 Valor Real:          0
+
+id_ex_imedext: Valor Esperado: 00000000000000000000000000000001 Valor Real: 00000000000000000000000000000000
+
+id_ex_selwsource: Valor Esperado: 0 Valor Real: 0
+
+id_ex_regdest: Valor Esperado: 00000 Valor Real 00000
+
+id_ex_writereg: Valor Esperado: 1 Valor Real: 0
+
+id_ex_writeov: Valor Esperado: 0 Valor Real: 0
+
+id_reg_addra: Valor Esperado: 00001 Valor Real: 00000
+
+id_reg_addrb: Valor Esperado: 00010 Valor Real: 00000
+
+LOAD:
+id_if_selpcsource: Valor Esperado: 0 Valor Real: 0
+
+id_if_rega: Valor Esperado:          x Valor Real:          x
+
+reg_id_dataa:          0 reg_id_datab:          0
+
+reg_id_ass_dataa: Valor Esperado:          0 Valor Real:          x
+ reg_id_ass_datab: Valor Esperado:          0 Valor Real:          x
+
+id_if_pcimd2ext: 00000000000000000000000000000000
+
+id_if_pcindex: 00000000000000000000000000000000
+
+id_if_selpctype: Valor Esperado: xx Valor Real: xx
+
+id_ex_selalushift: Valor Esperado: 0 Valor Real: 0
+
+id_ex_selimregb: Valor Esperado: 1 Valor Real: 0
+
+id_ex_aluop: Valor Esperado: 010 Valor Real: 000
+
+id_ex_unsig: Valor Esperado: 0 Valor Real: 0
+
+id_ex_shiftop: Valor Esperado: XX Valor Real: 00
+
+id_ex_shiftamt: Valor Esperado: 00000 Valor Real:  0
+
+id_ex_rega: Valor Esperado:          0 Valor Real:          0
+
+id_ex_readmem: Valor Esperado: 1Valor Real: 0
+
+id_ex_writemem:  Valor Esperado: 0 Valor Real: 0
+
+id_ex_regb: Valor Esperado:          0 Valor Real:          0
+
+id_ex_imedext: Valor Esperado: 00000000000000000000000000000001 Valor Real: 00000000000000000000000000000000
+
+id_ex_selwsource: Valor Esperado: 1 Valor Real: 0
+
+id_ex_regdest: Valor Esperado: 00000 Valor Real 00000
+
+id_ex_writereg: Valor Esperado: 1 Valor Real: 0
+
+id_ex_writeov: Valor Esperado: 1 Valor Real: 0
+
+id_reg_addra: Valor Esperado: 00001 Valor Real: 00000
+
+id_reg_addrb: Valor Esperado: 00010 Valor Real: 00000
+
+STORE:
+id_if_selpcsource: Valor Esperado: 0 Valor Real: 0
+
+id_if_rega: Valor Esperado:          x Valor Real:          x
+
+reg_id_dataa:          0 reg_id_datab:          0
+
+reg_id_ass_dataa: Valor Esperado:          0 Valor Real:          x
+ reg_id_ass_datab: Valor Esperado:          0 Valor Real:          x
+
+id_if_pcimd2ext: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_pcindex: 00000000000000000000000000000x00
+
+id_if_selpctype: Valor Esperado: xx Valor Real: xx
+
+id_ex_selalushift: Valor Esperado: 0 Valor Real: 0
+
+id_ex_selimregb: Valor Esperado: 1 Valor Real: 0
+
+id_ex_aluop: Valor Esperado: 010 Valor Real: 000
+
+id_ex_unsig: Valor Esperado: 0 Valor Real: 0
+
+id_ex_shiftop: Valor Esperado: XX Valor Real: 00
+
+id_ex_shiftamt: Valor Esperado: 00000 Valor Real:  0
+
+id_ex_rega: Valor Esperado:          0 Valor Real:          0
+
+id_ex_readmem: Valor Esperado: 0 Valor Real: 0
+
+id_ex_writemem:  Valor Esperado: 1 Valor Real: 0
+
+id_ex_regb: Valor Esperado:          0 Valor Real:          0
+
+id_ex_imedext: Valor Esperado: 00000000000000000000000000000001 Valor Real: 00000000000000000000000000000000
+
+id_ex_selwsource: Valor Esperado: x Valor Real: 0
+
+id_ex_regdest: Valor Esperado: 00000 Valor Real 00000
+
+id_ex_writereg: Valor Esperado: 0 Valor Real: 0
+
+id_ex_writeov: Valor Esperado: x Valor Real: 0
+
+id_reg_addra: Valor Esperado: 00001 Valor Real: 00000
+
+id_reg_addrb: Valor Esperado: 00010 Valor Real: 00000
+
+SLVL:
+id_if_selpcsource: Valor Esperado: 0 Valor Real: 0
+
+id_if_rega: Valor Esperado:          x Valor Real:          x
+
+reg_id_dataa:          x reg_id_datab:          x
+
+reg_id_ass_dataa: Valor Esperado:          x Valor Real:          x
+ reg_id_ass_datab: Valor Esperado:          x Valor Real:          x
+
+id_if_pcimd2ext: 00000000000000000000000000000000
+
+id_if_pcindex: 00000000000000000000000000000000
+
+id_if_selpctype: Valor Esperado: XX Valor Real: xx
+
+id_ex_selalushift: Valor Esperado: 1 Valor Real: 0
+
+id_ex_selimregb: Valor Esperado: 0 Valor Real: 0
+
+id_ex_aluop: Valor Esperado: XXX Valor Real: 000
+
+id_ex_unsig: Valor Esperado: X Valor Real: 0
+
+id_ex_shiftop: Valor Esperado: 10 Valor Real: 00
+
+id_ex_shiftamt: Valor Esperado:  0 Valor Real:  x
+
+id_ex_rega: Valor Esperado:          x Valor Real:          x
+
+id_ex_readmem: Valor Esperado: 0 Valor Real: 0
+
+id_ex_writemem:  Valor Esperado: 0 Valor Real: 0
+
+id_ex_regb: Valor Esperado:          x Valor Real:          x
+
+id_ex_imedext: Valor Esperado: 00000000000000000000100000000100 Valor Real: 00000000000000000000000000000000
+
+id_ex_selwsource: Valor Esperado: 0 Valor Real: 0
+
+id_ex_regdest: Valor Esperado: 00001 Valor Real 00000
+
+id_ex_writereg: Valor Esperado: 1 Valor Real: 0
+
+id_ex_writeov: Valor Esperado: 1 Valor Real: 0
+
+id_reg_addra: Valor Esperado: 00001 Valor Real: 00000
+
+id_reg_addrb: Valor Esperado: 00010 Valor Real: 00000
+
+JR:
+id_if_selpcsource: Valor Esperado: 1 Valor Real: 0
+
+id_if_rega: Valor Esperado:          x Valor Real:          x
+
+reg_id_dataa:          0 reg_id_datab:          0
+
+reg_id_ass_dataa: Valor Esperado:          0 Valor Real:          x
+ reg_id_ass_datab: Valor Esperado:          0 Valor Real:          x
+
+id_if_pcimd2ext: 00000000000000000000000000000000
+
+id_if_pcindex: 00000000000000000000000000000000
+
+id_if_selpctype: Valor Esperado: 01 Valor Real: xx
+
+id_ex_selalushift: Valor Esperado: X Valor Real: 0
+
+id_ex_selimregb: Valor Esperado: X Valor Real: 0
+
+id_ex_aluop: Valor Esperado: XXX Valor Real: 000
+
+id_ex_unsig: Valor Esperado: X Valor Real: 0
+
+id_ex_shiftop: Valor Esperado: XX Valor Real: 00
+
+id_ex_shiftamt: Valor Esperado: 11111 Valor Real:  0
+
+id_ex_rega: Valor Esperado:          0 Valor Real:          0
+
+id_ex_readmem: Valor Esperado: 0 Valor Real: 0
+
+id_ex_writemem:  Valor Esperado: 0 Valor Real: 0
+
+id_ex_regb: Valor Esperado:          0 Valor Real:          0
+
+id_ex_imedext: Valor Esperado: 00000000000000000001111111001000 Valor Real: 00000000000000000000000000000000
+
+id_ex_selwsource: Valor Esperado: X Valor Real: 0
+
+id_ex_regdest: Valor Esperado: 00011 Valor Real 00000
+
+id_ex_writereg: Valor Esperado: 0 Valor Real: 0
+
+id_ex_writeov: Valor Esperado: X Valor Real: 0
+
+id_reg_addra: Valor Esperado: 00001 Valor Real: 00000
+
+id_reg_addrb: Valor Esperado: 00010 Valor Real: 00000
+
+ADD:
+id_if_selpcsource: Valor Esperado: 0 Valor Real: 0
+
+id_if_rega: Valor Esperado:          x Valor Real:          x
+
+reg_id_dataa:          0 reg_id_datab:          0
+
+reg_id_ass_dataa: Valor Esperado:          0 Valor Real:          x
+ reg_id_ass_datab: Valor Esperado:          0 Valor Real:          x
+
+id_if_pcimd2ext: 00000000000000000000000000000000
+
+id_if_pcindex: 00000000000000000000000000000000
+
+id_if_selpctype: Valor Esperado: XX Valor Real: xx
+
+id_ex_selalushift: Valor Esperado: 0 Valor Real: 0
+
+id_ex_selimregb: Valor Esperado: 0 Valor Real: 0
+
+id_ex_aluop: Valor Esperado: 010 Valor Real: 000
+
+id_ex_unsig: Valor Esperado: 0 Valor Real: 0
+
+id_ex_shiftop: Valor Esperado: XX Valor Real: 00
+
+id_ex_shiftamt: Valor Esperado: 11111 Valor Real:  0
+
+id_ex_rega: Valor Esperado:          0 Valor Real:          0
+
+id_ex_readmem: Valor Esperado: 0 Valor Real: 0
+
+id_ex_writemem:  Valor Esperado: 0 Valor Real: 0
+
+id_ex_regb: Valor Esperado:          0 Valor Real:          0
+
+id_ex_imedext: Valor Esperado: 00000000000000000001111111100000 Valor Real: 00000000000000000000000000000000
+
+id_ex_selwsource: Valor Esperado: 0 Valor Real: 0
+
+id_ex_regdest: Valor Esperado: 00011 Valor Real 00000
+
+id_ex_writereg: Valor Esperado: 1 Valor Real: 0
+
+id_ex_writeov: Valor Esperado: 0 Valor Real: 0
+
+id_reg_addra: Valor Esperado: 00001 Valor Real: 00000
+
+id_reg_addrb: Valor Esperado: 00010 Valor Real: 00000
+
+JUMP:
+id_if_selpcsource: Valor Esperado: 1 Valor Real: 0
+
+id_if_rega: Valor Esperado:          x Valor Real:          x
+
+reg_id_dataa:          0 reg_id_datab:          0
+
+reg_id_ass_dataa: Valor Esperado:          0 Valor Real:          x
+ reg_id_ass_datab: Valor Esperado:          0 Valor Real:          x
+
+id_if_pcimd2ext: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_pcindex: 00000000000000000000000000000x00
+
+id_if_selpctype: Valor Esperado: 10 Valor Real: xx
+
+id_ex_selalushift: Valor Esperado: X Valor Real: 0
+
+id_ex_selimregb: Valor Esperado: X Valor Real: 0
+
+id_ex_aluop: Valor Esperado: XXX Valor Real: 000
+
+id_ex_unsig: Valor Esperado: X Valor Real: 0
+
+id_ex_shiftop: Valor Esperado: XX Valor Real: 00
+
+id_ex_shiftamt: Valor Esperado: 00000 Valor Real:  0
+
+id_ex_rega: Valor Esperado:          0 Valor Real:          0
+
+id_ex_readmem: Valor Esperado: 0 Valor Real: 0
+
+id_ex_writemem:  Valor Esperado: 0 Valor Real: 0
+
+id_ex_regb: Valor Esperado:          0 Valor Real:          0
+
+id_ex_imedext: Valor Esperado: 00000000000000000000000000000001 Valor Real: 00000000000000000000000000000000
+
+id_ex_selwsource: Valor Esperado: X Valor Real: 0
+
+id_ex_regdest: Valor Esperado: 00000 Valor Real 00000
+
+id_ex_writereg: Valor Esperado: 0 Valor Real: 0
+
+id_ex_writeov: Valor Esperado: X Valor Real: 0
+
+id_reg_addra: Valor Esperado: 00000 Valor Real: 00000
+
+id_reg_addrb: Valor Esperado: 00000 Valor Real: 00000
+
+BEQ:
+id_if_selpcsource:  Valor Real 0
+
+id_if_rega: Valor Esperado:          x Valor Real:          x
+
+reg_id_dataa:          0 reg_id_datab:          0
+
+reg_id_ass_dataa: Valor Esperado:          0 Valor Real:          x
+ reg_id_ass_datab: Valor Esperado:          0 Valor Real:          x
+
+id_if_pcimd2ext: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_pcindex: 00000000000000000000000000000x00
+
+id_if_selpctype: Valor Esperado: 00 Valor Real: xx
+
+id_ex_selalushift: Valor Esperado: X Valor Real: 0
+
+id_ex_selimregb: Valor Esperado: X Valor Real: 0
+
+id_ex_aluop: Valor Esperado: XXX Valor Real: 000
+
+id_ex_unsig: Valor Esperado: 0 Valor Real: 0
+
+id_ex_shiftop: Valor Esperado: XX Valor Real: 00
+
+id_ex_shiftamt: Valor Esperado: 00000 Valor Real:  0
+
+id_ex_rega: Valor Esperado:          0 Valor Real:          0
+
+id_ex_readmem: Valor Esperado: 0 Valor Real: 0
+
+id_ex_writemem:  Valor Esperado: 0 Valor Real: 0
+
+id_ex_regb: Valor Esperado:          0 Valor Real:          0
+
+id_ex_imedext: Valor Esperado: 00000000000000000000000000000001 Valor Real: 00000000000000000000000000000000
+
+id_ex_selwsource: Valor Esperado: X Valor Real: 0
+
+id_ex_regdest: Valor Esperado: 00000 Valor Real 00000
+
+id_ex_writereg: Valor Esperado: 0 Valor Real: 0
+
+id_ex_writeov: Valor Esperado: X Valor Real: 0
+
+id_reg_addra: Valor Esperado: 00001 Valor Real: 00000
+
+id_reg_addrb: Valor Esperado: 00010 Valor Real: 00000
+
+BGTZ:
+id_if_selpcsource: 0
+
+id_if_rega: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+id_if_pcimd2ext: 00000000000000000000000000000000
+
+id_if_pcindex: 00000000000000000000000000000000
+
+id_if_selpctype: xx
+
+id_ex_selalushift: 0
+
+id_ex_selimregb: 0
+
+id_ex_aluop: 000
+
+id_ex_unsig: 0
+
+id_ex_shiftop: 00
+
+id_ex_shiftamt: 00000
+
+id_ex_rega: 00000000000000000000000000000000
+
+id_ex_readmem: 0
+
+id_ex_writemem: 0
+
+id_ex_regb: 00000000000000000000000000000000
+
+id_ex_imedext: 00000000000000000000000000000000
+
+id_ex_selwsource: 0
+
+id_ex_regdest: 00000
+
+id_ex_writereg: 0
+
+id_ex_writeov'': 0
+
+id_reg_addra: 00000
+
+id_reg_addrb: 00000
+
+ADDI:
+id_if_selpcsource: Valor Esperado 0 0
+
+id_if_rega: Valor Esperado:          x Valor Real:          x
+
+reg_id_dataa:          0 reg_id_datab:          0
+
+reg_id_ass_dataa: Valor Esperado:          0 Valor Real:          x
+ reg_id_ass_datab: Valor Esperado:          0 Valor Real:          x
+
+id_if_pcimd2ext: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_pcindex: 00000000000000000000000000000x00
+
+id_if_selpctype: Valor Esperado: xx Valor Real: xx
+
+id_ex_selalushift: Valor Esperado: 0 Valor Real: 0
+
+id_ex_selimregb: Valor Esperado: 1 Valor Real: 0
+
+id_ex_aluop: Valor Esperado: 010 Valor Real: 000
+
+id_ex_unsig: Valor Esperado: 0 Valor Real: 0
+
+id_ex_shiftop: Valor Esperado: XX Valor Real: 00
+
+id_ex_shiftamt: Valor Esperado: 00000 Valor Real:  0
+
+id_ex_rega: Valor Esperado:          0 Valor Real:          0
+
+id_ex_readmem: Valor Esperado: 0 Valor Real: 0
+
+id_ex_writemem:  Valor Esperado: 0 Valor Real: 0
+
+id_ex_regb: Valor Esperado:          0 Valor Real:          0
+
+id_ex_imedext: Valor Esperado: 00000000000000000000000000000001 Valor Real: 00000000000000000000000000000000
+
+id_ex_selwsource: Valor Esperado: 0 Valor Real: 0
+
+id_ex_regdest: Valor Esperado: 00000 Valor Real 00000
+
+id_ex_writereg: Valor Esperado: 1 Valor Real: 0
+
+id_ex_writeov: Valor Esperado: 0 Valor Real: 0
+
+id_reg_addra: Valor Esperado: 00001 Valor Real: 00000
+
+id_reg_addrb: Valor Esperado: 00010 Valor Real: 00000
+
+LOAD:
+id_if_selpcsource: Valor Esperado: 0 Valor Real: 0
+
+id_if_rega: Valor Esperado:          x Valor Real:          x
+
+reg_id_dataa:          0 reg_id_datab:          0
+
+reg_id_ass_dataa: Valor Esperado:          0 Valor Real:          x
+ reg_id_ass_datab: Valor Esperado:          0 Valor Real:          x
+
+id_if_pcimd2ext: 00000000000000000000000000000000
+
+id_if_pcindex: 00000000000000000000000000000000
+
+id_if_selpctype: Valor Esperado: xx Valor Real: xx
+
+id_ex_selalushift: Valor Esperado: 0 Valor Real: 0
+
+id_ex_selimregb: Valor Esperado: 1 Valor Real: 0
+
+id_ex_aluop: Valor Esperado: 010 Valor Real: 000
+
+id_ex_unsig: Valor Esperado: 0 Valor Real: 0
+
+id_ex_shiftop: Valor Esperado: XX Valor Real: 00
+
+id_ex_shiftamt: Valor Esperado: 00000 Valor Real:  0
+
+id_ex_rega: Valor Esperado:          0 Valor Real:          0
+
+id_ex_readmem: Valor Esperado: 1Valor Real: 0
+
+id_ex_writemem:  Valor Esperado: 0 Valor Real: 0
+
+id_ex_regb: Valor Esperado:          0 Valor Real:          0
+
+id_ex_imedext: Valor Esperado: 00000000000000000000000000000001 Valor Real: 00000000000000000000000000000000
+
+id_ex_selwsource: Valor Esperado: 1 Valor Real: 0
+
+id_ex_regdest: Valor Esperado: 00000 Valor Real 00000
+
+id_ex_writereg: Valor Esperado: 1 Valor Real: 0
+
+id_ex_writeov: Valor Esperado: 1 Valor Real: 0
+
+id_reg_addra: Valor Esperado: 00001 Valor Real: 00000
+
+id_reg_addrb: Valor Esperado: 00010 Valor Real: 00000
+
+STORE:
+id_if_selpcsource: Valor Esperado: 0 Valor Real: 0
+
+id_if_rega: Valor Esperado:          x Valor Real:          x
+
+reg_id_dataa:          0 reg_id_datab:          0
+
+reg_id_ass_dataa: Valor Esperado:          0 Valor Real:          x
+ reg_id_ass_datab: Valor Esperado:          0 Valor Real:          x
+
+id_if_pcimd2ext: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+
+id_if_pcindex: 00000000000000000000000000000x00
+
+id_if_selpctype: Valor Esperado: xx Valor Real: xx
+
+id_ex_selalushift: Valor Esperado: 0 Valor Real: 0
+
+id_ex_selimregb: Valor Esperado: 1 Valor Real: 0
+
+id_ex_aluop: Valor Esperado: 010 Valor Real: 000
+
+id_ex_unsig: Valor Esperado: 0 Valor Real: 0
+
+id_ex_shiftop: Valor Esperado: XX Valor Real: 00
+
+id_ex_shiftamt: Valor Esperado: 00000 Valor Real:  0
+
+id_ex_rega: Valor Esperado:          0 Valor Real:          0
+
+id_ex_readmem: Valor Esperado: 0 Valor Real: 0
+
+id_ex_writemem:  Valor Esperado: 1 Valor Real: 0
+
+id_ex_regb: Valor Esperado:          0 Valor Real:          0
+
+id_ex_imedext: Valor Esperado: 00000000000000000000000000000001 Valor Real: 00000000000000000000000000000000
+
+id_ex_selwsource: Valor Esperado: x Valor Real: 0
+
+id_ex_regdest: Valor Esperado: 00000 Valor Real 00000
+
+id_ex_writereg: Valor Esperado: 0 Valor Real: 0
+
+id_ex_writeov: Valor Esperado: x Valor Real: 0
+
+id_reg_addra: Valor Esperado: 00001 Valor Real: 00000
+
+id_reg_addrb: Valor Esperado: 00010 Valor Real: 00000
+
